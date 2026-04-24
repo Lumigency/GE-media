@@ -28,6 +28,7 @@
               </button>
               <div class="nav-dropdown-menu" id="dropdown-categories" role="menu" aria-label="Catégories">
                 <a href="categories.html#ia" class="nav-dropdown-item" role="menuitem">
+                <a href="/categories#ia" class="nav-dropdown-item" role="menuitem">
                   <span class="nav-dropdown-icon" style="background:#f0fdf4;" aria-hidden="true">🤖</span>
                   <span class="nav-dropdown-text">
                     <span class="nav-dropdown-title">IA &amp; Automatisation</span>
