@@ -11,12 +11,12 @@
     <nav id="navbar" role="navigation" aria-label="Navigation principale">
       <div class="container">
         <div class="nav-inner">
-          <a href="/" class="nav-logo" aria-label="Le Guide de l'Entrepreneur — Accueil">
+          <a href="index.html" class="nav-logo" aria-label="Le Guide de l'Entrepreneur — Accueil">
             <span class="nav-logo-icon" aria-hidden="true">GE</span>
             Le Guide de l'Entrepreneur
           </a>
           <div class="nav-links" role="list">
-            <a href="/" class="nav-link" role="listitem">Accueil</a>
+            <a href="index.html" class="nav-link" role="listitem">Accueil</a>
  
             <!-- Catégories avec dropdown -->
             <div class="nav-dropdown" role="listitem">
@@ -27,42 +27,42 @@
                 </svg>
               </button>
               <div class="nav-dropdown-menu" id="dropdown-categories" role="menu" aria-label="Catégories">
-                <a href="/cat-ia" class="nav-dropdown-item" role="menuitem">
+                <a href="categories.html#ia" class="nav-dropdown-item" role="menuitem">
                   <span class="nav-dropdown-icon" style="background:#f0fdf4;" aria-hidden="true">🤖</span>
                   <span class="nav-dropdown-text">
                     <span class="nav-dropdown-title">IA &amp; Automatisation</span>
                     <span class="nav-dropdown-desc">Outils IA, prompts, comparatifs</span>
                   </span>
                 </a>
-                <a href="/cat-n8n" class="nav-dropdown-item" role="menuitem">
+                <a href="categories.html#n8n" class="nav-dropdown-item" role="menuitem">
                   <span class="nav-dropdown-icon" style="background:#fdf4ff;" aria-hidden="true">⚡</span>
                   <span class="nav-dropdown-text">
                     <span class="nav-dropdown-title">Workflows N8N</span>
                     <span class="nav-dropdown-desc">Templates et tutoriels N8N</span>
                   </span>
                 </a>
-                <a href="/cat-outils" class="nav-dropdown-item" role="menuitem">
+                <a href="categories.html#outils" class="nav-dropdown-item" role="menuitem">
                   <span class="nav-dropdown-icon" style="background:#fefce8;" aria-hidden="true">🛠️</span>
                   <span class="nav-dropdown-text">
                     <span class="nav-dropdown-title">Outils &amp; Apps</span>
                     <span class="nav-dropdown-desc">Comparatifs et avis honnêtes</span>
                   </span>
                 </a>
-                <a href="/cat-business" class="nav-dropdown-item" role="menuitem">
+                <a href="categories.html#business" class="nav-dropdown-item" role="menuitem">
                   <span class="nav-dropdown-icon" style="background:#eff6ff;" aria-hidden="true">📈</span>
                   <span class="nav-dropdown-text">
                     <span class="nav-dropdown-title">Business &amp; Stratégie</span>
                     <span class="nav-dropdown-desc">Systèmes, scale, productivité</span>
                   </span>
                 </a>
-                <a href="/cat-acquisition" class="nav-dropdown-item" role="menuitem">
+                <a href="categorie-acquisition.html" class="nav-dropdown-item" role="menuitem">
                   <span class="nav-dropdown-icon" style="background:#fff7ed;" aria-hidden="true">🎯</span>
                   <span class="nav-dropdown-text">
                     <span class="nav-dropdown-title">Acquisition &amp; Stratégie</span>
                     <span class="nav-dropdown-desc">SEO, LinkedIn, Pinterest, email</span>
                   </span>
                 </a>
-                <a href="/cat-finance" class="nav-dropdown-item" role="menuitem">
+                <a href="categorie-assurances-finances.html" class="nav-dropdown-item" role="menuitem">
                   <span class="nav-dropdown-icon" style="background:#f0fdfa;" aria-hidden="true">💰</span>
                   <span class="nav-dropdown-text">
                     <span class="nav-dropdown-title">Finance &amp; Assurances</span>
@@ -70,17 +70,17 @@
                   </span>
                 </a>
                 <div class="nav-dropdown-footer">
-                  <a href="/categories" class="nav-dropdown-all">Voir toutes les catégories →</a>
+                  <a href="categories.html" class="nav-dropdown-all">Voir toutes les catégories →</a>
                 </div>
               </div>
             </div>
  
-            <a href="/articles" class="nav-link" role="listitem">Articles</a>
-            <a href="/outils" class="nav-link" role="listitem">Outils</a>
-            <a href="/newsletter" class="nav-link" role="listitem">Newsletter</a>
-            <a href="/a-propos" class="nav-link" role="listitem">À propos</a>
+            <a href="articles.html" class="nav-link" role="listitem">Articles</a>
+            <a href="outils.html" class="nav-link" role="listitem">Outils</a>
+            <a href="newsletter.html" class="nav-link" role="listitem">Newsletter</a>
+            <a href="a-propos.html" class="nav-link" role="listitem">À propos</a>
           </div>
-          <a href="/newsletter" class="btn btn-primary btn-sm nav-cta">
+          <a href="newsletter.html" class="btn btn-primary btn-sm nav-cta">
             S'abonner gratuitement
           </a>
           <button class="nav-burger" id="navBurger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMobile">
@@ -92,7 +92,7 @@
  
         <!-- Menu mobile -->
         <div class="nav-mobile" id="navMobile" role="menu" aria-label="Menu mobile">
-          <a href="/" class="nav-link" role="menuitem">Accueil</a>
+          <a href="index.html" class="nav-link" role="menuitem">Accueil</a>
  
           <!-- Accordion catégories mobile -->
           <div class="nav-mobile-accordion">
@@ -103,21 +103,21 @@
               </svg>
             </button>
             <div class="nav-mobile-submenu" id="mobile-categories">
-              <a href="/cat-ia" class="nav-mobile-sublink" role="menuitem">🤖 IA &amp; Automatisation</a>
-              <a href="/cat-n8n" class="nav-mobile-sublink" role="menuitem">⚡ Workflows N8N</a>
-              <a href="/cat-outils" class="nav-mobile-sublink" role="menuitem">🛠️ Outils &amp; Apps</a>
-              <a href="/cat-business" class="nav-mobile-sublink" role="menuitem">📈 Business &amp; Stratégie</a>
-              <a href="/cat-acquisition" class="nav-mobile-sublink" role="menuitem">🎯 Acquisition &amp; Stratégie</a>
-              <a href="/cat-finance" class="nav-mobile-sublink" role="menuitem">💰 Finance &amp; Assurances</a>
-              <a href="/categories" class="nav-mobile-sublink nav-mobile-sublink--all" role="menuitem">Toutes les catégories →</a>
+              <a href="categories.html#ia" class="nav-mobile-sublink" role="menuitem">🤖 IA &amp; Automatisation</a>
+              <a href="categories.html#n8n" class="nav-mobile-sublink" role="menuitem">⚡ Workflows N8N</a>
+              <a href="categories.html#outils" class="nav-mobile-sublink" role="menuitem">🛠️ Outils &amp; Apps</a>
+              <a href="categories.html#business" class="nav-mobile-sublink" role="menuitem">📈 Business &amp; Stratégie</a>
+              <a href="categorie-acquisition.html" class="nav-mobile-sublink" role="menuitem">🎯 Acquisition &amp; Stratégie</a>
+              <a href="categorie-assurances-finances.html" class="nav-mobile-sublink" role="menuitem">💰 Finance &amp; Assurances</a>
+              <a href="categories.html" class="nav-mobile-sublink nav-mobile-sublink--all" role="menuitem">Toutes les catégories →</a>
             </div>
           </div>
  
-          <a href="/articles" class="nav-link" role="menuitem">Articles</a>
-          <a href="/outils" class="nav-link" role="menuitem">Outils</a>
-          <a href="/newsletter" class="nav-link" role="menuitem">Newsletter</a>
-          <a href="/a-propos" class="nav-link" role="menuitem">À propos</a>
-          <a href="/newsletter" class="btn btn-primary">S'abonner gratuitement</a>
+          <a href="articles.html" class="nav-link" role="menuitem">Articles</a>
+          <a href="outils.html" class="nav-link" role="menuitem">Outils</a>
+          <a href="newsletter.html" class="nav-link" role="menuitem">Newsletter</a>
+          <a href="a-propos.html" class="nav-link" role="menuitem">À propos</a>
+          <a href="newsletter.html" class="btn btn-primary">S'abonner gratuitement</a>
         </div>
       </div>
     </nav>
@@ -129,7 +129,7 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <a href="/" class="footer-logo" aria-label="Accueil">
+            <a href="index.html" class="footer-logo" aria-label="Accueil">
               <span class="footer-logo-icon" aria-hidden="true">GE</span>
               Le Guide de l'Entrepreneur
             </a>
@@ -141,39 +141,39 @@
           <div class="footer-col">
             <p class="footer-col-title">Explorer</p>
             <ul>
-              <li><a href="/categories">Toutes les catégories</a></li>
-              <li><a href="/articles">Tous les articles</a></li>
-              <li><a href="/outils">Outils recommandés</a></li>
-              <li><a href="/newsletter">Newsletter</a></li>
+              <li><a href="categories.html">Toutes les catégories</a></li>
+              <li><a href="articles.html">Tous les articles</a></li>
+              <li><a href="outils.html">Outils recommandés</a></li>
+              <li><a href="newsletter.html">Newsletter</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <p class="footer-col-title">Catégories</p>
             <ul>
-              <li><a href="/cat-ia">IA &amp; Automatisation</a></li>
-              <li><a href="/cat-n8n">Workflows N8N</a></li>
-              <li><a href="/cat-outils">Outils &amp; Apps</a></li>
-              <li><a href="/cat-business">Business &amp; Stratégie</a></li>
-              <li><a href="/cat-acquisition">Acquisition &amp; Stratégie</a></li>
-              <li><a href="/cat-finance">Finance &amp; Assurances</a></li>
+              <li><a href="categories.html#ia">IA &amp; Automatisation</a></li>
+              <li><a href="categories.html#n8n">Workflows N8N</a></li>
+              <li><a href="categories.html#outils">Outils &amp; Apps</a></li>
+              <li><a href="categories.html#business">Business &amp; Stratégie</a></li>
+              <li><a href="categorie-acquisition.html">Acquisition &amp; Stratégie</a></li>
+              <li><a href="categorie-assurances-finances.html">Finance &amp; Assurances</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <p class="footer-col-title">Le site</p>
             <ul>
-              <li><a href="/a-propos">À propos</a></li>
-              <li><a href="/a-propos#contact">Contact</a></li>
-              <li><a href="/a-propos#mentions-legales">Mentions légales</a></li>
-              <li><a href="/a-propos#politique-affiliation">Politique d'affiliation</a></li>
+              <li><a href="a-propos.html">À propos</a></li>
+              <li><a href="a-propos.html#contact">Contact</a></li>
+              <li><a href="a-propos.html#mentions-legales">Mentions légales</a></li>
+              <li><a href="a-propos.html#politique-affiliation">Politique d'affiliation</a></li>
             </ul>
           </div>
         </div>
         <div class="footer-bottom">
           <p class="footer-copy">© 2025 Le Guide de l'Entrepreneur. Tous droits réservés.</p>
           <nav class="footer-legal" aria-label="Liens légaux">
-            <a href="/a-propos#mentions-legales">Mentions légales</a>
-            <a href="/a-propos#politique-affiliation">Affiliation</a>
-            <a href="/a-propos#rgpd">RGPD</a>
+            <a href="a-propos.html#mentions-legales">Mentions légales</a>
+            <a href="a-propos.html#politique-affiliation">Affiliation</a>
+            <a href="a-propos.html#rgpd">RGPD</a>
           </nav>
         </div>
       </div>
@@ -204,9 +204,13 @@
     links.forEach(link => {
       const href = link.getAttribute('href');
       if (!href) return;
+      const normalizedHrefPath = new URL(href, window.location.origin).pathname;
+      const currentPath = window.location.pathname;
+      const isHome = normalizedHrefPath.endsWith('/index.html') || normalizedHrefPath === '/';
+      const isHomePath = currentPath === '/' || currentPath.endsWith('/index.html');
       if (
-        (href === '/' && path === '/') ||
-        (href !== '/' && path.startsWith(href))
+        (isHome && isHomePath) ||
+        (!isHome && currentPath === normalizedHrefPath)
       ) {
         link.classList.add('active');
         link.setAttribute('aria-current', 'page');
@@ -214,7 +218,7 @@
     });
  
     // Highlight "Catégories" trigger si on est sur une page cat-*
-    if (path.startsWith('/cat-') || path.startsWith('/categories')) {
+    if (path.includes('/categorie-') || path.includes('/categories')) {
       const trigger = document.querySelector('.nav-dropdown-trigger');
       if (trigger) trigger.classList.add('active');
     }
