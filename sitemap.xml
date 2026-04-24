@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Pages principales -->
+  <url>
+    <loc>https://leguidedelentrepreneur.vercel.app/</loc>
+    <lastmod>2025-04-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://leguidedelentrepreneur.vercel.app/categories</loc>
+    <lastmod>2025-04-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://leguidedelentrepreneur.vercel.app/articles</loc>
+    <lastmod>2025-04-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://leguidedelentrepreneur.vercel.app/outils</loc>
+    <lastmod>2025-04-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://leguidedelentrepreneur.vercel.app/newsletter</loc>
+    <lastmod>2025-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leguidedelentrepreneur.vercel.app/a-propos</loc>
+    <lastmod>2025-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Articles de blog -->
+  <url>
+    <loc>https://leguidedelentrepreneur.vercel.app/blog/n8n-vs-make-vs-zapier-2025</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leguidedelentrepreneur.vercel.app/blog/top-10-outils-ia-marketing-2025</loc>
+    <lastmod>2025-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leguidedelentrepreneur.vercel.app/blog/automatiser-prospection-linkedin-n8n</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leguidedelentrepreneur.vercel.app/blog/claude-vs-chatgpt-vs-gemini-comparatif-2025</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leguidedelentrepreneur.vercel.app/blog/notion-crm-guide-complet-entrepreneurs</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leguidedelentrepreneur.vercel.app/blog/automatiser-comptabilite-ia-guide-pratique</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

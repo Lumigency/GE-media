@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /js/
+Disallow: /css/
+
+Sitemap: https://leguidedelentrepreneur.vercel.app/sitemap.xml
