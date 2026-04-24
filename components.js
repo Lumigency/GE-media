@@ -2,10 +2,10 @@
    LE GUIDE DE L'ENTREPRENEUR — components.js
    Shared navbar + footer injected on every page
    ============================================== */
-
+ 
 (function () {
   'use strict';
-
+ 
   /* ---- NAV TEMPLATE ---- */
   const NAV_HTML = `
     <nav id="navbar" role="navigation" aria-label="Navigation principale">
@@ -17,7 +17,64 @@
           </a>
           <div class="nav-links" role="list">
             <a href="/" class="nav-link" role="listitem">Accueil</a>
-            <a href="/categories" class="nav-link" role="listitem">Catégories</a>
+ 
+            <!-- Catégories avec dropdown -->
+            <div class="nav-dropdown" role="listitem">
+              <button class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-categories">
+                Catégories
+                <svg class="nav-dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                  <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div class="nav-dropdown-menu" id="dropdown-categories" role="menu" aria-label="Catégories">
+                <a href="/cat-ia" class="nav-dropdown-item" role="menuitem">
+                  <span class="nav-dropdown-icon" style="background:#f0fdf4;" aria-hidden="true">🤖</span>
+                  <span class="nav-dropdown-text">
+                    <span class="nav-dropdown-title">IA &amp; Automatisation</span>
+                    <span class="nav-dropdown-desc">Outils IA, prompts, comparatifs</span>
+                  </span>
+                </a>
+                <a href="/cat-n8n" class="nav-dropdown-item" role="menuitem">
+                  <span class="nav-dropdown-icon" style="background:#fdf4ff;" aria-hidden="true">⚡</span>
+                  <span class="nav-dropdown-text">
+                    <span class="nav-dropdown-title">Workflows N8N</span>
+                    <span class="nav-dropdown-desc">Templates et tutoriels N8N</span>
+                  </span>
+                </a>
+                <a href="/cat-outils" class="nav-dropdown-item" role="menuitem">
+                  <span class="nav-dropdown-icon" style="background:#fefce8;" aria-hidden="true">🛠️</span>
+                  <span class="nav-dropdown-text">
+                    <span class="nav-dropdown-title">Outils &amp; Apps</span>
+                    <span class="nav-dropdown-desc">Comparatifs et avis honnêtes</span>
+                  </span>
+                </a>
+                <a href="/cat-business" class="nav-dropdown-item" role="menuitem">
+                  <span class="nav-dropdown-icon" style="background:#eff6ff;" aria-hidden="true">📈</span>
+                  <span class="nav-dropdown-text">
+                    <span class="nav-dropdown-title">Business &amp; Stratégie</span>
+                    <span class="nav-dropdown-desc">Systèmes, scale, productivité</span>
+                  </span>
+                </a>
+                <a href="/cat-acquisition" class="nav-dropdown-item" role="menuitem">
+                  <span class="nav-dropdown-icon" style="background:#fff7ed;" aria-hidden="true">🎯</span>
+                  <span class="nav-dropdown-text">
+                    <span class="nav-dropdown-title">Acquisition &amp; Stratégie</span>
+                    <span class="nav-dropdown-desc">SEO, LinkedIn, Pinterest, email</span>
+                  </span>
+                </a>
+                <a href="/cat-finance" class="nav-dropdown-item" role="menuitem">
+                  <span class="nav-dropdown-icon" style="background:#f0fdfa;" aria-hidden="true">💰</span>
+                  <span class="nav-dropdown-text">
+                    <span class="nav-dropdown-title">Finance &amp; Assurances</span>
+                    <span class="nav-dropdown-desc">Comptabilité, fiscalité, RC pro</span>
+                  </span>
+                </a>
+                <div class="nav-dropdown-footer">
+                  <a href="/categories" class="nav-dropdown-all">Voir toutes les catégories →</a>
+                </div>
+              </div>
+            </div>
+ 
             <a href="/articles" class="nav-link" role="listitem">Articles</a>
             <a href="/outils" class="nav-link" role="listitem">Outils</a>
             <a href="/newsletter" class="nav-link" role="listitem">Newsletter</a>
@@ -32,9 +89,30 @@
             <span></span>
           </button>
         </div>
+ 
+        <!-- Menu mobile -->
         <div class="nav-mobile" id="navMobile" role="menu" aria-label="Menu mobile">
           <a href="/" class="nav-link" role="menuitem">Accueil</a>
-          <a href="/categories" class="nav-link" role="menuitem">Catégories</a>
+ 
+          <!-- Accordion catégories mobile -->
+          <div class="nav-mobile-accordion">
+            <button class="nav-link nav-mobile-accordion-trigger" aria-expanded="false" aria-controls="mobile-categories">
+              Catégories
+              <svg class="nav-dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="nav-mobile-submenu" id="mobile-categories">
+              <a href="/cat-ia" class="nav-mobile-sublink" role="menuitem">🤖 IA &amp; Automatisation</a>
+              <a href="/cat-n8n" class="nav-mobile-sublink" role="menuitem">⚡ Workflows N8N</a>
+              <a href="/cat-outils" class="nav-mobile-sublink" role="menuitem">🛠️ Outils &amp; Apps</a>
+              <a href="/cat-business" class="nav-mobile-sublink" role="menuitem">📈 Business &amp; Stratégie</a>
+              <a href="/cat-acquisition" class="nav-mobile-sublink" role="menuitem">🎯 Acquisition &amp; Stratégie</a>
+              <a href="/cat-finance" class="nav-mobile-sublink" role="menuitem">💰 Finance &amp; Assurances</a>
+              <a href="/categories" class="nav-mobile-sublink nav-mobile-sublink--all" role="menuitem">Toutes les catégories →</a>
+            </div>
+          </div>
+ 
           <a href="/articles" class="nav-link" role="menuitem">Articles</a>
           <a href="/outils" class="nav-link" role="menuitem">Outils</a>
           <a href="/newsletter" class="nav-link" role="menuitem">Newsletter</a>
@@ -44,7 +122,7 @@
       </div>
     </nav>
   `;
-
+ 
   /* ---- FOOTER TEMPLATE ---- */
   const FOOTER_HTML = `
     <footer id="footer" role="contentinfo">
@@ -72,10 +150,12 @@
           <div class="footer-col">
             <p class="footer-col-title">Catégories</p>
             <ul>
-              <li><a href="/categories#ia">Intelligence Artificielle</a></li>
-              <li><a href="/categories#n8n">Workflows N8N</a></li>
-              <li><a href="/categories#outils">Outils & Apps</a></li>
-              <li><a href="/categories#business">Business & Stratégie</a></li>
+              <li><a href="/cat-ia">IA &amp; Automatisation</a></li>
+              <li><a href="/cat-n8n">Workflows N8N</a></li>
+              <li><a href="/cat-outils">Outils &amp; Apps</a></li>
+              <li><a href="/cat-business">Business &amp; Stratégie</a></li>
+              <li><a href="/cat-acquisition">Acquisition &amp; Stratégie</a></li>
+              <li><a href="/cat-finance">Finance &amp; Assurances</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -99,18 +179,16 @@
       </div>
     </footer>
   `;
-
+ 
   /* ---- INJECT NAV & FOOTER ---- */
   function injectComponents() {
-    // Inject navbar at top of body
     const navPlaceholder = document.getElementById('nav-placeholder');
     if (navPlaceholder) {
       navPlaceholder.outerHTML = NAV_HTML;
     } else {
       document.body.insertAdjacentHTML('afterbegin', NAV_HTML);
     }
-
-    // Inject footer at end of body (before scripts)
+ 
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder) {
       footerPlaceholder.outerHTML = FOOTER_HTML;
@@ -118,13 +196,14 @@
       document.body.insertAdjacentHTML('beforeend', FOOTER_HTML);
     }
   }
-
+ 
   /* ---- ACTIVE NAV LINK ---- */
   function setActiveNavLink() {
     const path = window.location.pathname;
     const links = document.querySelectorAll('.nav-link');
     links.forEach(link => {
       const href = link.getAttribute('href');
+      if (!href) return;
       if (
         (href === '/' && path === '/') ||
         (href !== '/' && path.startsWith(href))
@@ -133,8 +212,14 @@
         link.setAttribute('aria-current', 'page');
       }
     });
+ 
+    // Highlight "Catégories" trigger si on est sur une page cat-*
+    if (path.startsWith('/cat-') || path.startsWith('/categories')) {
+      const trigger = document.querySelector('.nav-dropdown-trigger');
+      if (trigger) trigger.classList.add('active');
+    }
   }
-
+ 
   /* ---- STICKY NAV SHADOW ---- */
   function initNavScroll() {
     const navbar = document.getElementById('navbar');
@@ -143,20 +228,19 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }
-
+ 
   /* ---- MOBILE BURGER MENU ---- */
   function initBurger() {
-    const burger  = document.getElementById('navBurger');
-    const mobile  = document.getElementById('navMobile');
+    const burger = document.getElementById('navBurger');
+    const mobile = document.getElementById('navMobile');
     if (!burger || !mobile) return;
-
+ 
     burger.addEventListener('click', () => {
       const isOpen = mobile.classList.toggle('open');
       burger.setAttribute('aria-expanded', isOpen);
       burger.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
     });
-
-    // Close on outside click
+ 
     document.addEventListener('click', (e) => {
       if (!burger.contains(e.target) && !mobile.contains(e.target)) {
         mobile.classList.remove('open');
@@ -165,26 +249,88 @@
       }
     });
   }
-
-  /* ---- READING PROGRESS BAR (article page) ---- */
+ 
+  /* ---- DROPDOWN CATÉGORIES (desktop hover + keyboard) ---- */
+  function initDropdown() {
+    const dropdown = document.querySelector('.nav-dropdown');
+    const trigger  = document.querySelector('.nav-dropdown-trigger');
+    const menu     = document.querySelector('.nav-dropdown-menu');
+    if (!dropdown || !trigger || !menu) return;
+ 
+    let closeTimer = null;
+ 
+    // Ouvrir au hover
+    dropdown.addEventListener('mouseenter', () => {
+      clearTimeout(closeTimer);
+      menu.classList.add('open');
+      trigger.setAttribute('aria-expanded', 'true');
+    });
+ 
+    // Fermer avec délai (évite fermeture accidentelle)
+    dropdown.addEventListener('mouseleave', () => {
+      closeTimer = setTimeout(() => {
+        menu.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+      }, 200);
+    });
+ 
+    // Toggle au clic (accessibilité)
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isOpen = menu.classList.toggle('open');
+      trigger.setAttribute('aria-expanded', isOpen);
+    });
+ 
+    // Fermer au clic extérieur
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        menu.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+ 
+    // Navigation clavier (Escape)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+        trigger.focus();
+      }
+    });
+  }
+ 
+  /* ---- ACCORDION MOBILE CATÉGORIES ---- */
+  function initMobileAccordion() {
+    const accTrigger = document.querySelector('.nav-mobile-accordion-trigger');
+    const accMenu    = document.querySelector('.nav-mobile-submenu');
+    if (!accTrigger || !accMenu) return;
+ 
+    accTrigger.addEventListener('click', () => {
+      const isOpen = accMenu.classList.toggle('open');
+      accTrigger.setAttribute('aria-expanded', isOpen);
+      accTrigger.querySelector('.nav-dropdown-arrow').style.transform = isOpen ? 'rotate(180deg)' : '';
+    });
+  }
+ 
+  /* ---- READING PROGRESS BAR ---- */
   function initReadingProgress() {
     const bar = document.querySelector('.reading-progress');
     if (!bar) return;
     const update = () => {
-      const scrollTop  = window.scrollY;
-      const docHeight  = document.documentElement.scrollHeight - window.innerHeight;
-      const progress   = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-      bar.style.width  = Math.min(progress, 100) + '%';
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress  = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      bar.style.width = Math.min(progress, 100) + '%';
     };
     window.addEventListener('scroll', update, { passive: true });
     update();
   }
-
-  /* ---- FILTER BUTTONS (articles / tools page) ---- */
+ 
+  /* ---- FILTER BUTTONS ---- */
   function initFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     if (!filterBtns.length) return;
-
+ 
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         const group = btn.dataset.filterGroup || 'default';
@@ -194,7 +340,7 @@
         });
         btn.classList.add('active');
         btn.setAttribute('aria-pressed', 'true');
-
+ 
         const filter = btn.dataset.filter;
         const items  = document.querySelectorAll('[data-category]');
         items.forEach(item => {
@@ -204,7 +350,7 @@
       });
     });
   }
-
+ 
   /* ---- TOC SMOOTH SCROLL ---- */
   function initTocScroll() {
     document.querySelectorAll('.toc a[href^="#"]').forEach(link => {
@@ -218,8 +364,8 @@
       });
     });
   }
-
-  /* ---- NEWSLETTER FORM (demo feedback) ---- */
+ 
+  /* ---- NEWSLETTER FORM ---- */
   function initNewsletterForms() {
     document.querySelectorAll('.newsletter-form').forEach(form => {
       form.addEventListener('submit', (e) => {
@@ -238,13 +384,15 @@
       });
     });
   }
-
+ 
   /* ---- INIT ---- */
   document.addEventListener('DOMContentLoaded', () => {
     injectComponents();
     setActiveNavLink();
     initNavScroll();
     initBurger();
+    initDropdown();
+    initMobileAccordion();
     initReadingProgress();
     initFilters();
     initTocScroll();
