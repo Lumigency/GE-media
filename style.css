@@ -1231,14 +1231,4 @@ textarea.form-input { resize: vertical; min-height: 120px; }
   color: var(--accent, #2563eb);
   margin-top: 4px;
 }
-.category-card {
-  display: flex !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
 
-.grid-4 {
-  height: auto !important;
-  max-height: none !important;
-  overflow: visible !important;
-}
