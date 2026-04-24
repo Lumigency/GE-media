@@ -27,6 +27,34 @@
                 </svg>
               </button>
               <div class="nav-dropdown-menu" id="dropdown-categories" role="menu" aria-label="Catégories">
+                <a href="/categories#ia" class="nav-dropdown-item" role="menuitem">
+                  <span class="nav-dropdown-icon" style="background:#f0fdf4;" aria-hidden="true">🤖</span>
+                  <span class="nav-dropdown-text">
+                    <span class="nav-dropdown-title">IA &amp; Automatisation</span>
+                    <span class="nav-dropdown-desc">Outils IA, prompts, comparatifs</span>
+                  </span>
+                </a>
+                <a href="/categories#n8n" class="nav-dropdown-item" role="menuitem">
+                  <span class="nav-dropdown-icon" style="background:#fdf4ff;" aria-hidden="true">⚡</span>
+                  <span class="nav-dropdown-text">
+                    <span class="nav-dropdown-title">Workflows N8N</span>
+                    <span class="nav-dropdown-desc">Templates et tutoriels N8N</span>
+                  </span>
+                </a>
+                <a href="/categories#outils" class="nav-dropdown-item" role="menuitem">
+                  <span class="nav-dropdown-icon" style="background:#fefce8;" aria-hidden="true">🛠️</span>
+                  <span class="nav-dropdown-text">
+                    <span class="nav-dropdown-title">Outils &amp; Apps</span>
+                    <span class="nav-dropdown-desc">Comparatifs et avis honnêtes</span>
+                  </span>
+                </a>
+                <a href="/categories#business" class="nav-dropdown-item" role="menuitem">
+                  <span class="nav-dropdown-icon" style="background:#eff6ff;" aria-hidden="true">📈</span>
+                  <span class="nav-dropdown-text">
+                    <span class="nav-dropdown-title">Business &amp; Stratégie</span>
+                    <span class="nav-dropdown-desc">Systèmes, scale, productivité</span>
+                  </span>
+                </a>
                 <a href="/categorie-acquisition" class="nav-dropdown-item" role="menuitem">
                   <span class="nav-dropdown-icon" style="background:#fff7ed;" aria-hidden="true">🎯</span>
                   <span class="nav-dropdown-text">
@@ -75,6 +103,10 @@
               </svg>
             </button>
             <div class="nav-mobile-submenu" id="mobile-categories">
+              <a href="/categories#ia" class="nav-mobile-sublink" role="menuitem">🤖 IA &amp; Automatisation</a>
+              <a href="/categories#n8n" class="nav-mobile-sublink" role="menuitem">⚡ Workflows N8N</a>
+              <a href="/categories#outils" class="nav-mobile-sublink" role="menuitem">🛠️ Outils &amp; Apps</a>
+              <a href="/categories#business" class="nav-mobile-sublink" role="menuitem">📈 Business &amp; Stratégie</a>
               <a href="/categorie-acquisition" class="nav-mobile-sublink" role="menuitem">🎯 Acquisition &amp; Stratégie</a>
               <a href="/categorie-assurances-finances" class="nav-mobile-sublink" role="menuitem">💰 Finance &amp; Assurances</a>
               <a href="/categories" class="nav-mobile-sublink nav-mobile-sublink--all" role="menuitem">Toutes les catégories →</a>
@@ -118,6 +150,10 @@
           <div class="footer-col">
             <p class="footer-col-title">Catégories</p>
             <ul>
+              <li><a href="/categories#ia">IA &amp; Automatisation</a></li>
+              <li><a href="/categories#n8n">Workflows N8N</a></li>
+              <li><a href="/categories#outils">Outils &amp; Apps</a></li>
+              <li><a href="/categories#business">Business &amp; Stratégie</a></li>
               <li><a href="/categorie-acquisition">Acquisition &amp; Stratégie</a></li>
               <li><a href="/categorie-assurances-finances">Finance &amp; Assurances</a></li>
             </ul>
