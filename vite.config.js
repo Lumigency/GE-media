@@ -15,6 +15,8 @@ export default defineConfig({
         outils:     resolve(__dirname, 'outils.html'),
         newsletter: resolve(__dirname, 'newsletter.html'),
         'a-propos': resolve(__dirname, 'a-propos.html'),
+        'categorie-acquisition': resolve(__dirname, 'categorie-acquisition.html'),
+        'categorie-assurances-finances': resolve(__dirname, 'categorie-assurances-finances.html'),
       },
     },
   },
