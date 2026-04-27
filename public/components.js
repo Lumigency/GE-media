@@ -90,9 +90,7 @@
             </button>
             <div class="nav-mobile-submenu" id="mobile-categories">
               <a href="categories.html#ia" class="nav-mobile-sublink" role="menuitem">🤖 IA &amp; Automatisation</a>
-              <a href="categories.html#n8n" class="nav-mobile-sublink" role="menuitem">⚡ Workflows N8N</a>
               <a href="categories.html#outils" class="nav-mobile-sublink" role="menuitem">🛠️ Outils &amp; Apps</a>
-              <a href="categories.html#business" class="nav-mobile-sublink" role="menuitem">📈 Business &amp; Stratégie</a>
               <a href="categorie-acquisition.html" class="nav-mobile-sublink" role="menuitem">🎯 Acquisition &amp; Stratégie</a>
               <a href="categorie-assurances-finances.html" class="nav-mobile-sublink" role="menuitem">💰 Finance &amp; Assurances</a>
               <a href="categories.html" class="nav-mobile-sublink nav-mobile-sublink--all" role="menuitem">Toutes les catégories →</a>
