@@ -34,25 +34,11 @@
                     <span class="nav-dropdown-desc">Outils IA, prompts, comparatifs</span>
                   </span>
                 </a>
-                <a href="categories.html#n8n" class="nav-dropdown-item" role="menuitem">
-                  <span class="nav-dropdown-icon" style="background:#fdf4ff;" aria-hidden="true">⚡</span>
-                  <span class="nav-dropdown-text">
-                    <span class="nav-dropdown-title">Workflows N8N</span>
-                    <span class="nav-dropdown-desc">Templates et tutoriels N8N</span>
-                  </span>
-                </a>
                 <a href="categories.html#outils" class="nav-dropdown-item" role="menuitem">
                   <span class="nav-dropdown-icon" style="background:#fefce8;" aria-hidden="true">🛠️</span>
                   <span class="nav-dropdown-text">
                     <span class="nav-dropdown-title">Outils &amp; Apps</span>
                     <span class="nav-dropdown-desc">Comparatifs et avis honnêtes</span>
-                  </span>
-                </a>
-                <a href="categories.html#business" class="nav-dropdown-item" role="menuitem">
-                  <span class="nav-dropdown-icon" style="background:#eff6ff;" aria-hidden="true">📈</span>
-                  <span class="nav-dropdown-text">
-                    <span class="nav-dropdown-title">Business &amp; Stratégie</span>
-                    <span class="nav-dropdown-desc">Systèmes, scale, productivité</span>
                   </span>
                 </a>
                 <a href="categorie-acquisition.html" class="nav-dropdown-item" role="menuitem">
@@ -151,9 +137,7 @@
             <p class="footer-col-title">Catégories</p>
             <ul>
               <li><a href="categories.html#ia">IA &amp; Automatisation</a></li>
-              <li><a href="categories.html#n8n">Workflows N8N</a></li>
               <li><a href="categories.html#outils">Outils &amp; Apps</a></li>
-              <li><a href="categories.html#business">Business &amp; Stratégie</a></li>
               <li><a href="categorie-acquisition.html">Acquisition &amp; Stratégie</a></li>
               <li><a href="categorie-assurances-finances.html">Finance &amp; Assurances</a></li>
             </ul>
