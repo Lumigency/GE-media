@@ -18,4 +18,11 @@
       ]
     }
   ]
+  ,"redirects": [
+    { "source": "/cat-acquisition", "destination": "/categorie-acquisition", "permanent": true },
+    { "source": "/cat-finance", "destination": "/categorie-assurances-finances", "permanent": true },
+    { "source": "/categorie-acquisition.html", "destination": "/categorie-acquisition", "permanent": true },
+    { "source": "/categorie-assurances-finances.html", "destination": "/categorie-assurances-finances", "permanent": true }
+  ]
+
 }
