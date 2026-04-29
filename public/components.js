@@ -39,7 +39,7 @@
                 <a href="categorie-acquisition.html" class="nav-dropdown-item" role="menuitem">
                   <span class="nav-dropdown-icon" style="background:#fff7ed;" aria-hidden="true">🎯</span>
                   <span class="nav-dropdown-text">
-                    <span class="nav-dropdown-title">Acquisition</span>
+                    <span class="nav-dropdown-title">Acquisition & Growth</span>
                     <span class="nav-dropdown-desc">SEO, LinkedIn, email, tunnel de vente</span>
                   </span>
                 </a>
