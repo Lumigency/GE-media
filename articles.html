@@ -3,19 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tous les articles — IA, N8N, Automatisation | Le Guide de l'Entrepreneur</title>
-  <meta name="description" content="Parcourez tous les articles du Guide de l'Entrepreneur : comparatifs d'outils IA, workflows N8N, tutoriels d'automatisation et stratégies business pour 2025." />
+
+  <title>Tous les articles — IA, Automatisation, Outils & Business | Le Guide de l'Entrepreneur</title>
+  <meta name="description" content="Parcourez tous les articles du Guide de l'Entrepreneur : IA, automatisation, outils, acquisition marketing, finances et assurances pour entrepreneurs." />
   <link rel="canonical" href="https://leguidedelentrepreneur.vercel.app/articles" />
 
-  <meta property="og:title"       content="Tous les articles — Le Guide de l'Entrepreneur" />
-  <meta property="og:description" content="120+ articles sur l'IA, N8N, l'automatisation et les outils pour entrepreneurs." />
-  <meta property="og:image"       content="https://leguidedelentrepreneur.vercel.app/og-image.jpg" />
-  <meta property="og:url"         content="https://leguidedelentrepreneur.vercel.app/articles" />
-  <meta property="og:type"        content="website" />
-  <meta name="twitter:card"       content="summary_large_image" />
-  <meta name="twitter:title"      content="Tous les articles — Le Guide de l'Entrepreneur" />
-  <meta name="twitter:description" content="120+ articles pratiques sur l'IA et l'automatisation." />
-  <meta name="twitter:image"      content="https://leguidedelentrepreneur.vercel.app/og-image.jpg" />
+  <meta property="og:title" content="Tous les articles — Le Guide de l'Entrepreneur" />
+  <meta property="og:description" content="Guides pratiques, comparatifs et ressources sur l'IA, l'automatisation, les outils, l'acquisition et les finances pour entrepreneurs." />
+  <meta property="og:image" content="https://leguidedelentrepreneur.vercel.app/og-image.jpg" />
+  <meta property="og:url" content="https://leguidedelentrepreneur.vercel.app/articles" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tous les articles — Le Guide de l'Entrepreneur" />
+  <meta name="twitter:description" content="Tous les guides pratiques pour structurer, automatiser et développer son activité." />
+  <meta name="twitter:image" content="https://leguidedelentrepreneur.vercel.app/og-image.jpg" />
 
   <script type="application/ld+json">
   {
@@ -23,17 +25,9 @@
     "@type": "Blog",
     "@id": "https://leguidedelentrepreneur.vercel.app/articles",
     "name": "Articles — Le Guide de l'Entrepreneur",
-    "description": "Tous les articles sur l'IA, N8N, les outils et la stratégie business",
+    "description": "Tous les articles sur l'IA, l'automatisation, les outils, l'acquisition marketing, les finances et les assurances pour entrepreneurs.",
     "url": "https://leguidedelentrepreneur.vercel.app/articles",
-    "isPartOf": { "@id": "https://leguidedelentrepreneur.vercel.app/#website" },
-    "blogPost": [
-      {
-        "@type": "BlogPosting",
-        "headline": "N8N vs Make vs Zapier 2025",
-        "datePublished": "2025-04-15",
-        "url": "https://leguidedelentrepreneur.vercel.app/blog/n8n-vs-make-vs-zapier-2025"
-      }
-    ]
+    "isPartOf": { "@id": "https://leguidedelentrepreneur.vercel.app/#website" }
   }
   </script>
 
@@ -41,9 +35,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
-</head>
-<body>
 
+  <style>
+    .tag-finance { background:#f0fdfa; color:#0d9488; }
+  </style>
+</head>
+
+<body>
   <main>
     <section class="page-hero">
       <div class="container">
@@ -52,9 +50,10 @@
           <span class="breadcrumb-sep" aria-hidden="true">/</span>
           <span aria-current="page">Articles</span>
         </nav>
-        <p class="section-label" style="justify-content:center;">120+ articles publiés</p>
+
+        <p class="section-label" style="justify-content:center;">Explorer les guides</p>
         <h1>Tous les articles</h1>
-        <p>Guides pratiques, comparatifs et tutoriels pour automatiser votre business et maîtriser les outils IA.</p>
+        <p>Guides pratiques, comparatifs et ressources pour mieux utiliser l’IA, choisir vos outils, automatiser votre activité, développer votre acquisition et piloter vos finances.</p>
       </div>
     </section>
 
@@ -66,27 +65,28 @@
           <div>
             <!-- Filter bar -->
             <div class="filter-bar" role="group" aria-label="Filtrer par catégorie">
-              <button class="filter-btn active" data-filter="all"         data-filter-group="cat" aria-pressed="true">Tous les articles</button>
-              <button class="filter-btn"        data-filter="ia"          data-filter-group="cat" aria-pressed="false">🤖 Intelligence Artificielle</button>
-              <button class="filter-btn"        data-filter="outils"      data-filter-group="cat" aria-pressed="false">🛠️ Outils &amp; Apps</button>
-              <button class="filter-btn"        data-filter="acquisition" data-filter-group="cat" aria-pressed="false">🎯 Acquisition &amp; Growth</button>
-              <button class="filter-btn"        data-filter="finances"    data-filter-group="cat" aria-pressed="false">💰 Finances &amp; Assurances</button>
+              <button class="filter-btn active" data-filter="all" data-filter-group="cat" aria-pressed="true">Tous les articles</button>
+              <button class="filter-btn" data-filter="ia" data-filter-group="cat" aria-pressed="false">🤖 IA &amp; Automatisation</button>
+              <button class="filter-btn" data-filter="outils" data-filter-group="cat" aria-pressed="false">🛠️ Outils &amp; Logiciels</button>
+              <button class="filter-btn" data-filter="acquisition" data-filter-group="cat" aria-pressed="false">🎯 Acquisition &amp; Growth</button>
+              <button class="filter-btn" data-filter="finances" data-filter-group="cat" aria-pressed="false">💰 Finances &amp; Assurances</button>
             </div>
 
             <!-- Article list -->
             <div style="display:flex;flex-direction:column;gap:16px;" aria-label="Liste des articles">
-              <a href="/article" class="article-list-item" data-category="n8n">
+
+              <a href="/article" class="article-list-item" data-category="ia">
                 <div class="article-list-img">
-                  <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Comparatif outils automatisation N8N Make Zapier" width="220" height="160" loading="lazy" />
+                  <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Comparatif outils automatisation Make Zapier n8n" width="220" height="160" loading="lazy" />
                 </div>
                 <div class="article-list-body">
                   <div class="article-card-meta">
-                    <span class="tag tag-n8n">N8N</span>
+                    <span class="tag tag-ia">Automatisation</span>
                     <span class="sep" aria-hidden="true">·</span>
-                    <time datetime="2025-04-15">15 avril 2025</time>
+                    <time datetime="2026-04-15">15 avril 2026</time>
                   </div>
-                  <h3>N8N vs Make vs Zapier 2025 : Quel outil d'automatisation choisir ?</h3>
-                  <p>Comparatif exhaustif des trois leaders de l'automatisation. Tarifs, fonctionnalités, courbe d'apprentissage — on a tout testé pour vous.</p>
+                  <h3>Make vs Zapier vs n8n 2026 : quel outil d'automatisation choisir ?</h3>
+                  <p>Comparatif des principaux outils d’automatisation. Tarifs, fonctionnalités, niveau technique et cas d’usage pour entrepreneurs.</p>
                   <div class="article-list-footer">
                     <span class="read-time">⏱ 12 min de lecture</span>
                     <span class="read-more">Lire l'article <span aria-hidden="true">→</span></span>
@@ -96,16 +96,16 @@
 
               <a href="/article" class="article-list-item" data-category="ia">
                 <div class="article-list-img">
-                  <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Outils IA marketing 2025" width="220" height="160" loading="lazy" />
+                  <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Outils IA marketing 2026" width="220" height="160" loading="lazy" />
                 </div>
                 <div class="article-list-body">
                   <div class="article-card-meta">
                     <span class="tag tag-ia">IA</span>
                     <span class="sep" aria-hidden="true">·</span>
-                    <time datetime="2025-04-12">12 avril 2025</time>
+                    <time datetime="2026-04-12">12 avril 2026</time>
                   </div>
-                  <h3>Top 10 outils IA marketing pour booster votre contenu en 2025</h3>
-                  <p>Jasper, Copy.ai, Claude — les meilleurs outils IA pour le copywriting, les visuels et la stratégie de contenu testés et comparés.</p>
+                  <h3>Top 10 outils IA marketing pour booster votre contenu en 2026</h3>
+                  <p>Les meilleurs outils IA pour la rédaction, les visuels, la recherche d’idées et la stratégie de contenu.</p>
                   <div class="article-list-footer">
                     <span class="read-time">⏱ 8 min de lecture</span>
                     <span class="read-more">Lire l'article <span aria-hidden="true">→</span></span>
@@ -113,18 +113,18 @@
                 </div>
               </a>
 
-              <a href="/article" class="article-list-item" data-category="n8n">
+              <a href="/article" class="article-list-item" data-category="acquisition">
                 <div class="article-list-img">
-                  <img src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Automatisation LinkedIn prospection" width="220" height="160" loading="lazy" />
+                  <img src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Automatisation LinkedIn prospection entrepreneur" width="220" height="160" loading="lazy" />
                 </div>
                 <div class="article-list-body">
                   <div class="article-card-meta">
-                    <span class="tag tag-n8n">N8N</span>
+                    <span class="tag tag-acquisition">Acquisition</span>
                     <span class="sep" aria-hidden="true">·</span>
-                    <time datetime="2025-04-10">10 avril 2025</time>
+                    <time datetime="2026-04-10">10 avril 2026</time>
                   </div>
-                  <h3>Comment automatiser sa prospection LinkedIn avec N8N</h3>
-                  <p>Workflow complet pas à pas pour générer des leads B2B qualifiés en automatique. Connexion LinkedIn → enrichissement → CRM.</p>
+                  <h3>Comment automatiser sa prospection LinkedIn sans perdre le côté humain</h3>
+                  <p>Workflow, enrichissement de prospects, personnalisation et relances : une méthode simple pour structurer votre prospection B2B.</p>
                   <div class="article-list-footer">
                     <span class="read-time">⏱ 10 min de lecture</span>
                     <span class="read-more">Lire l'article <span aria-hidden="true">→</span></span>
@@ -140,10 +140,10 @@
                   <div class="article-card-meta">
                     <span class="tag tag-ia">IA</span>
                     <span class="sep" aria-hidden="true">·</span>
-                    <time datetime="2025-04-08">8 avril 2025</time>
+                    <time datetime="2026-04-08">8 avril 2026</time>
                   </div>
-                  <h3>Claude vs ChatGPT vs Gemini : Comparatif complet 2025</h3>
-                  <p>Lequel choisir pour votre usage professionnel ? 12 cas d'usage testés en conditions réelles avec des prompts identiques.</p>
+                  <h3>Claude vs ChatGPT vs Gemini : comparatif complet 2026</h3>
+                  <p>Quel assistant IA choisir pour votre usage professionnel ? Forces, limites et cas d’usage concrets.</p>
                   <div class="article-list-footer">
                     <span class="read-time">⏱ 9 min de lecture</span>
                     <span class="read-more">Lire l'article <span aria-hidden="true">→</span></span>
@@ -159,10 +159,10 @@
                   <div class="article-card-meta">
                     <span class="tag tag-outils">Outils</span>
                     <span class="sep" aria-hidden="true">·</span>
-                    <time datetime="2025-04-05">5 avril 2025</time>
+                    <time datetime="2026-04-05">5 avril 2026</time>
                   </div>
-                  <h3>Notion comme CRM : Le guide complet pour entrepreneurs</h3>
-                  <p>Transformez Notion en un CRM puissant avec nos templates et workflows clés en main. Pipeline de vente, suivi clients et rapports.</p>
+                  <h3>Notion comme CRM : le guide complet pour entrepreneurs</h3>
+                  <p>Transformez Notion en CRM simple pour suivre vos prospects, clients, relances et opportunités commerciales.</p>
                   <div class="article-list-footer">
                     <span class="read-time">⏱ 11 min de lecture</span>
                     <span class="read-more">Lire l'article <span aria-hidden="true">→</span></span>
@@ -170,18 +170,18 @@
                 </div>
               </a>
 
-              <a href="/article" class="article-list-item" data-category="business">
+              <a href="/article" class="article-list-item" data-category="finances">
                 <div class="article-list-img">
-                  <img src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Automatiser comptabilité IA" width="220" height="160" loading="lazy" />
+                  <img src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Automatiser comptabilité entrepreneur" width="220" height="160" loading="lazy" />
                 </div>
                 <div class="article-list-body">
                   <div class="article-card-meta">
-                    <span class="tag tag-business">Business</span>
+                    <span class="tag tag-finance">Finance</span>
                     <span class="sep" aria-hidden="true">·</span>
-                    <time datetime="2025-04-01">1 avril 2025</time>
+                    <time datetime="2026-04-01">1 avril 2026</time>
                   </div>
-                  <h3>Automatiser sa comptabilité avec l'IA : Le guide pratique</h3>
-                  <p>De la saisie automatique des factures à la génération de rapports mensuels — l'IA prend en charge votre comptabilité quotidienne.</p>
+                  <h3>Automatiser sa comptabilité : le guide pratique pour entrepreneurs</h3>
+                  <p>Factures, justificatifs, synchronisation bancaire et reporting : les bases pour mieux suivre vos finances au quotidien.</p>
                   <div class="article-list-footer">
                     <span class="read-time">⏱ 7 min de lecture</span>
                     <span class="read-more">Lire l'article <span aria-hidden="true">→</span></span>
@@ -204,28 +204,42 @@
 
           <!-- SIDEBAR -->
           <aside class="sidebar" aria-label="Barre latérale">
-            <!-- Categories widget -->
             <div class="sidebar-widget">
               <h4>Catégories</h4>
               <ul style="display:flex;flex-direction:column;gap:8px;">
-                <li><a href="/categorie-ia-automatisation" style="display:flex;align-items:center;justify-content:space-between;font-size:.9375rem;color:var(--ink-70);">🤖 Intelligence Artificielle <span class="tag tag-ia">42</span></a></li>
-                <li><a href="/categorie-outils-app"        style="display:flex;align-items:center;justify-content:space-between;font-size:.9375rem;color:var(--ink-70);">🛠️ Outils &amp; Apps <span class="tag tag-outils">25</span></a></li>
-                <li><a href="/categorie-acquisition"       style="display:flex;align-items:center;justify-content:space-between;font-size:.9375rem;color:var(--ink-70);">🎯 Acquisition &amp; Growth <span class="tag tag-acquisition">15</span></a></li>
-                <li><a href="/categorie-assurances-finances" style="display:flex;align-items:center;justify-content:space-between;font-size:.9375rem;color:var(--ink-70);">💰 Finances &amp; Assurances <span class="tag tag-acquisition">15</span></a></li>
+                <li>
+                  <a href="/categorie-ia-automatisation" style="display:flex;align-items:center;justify-content:space-between;font-size:.9375rem;color:var(--ink-70);">
+                    🤖 IA &amp; Automatisation <span class="tag tag-ia">42</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/categorie-outils-apps" style="display:flex;align-items:center;justify-content:space-between;font-size:.9375rem;color:var(--ink-70);">
+                    🛠️ Outils &amp; Logiciels <span class="tag tag-outils">25</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/categorie-acquisition" style="display:flex;align-items:center;justify-content:space-between;font-size:.9375rem;color:var(--ink-70);">
+                    🎯 Acquisition &amp; Growth <span class="tag tag-acquisition">15</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/categorie-assurances-finances" style="display:flex;align-items:center;justify-content:space-between;font-size:.9375rem;color:var(--ink-70);">
+                    💰 Finances &amp; Assurances <span class="tag tag-finance">15</span>
+                  </a>
+                </li>
               </ul>
             </div>
 
-            <!-- Popular articles -->
             <div class="sidebar-widget">
               <h4>Articles populaires</h4>
               <div class="sidebar-list">
                 <div class="sidebar-list-item">
                   <span class="sidebar-num" aria-hidden="true">1</span>
-                  <a href="/article">N8N vs Make vs Zapier 2025 : Quel outil choisir ?</a>
+                  <a href="/article">Make vs Zapier vs n8n 2026 : quel outil choisir ?</a>
                 </div>
                 <div class="sidebar-list-item">
                   <span class="sidebar-num" aria-hidden="true">2</span>
-                  <a href="/article">Claude vs ChatGPT vs Gemini : Comparatif 2025</a>
+                  <a href="/article">Claude vs ChatGPT vs Gemini : comparatif 2026</a>
                 </div>
                 <div class="sidebar-list-item">
                   <span class="sidebar-num" aria-hidden="true">3</span>
@@ -233,25 +247,25 @@
                 </div>
                 <div class="sidebar-list-item">
                   <span class="sidebar-num" aria-hidden="true">4</span>
-                  <a href="/article">Notion comme CRM : Guide complet</a>
+                  <a href="/article">Notion comme CRM : guide complet</a>
                 </div>
                 <div class="sidebar-list-item">
                   <span class="sidebar-num" aria-hidden="true">5</span>
-                  <a href="/article">Top 10 outils IA marketing 2025</a>
+                  <a href="/article">Top 10 outils IA marketing 2026</a>
                 </div>
               </div>
             </div>
 
-            <!-- Newsletter widget -->
             <div class="sidebar-widget" style="background:var(--accent-xlight);border-color:var(--accent-light);">
               <h4 style="color:var(--accent-dark);">Newsletter gratuite</h4>
-              <p style="font-size:.875rem;margin-bottom:16px;">1 workflow + 1 outil + 1 astuce IA chaque semaine. 4 800 abonnés.</p>
+              <p style="font-size:.875rem;margin-bottom:16px;">Des outils, méthodes et ressources concrètes pour entrepreneurs.</p>
               <form class="newsletter-form" style="flex-direction:column;max-width:100%;" action="#" aria-label="Inscription newsletter sidebar">
                 <input type="email" placeholder="votre@email.com" required autocomplete="email" aria-label="Adresse email" />
                 <button type="submit" class="btn btn-primary" style="margin-top:8px;justify-content:center;">S'inscrire →</button>
               </form>
             </div>
           </aside>
+
         </div>
       </div>
     </section>
