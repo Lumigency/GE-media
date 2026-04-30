@@ -37,7 +37,7 @@
                 <a href="/categorie-outils-app" class="nav-dropdown-item" role="menuitem">
                   <span class="nav-dropdown-icon" style="background:#fefce8;" aria-hidden="true">🛠️</span>
                   <span class="nav-dropdown-text">
-                    <span class="nav-dropdown-title">Outils &amp; Apps</span>
+                    <span class="nav-dropdown-title">Outils coup de ❤️ &amp; Apps</span>
                     <span class="nav-dropdown-desc">Comparatifs et avis honnêtes</span>
                   </span>
                 </a>
