@@ -4,18 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Tous les articles — IA, Automatisation, Outils & Business | Le Guide de l'Entrepreneur</title>
-  <meta name="description" content="Parcourez tous les articles du Guide de l'Entrepreneur : IA, automatisation, outils, acquisition marketing, finances et assurances pour entrepreneurs." />
+  <title>Articles Entrepreneurs 2026 | IA, Outils, Acquisition, Finances & Automatisation</title>
+  <meta name="description" content="Tous les articles pour entrepreneurs : outils IA, automatisation no-code, CRM, facturation, acquisition client, SEO, finances, assurances et productivité pour structurer son activité." />
   <link rel="canonical" href="https://leguidedelentrepreneur.vercel.app/articles" />
 
-  <meta property="og:title" content="Tous les articles — Le Guide de l'Entrepreneur" />
-  <meta property="og:description" content="Guides pratiques, comparatifs et ressources sur l'IA, l'automatisation, les outils, l'acquisition et les finances pour entrepreneurs." />
+  <meta property="og:title" content="Articles Entrepreneurs 2026 | Le Guide de l'Entrepreneur" />
+  <meta property="og:description" content="Guides pratiques, comparatifs et ressources sur l'IA, l'automatisation, les outils, l'acquisition, les finances et les assurances pour entrepreneurs." />
   <meta property="og:image" content="https://leguidedelentrepreneur.vercel.app/og-image.jpg" />
   <meta property="og:url" content="https://leguidedelentrepreneur.vercel.app/articles" />
   <meta property="og:type" content="website" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Tous les articles — Le Guide de l'Entrepreneur" />
+  <meta name="twitter:title" content="Articles Entrepreneurs 2026 | Le Guide de l'Entrepreneur" />
   <meta name="twitter:description" content="Tous les guides pratiques pour structurer, automatiser et développer son activité." />
   <meta name="twitter:image" content="https://leguidedelentrepreneur.vercel.app/og-image.jpg" />
 
@@ -38,11 +38,19 @@
 
   <style>
     .tag-finance { background:#f0fdfa; color:#0d9488; }
+
+    @media (max-width: 768px) {
+      .articles-intro-list {
+        grid-template-columns: 1fr !important;
+      }
+    }
   </style>
 </head>
 
 <body>
   <main>
+
+    <!-- ===== HERO ===== -->
     <section class="page-hero">
       <div class="container">
         <nav class="breadcrumb" aria-label="Fil d'Ariane">
@@ -52,18 +60,37 @@
         </nav>
 
         <p class="section-label" style="justify-content:center;">Explorer les guides</p>
-        <h1>Tous les articles</h1>
-        <p>Guides pratiques, comparatifs et ressources pour mieux utiliser l’IA, choisir vos outils, automatiser votre activité, développer votre acquisition et piloter vos finances.</p>
+        <h1>Articles pour entrepreneurs</h1>
+        <p>Retrouvez tous nos guides pour entrepreneurs : outils IA, automatisation no-code, CRM, facturation, acquisition client, SEO, email marketing, finances, assurances professionnelles et productivité. Des contenus pratiques pour lancer, structurer et développer votre activité.</p>
       </div>
     </section>
 
+    <!-- ===== INTRO SEO ARTICLES ===== -->
+    <section class="section section--sm" aria-labelledby="articles-intro-title">
+      <div class="container">
+        <div style="background:#f7f5f3;border:1px solid var(--ink-15);border-radius:24px;padding:32px 36px;max-width:980px;margin:0 auto;">
+          <p class="section-label">Bibliothèque entrepreneur</p>
+          <h2 id="articles-intro-title" style="margin-bottom:16px;">Des guides pratiques pour structurer votre activité</h2>
+          <p style="font-size:1.0625rem;line-height:1.75;color:var(--ink-70);margin-bottom:18px;">
+            Cette bibliothèque regroupe nos contenus dédiés aux entrepreneurs, freelances et indépendants qui veulent mieux s’organiser, automatiser leurs tâches, choisir les bons logiciels, trouver des clients et piloter leurs finances avec plus de clarté.
+          </p>
+          <ul class="articles-intro-list" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px;margin:0;padding-left:0;list-style:none;color:var(--ink-70);">
+            <li>🤖 Outils IA et automatisation no-code</li>
+            <li>🛠️ CRM, facturation et logiciels business</li>
+            <li>🎯 Acquisition client, SEO et prospection</li>
+            <li>💰 Finances, assurances pro et trésorerie</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ARTICLES LIST ===== -->
     <section class="section section--sm">
       <div class="container">
         <div class="page-with-sidebar">
 
           <!-- MAIN CONTENT -->
           <div>
-            <!-- Filter bar -->
             <div class="filter-bar" role="group" aria-label="Filtrer par catégorie">
               <button class="filter-btn active" data-filter="all" data-filter-group="cat" aria-pressed="true">Tous les articles</button>
               <button class="filter-btn" data-filter="ia" data-filter-group="cat" aria-pressed="false">🤖 IA &amp; Automatisation</button>
@@ -72,7 +99,6 @@
               <button class="filter-btn" data-filter="finances" data-filter-group="cat" aria-pressed="false">💰 Finances &amp; Assurances</button>
             </div>
 
-            <!-- Article list -->
             <div style="display:flex;flex-direction:column;gap:16px;" aria-label="Liste des articles">
 
               <a href="/article" class="article-list-item" data-category="ia">
@@ -188,9 +214,9 @@
                   </div>
                 </div>
               </a>
+
             </div>
 
-            <!-- Pagination -->
             <nav class="pagination" aria-label="Pagination">
               <button class="pagination-btn pagination-btn--wide" aria-label="Page précédente" disabled>← Précédent</button>
               <button class="pagination-btn active" aria-label="Page 1, page actuelle" aria-current="page">1</button>
