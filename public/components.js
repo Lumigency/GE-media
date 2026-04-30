@@ -67,7 +67,7 @@
             </div>
 
             <a href="articles.html" class="nav-link" role="listitem">Articles</a>
-            <a href="outils.html" class="nav-link" role="listitem">Outils</a>
+            <a href="outils.html" class="nav-link" role="listitem">Outils coup de cœur ❤️</a>
             <a href="newsletter.html" class="nav-link" role="listitem">Newsletter</a>
             <a href="a-propos.html" class="nav-link" role="listitem">À propos</a>
           </div>
@@ -104,7 +104,7 @@
           </div>
 
           <a href="articles.html" class="nav-link" role="menuitem">Articles</a>
-          <a href="outils.html" class="nav-link" role="menuitem">Outils</a>
+          <a href="outils.html" class="nav-link" role="menuitem">Outils coup de cœur ❤️</a>
           <a href="newsletter.html" class="nav-link" role="menuitem">Newsletter</a>
           <a href="a-propos.html" class="nav-link" role="menuitem">À propos</a>
           <a href="newsletter.html" class="btn btn-primary">S'abonner gratuitement</a>
@@ -134,7 +134,7 @@
             <ul>
               <li><a href="categories.html">Toutes les catégories</a></li>
               <li><a href="articles.html">Tous les articles</a></li>
-              <li><a href="outils.html">Outils recommandés</a></li>
+              <li><a href="outils.html">Outils coup de cœur ❤️s</a></li>
               <li><a href="newsletter.html">Newsletter</a></li>
             </ul>
           </div>
