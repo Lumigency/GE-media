@@ -134,7 +134,7 @@
             <ul>
               <li><a href="categories.html">Toutes les catégories</a></li>
               <li><a href="articles.html">Tous les articles</a></li>
-              <li><a href="outils.html">Outils coup de cœur ❤️s</a></li>
+              <li><a href="outils.html">Outils coup de cœur ❤️</a></li>
               <li><a href="newsletter.html">Newsletter</a></li>
             </ul>
           </div>
