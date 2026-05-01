@@ -18,7 +18,7 @@ export default defineConfig({
         'categorie-acquisition': resolve(__dirname, 'categorie-acquisition.html'),
         'categorie-assurances-finances': resolve(__dirname, 'categorie-assurances-finances.html'),
         'categorie-ia-automatisation': resolve(__dirname, 'categorie-ia-automatisation.html'),
-        'categorie-outils-app': resolve(__dirname, 'categorie-outils-app.html'),
+        'categorie-outils-logiciels': resolve(__dirname, 'categorie-outils-logiciels.html'),
       },
     },
   },
