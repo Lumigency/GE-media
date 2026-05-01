@@ -36,7 +36,7 @@
                   </span>
                 </a>
 
-                <a href="/categorie-outils-apps" class="nav-dropdown-item" role="menuitem">
+                <a href="/categorie-outils-logiciels" class="nav-dropdown-item" role="menuitem">
                   <span class="nav-dropdown-icon" style="background:#f5f3ff;" aria-hidden="true">🛠️</span>
                   <span class="nav-dropdown-text">
                     <span class="nav-dropdown-title">Outils &amp; Logiciels</span>
@@ -96,7 +96,7 @@
 
             <div class="nav-mobile-submenu" id="mobile-categories">
               <a href="/categorie-ia-automatisation" class="nav-mobile-sublink" role="menuitem">🤖 IA &amp; Automatisation</a>
-              <a href="/categorie-outils-apps" class="nav-mobile-sublink" role="menuitem">🛠️ Outils &amp; Logiciels</a>
+              <a href="/categorie-outils-logiciels" class="nav-mobile-sublink" role="menuitem">🛠️ Outils &amp; Logiciels</a>
               <a href="/categorie-acquisition" class="nav-mobile-sublink" role="menuitem">🎯 Acquisition &amp; Growth</a>
               <a href="/categorie-assurances-finances" class="nav-mobile-sublink" role="menuitem">💰 Finances &amp; Assurances</a>
               <a href="categories.html" class="nav-mobile-sublink nav-mobile-sublink--all" role="menuitem">Toutes les catégories →</a>
@@ -143,7 +143,7 @@
             <p class="footer-col-title">Catégories</p>
             <ul>
               <li><a href="/categorie-ia-automatisation">IA &amp; Automatisation</a></li>
-              <li><a href="/categorie-outils-apps">Outils &amp; Logiciels</a></li>
+              <li><a href="/categorie-outils-logiciels">Outils &amp; Logiciels</a></li>
               <li><a href="/categorie-acquisition">Acquisition &amp; Growth</a></li>
               <li><a href="/categorie-assurances-finances">Finances &amp; Assurances</a></li>
             </ul>
