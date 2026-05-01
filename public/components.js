@@ -1,6 +1,5 @@
 /* ==============================================
    LE GUIDE DE L'ENTREPRENEUR — components.js
-   Shared navbar + footer injected on every page
    ============================================== */
 
 (function () {
@@ -20,6 +19,7 @@
           <div class="nav-links" role="list">
             <a href="/" class="nav-link">Accueil</a>
 
+            <!-- Dropdown -->
             <div class="nav-dropdown">
               <button class="nav-link nav-dropdown-trigger">
                 Catégories
@@ -71,10 +71,19 @@
         <!-- MOBILE -->
         <div class="nav-mobile" id="navMobile">
           <a href="/" class="nav-link">Accueil</a>
-          <a href="/categorie-ia-automatisation" class="nav-link">IA</a>
-          <a href="/categorie-acquisition" class="nav-link">Acquisition</a>
-          <a href="/categorie-assurances-finances" class="nav-link">Finances</a>
-          <a href="/categorie-outils-logiciels" class="nav-link">Outils</a>
+
+          <div class="nav-mobile-accordion">
+            <button class="nav-link nav-mobile-accordion-trigger">
+              Catégories
+            </button>
+
+            <div class="nav-mobile-submenu">
+              <a href="/categorie-ia-automatisation" class="nav-mobile-sublink">🤖 IA</a>
+              <a href="/categorie-acquisition" class="nav-mobile-sublink">🎯 Acquisition</a>
+              <a href="/categorie-assurances-finances" class="nav-mobile-sublink">💰 Finances</a>
+              <a href="/categorie-outils-logiciels" class="nav-mobile-sublink">🛠️ Outils</a>
+            </div>
+          </div>
 
           <a href="/articles" class="nav-link">Articles</a>
           <a href="/outils" class="nav-link">Outils coup de cœur ❤️</a>
@@ -99,17 +108,27 @@
             <strong>Le Guide de l'Entrepreneur</strong>
             <p>
               Le média pour automatiser ton business,
-              trouver les bons outils et scaler intelligemment.
+              choisir les bons outils et scaler intelligemment.
             </p>
           </div>
 
           <div>
             <p><strong>Explorer</strong></p>
             <ul>
-              <li><a href="/categories">Catégories</a></li>
+              <li><a href="/categories">Toutes les catégories</a></li>
               <li><a href="/articles">Articles</a></li>
               <li><a href="/outils">Outils coup de cœur ❤️</a></li>
               <li><a href="/newsletter">Newsletter</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p><strong>Catégories</strong></p>
+            <ul>
+              <li><a href="/categorie-ia-automatisation">IA & Automatisation</a></li>
+              <li><a href="/categorie-acquisition">Acquisition</a></li>
+              <li><a href="/categorie-assurances-finances">Finances</a></li>
+              <li><a href="/categorie-outils-logiciels">Outils</a></li>
             </ul>
           </div>
 
