@@ -23,9 +23,7 @@
     { "source": "/cat-finance", "destination": "/categorie-assurances-finances", "permanent": true },
     { "source": "/categorie-acquisition.html", "destination": "/categorie-acquisition", "permanent": true },
     { "source": "/categorie-assurances-finances.html", "destination": "/categorie-assurances-finances", "permanent": true },
-    { "source": "/categorie-business-strategie", "destination": "/categorie-acquisition", "permanent": true },
-    { "source": "/categorie-business-strategie.html", "destination": "/categorie-acquisition", "permanent": true },
-    { "source": "/categorie-workflow", "destination": "/categorie-ia-automatisation", "permanent": true },
-    { "source": "/categorie-workflow.html", "destination": "/categorie-ia-automatisation", "permanent": true }
+    { "source": "/categorie-categorie-ia-automatisation", "destination": "/categorie-ia-automatisation", "permanent": true },
+    { "source": "/categorie-ia-automatisation/outils-ia-entrepreneurs.html", "destination": "/categorie-ia-automatisation/outils-ia-entrepreneurs", "permanent": true }
   ]
 }
