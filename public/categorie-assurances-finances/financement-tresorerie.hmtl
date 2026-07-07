@@ -1,1 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Financement & Trésorerie Entrepreneur | Le Guide de l'Entrepreneur</title>
+  <meta name="description" content="Prêts professionnels, aides, Bpifrance, crowdfunding, business angels, affacturage et gestion de trésorerie : guides pour financer et sécuriser son entreprise." />
+  <link rel="canonical" href="https://ge-media.vercel.app/categorie-assurances-finances/financement-tresorerie.html" />
+
+  <meta property="og:title" content="Financement & Trésorerie Entrepreneur | Le Guide de l'Entrepreneur" />
+  <meta property="og:description" content="Guides pratiques pour financer son entreprise, gérer sa trésorerie et anticiper ses besoins de cash-flow." />
+  <meta property="og:image" content="https://ge-media.vercel.app/og-image.jpg" />
+  <meta property="og:url" content="https://ge-media.vercel.app/categorie-assurances-finances/financement-tresorerie.html" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Financement & Trésorerie Entrepreneur" />
+  <meta name="twitter:description" content="Financement, aides, prêts professionnels, Bpifrance, crowdfunding et gestion de trésorerie pour entrepreneurs." />
+  <meta name="twitter:image" content="https://ge-media.vercel.app/og-image.jpg" />
+  <meta name="robots" content="index, follow" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://ge-media.vercel.app/categorie-assurances-finances/financement-tresorerie.html",
+    "name": "Financement & trésorerie — Le Guide de l'Entrepreneur",
+    "description": "Guides pratiques sur le financement d'entreprise, les prêts professionnels, les aides, Bpifrance, le crowdfunding, les business angels et la gestion de trésorerie.",
+    "url": "https://ge-media.vercel.app/categorie-assurances-finances/financement-tresorerie.html",
+    "isPartOf": { "@id": "https://ge-media.vercel.app/#website" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://ge-media.vercel.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Finances & Assurances", "item": "https://ge-media.vercel.app/categorie-assurances-finances.html" },
+        { "@type": "ListItem", "position": 3, "name": "Financement & trésorerie" }
+      ]
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+
+  <style>
+    .tag-finance { background:#f0fdfa; color:#0f766e; }
+  </style>
+</head>
+
+<body>
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="/">Accueil</a>
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
+          <a href="/categorie-assurances-finances.html">Finances &amp; Assurances</a>
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
+          <span aria-current="page">Financement &amp; trésorerie</span>
+        </nav>
+
+        <p class="section-label" style="justify-content:center;">Financement, aides & cash-flow</p>
+        <h1>Financement &amp; trésorerie</h1>
+        <p>
+          Prêts professionnels, aides à la création, Bpifrance, crowdfunding, business angels, affacturage et cash-flow : découvrez comment financer votre entreprise, anticiper vos besoins et sécuriser votre trésorerie.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--sm">
+      <div class="container">
+        <div class="page-with-sidebar">
+
+          <div>
+
+            <section aria-labelledby="intro-title" style="margin-bottom:40px;">
+              <div style="background:#f7f5f3;border:1px solid var(--ink-15);border-radius:24px;padding:32px;">
+                <p class="section-label">Financer et sécuriser son activité</p>
+                <h2 id="intro-title" style="margin-bottom:16px;">Comment financer son entreprise et gérer sa trésorerie ?</h2>
+
+                <p style="font-size:1.0625rem;line-height:1.75;color:var(--ink-70);margin-bottom:18px;">
+                  Créer ou développer une entreprise demande souvent des investissements. Entre les besoins de financement, les délais de paiement, les charges à anticiper et les périodes plus calmes, une bonne gestion de trésorerie devient rapidement indispensable.
+                </p>
+
+                <p style="font-size:1.0625rem;line-height:1.75;color:var(--ink-70);margin-bottom:0;">
+                  Cette sous-catégorie regroupe des guides pratiques pour trouver des financements, améliorer sa trésorerie, comprendre les différentes solutions disponibles et éviter les erreurs qui fragilisent de nombreuses entreprises.
+                </p>
+
+                <ul style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px;margin:24px 0 0;padding-left:0;list-style:none;color:var(--ink-70);">
+                  <li>💳 Financer son entreprise</li>
+                  <li>🏦 Obtenir un prêt professionnel</li>
+                  <li>🚀 Découvrir les aides et subventions</li>
+                  <li>📈 Piloter sa trésorerie et son cash-flow</li>
+                </ul>
+              </div>
+            </section>
+
+            <section aria-labelledby="featured-title" style="margin-bottom:40px;">
+              <div class="section-header">
+                <div>
+                  <p class="section-label">À lire en premier</p>
+                  <h2 id="featured-title">Guides pratiques pour financer son activité</h2>
+                </div>
+              </div>
+
+              <div class="grid-3">
+
+                <a href="/categorie-assurances-finances/comment-financer-son-entreprise" class="article-card">
+                  <div class="article-card-img">
+                    <img src="https://images.pexels.com/photos/4386476/pexels-photo-4386476.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Comment financer son entreprise aides prêt professionnel" width="600" height="338" loading="lazy" />
+                  </div>
+                  <div class="article-card-body">
+                    <div class="article-card-meta">
+                      <span class="tag tag-finance">Financement</span>
+                      <span class="sep" aria-hidden="true">·</span>
+                      <time datetime="2026-05-01">1 mai 2026</time>
+                    </div>
+                    <h3>Comment financer la création de son entreprise ?</h3>
+                    <p class="article-card-excerpt">Apport personnel, prêt bancaire, aides, subventions, crowdfunding : les options pour démarrer sans se perdre.</p>
+                    <div class="article-card-footer"><span>Lire →</span><span>11 min</span></div>
+                  </div>
+                </a>
+
+                <a href="/categorie-assurances-finances/aides-bpifrance-entrepreneurs" class="article-card">
+                  <div class="article-card-img">
+                    <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Aides Bpifrance entrepreneurs création entreprise financement" width="600" height="338" loading="lazy" />
+                  </div>
+                  <div class="article-card-body">
+                    <div class="article-card-meta">
+                      <span class="tag tag-finance">Bpifrance</span>
+                      <span class="sep" aria-hidden="true">·</span>
+                      <time datetime="2026-05-01">1 mai 2026</time>
+                    </div>
+                    <h3>Bpifrance : quelles aides pour les entrepreneurs ?</h3>
+                    <p class="article-card-excerpt">Subventions, garanties, prêts, accompagnement : comprendre les dispositifs utiles pour créer ou développer son activité.</p>
+                    <div class="article-card-footer"><span>Lire →</span><span>10 min</span></div>
+                  </div>
+                </a>
+
+                <a href="/categorie-assurances-finances/gerer-tresorerie-entreprise" class="article-card">
+                  <div class="article-card-img">
+                    <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gérer trésorerie entreprise cash-flow entrepreneur" width="600" height="338" loading="lazy" />
+                  </div>
+                  <div class="article-card-body">
+                    <div class="article-card-meta">
+                      <span class="tag tag-finance">Trésorerie</span>
+                      <span class="sep" aria-hidden="true">·</span>
+                      <time datetime="2026-05-01">1 mai 2026</time>
+                    </div>
+                    <h3>Comment gérer efficacement sa trésorerie ?</h3>
+                    <p class="article-card-excerpt">Cash-flow, prévisionnel, délais de paiement, charges : les bases pour éviter les tensions financières.</p>
+                    <div class="article-card-footer"><span>Lire →</span><span>9 min</span></div>
+                  </div>
+                </a>
+
+              </div>
+            </section>
+
+            <section aria-labelledby="all-guides-title">
+              <div class="section-header">
+                <div>
+                  <p class="section-label">Tous les contenus</p>
+                  <h2 id="all-guides-title">Guides financement &amp; trésorerie</h2>
+                </div>
+              </div>
+
+              <div style="display:flex;flex-direction:column;gap:16px;">
+
+                <a href="/categorie-assurances-finances/pret-professionnel-entreprise" class="article-list-item" data-category="finances">
+                  <div class="article-list-img">
+                    <img src="https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Prêt professionnel entreprise financement bancaire" width="220" height="160" loading="lazy" />
+                  </div>
+                  <div class="article-list-body">
+                    <div class="article-card-meta">
+                      <span class="tag tag-finance">Prêt pro</span>
+                      <span class="sep" aria-hidden="true">·</span>
+                      <time datetime="2026-05-01">1 mai 2026</time>
+                    </div>
+                    <h3>Prêt professionnel : comment préparer son dossier ?</h3>
+                    <p>Prévisionnel, business plan, garanties, apport : les éléments à préparer avant de demander un financement bancaire.</p>
+                    <div class="article-list-footer">
+                      <span class="read-time">⏱ 9 min de lecture</span>
+                      <span class="read-more">Lire l'article →</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="/categorie-assurances-finances/crowdfunding-entreprise" class="article-list-item" data-category="finances">
+                  <div class="article-list-img">
+                    <img src="https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Crowdfunding entreprise financement participatif entrepreneur" width="220" height="160" loading="lazy" />
+                  </div>
+                  <div class="article-list-body">
+                    <div class="article-card-meta">
+                      <span class="tag tag-finance">Crowdfunding</span>
+                      <span class="sep" aria-hidden="true">·</span>
+                      <time datetime="2026-05-01">1 mai 2026</time>
+                    </div>
+                    <h3>Crowdfunding entreprise : dans quels cas l’utiliser ?</h3>
+                    <p>Don, prêt, equity, prévente : comprendre les formes de financement participatif avant de lancer une campagne.</p>
+                    <div class="article-list-footer">
+                      <span class="read-time">⏱ 8 min de lecture</span>
+                      <span class="read-more">Lire l'article →</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="/categorie-assurances-finances/business-angels-definition" class="article-list-item" data-category="finances">
+                  <div class="article-list-img">
+                    <img src="https://images.pexels.com/photos/6476589/pexels-photo-6476589.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Business angels définition financement startup entrepreneur" width="220" height="160" loading="lazy" />
+                  </div>
+                  <div class="article-list-body">
+                    <div class="article-card-meta">
+                      <span class="tag tag-finance">Business Angels</span>
+                      <span class="sep" aria-hidden="true">·</span>
+                      <time datetime="2026-05-01">1 mai 2026</time>
+                    </div>
+                    <h3>Business angels : définition, rôle et fonctionnement</h3>
+                    <p>Quand les solliciter, ce qu’ils apportent, ce qu’ils attendent et les erreurs à éviter avant de lever des fonds.</p>
+                    <div class="article-list-footer">
+                      <span class="read-time">⏱ 10 min de lecture</span>
+                      <span class="read-more">Lire l'article →</span>
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+            </section>
+
+            <section aria-labelledby="seo-title" style="margin-top:56px;padding-top:40px;border-top:1px solid var(--ink-15);">
+              <h2 id="seo-title" style="margin-bottom:20px;">Pourquoi bien gérer sa trésorerie ?</h2>
+
+              <p style="font-size:1rem;line-height:1.8;color:var(--ink-70);margin-bottom:16px;">
+                La trésorerie représente la capacité d’une entreprise à faire face à ses dépenses quotidiennes. Même une entreprise rentable peut rencontrer des difficultés si elle manque de liquidités au bon moment.
+              </p>
+
+              <p style="font-size:1rem;line-height:1.8;color:var(--ink-70);margin-bottom:16px;">
+                Une bonne gestion du cash-flow permet d’anticiper les périodes plus complexes, de financer sa croissance et d’éviter les tensions financières. Selon votre projet, plusieurs solutions existent : prêt bancaire, aides publiques, crowdfunding, business angels ou affacturage.
+              </p>
+
+              <p style="font-size:1rem;line-height:1.8;color:var(--ink-70);margin-bottom:0;">
+                Notre conseil : suivez votre trésorerie avant d’en manquer. Le cash-flow, c’est un peu comme l’essence dans un scooter : tant qu’il y en a, tout va bien. Quand il n’y en a plus, la stratégie devient soudainement très physique.
+              </p>
+            </section>
+
+          </div>
+
+          <aside class="sidebar" aria-label="Navigation de la catégorie">
+
+            <div class="sidebar-widget">
+              <h4>Finances &amp; Assurances</h4>
+              <ul style="display:flex;flex-direction:column;gap:8px;">
+                <li><a href="/categorie-assurances-finances/banques-comptes-professionnels.html" style="display:flex;align-items:center;gap:8px;font-size:.9375rem;color:var(--ink-70);">🏦 Banques &amp; comptes professionnels</a></li>
+                <li><a href="/categorie-assurances-finances/assurances-pro.html" style="display:flex;align-items:center;gap:8px;font-size:.9375rem;color:var(--ink-70);">🛡️ Assurances professionnelles</a></li>
+                <li><a href="/categorie-assurances-finances/fiscalite-entrepreneur.html" style="display:flex;align-items:center;gap:8px;font-size:.9375rem;color:var(--ink-70);">💰 Fiscalité entrepreneur</a></li>
+                <li><a href="/categorie-assurances-finances/financement-tresorerie.html" style="display:flex;align-items:center;gap:8px;font-size:.9375rem;color:#0f766e;font-weight:600;">💳 Financement &amp; trésorerie</a></li>
+              </ul>
+            </div>
+
+            <div class="sidebar-widget">
+              <h4>À retenir</h4>
+              <div style="display:flex;flex-direction:column;gap:12px;">
+                <div style="background:#f0fdfa;border-radius:16px;padding:16px;">
+                  <strong style="display:block;color:#0f766e;margin-bottom:4px;">Angle de cette page</strong>
+                  <span style="font-size:.875rem;color:var(--ink-70);">Comprendre les solutions de financement et les bonnes pratiques de gestion de trésorerie.</span>
+                </div>
+                <div style="background:#f7f5f3;border-radius:16px;padding:16px;">
+                  <strong style="display:block;margin-bottom:4px;">Objectif</strong>
+                  <span style="font-size:.875rem;color:var(--ink-70);">Financer son activité, anticiper ses besoins de cash et éviter les tensions financières.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-widget" style="background:var(--accent-xlight);border-color:var(--accent-light);">
+              <h4 style="color:var(--accent-dark);">Découvrir les outils coup de cœur ❤️</h4>
+              <p style="font-size:.875rem;margin-bottom:16px;">
+                Retrouvez notre sélection de banques, logiciels financiers et services utiles pour développer votre entreprise.
+              </p>
+              <a href="/outils" class="btn btn-primary" style="width:100%;justify-content:center;">Voir les outils →</a>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/components.js" defer></script>
+</body>
+</html>
