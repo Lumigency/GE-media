@@ -36,14 +36,7 @@
                   </span>
                 </a>
 
-                <a href="/categorie-outils-logiciels" class="nav-dropdown-item" role="menuitem">
-                  <span class="nav-dropdown-icon" style="background:#f5f3ff;" aria-hidden="true">🛠️</span>
-                  <span class="nav-dropdown-text">
-                    <span class="nav-dropdown-title">Outils &amp; Logiciels</span>
-                    <span class="nav-dropdown-desc">CRM, facturation, productivité</span>
-                  </span>
-                </a>
-
+      
                 <a href="/categorie-acquisition" class="nav-dropdown-item" role="menuitem">
                   <span class="nav-dropdown-icon" style="background:#fff7ed;" aria-hidden="true">🎯</span>
                   <span class="nav-dropdown-text">
@@ -67,7 +60,7 @@
             </div>
 
             <a href="articles.html" class="nav-link" role="listitem">Articles</a>
-            <a href="outils.html" class="nav-link" role="listitem">Outils coup de cœur ❤️</a>
+            <a href="outils.html" class="nav-link" role="listitem">Outils coup de cœur ❤️ & Bons plans</a>
             <a href="newsletter.html" class="nav-link" role="listitem">Newsletter</a>
             <a href="a-propos.html" class="nav-link" role="listitem">À propos</a>
           </div>
