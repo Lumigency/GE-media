@@ -127,7 +127,7 @@
             <ul>
               <li><a href="categories.html">Toutes les catégories</a></li>
               <li><a href="articles.html">Tous les articles</a></li>
-              <li><a href="outils.html">Outils coup de cœur ❤️</a></li>
+              <li><a href="outils.html">Bons plans & Outils ❤️</a></li>
               <li><a href="newsletter.html">Newsletter</a></li>
             </ul>
           </div>
@@ -136,7 +136,6 @@
             <p class="footer-col-title">Catégories</p>
             <ul>
               <li><a href="/categorie-ia-automatisation">IA &amp; Automatisation</a></li>
-              <li><a href="/categorie-outils-logiciels">Outils &amp; Logiciels</a></li>
               <li><a href="/categorie-acquisition">Acquisition &amp; Growth</a></li>
               <li><a href="/categorie-assurances-finances">Finances &amp; Assurances</a></li>
             </ul>
