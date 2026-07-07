@@ -60,7 +60,7 @@
             </div>
 
             <a href="articles.html" class="nav-link" role="listitem">Articles</a>
-            <a href="outils.html" class="nav-link" role="listitem">Outils coup de cœur ❤️ & Bons plans</a>
+            <a href="outils.html" class="nav-link" role="listitem">Bons plans & Outils ❤️</a>
             <a href="newsletter.html" class="nav-link" role="listitem">Newsletter</a>
             <a href="a-propos.html" class="nav-link" role="listitem">À propos</a>
           </div>
