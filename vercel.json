@@ -5,29 +5,134 @@
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
       ]
     }
   ],
   "redirects": [
-    { "source": "/cat-acquisition", "destination": "/categorie-acquisition", "permanent": true },
-    { "source": "/cat-finance", "destination": "/categorie-assurances-finances", "permanent": true },
-    { "source": "/categorie-acquisition.html", "destination": "/categorie-acquisition", "permanent": true },
-    { "source": "/categorie-assurances-finances.html", "destination": "/categorie-assurances-finances", "permanent": true },
-    { "source": "/categorie-categorie-ia-automatisation", "destination": "/categorie-ia-automatisation", "permanent": true },
-    { "source": "/categorie-ia-automatisation/outils-ia-entrepreneurs.html", "destination": "/categorie-ia-automatisation/outils-ia-entrepreneurs", "permanent": true },
-    { "source": "/categorie-ia-automatisation/workflows-et-automatisation-no-code.html", "destination": "/categorie-ia-automatisation/workflows-et-automatisation-no-code", "permanent": true },
-    { "source": "/categorie-ia-automatisation/automatisation-administrative-business.html", "destination": "/categorie-ia-automatisation/automatisation-administrative-business", "permanent": true },
-    { "source": "/categorie-ia-automatisation/guide-entrepreneur-et-productivite.html", "destination": "/categorie-ia-automatisation/guide-entrepreneur-et-productivite", "permanent": true },
-    { "source": "/categorie-ia-automatisation/ia-generative-creation-contenu.html", "destination": "/categorie-ia-automatisation/ia-generative-creation-contenu", "permanent": true }
+    {
+      "source": "/cat-acquisition",
+      "destination": "/categorie-acquisition",
+      "permanent": true
+    },
+    {
+      "source": "/cat-finance",
+      "destination": "/categorie-assurances-finances",
+      "permanent": true
+    },
+    {
+      "source": "/categorie-acquisition.html",
+      "destination": "/categorie-acquisition",
+      "permanent": true
+    },
+    {
+      "source": "/categorie-assurances-finances.html",
+      "destination": "/categorie-assurances-finances",
+      "permanent": true
+    },
+    {
+      "source": "/categorie-categorie-ia-automatisation",
+      "destination": "/categorie-ia-automatisation",
+      "permanent": true
+    },
+    {
+      "source": "/categorie-ia-automatisation/outils-ia-entrepreneurs.html",
+      "destination": "/categorie-ia-automatisation/outils-ia-entrepreneurs",
+      "permanent": true
+    },
+    {
+      "source": "/categorie-ia-automatisation/workflows-et-automatisation-no-code.html",
+      "destination": "/categorie-ia-automatisation/workflows-et-automatisation-no-code",
+      "permanent": true
+    },
+    {
+      "source": "/categorie-ia-automatisation/automatisation-administrative-business.html",
+      "destination": "/categorie-ia-automatisation/automatisation-administrative-business",
+      "permanent": true
+    },
+    {
+      "source": "/categorie-ia-automatisation/guide-entrepreneur-et-productivite.html",
+      "destination": "/categorie-ia-automatisation/guide-entrepreneur-et-productivite",
+      "permanent": true
+    },
+    {
+      "source": "/categorie-ia-automatisation/ia-generative-creation-contenu.html",
+      "destination": "/categorie-ia-automatisation/ia-generative-creation-contenu",
+      "permanent": true
+    },
+    {
+      "source": "/guides.html",
+      "destination": "/guides",
+      "permanent": true
+    },
+    {
+      "source": "/categorie-assurances-finances/banques-compte-pro.html",
+      "destination": "/categorie-assurances-finances/banques-compte-pro",
+      "permanent": true
+    },
+    {
+      "source": "/categorie-assurances-finances/financement-tresorerie.html",
+      "destination": "/categorie-assurances-finances/financement-tresorerie",
+      "permanent": true
+    },
+    {
+      "source": "/categorie-assurances-finances/fiscalite-entrepreneur.html",
+      "destination": "/categorie-assurances-finances/fiscalite-entrepreneur",
+      "permanent": true
+    },
+    {
+      "source": "/categorie-assurances-finances/assurances-pro.html",
+      "destination": "/categorie-assurances-finances/assurances-pro",
+      "permanent": true
+    },
+    {
+      "source": "/categorie-acquisition/seo-et-strategie-contenus.html",
+      "destination": "/categorie-acquisition/seo-et-strategie-contenus",
+      "permanent": true
+    },
+    {
+      "source": "/categorie-acquisition/crm-et-automatisation.html",
+      "destination": "/categorie-acquisition/crm-et-automatisation",
+      "permanent": true
+    },
+    {
+      "source": "/categorie-acquisition/payante-et-performance.html",
+      "destination": "/categorie-acquisition/payante-et-performance",
+      "permanent": true
+    },
+    {
+      "source": "/categorie-acquisition/tunnel-de-vente-conversion.html",
+      "destination": "/categorie-acquisition/tunnel-de-vente-conversion",
+      "permanent": true
+    },
+    {
+      "source": "/categorie-acquisition/prospection-linkedin-b2b.html",
+      "destination": "/categorie-acquisition/prospection-linkedin-b2b",
+      "permanent": true
+    }
   ]
 }

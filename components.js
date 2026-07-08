@@ -11,13 +11,13 @@
     <nav id="navbar" role="navigation" aria-label="Navigation principale">
       <div class="container">
         <div class="nav-inner">
-          <a href="index.html" class="nav-logo" aria-label="Le Guide de l'Entrepreneur — Accueil">
+          <a href="/" class="nav-logo" aria-label="Le Guide de l'Entrepreneur — Accueil">
             <span class="nav-logo-icon" aria-hidden="true">GE</span>
             Le Guide de l'Entrepreneur
           </a>
 
           <div class="nav-links" role="list">
-            <a href="index.html" class="nav-link" role="listitem">Accueil</a>
+            <a href="/" class="nav-link" role="listitem">Accueil</a>
 
             <div class="nav-dropdown" role="listitem">
               <button class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-categories">
@@ -61,19 +61,19 @@
                 </a>
 
                 <div class="nav-dropdown-footer">
-                  <a href="categories.html" class="nav-dropdown-all">Voir toutes les catégories →</a>
+                  <a href="/categories" class="nav-dropdown-all">Voir toutes les catégories →</a>
                 </div>
               </div>
             </div>
 
-            <a href="articles.html" class="nav-link" role="listitem">Articles</a>
-            <a href="guides.html" class="nav-link" role="listitem">Guides</a>
-            <a href="outils.html" class="nav-link" role="listitem">Outils coup de cœur ❤️</a>
-            <a href="newsletter.html" class="nav-link" role="listitem">Newsletter</a>
-            <a href="a-propos.html" class="nav-link" role="listitem">À propos</a>
+            <a href="/articles" class="nav-link" role="listitem">Articles</a>
+            <a href="/guides" class="nav-link" role="listitem">Guides</a>
+            <a href="/outils" class="nav-link" role="listitem">Outils coup de cœur ❤️</a>
+            <a href="/newsletter" class="nav-link" role="listitem">Newsletter</a>
+            <a href="/a-propos" class="nav-link" role="listitem">À propos</a>
           </div>
 
-          <a href="newsletter.html" class="btn btn-primary btn-sm nav-cta">
+          <a href="/newsletter" class="btn btn-primary btn-sm nav-cta">
             S'abonner gratuitement
           </a>
 
@@ -85,7 +85,7 @@
         </div>
 
         <div class="nav-mobile" id="navMobile" role="menu" aria-label="Menu mobile">
-          <a href="index.html" class="nav-link" role="menuitem">Accueil</a>
+          <a href="/" class="nav-link" role="menuitem">Accueil</a>
 
           <div class="nav-mobile-accordion">
             <button class="nav-link nav-mobile-accordion-trigger" aria-expanded="false" aria-controls="mobile-categories">
@@ -100,16 +100,16 @@
               <a href="/categorie-outils-logiciels" class="nav-mobile-sublink" role="menuitem">🛠️ Outils &amp; Logiciels</a>
               <a href="/categorie-acquisition" class="nav-mobile-sublink" role="menuitem">🎯 Acquisition &amp; Growth</a>
               <a href="/categorie-assurances-finances" class="nav-mobile-sublink" role="menuitem">💰 Finances &amp; Assurances</a>
-              <a href="categories.html" class="nav-mobile-sublink nav-mobile-sublink--all" role="menuitem">Toutes les catégories →</a>
+              <a href="/categories" class="nav-mobile-sublink nav-mobile-sublink--all" role="menuitem">Toutes les catégories →</a>
             </div>
           </div>
 
-          <a href="articles.html" class="nav-link" role="menuitem">Articles</a>
-          <a href="guides.html" class="nav-link" role="menuitem">Guides</a>
-          <a href="outils.html" class="nav-link" role="menuitem">Outils coup de cœur ❤️</a>
-          <a href="newsletter.html" class="nav-link" role="menuitem">Newsletter</a>
-          <a href="a-propos.html" class="nav-link" role="menuitem">À propos</a>
-          <a href="newsletter.html" class="btn btn-primary">S'abonner gratuitement</a>
+          <a href="/articles" class="nav-link" role="menuitem">Articles</a>
+          <a href="/guides" class="nav-link" role="menuitem">Guides</a>
+          <a href="/outils" class="nav-link" role="menuitem">Outils coup de cœur ❤️</a>
+          <a href="/newsletter" class="nav-link" role="menuitem">Newsletter</a>
+          <a href="/a-propos" class="nav-link" role="menuitem">À propos</a>
+          <a href="/newsletter" class="btn btn-primary">S'abonner gratuitement</a>
         </div>
       </div>
     </nav>
@@ -121,7 +121,7 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <a href="index.html" class="footer-logo" aria-label="Accueil">
+            <a href="/" class="footer-logo" aria-label="Accueil">
               <span class="footer-logo-icon" aria-hidden="true">GE</span>
               Le Guide de l'Entrepreneur
             </a>
@@ -134,10 +134,10 @@
           <div class="footer-col">
             <p class="footer-col-title">Explorer</p>
             <ul>
-              <li><a href="categories.html">Toutes les catégories</a></li>
-              <li><a href="articles.html">Tous les articles</a></li>
-              <li><a href="outils.html">Outils coup de cœur ❤️</a></li>
-              <li><a href="newsletter.html">Newsletter</a></li>
+              <li><a href="/categories">Toutes les catégories</a></li>
+              <li><a href="/articles">Tous les articles</a></li>
+              <li><a href="/outils">Outils coup de cœur ❤️</a></li>
+              <li><a href="/newsletter">Newsletter</a></li>
             </ul>
           </div>
 
@@ -154,10 +154,10 @@
           <div class="footer-col">
             <p class="footer-col-title">Le site</p>
             <ul>
-              <li><a href="a-propos.html">À propos</a></li>
-              <li><a href="a-propos.html#contact">Contact</a></li>
-              <li><a href="a-propos.html#mentions-legales">Mentions légales</a></li>
-              <li><a href="a-propos.html#politique-affiliation">Politique d'affiliation</a></li>
+              <li><a href="/a-propos">À propos</a></li>
+              <li><a href="/a-propos#contact">Contact</a></li>
+              <li><a href="/a-propos#mentions-legales">Mentions légales</a></li>
+              <li><a href="/a-propos#politique-affiliation">Politique d'affiliation</a></li>
             </ul>
           </div>
         </div>
@@ -165,9 +165,9 @@
         <div class="footer-bottom">
           <p class="footer-copy">© 2026 Le Guide de l'Entrepreneur. Tous droits réservés.</p>
           <nav class="footer-legal" aria-label="Liens légaux">
-            <a href="a-propos.html#mentions-legales">Mentions légales</a>
-            <a href="a-propos.html#politique-affiliation">Affiliation</a>
-            <a href="a-propos.html#rgpd">RGPD</a>
+            <a href="/a-propos#mentions-legales">Mentions légales</a>
+            <a href="/a-propos#politique-affiliation">Affiliation</a>
+            <a href="/a-propos#rgpd">RGPD</a>
           </nav>
         </div>
       </div>
