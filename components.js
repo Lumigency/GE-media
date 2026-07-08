@@ -105,6 +105,7 @@
           </div>
 
           <a href="articles.html" class="nav-link" role="menuitem">Articles</a>
+          <a href="guides.html" class="nav-link" role="menuitem">Guides</a>
           <a href="outils.html" class="nav-link" role="menuitem">Outils coup de cœur ❤️</a>
           <a href="newsletter.html" class="nav-link" role="menuitem">Newsletter</a>
           <a href="a-propos.html" class="nav-link" role="menuitem">À propos</a>
@@ -333,7 +334,8 @@
         const items = document.querySelectorAll('[data-category]');
 
         items.forEach(item => {
-          const show = filter === 'all' || item.dataset.category === filter;
+          const categories = (item.dataset.category || '').split(/\s+/).filter(Boolean);
+          const show = filter === 'all' || categories.includes(filter);
           item.style.display = show ? '' : 'none';
         });
       });

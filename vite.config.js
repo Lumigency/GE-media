@@ -11,7 +11,7 @@ export default defineConfig({
         main:       resolve(__dirname, 'index.html'),
         categories: resolve(__dirname, 'categories.html'),
         articles:   resolve(__dirname, 'articles.html'),
-        article:    resolve(__dirname, 'article.html'),
+        guides:    resolve(__dirname, 'guides.html'),
         outils:     resolve(__dirname, 'outils.html'),
         newsletter: resolve(__dirname, 'newsletter.html'),
         'a-propos': resolve(__dirname, 'a-propos.html'),
