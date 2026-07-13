@@ -28,7 +28,7 @@
               </button>
 
               <div class="nav-dropdown-menu" id="dropdown-categories" role="menu" aria-label="Catégories">
-                <a href="/categorie-ia-automatisation" class="nav-dropdown-item" role="menuitem">
+                <a href="/ia-automatisation" class="nav-dropdown-item" role="menuitem">
                   <span class="nav-dropdown-icon" style="background:#eef2ff;" aria-hidden="true">🤖</span>
                   <span class="nav-dropdown-text">
                     <span class="nav-dropdown-title">IA &amp; Automatisation</span>
@@ -37,7 +37,7 @@
                 </a>
 
       
-                <a href="/categorie-acquisition" class="nav-dropdown-item" role="menuitem">
+                <a href="/acquisition-growth" class="nav-dropdown-item" role="menuitem">
                   <span class="nav-dropdown-icon" style="background:#fff7ed;" aria-hidden="true">🎯</span>
                   <span class="nav-dropdown-text">
                     <span class="nav-dropdown-title">Acquisition &amp; Growth</span>
@@ -45,7 +45,7 @@
                   </span>
                 </a>
 
-                <a href="/categorie-assurances-finances" class="nav-dropdown-item" role="menuitem">
+                <a href="/finance-assurances" class="nav-dropdown-item" role="menuitem">
                   <span class="nav-dropdown-icon" style="background:#f0fdfa;" aria-hidden="true">💰</span>
                   <span class="nav-dropdown-text">
                     <span class="nav-dropdown-title">Finances &amp; Assurances</span>
@@ -88,15 +88,13 @@
             </button>
 
             <div class="nav-mobile-submenu" id="mobile-categories">
-              <a href="/categorie-ia-automatisation" class="nav-mobile-sublink" role="menuitem">🤖 IA &amp; Automatisation</a>
-              <a href="/categorie-outils-logiciels" class="nav-mobile-sublink" role="menuitem">🛠️ Outils &amp; Logiciels</a>
-              <a href="/categorie-acquisition" class="nav-mobile-sublink" role="menuitem">🎯 Acquisition &amp; Growth</a>
-              <a href="/categorie-assurances-finances" class="nav-mobile-sublink" role="menuitem">💰 Finances &amp; Assurances</a>
+              <a href="/ia-automatisation" class="nav-mobile-sublink" role="menuitem">🤖 IA &amp; Automatisation</a>
+              <a href="/acquisition-growth" class="nav-mobile-sublink" role="menuitem">🎯 Acquisition &amp; Growth</a>
+              <a href="/finance-assurances" class="nav-mobile-sublink" role="menuitem">💰 Finances &amp; Assurances</a>
               <a href="/categories" class="nav-mobile-sublink nav-mobile-sublink--all" role="menuitem">Toutes les catégories →</a>
             </div>
           </div>
 
-          <a href="/articles" class="nav-link" role="menuitem">Articles</a>
           <a href="/guides" class="nav-link" role="menuitem">Guides</a>
           <a href="/outils" class="nav-link" role="menuitem">Outils coup de cœur ❤️</a>
           <a href="/newsletter" class="nav-link" role="menuitem">Newsletter</a>
@@ -127,7 +125,7 @@
             <p class="footer-col-title">Explorer</p>
             <ul>
               <li><a href="/categories">Toutes les catégories</a></li>
-              <li><a href="/articles">Tous les articles</a></li>
+              <li><a href="/guides">Tous les guides</a></li>
               <li><a href="/outils">Bons plans & Outils ❤️</a></li>
               <li><a href="/newsletter">Newsletter</a></li>
             </ul>
@@ -136,9 +134,9 @@
           <div class="footer-col">
             <p class="footer-col-title">Catégories</p>
             <ul>
-              <li><a href="/categorie-ia-automatisation">IA &amp; Automatisation</a></li>
-              <li><a href="/categorie-acquisition">Acquisition &amp; Growth</a></li>
-              <li><a href="/categorie-assurances-finances">Finances &amp; Assurances</a></li>
+              <li><a href="/ia-automatisation">IA &amp; Automatisation</a></li>
+              <li><a href="/acquisition-growth">Acquisition &amp; Growth</a></li>
+              <li><a href="/finance-assurances">Finances &amp; Assurances</a></li>
             </ul>
           </div>
 

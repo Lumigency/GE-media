@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://leguidedelentrepreneur.vercel.app/sitemap.xml
+Sitemap: https://ge-media.vercel.app/sitemap.xml
