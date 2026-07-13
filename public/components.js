@@ -11,9 +11,9 @@
     <nav id="navbar" role="navigation" aria-label="Navigation principale">
       <div class="container">
         <div class="nav-inner">
-          <a href="/" class="nav-logo" aria-label="Le Guide de l'Entrepreneur — Accueil">
+          <a href="/" class="nav-logo" aria-label="GE Media — Accueil">
             <span class="nav-logo-icon" aria-hidden="true">GE</span>
-            Le Guide de l'Entrepreneur
+            GE Media
           </a>
 
           <div class="nav-links" role="list">
@@ -48,7 +48,7 @@
                 <a href="/finance-assurances" class="nav-dropdown-item" role="menuitem">
                   <span class="nav-dropdown-icon" style="background:#f0fdfa;" aria-hidden="true">💰</span>
                   <span class="nav-dropdown-text">
-                    <span class="nav-dropdown-title">Finances &amp; Assurances</span>
+                    <span class="nav-dropdown-title">Finance &amp; Assurances</span>
                     <span class="nav-dropdown-desc">Comptabilité, fiscalité, RC pro</span>
                   </span>
                 </a>
@@ -59,8 +59,7 @@
               </div>
             </div>
 
-            <a href="/guides" class="nav-link" role="listitem">Guides </a>
-            <a href="/outils" class="nav-link" role="listitem">Bons plans & Outils ❤️</a>
+            <a href="/outils" class="nav-link" role="listitem">Bons plans &amp; Outils</a>
             <a href="/newsletter" class="nav-link" role="listitem">Newsletter</a>
             <a href="/a-propos" class="nav-link" role="listitem">À propos</a>
           </div>
@@ -95,8 +94,7 @@
             </div>
           </div>
 
-          <a href="/guides" class="nav-link" role="menuitem">Guides</a>
-          <a href="/outils" class="nav-link" role="menuitem">Outils coup de cœur ❤️</a>
+          <a href="/outils" class="nav-link" role="menuitem">Bons plans &amp; Outils</a>
           <a href="/newsletter" class="nav-link" role="menuitem">Newsletter</a>
           <a href="/a-propos" class="nav-link" role="menuitem">À propos</a>
           <a href="/newsletter" class="btn btn-primary">S'abonner gratuitement</a>
@@ -111,23 +109,17 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <a href="/" class="footer-logo" aria-label="Accueil">
+            <a href="/" class="footer-logo" aria-label="Accueil GE Media">
               <span class="footer-logo-icon" aria-hidden="true">GE</span>
-              Le Guide de l'Entrepreneur
+              GE Media
             </a>
             <p class="footer-desc">
-              Le média pratique pour les entrepreneurs qui veulent mieux utiliser l’IA,
-              automatiser leur activité, choisir les bons outils et développer leur acquisition.
+              GE Media accompagne les entrepreneurs, freelances et PME avec des guides, comparatifs et analyses consacrés à l’intelligence artificielle, à l’acquisition, aux logiciels professionnels, à la finance et aux assurances.
             </p>
-          </div>
-
-          <div class="footer-col">
-            <p class="footer-col-title">Explorer</p>
             <ul>
-              <li><a href="/categories">Toutes les catégories</a></li>
-              <li><a href="/guides">Tous les guides</a></li>
-              <li><a href="/outils">Bons plans & Outils ❤️</a></li>
               <li><a href="/newsletter">Newsletter</a></li>
+              <li><a href="/a-propos">À propos</a></li>
+              <li><a href="/a-propos#contact">Contact</a></li>
             </ul>
           </div>
 
@@ -136,7 +128,20 @@
             <ul>
               <li><a href="/ia-automatisation">IA &amp; Automatisation</a></li>
               <li><a href="/acquisition-growth">Acquisition &amp; Growth</a></li>
-              <li><a href="/finance-assurances">Finances &amp; Assurances</a></li>
+              <li><a href="/finance-assurances">Finance &amp; Assurances</a></li>
+              <li><a href="/guides">Tous les guides</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <p class="footer-col-title">Guides incontournables</p>
+            <ul>
+              <li><a href="/ia-automatisation/meilleurs-outils-ia">Meilleurs outils IA</a></li>
+              <li><a href="/ia-automatisation/automatiser-son-entreprise">Automatiser son entreprise</a></li>
+              <li><a href="/acquisition-growth/crm/meilleur-crm-pme">Meilleur CRM pour PME</a></li>
+              <li><a href="/acquisition-growth/email-marketing/meilleur-logiciel-emailing">Meilleur logiciel emailing</a></li>
+              <li><a href="/finance-assurances/banques-professionnelles/meilleure-banque-professionnelle">Meilleure banque professionnelle</a></li>
+              <li><a href="/finance-assurances/assurance-professionnelle/meilleure-assurance-professionnelle">Meilleure assurance professionnelle</a></li>
             </ul>
           </div>
 
@@ -147,15 +152,16 @@
               <li><a href="/a-propos#contact">Contact</a></li>
               <li><a href="/a-propos#mentions-legales">Mentions légales</a></li>
               <li><a href="/a-propos#politique-affiliation">Politique d'affiliation</a></li>
+              <li><a href="/a-propos#rgpd">RGPD</a></li>
             </ul>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p class="footer-copy">© 2026 Le Guide de l'Entrepreneur. Tous droits réservés.</p>
+          <p class="footer-copy">© 2026 GE Media. Tous droits réservés.</p>
           <nav class="footer-legal" aria-label="Liens légaux">
             <a href="/a-propos#mentions-legales">Mentions légales</a>
-            <a href="/a-propos#politique-affiliation">Affiliation</a>
+            <a href="/a-propos#politique-affiliation">Politique d’affiliation</a>
             <a href="/a-propos#rgpd">RGPD</a>
           </nav>
         </div>
@@ -198,9 +204,14 @@
       }
     });
 
-    if (path.includes('/categorie-') || path.includes('/categories')) {
+    const categoryPaths = ['/ia-automatisation', '/acquisition-growth', '/finance-assurances', '/categories'];
+    const isCategoryPath = categoryPaths.some(categoryPath => path === categoryPath || path.startsWith(`${categoryPath}/`));
+    if (isCategoryPath) {
       const trigger = document.querySelector('.nav-dropdown-trigger');
-      if (trigger) trigger.classList.add('active');
+      if (trigger) {
+        trigger.classList.add('active');
+        trigger.setAttribute('aria-current', 'page');
+      }
     }
   }
 
