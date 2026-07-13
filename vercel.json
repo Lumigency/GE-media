@@ -378,6 +378,36 @@
       "source": "/acquisition-growth/prospection-linkedin-b2b.html",
       "destination": "/acquisition-growth/prospection-linkedin-b2b",
       "permanent": true
+    },
+    {
+      "source": "/ia-automatisation/meilleurs-outils-ia.html",
+      "destination": "/ia-automatisation/meilleurs-outils-ia",
+      "permanent": true
+    },
+    {
+      "source": "/ia-automatisation/automatiser-son-entreprise.html",
+      "destination": "/ia-automatisation/automatiser-son-entreprise",
+      "permanent": true
+    },
+    {
+      "source": "/acquisition-growth/crm/meilleur-crm-pme.html",
+      "destination": "/acquisition-growth/crm/meilleur-crm-pme",
+      "permanent": true
+    },
+    {
+      "source": "/acquisition-growth/email-marketing/meilleur-logiciel-emailing.html",
+      "destination": "/acquisition-growth/email-marketing/meilleur-logiciel-emailing",
+      "permanent": true
+    },
+    {
+      "source": "/finance-assurances/banques-professionnelles/meilleure-banque-professionnelle.html",
+      "destination": "/finance-assurances/banques-professionnelles/meilleure-banque-professionnelle",
+      "permanent": true
+    },
+    {
+      "source": "/finance-assurances/assurance-professionnelle/meilleure-assurance-professionnelle.html",
+      "destination": "/finance-assurances/assurance-professionnelle/meilleure-assurance-professionnelle",
+      "permanent": true
     }
   ]
 }
