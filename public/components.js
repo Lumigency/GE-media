@@ -62,7 +62,7 @@
             <span class="nav-dot" aria-hidden="true">·</span>
             <a href="/acquisition-growth" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true">🎯</span>Growth</a>
             <span class="nav-dot" aria-hidden="true">·</span>
-            <a href="/argent-tresorerie" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true">💰</span>Argent</a>
+            <a href="/finance-assurances" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true">💰</span>Argent</a>
             <span class="nav-dot" aria-hidden="true">·</span>
             <a href="/la-jauge" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true">🧠</span>La Jauge</a>
           </div>
