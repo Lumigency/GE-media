@@ -98,7 +98,7 @@
             <div class="nav-mobile-submenu" id="mobile-categories">
               <a href="/outils-ia" class="nav-mobile-sublink" role="menuitem">🤖 Outils &amp; IA</a>
               <a href="/acquisition-growth" class="nav-mobile-sublink" role="menuitem">🎯 Acquisition &amp; Growth</a>
-              <a href="/argent-tresorerie" class="nav-mobile-sublink" role="menuitem">💰 Argent &amp; Trésorerie</a>
+              <a href="/finance-assurances" class="nav-mobile-sublink" role="menuitem">💰 Argent &amp; Trésorerie</a>
               <a href="/la-jauge" class="nav-mobile-sublink" role="menuitem">🧠 La Jauge</a>
               <a href="/categories" class="nav-mobile-sublink nav-mobile-sublink--all" role="menuitem">Toutes les jauges →</a>
             </div>
