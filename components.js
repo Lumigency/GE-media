@@ -1,5 +1,5 @@
 /* ==============================================
-   LE GUIDE DE L'ENTREPRENEUR — components.js
+   JAUGE — components.js
    Shared navbar + footer injected on every page
    ============================================== */
 
@@ -11,9 +11,9 @@
     <nav id="navbar" role="navigation" aria-label="Navigation principale">
       <div class="container">
         <div class="nav-inner">
-          <a href="/" class="nav-logo" aria-label="GE Media — Accueil">
-            <span class="nav-logo-icon" aria-hidden="true">GE</span>
-            GE Media
+          <a href="/" class="nav-logo" aria-label="Jauge — Accueil">
+            <span class="nav-logo-icon" aria-hidden="true">J</span>
+            Jauge
           </a>
 
           <div class="nav-links" role="list">
@@ -21,51 +21,59 @@
 
             <div class="nav-dropdown" role="listitem">
               <button class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-categories">
-                Catégories
+                Les jauges
                 <svg class="nav-dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                   <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
 
-              <div class="nav-dropdown-menu" id="dropdown-categories" role="menu" aria-label="Catégories">
-                <a href="/ia-automatisation" class="nav-dropdown-item" role="menuitem">
-                  <span class="nav-dropdown-icon" style="background:#eef2ff;" aria-hidden="true">🤖</span>
+              <div class="nav-dropdown-menu" id="dropdown-categories" role="menu" aria-label="Les jauges">
+                <a href="/outils-ia" class="nav-dropdown-item" role="menuitem">
+                  <span class="nav-dropdown-icon" style="background:#FFE0D6;" aria-hidden="true">🤖</span>
                   <span class="nav-dropdown-text">
-                    <span class="nav-dropdown-title">IA &amp; Automatisation</span>
-                    <span class="nav-dropdown-desc">Outils IA, workflows, no-code</span>
+                    <span class="nav-dropdown-title">Outils &amp; IA</span>
+                    <span class="nav-dropdown-desc">Testé, pas hypé</span>
                   </span>
                 </a>
 
       
                 <a href="/acquisition-growth" class="nav-dropdown-item" role="menuitem">
-                  <span class="nav-dropdown-icon" style="background:#fff7ed;" aria-hidden="true">🎯</span>
+                  <span class="nav-dropdown-icon" style="background:#EEFAC7;" aria-hidden="true">🎯</span>
                   <span class="nav-dropdown-text">
                     <span class="nav-dropdown-title">Acquisition &amp; Growth</span>
-                    <span class="nav-dropdown-desc">SEO, prospection, conversion</span>
+                    <span class="nav-dropdown-desc">Les vrais chiffres</span>
                   </span>
                 </a>
 
-                <a href="/finance-assurances" class="nav-dropdown-item" role="menuitem">
-                  <span class="nav-dropdown-icon" style="background:#f0fdfa;" aria-hidden="true">💰</span>
+                <a href="/argent-tresorerie" class="nav-dropdown-item" role="menuitem">
+                  <span class="nav-dropdown-icon" style="background:#e7e5de;" aria-hidden="true">💰</span>
                   <span class="nav-dropdown-text">
-                    <span class="nav-dropdown-title">Finance &amp; Assurances</span>
-                    <span class="nav-dropdown-desc">Comptabilité, fiscalité, RC pro</span>
+                    <span class="nav-dropdown-title">Argent &amp; Trésorerie</span>
+                    <span class="nav-dropdown-desc">Sans langue de bois</span>
+                  </span>
+                </a>
+
+                <a href="/la-jauge" class="nav-dropdown-item" role="menuitem">
+                  <span class="nav-dropdown-icon" style="background:#FDF3D9;" aria-hidden="true">🧠</span>
+                  <span class="nav-dropdown-text">
+                    <span class="nav-dropdown-title">La Jauge</span>
+                    <span class="nav-dropdown-desc">La tête, pour de vrai</span>
                   </span>
                 </a>
 
                 <div class="nav-dropdown-footer">
-                  <a href="/categories" class="nav-dropdown-all">Voir toutes les catégories →</a>
+                  <a href="/categories" class="nav-dropdown-all">Voir toutes les jauges →</a>
                 </div>
               </div>
             </div>
 
-            <a href="/outils" class="nav-link" role="listitem">Bons plans &amp; Outils</a>
+            <a href="/outils" class="nav-link" role="listitem">Outils testés</a>
             <a href="/newsletter" class="nav-link" role="listitem">Newsletter</a>
             <a href="/a-propos" class="nav-link" role="listitem">À propos</a>
           </div>
 
           <a href="/newsletter" class="btn btn-primary btn-sm nav-cta">
-            S'abonner gratuitement
+            Rejoindre la newsletter
           </a>
 
           <button class="nav-burger" id="navBurger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMobile">
@@ -80,24 +88,25 @@
 
           <div class="nav-mobile-accordion">
             <button class="nav-link nav-mobile-accordion-trigger" aria-expanded="false" aria-controls="mobile-categories">
-              Catégories
+              Les jauges
               <svg class="nav-dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                 <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
 
             <div class="nav-mobile-submenu" id="mobile-categories">
-              <a href="/ia-automatisation" class="nav-mobile-sublink" role="menuitem">🤖 IA &amp; Automatisation</a>
+              <a href="/outils-ia" class="nav-mobile-sublink" role="menuitem">🤖 Outils &amp; IA</a>
               <a href="/acquisition-growth" class="nav-mobile-sublink" role="menuitem">🎯 Acquisition &amp; Growth</a>
-              <a href="/finance-assurances" class="nav-mobile-sublink" role="menuitem">💰 Finances &amp; Assurances</a>
-              <a href="/categories" class="nav-mobile-sublink nav-mobile-sublink--all" role="menuitem">Toutes les catégories →</a>
+              <a href="/argent-tresorerie" class="nav-mobile-sublink" role="menuitem">💰 Argent &amp; Trésorerie</a>
+              <a href="/la-jauge" class="nav-mobile-sublink" role="menuitem">🧠 La Jauge</a>
+              <a href="/categories" class="nav-mobile-sublink nav-mobile-sublink--all" role="menuitem">Toutes les jauges →</a>
             </div>
           </div>
 
-          <a href="/outils" class="nav-link" role="menuitem">Bons plans &amp; Outils</a>
+          <a href="/outils" class="nav-link" role="menuitem">Outils testés</a>
           <a href="/newsletter" class="nav-link" role="menuitem">Newsletter</a>
           <a href="/a-propos" class="nav-link" role="menuitem">À propos</a>
-          <a href="/newsletter" class="btn btn-primary">S'abonner gratuitement</a>
+          <a href="/newsletter" class="btn btn-primary">Rejoindre la newsletter</a>
         </div>
       </div>
     </nav>
@@ -109,12 +118,12 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <a href="/" class="footer-logo" aria-label="Accueil GE Media">
-              <span class="footer-logo-icon" aria-hidden="true">GE</span>
-              GE Media
+            <a href="/" class="footer-logo" aria-label="Accueil Jauge">
+              <span class="footer-logo-icon" aria-hidden="true">J</span>
+              Jauge
             </a>
             <p class="footer-desc">
-              GE Media accompagne les entrepreneurs, freelances et PME avec des guides, comparatifs et analyses consacrés à l’intelligence artificielle, à l’acquisition, aux logiciels professionnels, à la finance et aux assurances.
+              Jauge parle de trésorerie, d'outils IA, d'acquisition client et de charge mentale d'entrepreneur. Des avis tranchés, pas des tops génériques.
             </p>
             <ul>
               <li><a href="/newsletter">Newsletter</a></li>
@@ -124,24 +133,25 @@
           </div>
 
           <div class="footer-col">
-            <p class="footer-col-title">Catégories</p>
+            <p class="footer-col-title">Les jauges</p>
             <ul>
-              <li><a href="/ia-automatisation">IA &amp; Automatisation</a></li>
+              <li><a href="/outils-ia">Outils &amp; IA</a></li>
               <li><a href="/acquisition-growth">Acquisition &amp; Growth</a></li>
-              <li><a href="/finance-assurances">Finance &amp; Assurances</a></li>
-              <li><a href="/guides">Tous les guides</a></li>
+              <li><a href="/argent-tresorerie">Argent &amp; Trésorerie</a></li>
+              <li><a href="/la-jauge">La Jauge</a></li>
+              <li><a href="/guides">Tous les articles</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
-            <p class="footer-col-title">Guides incontournables</p>
+            <p class="footer-col-title">Articles incontournables</p>
             <ul>
-              <li><a href="/ia-automatisation/meilleurs-outils-ia">Meilleurs outils IA</a></li>
-              <li><a href="/ia-automatisation/automatiser-son-entreprise">Automatiser son entreprise</a></li>
+              <li><a href="/outils-ia/meilleurs-outils-ia">Meilleurs outils IA</a></li>
+              <li><a href="/outils-ia/automatiser-son-entreprise">Automatiser son entreprise</a></li>
               <li><a href="/acquisition-growth/crm/meilleur-crm-pme">Meilleur CRM pour PME</a></li>
               <li><a href="/acquisition-growth/email-marketing/meilleur-logiciel-emailing">Meilleur logiciel emailing</a></li>
-              <li><a href="/finance-assurances/banques-professionnelles/meilleure-banque-professionnelle">Meilleure banque professionnelle</a></li>
-              <li><a href="/finance-assurances/assurance-professionnelle/meilleure-assurance-professionnelle">Meilleure assurance professionnelle</a></li>
+              <li><a href="/argent-tresorerie/banques-professionnelles/meilleure-banque-professionnelle">Meilleure banque professionnelle</a></li>
+              <li><a href="/la-jauge/charge-mentale-entrepreneur">La charge mentale, ça se travaille</a></li>
             </ul>
           </div>
 
@@ -158,7 +168,7 @@
         </div>
 
         <div class="footer-bottom">
-          <p class="footer-copy">© 2026 GE Media. Tous droits réservés.</p>
+          <p class="footer-copy">© 2026 Jauge. Tous droits réservés.</p>
           <nav class="footer-legal" aria-label="Liens légaux">
             <a href="/a-propos#mentions-legales">Mentions légales</a>
             <a href="/a-propos#politique-affiliation">Politique d’affiliation</a>
