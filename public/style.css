@@ -386,7 +386,7 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
   color: inherit;
   transition: background 0.15s;
 }
-.nav-dropdown-item:hover { background: var(--bg); }
+.nav-dropdown-item:hover { background: #f4f2ee; }
 
 .nav-dropdown-icon {
   width: 38px;
@@ -1229,3 +1229,15 @@ textarea.form-input { resize: vertical; min-height: 120px; }
   .newsletter-form { flex-direction: column; }
   .newsletter-form input[type="email"] { min-width: unset; }
 }
+
+/* ---- 33. LEGACY LIGHT CONTENT BOXES (inline-styled, pre-dark-mode) ---- */
+/* These are ad-hoc light-tinted boxes written directly in page HTML (background:#fff7ed etc.)
+   from before the site went dark-first. They have no explicit text color, so they inherited
+   the old dark-on-light default. Now that the global default is light-on-dark, force dark
+   text back inside any element whose inline style still sets one of these light backgrounds. */
+[style*="background:#fff7ed"], [style*="background:#f0fdfa"], [style*="background:#eef2ff"], [style*="background:#f5f3ff"], [style*="background:#f7f5f3"], [style*="background:white"], [style*="background:#ffffff"], [style*="background:#fff"] { color: var(--ink); }
+[style*="background:#fff7ed"] h1, [style*="background:#f0fdfa"] h1, [style*="background:#eef2ff"] h1, [style*="background:#f5f3ff"] h1, [style*="background:#f7f5f3"] h1, [style*="background:white"] h1, [style*="background:#ffffff"] h1, [style*="background:#fff"] h1 { color: var(--ink); }
+[style*="background:#fff7ed"] h2, [style*="background:#f0fdfa"] h2, [style*="background:#eef2ff"] h2, [style*="background:#f5f3ff"] h2, [style*="background:#f7f5f3"] h2, [style*="background:white"] h2, [style*="background:#ffffff"] h2, [style*="background:#fff"] h2 { color: var(--ink); }
+[style*="background:#fff7ed"] h3, [style*="background:#f0fdfa"] h3, [style*="background:#eef2ff"] h3, [style*="background:#f5f3ff"] h3, [style*="background:#f7f5f3"] h3, [style*="background:white"] h3, [style*="background:#ffffff"] h3, [style*="background:#fff"] h3 { color: var(--ink); }
+[style*="background:#fff7ed"] h4, [style*="background:#f0fdfa"] h4, [style*="background:#eef2ff"] h4, [style*="background:#f5f3ff"] h4, [style*="background:#f7f5f3"] h4, [style*="background:white"] h4, [style*="background:#ffffff"] h4, [style*="background:#fff"] h4 { color: var(--ink); }
+[style*="background:#fff7ed"] p, [style*="background:#f0fdfa"] p, [style*="background:#eef2ff"] p, [style*="background:#f5f3ff"] p, [style*="background:#f7f5f3"] p, [style*="background:white"] p, [style*="background:#ffffff"] p, [style*="background:#fff"] p { color: var(--ink); }
