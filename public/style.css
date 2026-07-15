@@ -589,14 +589,16 @@ p  { line-height: 1.7; color: var(--ink-70); }
   flex-direction: column;
   gap: 12px;
   padding: 28px;
-  background: var(--white);
-  border: 1px solid var(--ink-15);
+  background: var(--dark-card);
+  border: 1px solid rgba(255,255,255,.08);
   border-radius: var(--radius-lg);
-  transition: box-shadow .25s, transform .25s;
+  transition: box-shadow .25s, transform .25s, border-color .25s;
   text-decoration: none;
-  color: inherit;
+  color: var(--white);
 }
-.category-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.category-card:hover { box-shadow: 0 10px 32px rgba(0,0,0,.35); transform: translateY(-3px); border-color: rgba(255,92,57,.35); }
+.category-card h3 { color: var(--white); }
+.category-card > p { color: rgba(255,255,255,.55); }
 .category-card-icon {
   width: 48px; height: 48px;
   border-radius: var(--radius);
@@ -616,6 +618,16 @@ p  { line-height: 1.7; color: var(--ink-70); }
   transition: gap .2s;
 }
 .category-card:hover .category-card-arrow { gap: 10px; }
+
+/* La Jauge card: light/cream contrast against the 3 dark category cards */
+.category-card--jauge {
+  background: #F4F1EC;
+  border-color: #ECE6DA;
+  color: var(--ink);
+}
+.category-card--jauge:hover { border-color: #D8D2C4; }
+.category-card--jauge h3 { color: var(--ink); }
+.category-card--jauge > p { color: var(--ink-70); }
 
 /* ---- 12. ARTICLE CARDS ---- */
 .article-card {
