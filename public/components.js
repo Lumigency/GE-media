@@ -11,62 +11,63 @@
     <nav id="navbar" role="navigation" aria-label="Navigation principale">
       <div class="container">
         <div class="nav-inner">
-          <a href="/" class="nav-logo" aria-label="Jauge — Accueil">
-            <span class="nav-logo-icon" aria-hidden="true">J</span>
-            Jauge
-          </a>
+          <a href="/" class="nav-logo" aria-label="Jauge — Accueil">Jauge</a>
 
-          <div class="nav-links" role="list">
-            <a href="/" class="nav-link" role="listitem">Accueil</a>
+          <div class="nav-dropdown" role="listitem">
+            <button class="nav-menu-trigger nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-categories">
+              menu
+            </button>
 
-            <div class="nav-dropdown" role="listitem">
-              <button class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-categories">
-                Les jauges
-                <svg class="nav-dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                  <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </button>
+            <div class="nav-dropdown-menu" id="dropdown-categories" role="menu" aria-label="Les jauges">
+              <a href="/outils-ia" class="nav-dropdown-item" role="menuitem">
+                <span class="nav-dropdown-icon" style="background:#FFE0D6;" aria-hidden="true">🤖</span>
+                <span class="nav-dropdown-text">
+                  <span class="nav-dropdown-title">Outils &amp; IA</span>
+                  <span class="nav-dropdown-desc">Testé, pas hypé</span>
+                </span>
+              </a>
 
-              <div class="nav-dropdown-menu" id="dropdown-categories" role="menu" aria-label="Les jauges">
-                <a href="/outils-ia" class="nav-dropdown-item" role="menuitem">
-                  <span class="nav-dropdown-icon" style="background:#FFE0D6;" aria-hidden="true">🤖</span>
-                  <span class="nav-dropdown-text">
-                    <span class="nav-dropdown-title">Outils &amp; IA</span>
-                    <span class="nav-dropdown-desc">Testé, pas hypé</span>
-                  </span>
-                </a>
+              <a href="/acquisition-growth" class="nav-dropdown-item" role="menuitem">
+                <span class="nav-dropdown-icon" style="background:#EEFAC7;" aria-hidden="true">🎯</span>
+                <span class="nav-dropdown-text">
+                  <span class="nav-dropdown-title">Acquisition &amp; Growth</span>
+                  <span class="nav-dropdown-desc">Les vrais chiffres</span>
+                </span>
+              </a>
 
-      
-                <a href="/acquisition-growth" class="nav-dropdown-item" role="menuitem">
-                  <span class="nav-dropdown-icon" style="background:#EEFAC7;" aria-hidden="true">🎯</span>
-                  <span class="nav-dropdown-text">
-                    <span class="nav-dropdown-title">Acquisition &amp; Growth</span>
-                    <span class="nav-dropdown-desc">Les vrais chiffres</span>
-                  </span>
-                </a>
+              <a href="/finance-assurances" class="nav-dropdown-item" role="menuitem">
+                <span class="nav-dropdown-icon" style="background:#e7e5de;" aria-hidden="true">💰</span>
+                <span class="nav-dropdown-text">
+                  <span class="nav-dropdown-title">Argent &amp; Trésorerie</span>
+                  <span class="nav-dropdown-desc">Sans langue de bois</span>
+                </span>
+              </a>
 
-                <a href="/argent-tresorerie" class="nav-dropdown-item" role="menuitem">
-                  <span class="nav-dropdown-icon" style="background:#e7e5de;" aria-hidden="true">💰</span>
-                  <span class="nav-dropdown-text">
-                    <span class="nav-dropdown-title">Argent &amp; Trésorerie</span>
-                    <span class="nav-dropdown-desc">Sans langue de bois</span>
-                  </span>
-                </a>
+              <a href="/la-jauge" class="nav-dropdown-item" role="menuitem">
+                <span class="nav-dropdown-icon" style="background:#FDF3D9;" aria-hidden="true">🧠</span>
+                <span class="nav-dropdown-text">
+                  <span class="nav-dropdown-title">La Jauge</span>
+                  <span class="nav-dropdown-desc">La tête, pour de vrai</span>
+                </span>
+              </a>
 
-                <a href="/la-jauge" class="nav-dropdown-item" role="menuitem">
-                  <span class="nav-dropdown-icon" style="background:#FDF3D9;" aria-hidden="true">🧠</span>
-                  <span class="nav-dropdown-text">
-                    <span class="nav-dropdown-title">La Jauge</span>
-                    <span class="nav-dropdown-desc">La tête, pour de vrai</span>
-                  </span>
-                </a>
-
-                <div class="nav-dropdown-footer">
-                  <a href="/categories" class="nav-dropdown-all">Voir toutes les jauges →</a>
-                </div>
+              <div class="nav-dropdown-footer">
+                <a href="/categories" class="nav-dropdown-all">Voir toutes les jauges →</a>
               </div>
             </div>
+          </div>
 
+          <div class="nav-links" role="list">
+            <a href="/ia-automatisation" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true">🤖</span>Outils &amp; IA</a>
+            <span class="nav-dot" aria-hidden="true">·</span>
+            <a href="/acquisition-growth" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true">🎯</span>Growth</a>
+            <span class="nav-dot" aria-hidden="true">·</span>
+            <a href="/argent-tresorerie" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true">💰</span>Argent</a>
+            <span class="nav-dot" aria-hidden="true">·</span>
+            <a href="/la-jauge" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true">🧠</span>La Jauge</a>
+          </div>
+
+          <div class="nav-links nav-links--secondary" role="list">
             <a href="/outils" class="nav-link" role="listitem">Outils testés</a>
             <a href="/newsletter" class="nav-link" role="listitem">Newsletter</a>
             <a href="/a-propos" class="nav-link" role="listitem">À propos</a>
@@ -214,7 +215,7 @@
       }
     });
 
-    const categoryPaths = ['/ia-automatisation', '/acquisition-growth', '/finance-assurances', '/categories'];
+    const categoryPaths = ['/outils-ia', '/acquisition-growth', '/argent-tresorerie', '/la-jauge', '/categories'];
     const isCategoryPath = categoryPaths.some(categoryPath => path === categoryPath || path.startsWith(`${categoryPath}/`));
     if (isCategoryPath) {
       const trigger = document.querySelector('.nav-dropdown-trigger');
