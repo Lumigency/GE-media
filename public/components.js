@@ -35,7 +35,7 @@
                 </span>
               </a>
 
-              <a href="/argent-tresorerie" class="nav-dropdown-item" role="menuitem">
+              <a href="/finance-assurances class="nav-dropdown-item" role="menuitem">
                 <span class="nav-dropdown-icon" style="background:#e7e5de;" aria-hidden="true">💰</span>
                 <span class="nav-dropdown-text">
                   <span class="nav-dropdown-title">Argent &amp; Trésorerie</span>
