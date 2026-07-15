@@ -226,6 +226,7 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
   align-items: center;
   height: var(--nav-h);
   gap: 8px;
+  flex-wrap: nowrap;
   overflow: visible; /* ← FIX DROPDOWN */
 }
 .nav-logo {
@@ -238,6 +239,7 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
   color: var(--white);
   flex-shrink: 0;
   text-decoration: none;
+  white-space: nowrap;
   margin-right: 4px;
 }
 .nav-logo-icon {
@@ -254,27 +256,30 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
+  flex-shrink: 0;
   overflow: visible; /* ← FIX DROPDOWN */
 }
 .nav-links--secondary { margin-left: auto; padding-left: 0; }
 .nav-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 10px;
+  gap: 5px;
+  padding: 6px 8px;
   border-radius: var(--radius-sm);
-  font-size: .875rem;
+  font-size: .85rem;
   font-weight: 500;
   color: rgba(255,255,255,.55);
   transition: color .2s, background .2s;
   text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .nav-link:hover { color: var(--white); background: rgba(255,255,255,.08); }
 .nav-link.active { color: var(--white); font-weight: 700; background: transparent; }
 .nav-link-icon { font-size: .95em; line-height: 1; }
-.nav-dot { color: rgba(255,255,255,.25); padding: 0 1px; user-select: none; }
-.nav-cta { margin-left: 12px; }
+.nav-dot { color: rgba(255,255,255,.25); padding: 0; flex-shrink: 0; user-select: none; }
+.nav-cta { margin-left: 12px; flex-shrink: 0; white-space: nowrap; }
 .btn-primary.nav-cta { color: var(--ink); font-weight: 700; }
 
 .nav-burger {
@@ -312,6 +317,7 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
   position: relative;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .nav-dropdown-trigger {
@@ -342,6 +348,8 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
   text-decoration: underline;
   text-underline-offset: 3px;
   padding: 6px 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .nav-menu-trigger:hover,
 .nav-menu-trigger.active {
