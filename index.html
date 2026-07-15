@@ -1,527 +1,1231 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+/* =============================================
+   JAUGE — style.css
+   Shared stylesheet for all pages
+   ============================================= */
 
-  <title>Jauge | Argent, outils & tête d'entrepreneur</title>
-  <meta name="description" content="Jauge est le média qui dit vraiment où t'en es : trésorerie, outils IA, acquisition client et charge mentale d'entrepreneur. Avis tranchés, pas de top 10 générique." />
-  <link rel="canonical" href="https://jauge.media" />
+/* ---- 1. CSS VARIABLES ---- */
+:root {
+  --bg:           #0B0B0C;
+  --page-ink:     #F5F3EE;
+  --page-ink-70:  rgba(245, 243, 238, 0.72);
+  --page-ink-45:  rgba(245, 243, 238, 0.45);
+  --page-ink-15:  rgba(245, 243, 238, 0.14);
+  --white:        #ffffff;
+  --ink:          #1a1a18;
+  --ink-70:       rgba(26, 26, 24, 0.70);
+  --ink-45:       rgba(26, 26, 24, 0.45);
+  --ink-15:       rgba(26, 26, 24, 0.10);
+  --accent:       #FF5C39;
+  --accent-dark:  #D9431F;
+  --accent-light: #FFE0D6;
+  --accent-xlight:#FFF4F0;
+  --dark-bg:      #0f0f0e;
+  --dark-card:    #1a1a18;
 
-  <meta property="og:title" content="Jauge | Argent, outils & tête d'entrepreneur" />
-  <meta property="og:description" content="Trésorerie, outils IA, acquisition et charge mentale : le média qui dit vraiment où t'en es." />
-  <meta property="og:image" content="https://jauge.media/og-image.jpg" />
-  <meta property="og:url" content="https://jauge.media" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="fr_FR" />
-  <meta property="og:site_name" content="Jauge" />
+  /* Category tag colours */
+  --green:        #4a5b0a;
+  --green-light:  #EEFAC7;
+  --violet:       #92640b;
+  --violet-light: #FDF3D9;
+  --amber:        #b45309;
+  --amber-light:  #fef3c7;
+  --blue:         #44453f;
+  --blue-light:   #e7e5de;
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://jauge.media/#website",
-      "url": "https://jauge.media/",
-      "name": "Jauge",
-      "description": "Média pour entrepreneurs solo sur l'argent, les outils IA, l'acquisition et la charge mentale.",
-      "inLanguage": "fr-FR",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://jauge.media/articles?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://jauge.media/#organization",
-      "name": "Jauge",
-      "url": "https://jauge.media/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://jauge.media/og-image.jpg"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://jauge.media/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "C'est quoi Jauge ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Jauge est un média pour freelances, solopreneurs et petites structures qui parle d'argent, d'outils IA, d'acquisition client et de charge mentale entrepreneuriale, avec des avis tranchés plutôt que des tops génériques."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "À qui s'adresse Jauge ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Jauge s'adresse aux freelances, indépendants et dirigeants de très petites structures qui portent seuls la charge de leur activité : argent, outils, acquisition et mental."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quels sont les outils IA vraiment utiles pour un entrepreneur solo ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Peu d'outils valent vraiment le coup : un assistant IA généraliste, un outil d'automatisation no-code comme n8n ou Make, et un outil de gestion simple. Le reste est souvent du bruit marketing."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Comment savoir si son compte pro est adapté à son activité ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ça dépend du volume de transactions, du besoin de cartes multiples, et de l'intégration avec un outil de facturation. Un compte pro se choisit sur l'usage réel, pas sur la pub la plus vue."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Comment trouver ses premiers clients quand on est entrepreneur ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Prospection LinkedIn, SEO, email marketing, recommandations, partenariats ou publicité en ligne. Le plus important est de choisir un canal adapté à son marché et de le travailler régulièrement, pas d'en essayer dix à la fois."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Pourquoi Jauge parle de charge mentale d'entrepreneur ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Parce que personne d'autre n'en parle vraiment. La solitude de la décision, la peur de regarder son compte en banque, le syndrome de l'imposteur face aux clients sont des réalités du quotidien entrepreneurial, pas des sujets annexes."
-          }
-        }
-      ]
-    }
-  ]
+  --nav-h:        72px;
+  --radius-sm:    6px;
+  --radius:       12px;
+  --radius-lg:    20px;
+  --radius-xl:    28px;
+  --max-w:        1200px;
+
+  --shadow-xs:    0 1px 2px rgba(26,26,24,.06);
+  --shadow-sm:    0 1px 3px rgba(26,26,24,.10), 0 1px 2px rgba(26,26,24,.06);
+  --shadow-md:    0 4px 12px rgba(26,26,24,.08), 0 2px 4px rgba(26,26,24,.05);
+  --shadow-lg:    0 10px 30px rgba(26,26,24,.10), 0 4px 8px rgba(26,26,24,.06);
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, -apple-system, sans-serif;
 }
-</script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css" />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Jauge" />
-  <meta name="twitter:description" content="Argent, outils et tête d'entrepreneur. Sans bullshit." />
-  <meta name="twitter:image" content="https://jauge.media/og-image.jpg" />
-  <meta name="theme-color" content="#0B0B0C" />
-  <link rel="sitemap" type="application/xml" href="https://jauge.media/sitemap.xml" />
+/* ---- 2. RESET & BASE ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--page-ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+button { font-family: var(--font-body); cursor: pointer; border: none; background: none; }
+input, textarea, select { font-family: var(--font-body); }
 
-  <style>
-    @media (max-width: 768px) {
-      .faq-grid {
-        grid-template-columns: 1fr !important;
-      }
+/* ---- 3. TYPOGRAPHY ---- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--page-ink);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); }
+h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
+h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
+h4 { font-size: 1.15rem; }
+p  { line-height: 1.7; color: var(--page-ink-70); }
 
-      .faq-grid .faq-item {
-        min-width: 0;
-      }
-    }
-  </style>
+/* ---- 4. LAYOUT ---- */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.section    { padding: 80px 0; }
+.section--sm{ padding: 48px 0; }
+.section--lg{ padding: 112px 0; }
+.section--dark {
+  background: var(--dark-bg);
+  color: var(--white);
+}
+.section--dark p { color: rgba(255,255,255,.65); }
+.section--grey { background: #f0ede6; color: var(--ink); }
+.section--grey h2, .section--grey h3 { color: var(--ink); }
+.section--grey p { color: var(--ink-70); }
 
-</head>
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 
-<body>
-  <main>
+/* ---- 5. ANIMATIONS ---- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .45; }
+}
 
-    <!-- ===== HERO ===== -->
-    <section class="hero">
-      <div class="container">
-        <div class="anim-fade-up">
-          <div class="hero-badge">
-            <span class="hero-badge-dot" aria-hidden="true"></span>
-            Nouveau · On a testé Claude, ChatGPT et Gemini sur un vrai mois de boulot
-          </div>
-        </div>
+.anim-fade-up            { animation: fadeUp .55s cubic-bezier(.16,1,.3,1) both; opacity: 0; }
+.anim-delay-1            { animation-delay: .1s; }
+.anim-delay-2            { animation-delay: .2s; }
+.anim-delay-3            { animation-delay: .3s; }
+.anim-delay-4            { animation-delay: .4s; }
+.anim-delay-5            { animation-delay: .5s; }
 
-        <h1 class="hero-title anim-fade-up anim-delay-1">
-          T'en es où, <em>vraiment</em> ?
-        </h1>
+/* ---- 6. BUTTONS ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 24px;
+  border-radius: var(--radius-sm);
+  font-size: .9375rem;
+  font-weight: 600;
+  transition: background .2s, color .2s, box-shadow .2s, transform .15s;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+.btn:hover  { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
 
-        <p class="hero-desc anim-fade-up anim-delay-2">
-          Jauge parle de ta trésorerie, de tes outils IA, de ton acquisition client et de ta tête. Sans top 10 générique, sans langue de bois — écrit par quelqu'un qui est dedans, pas par un algorithme.
-        </p>
+.btn-primary {
+  background: var(--accent);
+  color: var(--white);
+  box-shadow: 0 1px 2px rgba(255,92,57,.3);
+}
+.btn-primary:hover {
+  background: var(--accent-dark);
+  box-shadow: 0 4px 14px rgba(255,92,57,.4);
+  color: var(--white);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--page-ink);
+  border: 1.5px solid var(--page-ink-15);
+}
+.btn-outline:hover {
+  border-color: var(--page-ink);
+  background: var(--page-ink);
+  color: var(--ink);
+}
+.section--grey .btn-outline {
+  color: var(--ink);
+  border-color: var(--ink-15);
+}
+.section--grey .btn-outline:hover {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--white);
+}
+.btn-outline-white {
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid rgba(255,255,255,.3);
+}
+.btn-outline-white:hover {
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.6);
+  color: var(--white);
+}
+.btn-sm  { padding: 8px 16px;  font-size: .875rem; }
+.btn-lg  { padding: 15px 32px; font-size: 1.0625rem; }
 
-        <div class="hero-actions anim-fade-up anim-delay-3">
-          <a href="/articles" class="btn btn-primary btn-lg">Lire les articles →</a>
-          <a href="/newsletter" class="btn btn-outline btn-lg">Rejoindre la newsletter</a>
-        </div>
+/* ---- 7. TAGS / PILLS ---- */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.tag-ia          { background: #FFE0D6; color: #B8420F; }
+.tag-n8n         { background: var(--violet-light); color: var(--violet); }
+.tag-outils      { background: var(--amber-light);  color: var(--amber);  }
+.tag-business    { background: var(--blue-light);   color: var(--blue);   }
+.tag-acquisition { background: var(--green-light); color: var(--green); }
+.tag-finance     { background: var(--blue-light); color: var(--blue); }
+.tag-jauge       { background: var(--violet-light); color: var(--violet); }
 
-        <div class="hero-stats anim-fade-up anim-delay-4">
-          <div>
-            <span class="hero-stat-num">4</span>
-            <span class="hero-stat-label">Jauges thématiques</span>
-          </div>
-          <div>
-            <span class="hero-stat-num">71/100</span>
-            <span class="hero-stat-label">Jauge du mois (charge mentale)</span>
-          </div>
-          <div>
-            <span class="hero-stat-num">0</span>
-            <span class="hero-stat-label">Top 10 génériques</span>
-          </div>
-          <div>
-            <span class="hero-stat-num">100%</span>
-            <span class="hero-stat-label">Testé, pas hypé</span>
-          </div>
-        </div>
-      </div>
-    </section>
+/* ---- 8. NAVBAR ---- */
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--nav-h);
+  background: rgba(249,248,246,.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--ink-15);
+  transition: box-shadow .3s;
+  overflow: visible; /* ← FIX DROPDOWN */
+}
+#navbar.scrolled { box-shadow: var(--shadow-sm); }
 
-    <!-- ===== INTRO / MANIFESTE ===== -->
-    <section class="section section--sm" aria-labelledby="intro-home-title">
-      <div class="container">
-        <div style="max-width:860px;margin:0 auto;text-align:center;">
-          <p class="section-label" style="justify-content:center;">Le manifeste, en deux phrases</p>
-          <h2 id="intro-home-title">On en a marre des tops 10 écrits par une IA</h2>
-          <p style="font-size:1.0625rem;line-height:1.75;color:var(--page-ink-70);">
-            Jauge, c'est le contraire des comparatifs qui sonnent comme une pub et des médias business qui ne parlent jamais de la vraie charge de tout porter seul : des avis tranchés sur les outils, des vrais chiffres sur l'acquisition et l'argent, et un espace pour dire que la tête, ça compte aussi.
-          </p>
-        </div>
-      </div>
-    </section>
+#navbar .container {
+  overflow: visible; /* ← FIX DROPDOWN */
+}
 
-    <!-- ===== CATÉGORIES ===== -->
-    <section class="section section--sm" aria-labelledby="cat-title">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <p class="section-label">Explorer par thème</p>
-            <h2 id="cat-title">Les 4 jauges</h2>
-          </div>
-          <a href="/categories" class="btn btn-outline">Voir tout →</a>
-        </div>
+.nav-inner {
+  display: flex;
+  align-items: center;
+  height: var(--nav-h);
+  gap: 8px;
+  overflow: visible; /* ← FIX DROPDOWN */
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink);
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.nav-logo-icon {
+  width: 34px; height: 34px;
+  background: var(--accent);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--white);
+  font-size: .75rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  flex-shrink: 0;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+  padding-left: 16px;
+  overflow: visible; /* ← FIX DROPDOWN */
+}
+.nav-link {
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: .9rem;
+  font-weight: 450;
+  color: var(--ink-70);
+  transition: color .2s, background .2s;
+  text-decoration: none;
+}
+.nav-link:hover, .nav-link.active { color: var(--ink); background: var(--ink-15); }
+.nav-cta { margin-left: auto; }
 
-        <div class="grid-4">
-          <a href="/outils-ia" class="category-card">
-            <div class="category-card-icon" style="background:#3a1810;" aria-hidden="true">🤖</div>
-            <h3>Outils &amp; IA</h3>
-            <p>Outils IA, workflows no-code et productivité, testés en vrai sur des tâches réelles. On dit aussi quand c'est nul.</p>
-            <span class="category-card-arrow" style="color:#FF7452;">Découvrir les articles <span aria-hidden="true">→</span></span>
-          </a>
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  margin-left: auto;
+  border-radius: var(--radius-sm);
+  transition: background .2s;
+}
+.nav-burger:hover { background: var(--ink-15); }
+.nav-burger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform .3s, opacity .3s;
+}
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  padding: 12px 16px 20px;
+  border-top: 1px solid var(--ink-15);
+  background: rgba(249,248,246,.97);
+  backdrop-filter: blur(14px);
+  gap: 2px;
+}
+.nav-mobile.open { display: flex; }
+.nav-mobile .nav-link { padding: 10px 12px; display: block; }
+.nav-mobile .btn { margin-top: 8px; justify-content: center; }
 
-          <a href="/acquisition-growth" class="category-card">
-            <div class="category-card-icon" style="background:#2e3a1a;" aria-hidden="true">🎯</div>
-            <h3>Acquisition &amp; Growth</h3>
-            <p>SEO, paid ads, affiliation, tunnels de vente : les mécaniques réelles pour attirer et convertir, pas la théorie.</p>
-            <span class="category-card-arrow" style="color:#D6FF3F;">Découvrir les articles <span aria-hidden="true">→</span></span>
-          </a>
+/* ---- DROPDOWN CATÉGORIES ---- */
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 
-          <a href="/argent-tresorerie" class="category-card">
-            <div class="category-card-icon" style="background:#2a2a28;" aria-hidden="true">💰</div>
-            <h3>Argent &amp; Trésorerie</h3>
-            <p>Comptes pro, comptabilité, fiscalité, assurances : ce qu'il faut vraiment suivre pour ne pas se faire surprendre.</p>
-            <span class="category-card-arrow" style="color:#ffffff;">Découvrir les articles <span aria-hidden="true">→</span></span>
-          </a>
+.nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: .9rem;
+  font-weight: 450;
+  color: var(--ink-70);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  transition: color .2s, background .2s;
+}
+.nav-dropdown-trigger:hover,
+.nav-dropdown-trigger.active {
+  color: var(--ink);
+  background: var(--ink-15);
+}
 
-          <a href="/la-jauge" class="category-card category-card--jauge">
-            <div class="category-card-icon" style="background:#FFE0D6;" aria-hidden="true">🧠</div>
-            <h3>La Jauge</h3>
-            <p>Charge mentale, solitude de la décision, peur de regarder son compte. Ce que personne ne dit jamais.</p>
-            <span class="category-card-arrow" style="color:#D9431F;">Découvrir les articles <span aria-hidden="true">→</span></span>
-          </a>
-        </div>
-      </div>
-    </section>
+.nav-dropdown-arrow {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+.nav-dropdown-trigger[aria-expanded="true"] .nav-dropdown-arrow {
+  transform: rotate(180deg);
+}
 
-    <!-- ===== ARTICLES À LA UNE ===== -->
-    <section class="section section--grey" aria-labelledby="featured-title">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <p class="section-label">À la une</p>
-            <h2 id="featured-title">Ça, tu dois le lire</h2>
-          </div>
-          <a href="/articles" class="btn btn-outline">Tous les articles →</a>
-        </div>
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  width: 480px;
+  background: #ffffff;
+  border: 1px solid var(--ink-15);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+  z-index: 9999;
+}
 
-        <div style="display:grid;grid-template-columns:2fr 1fr;gap:24px;" class="featured-layout">
-          <a href="/articles" class="article-card article-card--featured" aria-label="Lire : Make vs Zapier vs n8n">
-            <div class="article-card-img">
-              <img
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Équipe testant des outils d'automatisation sur ordinateur"
-                width="600" height="400"
-                loading="eager"
-              />
-            </div>
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-left: 1px solid var(--ink-15);
+  border-top: 1px solid var(--ink-15);
+}
 
-            <div class="article-card-body">
-              <div class="article-card-meta">
-                <span class="tag tag-ia">Outils &amp; IA</span>
-                <span class="sep" aria-hidden="true">·</span>
-                <time datetime="2026-04-15">15 avril 2026</time>
-                <span class="sep" aria-hidden="true">·</span>
-                <span>12 min de lecture</span>
-              </div>
-              <h3>Make, Zapier, n8n : lequel arrête vraiment de te faire perdre du temps</h3>
-              <p class="article-card-excerpt">
-                On a mis les trois à l'épreuve sur les mêmes workflows réels. Un seul tient la route pour un solopreneur qui n'a pas de temps à perdre en configuration.
-              </p>
-              <div class="article-card-footer">
-                <span>Lire l'article complet →</span>
-                <span class="tag tag-ia">Article populaire</span>
-              </div>
-            </div>
-          </a>
+.nav-dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
 
-          <div style="display:flex;flex-direction:column;gap:16px;">
-            <a href="/articles" class="article-card" aria-label="Lire : Claude vs ChatGPT vs Gemini">
-              <div class="article-card-img">
-                <img
-                  src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=400"
-                  alt="Interface IA marketing sur un écran"
-                  width="400" height="225"
-                  loading="lazy"
-                />
-              </div>
-              <div class="article-card-body">
-                <div class="article-card-meta">
-                  <span class="tag tag-ia">Outils &amp; IA</span>
-                  <span class="sep" aria-hidden="true">·</span>
-                  <time datetime="2026-04-12">12 avr. 2026</time>
-                </div>
-                <h3>Claude vs ChatGPT vs Gemini : lequel mérite ton abonnement</h3>
-                <div class="article-card-footer"><span>Lire →</span><span>8 min</span></div>
-              </div>
-            </a>
+.nav-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+}
+.nav-dropdown-item:hover { background: var(--bg); }
 
-            <a href="/articles" class="article-card" aria-label="Lire : Perdre son plus gros client">
-              <div class="article-card-body" style="padding:20px;">
-                <div class="article-card-meta">
-                  <span class="tag tag-jauge">La Jauge</span>
-                  <span class="sep" aria-hidden="true">·</span>
-                  <time datetime="2026-04-10">10 avr. 2026</time>
-                </div>
-                <h3>Perdre son plus gros client : ce que ça fait vraiment</h3>
-                <p class="article-card-excerpt">Pas un article de conseils. Juste ce qui se passe dans ta tête les trois semaines qui suivent.</p>
-                <div class="article-card-footer"><span>Lire →</span><span>7 min</span></div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+.nav-dropdown-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
 
-    <!-- ===== OUTILS RECOMMANDÉS ===== -->
-    <section class="section section--dark" aria-labelledby="tools-title">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <p class="section-label" style="color:rgba(255,255,255,.5);">Testés pour de vrai</p>
-            <h2 id="tools-title" style="color:var(--white);">Les outils qui méritent ta place dans le stack</h2>
-          </div>
-          <a href="/outils" class="btn btn-outline-white">Voir tous les outils →</a>
-        </div>
+.nav-dropdown-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
 
-        <div class="grid-3">
-          <div class="tool-card tool-card--highlight">
-            <div class="tool-card-header">
-              <div class="tool-card-logo" aria-hidden="true">⚡</div>
-              <div class="tool-card-tags">
-                <span class="tag tag-ia">Notre pick</span>
-              </div>
-            </div>
-            <h3>n8n</h3>
-            <p>Automatisation flexible pour connecter formulaires, emails, CRM et workflows — sans dépendre d'un abonnement qui explose avec le volume.</p>
-            <div class="tool-card-footer">
-              <span class="tool-price">Dès <strong>0 €/mois</strong></span>
-              <a href="/outils" class="btn btn-outline-white btn-sm" aria-label="Découvrir n8n">Voir le test →</a>
-            </div>
-          </div>
+.nav-dropdown-title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.3;
+}
 
-          <div class="tool-card">
-            <div class="tool-card-header">
-              <div class="tool-card-logo" aria-hidden="true">🤖</div>
-            </div>
-            <h3>Claude</h3>
-            <p>Solide pour rédiger, structurer et analyser. Pas magique, mais c'est celui qui tient le mieux sur des tâches longues et complexes.</p>
-            <div class="tool-card-footer">
-              <span class="tool-price">Dès <strong>0 €/mois</strong></span>
-              <a href="/outils" class="btn btn-outline-white btn-sm" aria-label="Découvrir Claude">Voir le test →</a>
-            </div>
-          </div>
+.nav-dropdown-desc {
+  font-size: 0.6875rem;
+  color: var(--ink-45);
+  line-height: 1.3;
+}
 
-          <div class="tool-card">
-            <div class="tool-card-header">
-              <div class="tool-card-logo" aria-hidden="true">📋</div>
-            </div>
-            <h3>Notion</h3>
-            <p>Devient un CRM correct si tu prends 30 minutes pour le structurer. Sinon, ça reste un joli cimetière de notes.</p>
-            <div class="tool-card-footer">
-              <span class="tool-price">Dès <strong>0 €/mois</strong></span>
-              <a href="/outils" class="btn btn-outline-white btn-sm" aria-label="Découvrir Notion">Voir le test →</a>
-            </div>
-          </div>
-        </div>
+.nav-dropdown-footer {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--ink-15);
+  margin-top: 4px;
+  padding-top: 8px;
+  text-align: center;
+}
 
-        <p style="text-align:center;margin-top:24px;font-size:.8125rem;color:rgba(255,255,255,.3);">
-          ⚠ Certains liens peuvent être affiliés — nous pouvons percevoir une commission sans surcoût pour vous.
-          <a href="/a-propos#politique-affiliation" style="color:rgba(255,255,255,.45);text-decoration:underline;">En savoir plus</a>
-        </p>
-      </div>
-    </section>
+.nav-dropdown-all {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 6px 16px;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+.nav-dropdown-all:hover { background: var(--accent-xlight); }
 
-    <!-- ===== 3 DERNIERS ARTICLES ===== -->
-    <section class="section" aria-labelledby="recent-title">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <p class="section-label">Récemment publié</p>
-            <h2 id="recent-title">Les derniers</h2>
-          </div>
-          <a href="/articles" class="btn btn-outline">Voir tout →</a>
-        </div>
+/* ---- MOBILE ACCORDION ---- */
+.nav-mobile-accordion { width: 100%; }
 
-        <div class="grid-3">
-          <a href="/articles" class="article-card anim-fade-up">
-            <div class="article-card-img">
-              <img
-                src="https://images.pexels.com/photos/5077039/pexels-photo-5077039.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Entrepreneur comparant des interfaces IA sur son écran"
-                width="600" height="338"
-                loading="lazy"
-              />
-            </div>
-            <div class="article-card-body">
-              <div class="article-card-meta">
-                <span class="tag tag-ia">Outils &amp; IA</span>
-                <span class="sep" aria-hidden="true">·</span>
-                <time datetime="2026-04-08">8 avr. 2026</time>
-              </div>
-              <h3>Comptabilité automatisée : ce qui marche vraiment sans y passer un dimanche</h3>
-              <p class="article-card-excerpt">Factures, justificatifs, synchronisation bancaire : les bases qui font gagner du temps pour de vrai.</p>
-              <div class="article-card-footer"><span>Lire l'article →</span><span>9 min</span></div>
-            </div>
-          </a>
+.nav-mobile-accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: .9rem;
+  font-weight: 450;
+  color: var(--ink-70);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  text-align: left;
+  transition: color .2s, background .2s;
+}
+.nav-mobile-accordion-trigger:hover { color: var(--ink); background: var(--ink-15); }
 
-          <a href="/articles" class="article-card anim-fade-up anim-delay-1">
-            <div class="article-card-img">
-              <img
-                src="https://images.pexels.com/photos/1181672/pexels-photo-1181672.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Écran montrant une interface Notion avec des projets"
-                width="600" height="338"
-                loading="lazy"
-              />
-            </div>
-            <div class="article-card-body">
-              <div class="article-card-meta">
-                <span class="tag tag-acquisition">Acquisition</span>
-                <span class="sep" aria-hidden="true">·</span>
-                <time datetime="2026-04-05">5 avr. 2026</time>
-              </div>
-              <h3>Prospecter sur LinkedIn sans avoir l'air d'un bot</h3>
-              <p class="article-card-excerpt">Workflow, personnalisation et relances : une méthode simple pour suivre ses prospects sans y passer ses soirées.</p>
-              <div class="article-card-footer"><span>Lire l'article →</span><span>11 min</span></div>
-            </div>
-          </a>
+.nav-mobile-submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 4px 0 4px 12px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.nav-mobile-submenu.open { max-height: 400px; }
 
-          <a href="/articles" class="article-card anim-fade-up anim-delay-2">
-            <div class="article-card-img">
-              <img
-                src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Tableau de bord financier"
-                width="600" height="338"
-                loading="lazy"
-              />
-            </div>
-            <div class="article-card-body">
-              <div class="article-card-meta">
-                <span class="tag tag-finance">Argent</span>
-                <span class="sep" aria-hidden="true">·</span>
-                <time datetime="2026-04-01">1 avr. 2026</time>
-              </div>
-              <h3>Le vrai coût d'un compte pro, au-delà de la pub</h3>
-              <p class="article-card-excerpt">Frais réels sur 12 mois selon le volume de transactions, cartes incluses. Ce que les pubs ne montrent jamais.</p>
-              <div class="article-card-footer"><span>Lire l'article →</span><span>7 min</span></div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
+.nav-mobile-sublink {
+  font-size: 0.875rem;
+  color: var(--ink-70);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: block;
+  transition: background 0.15s, color 0.15s;
+}
+.nav-mobile-sublink:hover { background: var(--ink-15); color: var(--ink); }
 
-    <!-- ===== FAQ SEO ===== -->
-    <section class="section section--sm" aria-labelledby="faq-title">
-  <div class="container" style="max-width:980px;">
-    <div style="background:linear-gradient(180deg,#f7f5f3 0%,#ffffff 100%);border:1px solid var(--ink-15);border-radius:28px;padding:40px 36px;">
-      <div style="text-align:center;max-width:720px;margin:0 auto 32px;">
-        <p class="section-label" style="justify-content:center;">Questions fréquentes</p>
-        <h2 id="faq-title" style="margin-bottom:14px;">Ce qu'on te demande souvent</h2>
-        <p style="font-size:1.0625rem;line-height:1.7;color:var(--ink-70);margin:0;">
-          Les réponses directes, sans détour, aux questions qu'on nous pose le plus.
-        </p>
-      </div>
+.nav-mobile-sublink--all {
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 4px;
+}
 
-      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;" class="faq-grid">
+/* ---- 9. FOOTER ---- */
+#footer {
+  background: var(--ink);
+  color: rgba(255,255,255,.8);
+  padding: 64px 0 32px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.footer-logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  text-decoration: none;
+}
+.footer-logo-icon {
+  width: 34px; height: 34px;
+  background: var(--accent);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: .75rem;
+  color: var(--white);
+  flex-shrink: 0;
+}
+.footer-desc { font-size: .9375rem; color: rgba(255,255,255,.45); line-height: 1.65; }
+.footer-col-title {
+  font-family: var(--font-body);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.35);
+  margin-bottom: 16px;
+}
+.footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+.footer-col a { font-size: .9375rem; color: rgba(255,255,255,.55); transition: color .2s; }
+.footer-col a:hover { color: var(--white); }
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 28px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.footer-copy { font-size: .875rem; color: rgba(255,255,255,.3); }
+.footer-legal { display: flex; gap: 24px; }
+.footer-legal a { font-size: .875rem; color: rgba(255,255,255,.35); transition: color .2s; }
+.footer-legal a:hover { color: rgba(255,255,255,.7); }
 
-        <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
-          <h3 style="font-size:1.05rem;margin-bottom:10px;">👋 C'est quoi Jauge ?</h3>
-          <p style="margin:0;color:var(--ink-70);line-height:1.7;">Un média pour freelances et solopreneurs qui parle d'argent, d'outils IA, d'acquisition et de charge mentale — avec des avis tranchés plutôt que des tops génériques.</p>
-        </article>
+/* ---- 10. HERO ---- */
+.hero { padding: 96px 0 80px; overflow: hidden; }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: var(--accent-xlight);
+  border: 1px solid var(--accent-light);
+  border-radius: 100px;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  margin-bottom: 24px;
+  letter-spacing: .02em;
+}
+.hero-badge-dot {
+  width: 7px; height: 7px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+.hero-title    { margin-bottom: 20px; }
+.hero-title em { font-style: normal; color: var(--accent); }
+.hero-desc {
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin-bottom: 36px;
+  color: var(--page-ink-70);
+}
+.hero-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 56px; }
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  border-top: 1px solid var(--page-ink-15);
+}
+.hero-stat-num {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.1rem;
+  color: var(--page-ink);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.hero-stat-label { font-size: .875rem; color: var(--page-ink-45); }
 
-        <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
-          <h3 style="font-size:1.05rem;margin-bottom:10px;">🎯 À qui s'adresse Jauge ?</h3>
-          <p style="margin:0;color:var(--ink-70);line-height:1.7;">Aux freelances, indépendants et dirigeants de très petites structures qui portent seuls la charge de leur activité, du premier euro facturé jusqu'à la vraie structuration.</p>
-        </article>
+/* ---- 11. CATEGORY CARDS ---- */
+.category-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  background: var(--dark-card);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius-lg);
+  transition: box-shadow .25s, transform .25s, border-color .25s;
+  text-decoration: none;
+  color: var(--white);
+}
+.category-card:hover { box-shadow: 0 10px 32px rgba(0,0,0,.35); transform: translateY(-3px); border-color: rgba(255,92,57,.35); }
+.category-card h3 { color: var(--white); }
+.category-card > p { color: rgba(255,255,255,.55); }
+.category-card-icon {
+  width: 48px; height: 48px;
+  border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+.category-card h3 { font-size: 1.25rem; }
+.category-card > p { font-size: .9375rem; flex: 1; }
+.category-card-arrow {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .875rem;
+  font-weight: 600;
+  transition: gap .2s;
+}
+.category-card:hover .category-card-arrow { gap: 10px; }
 
-        <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
-          <h3 style="font-size:1.05rem;margin-bottom:10px;">🤖 Quels outils IA sont vraiment utiles à un solo ?</h3>
-          <p style="margin:0;color:var(--ink-70);line-height:1.7;">Peu, en fait. Un assistant généraliste, un outil d'automatisation no-code comme n8n ou Make, et une gestion simple suffisent souvent. Le reste est du bruit marketing.</p>
-        </article>
+/* La Jauge card: light/cream contrast against the 3 dark category cards */
+.category-card--jauge {
+  background: #F4F1EC;
+  border-color: #ECE6DA;
+  color: var(--ink);
+}
+.category-card--jauge:hover { border-color: #D8D2C4; }
+.category-card--jauge h3 { color: var(--ink); }
+.category-card--jauge > p { color: var(--ink-70); }
 
-        <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
-          <h3 style="font-size:1.05rem;margin-bottom:10px;">💰 Comment choisir son compte pro ?</h3>
-          <p style="margin:0;color:var(--ink-70);line-height:1.7;">Sur l'usage réel : volume de transactions, besoin de cartes, intégration facturation. Pas sur la pub qu'on voit le plus.</p>
-        </article>
+/* ---- 12. ARTICLE CARDS ---- */
+.article-card {
+  background: var(--white);
+  border: 1px solid var(--ink-15);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: box-shadow .25s, transform .25s;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+.article-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.article-card-img { aspect-ratio: 16/9; overflow: hidden; }
+.article-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .4s cubic-bezier(.16,1,.3,1);
+}
+.article-card:hover .article-card-img img { transform: scale(1.05); }
+.article-card-body {
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+}
+.article-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .8rem;
+  color: var(--ink-45);
+  flex-wrap: wrap;
+}
+.article-card-meta .sep { color: var(--ink-15); }
+.article-card h3 { font-size: 1.1rem; line-height: 1.35; color: var(--ink); }
+.article-card-excerpt {
+  font-size: .9375rem;
+  color: var(--ink-70);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.article-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--ink-15);
+  font-size: .875rem;
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+.article-card--featured { flex-direction: row; }
+.article-card--featured .article-card-img { width: 45%; flex-shrink: 0; aspect-ratio: auto; min-height: 260px; }
+.article-card--featured h3 { font-size: 1.35rem; }
 
-        <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
-          <h3 style="font-size:1.05rem;margin-bottom:10px;">📈 Comment trouver ses premiers clients ?</h3>
-          <p style="margin:0;color:var(--ink-70);line-height:1.7;">Prospection LinkedIn, SEO, email marketing, recommandations, partenariats ou publicité en ligne. L'important est de choisir un canal adapté et de le travailler régulièrement, pas d'en essayer dix à la fois.</p>
-        </article>
+/* ---- 13. TOOL CARDS ---- */
+.tool-card {
+  background: var(--dark-card);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: box-shadow .25s, transform .25s, border-color .25s;
+}
+.tool-card:hover {
+  box-shadow: 0 0 0 1px rgba(255,92,57,.4), 0 10px 32px rgba(0,0,0,.3);
+  transform: translateY(-3px);
+  border-color: rgba(255,92,57,.3);
+}
+.tool-card-logo {
+  width: 48px; height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem;
+}
+.tool-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.tool-card h3  { color: var(--white); font-size: 1.1rem; }
+.tool-card > p { font-size: .9375rem; color: rgba(255,255,255,.5); flex: 1; }
+.tool-card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tool-card-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; margin-top: auto; flex-wrap: wrap;
+}
+.tool-price { font-size: .875rem; color: rgba(255,255,255,.4); }
+.tool-price strong { color: rgba(255,255,255,.8); font-weight: 600; }
+.tool-card--highlight {
+  background: linear-gradient(135deg, #7A2A15, #401107);
+  border-color: rgba(255,92,57,.3);
+}
+.tool-card--highlight h3, .tool-card--highlight > p { color: var(--white); }
+.tool-card--highlight > p { color: rgba(255,255,255,.7); }
+.tool-card--highlight .tool-price { color: rgba(255,255,255,.6); }
+.tool-card--highlight .tool-price strong { color: var(--white); }
 
-        <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
-          <h3 style="font-size:1.05rem;margin-bottom:10px;">🧠 Pourquoi parler de charge mentale ?</h3>
-          <p style="margin:0;color:var(--ink-70);line-height:1.7;">Parce que personne d'autre n'en parle vraiment. La solitude de la décision, la peur de regarder son compte, le syndrome de l'imposteur sont des réalités du quotidien entrepreneurial, pas des sujets annexes.</p>
-        </article>
+/* ---- 14. NEWSLETTER FORM ---- */
+.newsletter-form {
+  display: flex;
+  gap: 8px;
+  max-width: 480px;
+  flex-wrap: wrap;
+}
+.newsletter-form input[type="email"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 11px 16px;
+  border: 1.5px solid var(--ink-15);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  font-size: .9375rem;
+  color: var(--ink);
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.newsletter-form input[type="email"]::placeholder { color: var(--ink-45); }
+.newsletter-form input[type="email"]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255,92,57,.12);
+}
+.newsletter-form--dark input[type="email"] {
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.15);
+  color: var(--white);
+}
+.newsletter-form--dark input[type="email"]::placeholder { color: rgba(255,255,255,.38); }
+.newsletter-form--dark input[type="email"]:focus {
+  border-color: rgba(255,255,255,.4);
+  box-shadow: 0 0 0 3px rgba(255,255,255,.08);
+}
+.newsletter-disclaimer { margin-top: 10px; font-size: .8125rem; color: var(--ink-45); }
 
-      </div>
-    </div>
-  </div>
-    </section>
+/* ---- 15. BREADCRUMB ---- */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .875rem;
+  color: var(--page-ink-45);
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.breadcrumb a { color: var(--accent); transition: color .2s; }
+.breadcrumb a:hover { color: var(--accent-dark); }
+.breadcrumb-sep { color: var(--page-ink-15); user-select: none; }
 
-    <!-- ===== NEWSLETTER ===== -->
-    <section class="section section--dark" aria-labelledby="nl-title">
-      <div class="container" style="max-width:700px;">
-        <div style="text-align:center;">
-          <p class="section-label" style="color:rgba(255,255,255,.45);justify-content:center;">
-            Newsletter gratuite
-          </p>
-          <h2 id="nl-title" style="color:var(--white);margin-bottom:16px;">
-            Une jauge dans ta boîte mail, chaque semaine
-          </h2>
-          <p style="color:rgba(255,255,255,.6);font-size:1.0625rem;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto;">
-            Un outil testé, un chiffre qui compte, et un truc sur la tête. Pas de spam, pas de storytelling creux.
-          </p>
+/* ---- 16. SIDEBAR ---- */
+.page-with-sidebar {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 48px;
+  align-items: start;
+}
+.sidebar { display: flex; flex-direction: column; gap: 24px; }
+.sidebar-widget {
+  background: var(--white);
+  border: 1px solid var(--ink-15);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+.sidebar-widget h4 { font-size: 1rem; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--ink-15); color: var(--ink); }
+.sidebar-widget-sticky { position: sticky; top: calc(var(--nav-h) + 24px); }
+.sidebar-list { display: flex; flex-direction: column; gap: 12px; }
+.sidebar-list-item { display: flex; gap: 12px; align-items: flex-start; }
+.sidebar-num {
+  width: 22px; height: 22px;
+  border-radius: 4px;
+  background: var(--accent-xlight);
+  color: var(--accent-dark);
+  font-size: .75rem;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.sidebar-list-item a { font-size: .9rem; color: var(--ink-70); line-height: 1.4; transition: color .2s; }
+.sidebar-list-item a:hover { color: var(--accent-dark); }
 
-          <form class="newsletter-form newsletter-form--dark" style="justify-content:center;" action="#" aria-label="Inscription newsletter">
-            <input type="email" placeholder="ton@email.com" required autocomplete="email" aria-label="Votre adresse email" />
-            <button type="submit" class="btn btn-primary">S'inscrire gratuitement →</button>
-          </form>
+/* ---- 17. ARTICLE PAGE ---- */
+.reading-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  background: var(--accent);
+  z-index: 200;
+  transition: width .1s linear;
+  border-radius: 0 2px 2px 0;
+  width: 0;
+}
+.article-header { margin-bottom: 40px; }
+.article-header h1 { margin: 16px 0 20px; }
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.article-author { display: flex; align-items: center; gap: 10px; }
+.article-author-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: .875rem;
+  color: var(--accent-dark);
+}
+.article-author-name  { font-weight: 600; font-size: .875rem; color: var(--ink); }
+.article-author-role  { font-size: .8rem; color: var(--ink-45); }
+.article-meta-sep     { width: 1px; height: 32px; background: var(--ink-15); }
+.article-meta-item    { font-size: .875rem; color: var(--ink-45); display: flex; align-items: center; gap: 5px; }
+.article-hero-img {
+  width: 100%;
+  aspect-ratio: 16/7;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin-bottom: 40px;
+}
+.toc {
+  background: var(--accent-xlight);
+  border: 1px solid var(--accent-light);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin: 32px 0;
+}
+.toc-title { font-size: 1rem; margin-bottom: 14px; color: var(--ink); }
+.toc ol { list-style: decimal; padding-left: 20px; display: flex; flex-direction: column; gap: 7px; }
+.toc a { font-size: .9375rem; color: var(--accent-dark); transition: color .2s; }
+.toc a:hover { color: var(--accent); }
+.article-content { max-width: 720px; }
+.article-content h2 { font-size: 1.7rem; margin: 48px 0 18px; padding-top: 8px; }
+.article-content h3 { font-size: 1.3rem; margin: 32px 0 12px; }
+.article-content p  { margin-bottom: 20px; font-size: 1rem; color: var(--ink-70); }
+.article-content ul, .article-content ol {
+  margin: 0 0 20px 20px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.article-content ul { list-style: disc; }
+.article-content ol { list-style: decimal; }
+.article-content li    { font-size: 1rem; color: var(--ink-70); }
+.article-content strong{ color: var(--ink); font-weight: 600; }
+.article-content a     { color: var(--accent-dark); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .2s; }
+.article-content a:hover { text-decoration-color: var(--accent-dark); }
+.callout { border-radius: var(--radius); padding: 18px 22px; margin: 28px 0; display: flex; gap: 14px; align-items: flex-start; }
+.callout-icon { font-size: 1.2rem; flex-shrink: 0; line-height: 1.7; }
+.callout p { margin: 0; font-size: .9375rem; }
+.callout--tip     { background: #EEFAC7; border: 1px solid #D6FF3F; }
+.callout--tip p   { color: #3C4A0B; }
+.callout--warning { background: #fffbeb; border: 1px solid #fde68a; }
+.callout--warning p { color: #92400e; }
+.callout--info    { background: var(--accent-xlight); border: 1px solid var(--accent-light); }
+.callout--info p  { color: var(--accent-dark); }
+.affiliate-block {
+  background: var(--ink);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin: 36px 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.affiliate-block-logo {
+  width: 52px; height: 52px;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+.affiliate-block-body { flex: 1; min-width: 180px; }
+.affiliate-block-body h4 { color: var(--white); font-size: 1.1rem; margin-bottom: 4px; }
+.affiliate-block-body p  { color: rgba(255,255,255,.6); font-size: .9375rem; margin: 0; }
+.affiliate-badge {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.35);
+  display: flex; align-items: center; gap: 4px;
+  margin-bottom: 3px;
+}
+.related-articles { padding: 48px 0; border-top: 1px solid var(--ink-15); margin-top: 48px; }
+.related-articles h2 { font-size: 1.5rem; margin-bottom: 24px; }
 
-          <p style="margin-top:12px;font-size:.8125rem;color:rgba(255,255,255,.3);">
-            Désinscription en 1 clic · Aucun spam
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
+/* ---- 18. COMPARISON TABLE ---- */
+.comparison-table-wrap { overflow-x: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  font-size: .9375rem;
+}
+.comparison-table th {
+  background: var(--ink);
+  color: var(--white);
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: .875rem;
+  white-space: nowrap;
+}
+.comparison-table th:first-child { padding-left: 24px; }
+.comparison-table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--ink-15);
+  color: var(--ink-70);
+  vertical-align: middle;
+}
+.comparison-table td:first-child { padding-left: 24px; font-weight: 600; color: var(--ink); }
+.comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table tr:nth-child(even) td { background: var(--bg); }
+.check   { color: #16a34a; }
+.cross   { color: #dc2626; }
+.partial { color: var(--amber); }
 
-  <script src="/components.js" defer></script>
-</body>
-</html>
+/* ---- 19. FILTERS ---- */
+.filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
+.filter-btn {
+  padding: 8px 18px;
+  border: 1.5px solid var(--ink-15);
+  border-radius: 100px;
+  font-size: .875rem;
+  font-weight: 500;
+  color: var(--ink-70);
+  background: var(--white);
+  transition: all .2s;
+  cursor: pointer;
+}
+.filter-btn:hover { border-color: var(--accent); color: var(--accent-dark); }
+.filter-btn.active { background: var(--accent); border-color: var(--accent); color: var(--white); }
+
+/* ---- 20. PAGINATION ---- */
+.pagination { display: flex; align-items: center; justify-content: center; gap: 6px; padding-top: 48px; }
+.pagination-btn {
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1.5px solid var(--ink-15);
+  border-radius: var(--radius-sm);
+  font-size: .9375rem;
+  font-weight: 500;
+  color: var(--ink-70);
+  background: var(--white);
+  transition: all .2s;
+  cursor: pointer;
+}
+.pagination-btn:hover { border-color: var(--accent); color: var(--accent-dark); }
+.pagination-btn.active { background: var(--accent); border-color: var(--accent); color: var(--white); }
+.pagination-btn--wide { width: auto; padding: 0 16px; }
+
+/* ---- 21. SECTION TITLES ---- */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.section-label::before { content: ''; display: block; width: 24px; height: 2px; background: var(--accent); }
+#faq-title, .faq-item h3 { color: var(--ink); }
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.section-header > div { flex: 1; }
+
+/* ---- 22. STATS BAR ---- */
+.stats-bar {
+  display: flex;
+  background: var(--white);
+  border: 1px solid var(--ink-15);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.stats-bar-item {
+  flex: 1;
+  padding: 28px 24px;
+  border-right: 1px solid var(--ink-15);
+  text-align: center;
+}
+.stats-bar-item:last-child { border-right: none; }
+.stats-bar-num { font-family: var(--font-display); font-weight: 700; font-size: 2.2rem; color: var(--ink); line-height: 1; margin-bottom: 6px; }
+.stats-bar-label { font-size: .875rem; color: var(--ink-45); }
+
+/* ---- 23. VALUE CARDS ---- */
+.value-card {
+  background: var(--white);
+  border: 1px solid var(--ink-15);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: box-shadow .25s, transform .2s;
+}
+.value-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.value-card-icon { width: 44px; height: 44px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 16px; }
+.value-card h3 { font-size: 1.125rem; margin-bottom: 8px; color: var(--ink); }
+.value-card p  { font-size: .9375rem; color: var(--ink-70); }
+
+/* ---- 24. TESTIMONIALS ---- */
+.testimonial-card {
+  background: var(--white);
+  border: 1px solid var(--ink-15);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.testimonial-quote { font-size: .9875rem; color: var(--ink-70); line-height: 1.7; font-style: italic; }
+.testimonial-quote::before { content: '\201C'; font-family: var(--font-display); font-size: 2.5rem; color: var(--accent); line-height: .6; display: block; margin-bottom: 10px; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.testimonial-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .875rem;
+}
+.testimonial-name { font-weight: 600; font-size: .9375rem; color: var(--ink); }
+.testimonial-role { font-size: .8125rem; color: var(--ink-45); }
+.stars { color: #f59e0b; font-size: .875rem; letter-spacing: 1px; margin-bottom: 4px; }
+
+/* ---- 25. CONTACT FORM ---- */
+.contact-form { display: flex; flex-direction: column; gap: 16px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: .875rem; font-weight: 500; color: var(--ink-70); }
+.form-input {
+  padding: 11px 14px;
+  border: 1.5px solid var(--ink-15);
+  border-radius: var(--radius-sm);
+  font-size: .9375rem;
+  color: var(--ink);
+  background: var(--white);
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+  width: 100%;
+}
+.form-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(255,92,57,.1); }
+.form-input::placeholder { color: var(--ink-45); }
+textarea.form-input { resize: vertical; min-height: 120px; }
+
+/* ---- 26. LEGAL / AFFILIATE BOXES ---- */
+.legal-section h2 { font-size: 1.5rem; margin: 40px 0 16px; }
+.legal-section h2:first-child { margin-top: 0; }
+.legal-section p, .legal-section li { font-size: .9375rem; color: var(--ink-70); line-height: 1.75; }
+.legal-section ul { list-style: disc; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; margin: 8px 0 20px; }
+.affiliate-box {
+  background: var(--accent-xlight);
+  border: 1px solid var(--accent-light);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin: 24px 0;
+}
+.affiliate-box h3 { font-size: 1.05rem; margin-bottom: 10px; color: var(--accent-dark); }
+.affiliate-box p  { color: var(--accent-dark); font-size: .9375rem; margin: 0; }
+
+/* ---- 27. ARTICLE LIST ---- */
+.article-list-item {
+  display: flex;
+  background: var(--white);
+  border: 1px solid var(--ink-15);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: box-shadow .25s, transform .25s;
+  text-decoration: none;
+  color: inherit;
+}
+.article-list-item:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.article-list-img { width: 220px; flex-shrink: 0; overflow: hidden; }
+.article-list-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.article-list-item:hover .article-list-img img { transform: scale(1.05); }
+.article-list-body { padding: 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.article-list-body h3 { font-size: 1.2rem; line-height: 1.35; color: var(--ink); }
+.article-list-body p  { font-size: .9375rem; color: var(--ink-70); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.article-list-footer  { display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
+.read-time { font-size: .8125rem; color: var(--ink-45); display: flex; align-items: center; gap: 4px; }
+.read-more { font-size: .875rem; color: var(--accent-dark); font-weight: 500; display: flex; align-items: center; gap: 4px; }
+
+/* ---- 28. PAGE HERO ---- */
+.page-hero { padding: 64px 0 48px; text-align: center; }
+.page-hero h1 { margin-bottom: 16px; }
+.page-hero p { font-size: 1.125rem; max-width: 560px; margin: 0 auto; color: var(--page-ink-70); }
+.page-hero--dark { background: var(--dark-bg); }
+.page-hero--dark h1 { color: var(--white); }
+.page-hero--dark p  { color: rgba(255,255,255,.65); }
+
+/* ---- 29. WHAT YOU GET ---- */
+.what-you-get-card {
+  background: var(--white);
+  border: 1px solid var(--ink-15);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  transition: box-shadow .2s, transform .2s;
+}
+.what-you-get-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.what-you-get-icon { width: 44px; height: 44px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; background: var(--accent-xlight); flex-shrink: 0; }
+.what-you-get-card h4 { font-size: 1rem; margin-bottom: 4px; color: var(--ink); }
+.what-you-get-card p  { font-size: .875rem; color: var(--ink-70); }
+
+/* ---- 30. EMAIL PREVIEW ---- */
+.email-preview { background: var(--white); border: 1px solid var(--ink-15); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); }
+.email-preview-header { background: #2d2d2b; padding: 12px 16px; display: flex; align-items: center; gap: 8px; }
+.email-preview-dots  { display: flex; gap: 6px; }
+.email-preview-dot   { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,.2); }
+.email-preview-body  { padding: 32px; }
+.email-preview-from  { font-size: .8125rem; color: var(--ink-45); margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--ink-15); }
+.email-preview-subject { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; margin-bottom: 16px; color: var(--ink); }
+.email-preview-content { font-size: .9375rem; color: var(--ink-70); line-height: 1.75; }
+
+/* ---- 31. UTILITY ---- */
+.text-center { text-align: center; }
+.mt-8  { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+.mt-32 { margin-top: 32px; }
+.mb-8  { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; }
+.mb-32 { margin-bottom: 32px; }
+.mb-40 { margin-bottom: 40px; }
+.mb-48 { margin-bottom: 48px; }
+
+/* ---- 32. RESPONSIVE ---- */
+@media (max-width: 1024px) {
+  .grid-4   { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .page-with-sidebar { grid-template-columns: 1fr; }
+  .sidebar-widget-sticky { position: static; }
+  .article-card--featured { flex-direction: column; }
+  .article-card--featured .article-card-img { width: 100%; min-height: auto; aspect-ratio: 16/9; }
+}
+
+@media (max-width: 768px) {
+  :root { --nav-h: 64px; }
+  .hero   { padding: 64px 0 56px; }
+  .section { padding: 56px 0; }
+  .section--lg { padding: 72px 0; }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .nav-links, .nav-cta { display: none; }
+  .nav-burger { display: flex; }
+  .hero-stats { gap: 24px; }
+  .stats-bar  { flex-direction: column; }
+  .stats-bar-item { border-right: none; border-bottom: 1px solid var(--ink-15); }
+  .stats-bar-item:last-child { border-bottom: none; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .article-list-item { flex-direction: column; }
+  .article-list-img  { width: 100%; height: 200px; }
+  .article-list-body { padding: 16px; }
+  .form-row { grid-template-columns: 1fr; }
+  .affiliate-block { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  h1 { font-size: 2rem; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { justify-content: center; }
+  .pagination { gap: 4px; }
+  .newsletter-form { flex-direction: column; }
+  .newsletter-form input[type="email"] { min-width: unset; }
+}
