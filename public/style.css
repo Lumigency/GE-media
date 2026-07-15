@@ -368,8 +368,8 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
 .nav-dropdown-menu {
   position: absolute;
   top: calc(100% + 12px);
-  left: 50%;
-  transform: translateX(-50%) translateY(-6px);
+  left: 0;
+  transform: translateY(-6px);
   width: 480px;
   background: #ffffff;
   border: 1px solid var(--ink-15);
@@ -390,8 +390,8 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
   content: '';
   position: absolute;
   top: -6px;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
+  left: 24px;
+  transform: rotate(45deg);
   width: 12px;
   height: 12px;
   background: #ffffff;
@@ -403,7 +403,7 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0);
 }
 
 .nav-dropdown-item {
