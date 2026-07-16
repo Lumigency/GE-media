@@ -23,7 +23,7 @@
                 <span class="nav-dropdown-icon" style="background:#FFE0D6;" aria-hidden="true">🤖</span>
                 <span class="nav-dropdown-text">
                   <span class="nav-dropdown-title">Outils &amp; IA</span>
-                  <span class="nav-dropdown-desc">Testé, pas hypé</span>
+                  <span class="nav-dropdown-desc">Testé /span>
                 </span>
               </a>
 
@@ -31,7 +31,7 @@
                 <span class="nav-dropdown-icon" style="background:#EEFAC7;" aria-hidden="true">🎯</span>
                 <span class="nav-dropdown-text">
                   <span class="nav-dropdown-title">Acquisition &amp; Growth</span>
-                  <span class="nav-dropdown-desc">Les vrais chiffres</span>
+                  <span class="nav-dropdown-desc"> Stratgies,Paids,chiffres</span>
                 </span>
               </a>
 
@@ -39,7 +39,7 @@
                 <span class="nav-dropdown-icon" style="background:#e7e5de;" aria-hidden="true">💰</span>
                 <span class="nav-dropdown-text">
                   <span class="nav-dropdown-title">Argent &amp; Trésorerie</span>
-                  <span class="nav-dropdown-desc">Sans langue de bois</span>
+                  <span class="nav-dropdown-desc">Banques Pro, Assurances</span>
                 </span>
               </a>
 
