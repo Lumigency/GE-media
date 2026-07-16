@@ -19,7 +19,7 @@
             </button>
 
             <div class="nav-dropdown-menu" id="dropdown-categories" role="menu" aria-label="Les jauges">
-              <a href="/outils-ia" class="nav-dropdown-item" role="menuitem">
+              <a href="/ia-automatisation" class="nav-dropdown-item" role="menuitem">
                 <span class="nav-dropdown-icon" style="background:#FFE0D6;" aria-hidden="true">🤖</span>
                 <span class="nav-dropdown-text">
                   <span class="nav-dropdown-title">Outils &amp; IA</span>
@@ -58,11 +58,11 @@
           </div>
 
           <div class="nav-links" role="list">
-            <a href="/outils-ia" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true">🤖</span>Outils &amp; IA</a>
+            <a href="/ia-automatisation" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true">🤖</span>Outils &amp; IA</a>
             <span class="nav-dot" aria-hidden="true">·</span>
             <a href="/acquisition-growth" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true">🎯</span>Growth</a>
             <span class="nav-dot" aria-hidden="true">·</span>
-            <a href="/argent-tresorerie" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true">💰</span>Argent</a>
+            <a href="/finance-assurances" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true">💰</span>Argent</a>
             <span class="nav-dot" aria-hidden="true">·</span>
             <a href="/la-jauge" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true">🧠</span>La Jauge</a>
           </div>
@@ -96,9 +96,9 @@
             </button>
 
             <div class="nav-mobile-submenu" id="mobile-categories">
-              <a href="/outils-ia" class="nav-mobile-sublink" role="menuitem">🤖 Outils &amp; IA</a>
+              <a href="/ia-automatisation" class="nav-mobile-sublink" role="menuitem">🤖 Outils &amp; IA</a>
               <a href="/acquisition-growth" class="nav-mobile-sublink" role="menuitem">🎯 Acquisition &amp; Growth</a>
-              <a href="/argent-tresorerie" class="nav-mobile-sublink" role="menuitem">💰 Argent &amp; Trésorerie</a>
+              <a href="/finance-assurances" class="nav-mobile-sublink" role="menuitem">💰 Argent &amp; Trésorerie</a>
               <a href="/la-jauge" class="nav-mobile-sublink" role="menuitem">🧠 La Jauge</a>
               <a href="/categories" class="nav-mobile-sublink nav-mobile-sublink--all" role="menuitem">Toutes les jauges →</a>
             </div>
@@ -131,9 +131,9 @@
           <div class="footer-col">
             <p class="footer-col-title">Les jauges</p>
             <ul>
-              <li><a href="/outils-ia">Outils &amp; IA</a></li>
+              <li><a href="/ia-automatisation">Outils &amp; IA</a></li>
               <li><a href="/acquisition-growth">Acquisition &amp; Growth</a></li>
-              <li><a href="/argent-tresorerie">Argent &amp; Trésorerie</a></li>
+              <li><a href="/finance-assurances">Argent &amp; Trésorerie</a></li>
               <li><a href="/la-jauge">La Jauge</a></li>
               <li><a href="/guides">Tous les articles</a></li>
             </ul>
@@ -142,9 +142,9 @@
           <div class="footer-col">
             <p class="footer-col-title">Articles incontournables</p>
             <ul>
-              <li><a href="/outils-ia/claude-vs-chatgpt-vs-gemini">Claude vs ChatGPT vs Gemini : lequel mérite ton abonnement</a></li>
+              <li><a href="/ia-automatisation/claude-vs-chatgpt-vs-gemini">Claude vs ChatGPT vs Gemini : lequel mérite ton abonnement</a></li>
               <li><a href="/acquisition-growth/meilleur-crm-freelance">Meilleur CRM pour freelance et petite structure</a></li>
-              <li><a href="/argent-tresorerie/vrai-cout-compte-pro">Le vrai coût d'un compte pro, au-delà de la pub</a></li>
+              <li><a href="/finance-assurances/vrai-cout-compte-pro">Le vrai coût d'un compte pro, au-delà de la pub</a></li>
               <li><a href="/la-jauge/perdre-son-plus-gros-client">Perdre son plus gros client : ce que ça fait vraiment</a></li>
               <li><a href="/la-jauge/charge-mentale-entrepreneur">La charge mentale, ça se travaille</a></li>
             </ul>
@@ -210,7 +210,7 @@
       }
     });
 
-    const categoryPaths = ['/outils-ia', '/acquisition-growth', '/argent-tresorerie', '/la-jauge', '/categories'];
+    const categoryPaths = ['/ia-automatisation', '/acquisition-growth', '/finance-assurances', '/la-jauge', '/categories'];
     const isCategoryPath = categoryPaths.some(categoryPath => path === categoryPath || path.startsWith(`${categoryPath}/`));
     if (isCategoryPath) {
       const trigger = document.querySelector('.nav-dropdown-trigger');
