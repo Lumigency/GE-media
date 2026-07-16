@@ -23,7 +23,7 @@
                 <span class="nav-dropdown-icon" style="background:#FFE0D6;" aria-hidden="true">🤖</span>
                 <span class="nav-dropdown-text">
                   <span class="nav-dropdown-title">Outils &amp; IA</span>
-                  <span class="nav-dropdown-desc">Testé /span>
+                  <span class="nav-dropdown-desc">IA, no-code, automatisation</span>
                 </span>
               </a>
 
@@ -31,15 +31,15 @@
                 <span class="nav-dropdown-icon" style="background:#EEFAC7;" aria-hidden="true">🎯</span>
                 <span class="nav-dropdown-text">
                   <span class="nav-dropdown-title">Acquisition &amp; Growth</span>
-                  <span class="nav-dropdown-desc"> Stratgies,Paids,chiffres</span>
+                  <span class="nav-dropdown-desc">SEO, paid, CRM, prospection</span>
                 </span>
               </a>
 
-              <a href="/finance-assurances class="nav-dropdown-item" role="menuitem">
+              <a href="/finance-assurances" class="nav-dropdown-item" role="menuitem">
                 <span class="nav-dropdown-icon" style="background:#e7e5de;" aria-hidden="true">💰</span>
                 <span class="nav-dropdown-text">
                   <span class="nav-dropdown-title">Argent &amp; Trésorerie</span>
-                  <span class="nav-dropdown-desc">Banques Pro, Assurances</span>
+                  <span class="nav-dropdown-desc">Compte pro, compta, fiscalité</span>
                 </span>
               </a>
 
@@ -47,7 +47,7 @@
                 <span class="nav-dropdown-icon" style="background:#FDF3D9;" aria-hidden="true">🧠</span>
                 <span class="nav-dropdown-text">
                   <span class="nav-dropdown-title">La Jauge</span>
-                  <span class="nav-dropdown-desc">La tête, pour de vrai</span>
+                  <span class="nav-dropdown-desc">Charge mentale, solitude, burnout</span>
                 </span>
               </a>
 
