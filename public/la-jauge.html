@@ -4,44 +4,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>La Jauge : charge mentale de l'entrepreneur | Jauge</title>
-  <meta name="description" content="Charge mentale, solitude de la décision, peur de l'échec, syndrome de l'imposteur, rapport à l'argent — ce que personne ne dit à un entrepreneur qui porte tout seul." />
+  <title>La Jauge : charge mentale, solitude & burnout entrepreneur | Jauge</title>
+  <meta name="description" content="Charge mentale, solitude de la décision, peur de l'échec, syndrome de l'imposteur, rapport à l'argent : ce que personne ne dit à un entrepreneur qui porte tout seul." />
   <link rel="canonical" href="https://jauge.media/la-jauge" />
 
-  <meta property="og:title" content="La Jauge : charge mentale de l'entrepreneur | Jauge" />
+  <meta property="og:title" content="La Jauge : charge mentale, solitude &amp; burnout entrepreneur" />
   <meta property="og:description" content="Charge mentale, solitude de la décision, peur de l'échec, syndrome de l'imposteur — ce que personne ne dit jamais." />
   <meta property="og:image" content="https://jauge.media/og-image.jpg" />
   <meta property="og:url" content="https://jauge.media/la-jauge" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="Jauge" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="La Jauge | Jauge" />
+  <meta name="twitter:title" content="La Jauge — charge mentale d'entrepreneur | Jauge" />
   <meta name="twitter:description" content="La tête, pour de vrai : charge mentale, solitude, peur de l'échec, syndrome de l'imposteur." />
   <meta name="twitter:image" content="https://jauge.media/og-image.jpg" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-
-  <meta property="og:locale" content="fr_FR" />
-  <meta property="og:site_name" content="Jauge" />
   <meta name="theme-color" content="#0B0B0C" />
   <link rel="sitemap" type="application/xml" href="https://jauge.media/sitemap.xml" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "@id": "https://jauge.media/la-jauge",
-    "name": "La Jauge — Jauge",
-    "description": "Charge mentale, solitude de la décision, peur de l'échec, syndrome de l'imposteur et rapport à l'argent pour les entrepreneurs solo.",
-    "url": "https://jauge.media/la-jauge",
-    "isPartOf": { "@id": "https://jauge.media/#website" },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://jauge.media/" },
-        { "@type": "ListItem", "position": 2, "name": "Catégories", "item": "https://jauge.media/categories" },
-        { "@type": "ListItem", "position": 3, "name": "La Jauge" }
-      ]
-    }
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://jauge.media/la-jauge",
+        "name": "La Jauge — Jauge",
+        "description": "Charge mentale, solitude de la décision, peur de l'échec, syndrome de l'imposteur et rapport à l'argent pour les entrepreneurs solo.",
+        "url": "https://jauge.media/la-jauge",
+        "isPartOf": { "@id": "https://jauge.media/#website" },
+        "breadcrumb": { "@id": "https://jauge.media/la-jauge#breadcrumb" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://jauge.media/la-jauge#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://jauge.media/" },
+          { "@type": "ListItem", "position": 2, "name": "Catégories", "item": "https://jauge.media/categories" },
+          { "@type": "ListItem", "position": 3, "name": "La Jauge" }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://jauge.media/la-jauge#articles",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "url": "https://jauge.media/la-jauge/charge-mentale-entrepreneur", "name": "La charge mentale, ça se travaille" },
+          { "@type": "ListItem", "position": 2, "url": "https://jauge.media/la-jauge/perdre-son-plus-gros-client", "name": "Perdre son plus gros client : ce que ça fait vraiment" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://jauge.media/la-jauge#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "C'est quoi la charge mentale d'un entrepreneur ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "La charge mentale d'un entrepreneur, c'est le poids cumulé des décisions, de la trésorerie, des clients et de l'incertitude qu'une seule personne porte en continu, sans équipe pour partager la responsabilité." }
+          },
+          {
+            "@type": "Question",
+            "name": "Pourquoi le syndrome de l'imposteur touche autant les entrepreneurs solo ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sans collègues ni hiérarchie pour valider son travail, un entrepreneur solo manque de repères extérieurs. Le doute sur sa légitimité s'installe facilement, surtout face à des clients qui paient cher." }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment reconnaître les signes avant-coureurs du burnout entrepreneurial ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Les signaux précèdent presque toujours la fatigue physique : irritabilité inhabituelle, perte de plaisir dans des tâches qu'on aimait, difficulté à décider même sur des sujets mineurs, et isolement social progressif." }
+          }
+        ]
+      }
+    ]
   }
   </script>
 
@@ -67,22 +101,7 @@
         <p class="section-label" style="justify-content:center;">La tête, pour de vrai</p>
         <h1>La Jauge</h1>
         <p>Charge mentale, solitude de la décision, peur de l'échec, syndrome de l'imposteur, rapport à l'argent — ce que ça fait vraiment de tout porter seul, sans discours de développement personnel plaqué dessus.</p>
-      </div>
-    </section>
-
-    <section class="section section--sm" aria-labelledby="intro-jauge-title">
-      <div class="container">
-        <div style="background:#FDF3D9;border:1px solid rgba(146,100,11,.16);border-radius:24px;padding:32px 36px;max-width:980px;margin:0 auto;">
-
-          <p class="section-label" style="margin-bottom:10px;color:var(--violet);">Comprendre la charge mentale</p>
-          <h2 id="intro-jauge-title" style="margin-bottom:16px;color:var(--ink);">
-            Ce que personne ne dit à un entrepreneur qui se lance seul
-          </h2>
-
-          <p style="font-size:1.02rem;line-height:1.75;margin-bottom:0;color:var(--ink-70);max-width:760px;">
-            Personne ne prévient qu'être seul aux commandes, ça pèse. La charge mentale d'un solopreneur ne se limite pas au travail : c'est la décision qu'on prend seul à 23h, le compte en banque qu'on n'ose pas regarder, le client perdu dont on se sent responsable. Ici, on ne fait pas de développement personnel de surface — on nomme <strong style="color:var(--ink);">ce qui pèse vraiment</strong>.
-          </p>
-        </div>
+        <p style="font-size:.8125rem;color:var(--page-ink-45);margin-top:16px;">Mis à jour en mai 2026 · 6 articles</p>
       </div>
     </section>
 
@@ -101,8 +120,9 @@
         <div class="grid-3">
 
           <a href="/la-jauge/charge-mentale-entrepreneur" class="article-card" data-category="charge-mentale">
+            <article>
             <div class="article-card-img">
-              <img src="https://images.pexels.com/photos/3760810/pexels-photo-3760810.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Entrepreneur solo épuisé par la charge mentale" width="500" height="281" loading="lazy" />
+              <img src="https://images.pexels.com/photos/3760810/pexels-photo-3760810.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Entrepreneur solo épuisé par la charge mentale, tête entre les mains devant son ordinateur" width="500" height="281" loading="lazy" />
             </div>
             <div class="article-card-body">
               <div class="article-card-meta">
@@ -114,11 +134,13 @@
               <p class="article-card-excerpt">Ce n'est pas de la fragilité. C'est une conséquence directe de porter tous les rôles d'une entreprise à soi seul — et ça se travaille, concrètement.</p>
               <div class="article-card-footer"><span>Lire →</span><span>9 min</span></div>
             </div>
+            </article>
           </a>
 
           <a href="/la-jauge/perdre-son-plus-gros-client" class="article-card" data-category="solitude-echec">
+            <article>
             <div class="article-card-img">
-              <img src="https://images.pexels.com/photos/6620832/pexels-photo-6620832.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Entrepreneur seul après avoir perdu un client important" width="500" height="281" loading="lazy" />
+              <img src="https://images.pexels.com/photos/6620832/pexels-photo-6620832.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Entrepreneur seul et pensif après avoir perdu un client important" width="500" height="281" loading="lazy" />
             </div>
             <div class="article-card-body">
               <div class="article-card-meta">
@@ -130,11 +152,13 @@
               <p class="article-card-excerpt">Pas un article de conseils. Juste ce qui se passe dans ta tête les trois semaines qui suivent.</p>
               <div class="article-card-footer"><span>Lire →</span><span>7 min</span></div>
             </div>
+            </article>
           </a>
 
           <a href="/guides" class="article-card" data-category="argent-risque">
+            <article>
             <div class="article-card-img">
-              <img src="https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Entrepreneur anxieux face à son compte en banque professionnel" width="500" height="281" loading="lazy" />
+              <img src="https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Entrepreneur anxieux consultant son compte en banque professionnel sur son téléphone" width="500" height="281" loading="lazy" />
             </div>
             <div class="article-card-body">
               <div class="article-card-meta">
@@ -146,11 +170,13 @@
               <p class="article-card-excerpt">Ce n'est pas de la procrastination. C'est que le compte en banque est devenu le thermomètre direct de ta valeur — et ça fait peur.</p>
               <div class="article-card-footer"><span>Lire →</span><span>8 min</span></div>
             </div>
+            </article>
           </a>
 
           <a href="/guides" class="article-card" data-category="imposteur">
+            <article>
             <div class="article-card-img">
-              <img src="https://images.pexels.com/photos/5325841/pexels-photo-5325841.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Entrepreneure doutant de sa légitimité face à un client" width="500" height="281" loading="lazy" />
+              <img src="https://images.pexels.com/photos/5325841/pexels-photo-5325841.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Entrepreneure doutant de sa légitimité avant un rendez-vous avec un client" width="500" height="281" loading="lazy" />
             </div>
             <div class="article-card-body">
               <div class="article-card-meta">
@@ -162,11 +188,13 @@
               <p class="article-card-excerpt">Le tarif que tu factures n'a rien à voir avec ta légitimité réelle. Pourquoi ce doute revient sans arrêt, et ce qui aide vraiment.</p>
               <div class="article-card-footer"><span>Lire →</span><span>8 min</span></div>
             </div>
+            </article>
           </a>
 
           <a href="/guides" class="article-card" data-category="repos-limites">
+            <article>
             <div class="article-card-img">
-              <img src="https://images.pexels.com/photos/3760607/pexels-photo-3760607.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Entrepreneure se reposant loin de son ordinateur" width="500" height="281" loading="lazy" />
+              <img src="https://images.pexels.com/photos/3760607/pexels-photo-3760607.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Entrepreneure se reposant dans un hamac, loin de son ordinateur" width="500" height="281" loading="lazy" />
             </div>
             <div class="article-card-body">
               <div class="article-card-meta">
@@ -178,10 +206,15 @@
               <p class="article-card-excerpt">Ce n'est presque jamais la fatigue qui alerte en premier. Les vrais signaux, souvent invisibles jusqu'à ce que ce soit trop tard.</p>
               <div class="article-card-footer"><span>Lire →</span><span>9 min</span></div>
             </div>
+            </article>
           </a>
 
           <a href="/guides" class="article-card" data-category="solitude-echec">
-            <div class="article-card-body" style="padding:24px;">
+            <article>
+            <div class="article-card-img">
+              <img src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Entrepreneur seul travaillant tard le soir, sans collègue à qui parler" width="500" height="281" loading="lazy" />
+            </div>
+            <div class="article-card-body">
               <div class="article-card-meta">
                 <span class="tag tag-jauge">Solitude &amp; échec</span>
                 <span class="sep" aria-hidden="true">·</span>
@@ -191,35 +224,66 @@
               <p class="article-card-excerpt">Pas de comité de direction, pas de collègue de bureau. Où trouver un vrai regard extérieur quand on porte tout seul.</p>
               <div class="article-card-footer"><span>Lire →</span><span>8 min</span></div>
             </div>
+            </article>
           </a>
 
+        </div>
+
+        <div style="text-align:center;margin-top:40px;">
+          <a href="/guides" class="btn btn-outline btn-lg">Charger plus d'articles →</a>
         </div>
       </div>
     </section>
 
-    <section class="section section--sm" id="guides-piliers-jauge" aria-labelledby="guides-piliers-title">
+    <!-- MAILLAGE INTERNE : LES AUTRES JAUGES -->
+    <section class="section section--sm" style="background:var(--dark-bg);" aria-labelledby="autres-jauges-title">
       <div class="container">
-        <div style="display:flex;justify-content:space-between;gap:20px;align-items:end;flex-wrap:wrap;margin-bottom:24px;">
-          <div><p class="section-label">Articles incontournables</p><h2 id="guides-piliers-title">Les piliers de cette jauge</h2></div>
-          <a href="/guides" class="btn btn-outline">Tous les articles</a>
+        <p class="section-label" style="justify-content:center;">Explorer aussi</p>
+        <h2 id="autres-jauges-title" style="text-align:center;margin-bottom:28px;">Les autres jauges</h2>
+        <div class="grid-3">
+          <a href="/ia-automatisation" class="category-card">
+            <div class="category-card-icon" style="background:#3a1810;" aria-hidden="true">🤖</div>
+            <h3>Outils &amp; IA</h3>
+            <p>Testé, pas hypé.</p>
+          </a>
+          <a href="/acquisition-growth" class="category-card">
+            <div class="category-card-icon" style="background:#2e3a1a;" aria-hidden="true">🎯</div>
+            <h3>Acquisition &amp; Growth</h3>
+            <p>Les vrais chiffres.</p>
+          </a>
+          <a href="/finance-assurances" class="category-card">
+            <div class="category-card-icon" style="background:#2a2a28;" aria-hidden="true">💰</div>
+            <h3>Argent &amp; Trésorerie</h3>
+            <p>Sans langue de bois.</p>
+          </a>
         </div>
-        <div class="grid-2">
-          <a href="/la-jauge/charge-mentale-entrepreneur" class="article-card">
-            <div class="article-card-body">
-              <div class="article-card-meta"><span class="tag tag-jauge">Article pilier</span><span class="sep" aria-hidden="true">·</span><span>2026</span></div>
-              <h3>La charge mentale, ça se travaille</h3>
-              <p class="article-card-excerpt">Ce n'est pas de la fragilité. C'est une conséquence directe de porter tous les rôles d'une entreprise à soi seul.</p>
-              <div class="article-card-footer"><span>Lire →</span><span>9 min</span></div>
-            </div>
-          </a>
-          <a href="/la-jauge/perdre-son-plus-gros-client" class="article-card">
-            <div class="article-card-body">
-              <div class="article-card-meta"><span class="tag tag-jauge">Article pilier</span><span class="sep" aria-hidden="true">·</span><span>2026</span></div>
-              <h3>Perdre son plus gros client : ce que ça fait vraiment</h3>
-              <p class="article-card-excerpt">Pas un article de conseils. Juste ce qui se passe dans ta tête les trois semaines qui suivent.</p>
-              <div class="article-card-footer"><span>Lire →</span><span>7 min</span></div>
-            </div>
-          </a>
+      </div>
+    </section>
+
+    <!-- FAQ SEO -->
+    <section class="section section--sm" aria-labelledby="faq-jauge-title">
+      <div class="container" style="max-width:820px;">
+        <div style="text-align:center;margin-bottom:28px;">
+          <p class="section-label" style="justify-content:center;">Questions fréquentes</p>
+          <h2 id="faq-jauge-title">Charge mentale d'entrepreneur : les questions qu'on nous pose</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;" class="faq-grid">
+          <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
+            <h3 style="font-size:1.05rem;margin-bottom:10px;">🧠 C'est quoi la charge mentale d'un entrepreneur ?</h3>
+            <p style="margin:0;color:var(--ink-70);line-height:1.7;">Le poids cumulé des décisions, de la trésorerie, des clients et de l'incertitude qu'une seule personne porte en continu, sans équipe pour partager la responsabilité.</p>
+          </article>
+          <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
+            <h3 style="font-size:1.05rem;margin-bottom:10px;">🎭 Pourquoi le syndrome de l'imposteur touche autant les solos ?</h3>
+            <p style="margin:0;color:var(--ink-70);line-height:1.7;">Sans collègues ni hiérarchie pour valider son travail, les repères extérieurs manquent. Le doute sur sa légitimité s'installe facilement, surtout face à un client qui paie cher.</p>
+          </article>
+          <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
+            <h3 style="font-size:1.05rem;margin-bottom:10px;">🔋 Comment reconnaître les signes avant-coureurs du burnout ?</h3>
+            <p style="margin:0;color:var(--ink-70);line-height:1.7;">Les signaux précèdent presque toujours la fatigue physique : irritabilité inhabituelle, perte de plaisir, difficulté à décider, isolement progressif.</p>
+          </article>
+          <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
+            <h3 style="font-size:1.05rem;margin-bottom:10px;">💸 Pourquoi j'évite de regarder mon compte en banque ?</h3>
+            <p style="margin:0;color:var(--ink-70);line-height:1.7;">Le compte devient le thermomètre direct de ta valeur perçue. L'éviter est une réaction de protection, pas de la négligence.</p>
+          </article>
         </div>
       </div>
     </section>
