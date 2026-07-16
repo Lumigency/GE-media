@@ -155,10 +155,10 @@
             <ul>
               <li><a href="/newsletter">Newsletter</a></li>
               <li><a href="/a-propos">À propos</a></li>
-              <li><a href="/a-propos#contact">Contact</a></li>
-              <li><a href="/a-propos#mentions-legales">Mentions légales</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/mentions-legales">Mentions légales</a></li>
               <li><a href="/a-propos#politique-affiliation">Politique d'affiliation</a></li>
-              <li><a href="/a-propos#rgpd">RGPD</a></li>
+              <li><a href="/mentions-legales#rgpd">RGPD</a></li>
             </ul>
           </div>
         </div>
@@ -166,9 +166,9 @@
         <div class="footer-bottom">
           <p class="footer-copy">© 2026 Jauge. Tous droits réservés.</p>
           <nav class="footer-legal" aria-label="Liens légaux">
-            <a href="/a-propos#mentions-legales">Mentions légales</a>
+            <a href="/mentions-legales">Mentions légales</a>
             <a href="/a-propos#politique-affiliation">Politique d’affiliation</a>
-            <a href="/a-propos#rgpd">RGPD</a>
+            <a href="/mentions-legales#rgpd">RGPD</a>
           </nav>
         </div>
       </div>
