@@ -130,6 +130,61 @@
 <body>
   <main>
 
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+
+          <div class="hero-main">
+            <p class="hero-dateline anim-fade-up">
+              Cette semaine · un CRM à l'épreuve, la charge mentale, le vrai coût d'un compte pro
+            </p>
+
+            <h1 class="hero-title anim-fade-up anim-delay-1">
+              T'en es où, <em>vraiment</em> ?
+            </h1>
+
+            <p class="hero-desc anim-fade-up anim-delay-2">
+              Jauge parle de ta trésorerie, de tes outils IA, de ton acquisition client et de ta santé mentale face à l'entrepreneuriat.
+            </p>
+
+            <div class="hero-actions anim-fade-up anim-delay-3">
+              <a href="/articles" class="btn btn-primary btn-lg">Lire les articles →</a>
+              <a href="/newsletter" class="btn btn-outline btn-lg">Rejoindre la newsletter</a>
+            </div>
+
+            <div class="hero-stats anim-fade-up anim-delay-4">
+              <div>
+                <span class="hero-stat-num">4</span>
+                <span class="hero-stat-label">Jauges thématiques</span>
+              </div>
+              <div>
+                <span class="hero-stat-num">0</span>
+                <span class="hero-stat-label">Top 10 génériques</span>
+              </div>
+              <div>
+                <span class="hero-stat-num">100%</span>
+                <span class="hero-stat-label">Testé, pas hypé</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-gauge anim-fade-up anim-delay-2" role="img" aria-label="Jauge du mois : charge mentale à 71 sur 100">
+            <svg viewBox="0 0 240 150" class="hero-gauge-svg">
+              <path d="M 20 130 A 100 100 0 0 1 220 130" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="18" stroke-linecap="round" />
+              <path id="gaugeArc" d="M 20 130 A 100 100 0 0 1 220 130" fill="none" stroke="var(--accent)" stroke-width="18" stroke-linecap="round"
+                    stroke-dasharray="314" stroke-dashoffset="91" />
+              <line x1="120" y1="130" x2="168" y2="66" stroke="var(--white)" stroke-width="4" stroke-linecap="round" transform="rotate(0 120 130)" />
+              <circle cx="120" cy="130" r="8" fill="var(--white)" />
+            </svg>
+            <div class="hero-gauge-value">71<span>/100</span></div>
+            <p class="hero-gauge-label">Jauge du mois<br />Charge mentale entrepreneurs solo</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- ===== CARROUSEL À LA UNE ===== -->
     <section class="hero-carousel" aria-label="À la une" aria-roledescription="carrousel">
       <div class="carousel" id="jaugeCarousel">
@@ -228,50 +283,6 @@
         restart();
       })();
     </script>
-
-    <!-- ===== HERO ===== -->
-    <section class="hero">
-      <div class="container">
-        <div class="anim-fade-up">
-          <div class="hero-badge">
-            <span class="hero-badge-dot" aria-hidden="true"></span>
-            Nouveau · On a testé Claude, ChatGPT et Gemini sur un vrai mois de boulot
-          </div>
-        </div>
-
-        <h1 class="hero-title anim-fade-up anim-delay-1">
-          T'en es où, <em>vraiment</em> ?
-        </h1>
-
-        <p class="hero-desc anim-fade-up anim-delay-2">
-          Jauge parle de ta trésorerie, de tes outils IA, de ton acquisition client et de ta santé mentale face à l'entrepreneuriat.
-        </p>
-
-        <div class="hero-actions anim-fade-up anim-delay-3">
-          <a href="/articles" class="btn btn-primary btn-lg">Lire les articles →</a>
-          <a href="/newsletter" class="btn btn-outline btn-lg">Rejoindre la newsletter</a>
-        </div>
-
-        <div class="hero-stats anim-fade-up anim-delay-4">
-          <div>
-            <span class="hero-stat-num">4</span>
-            <span class="hero-stat-label">Jauges thématiques</span>
-          </div>
-          <div>
-            <span class="hero-stat-num">71/100</span>
-            <span class="hero-stat-label">Jauge du mois (charge mentale)</span>
-          </div>
-          <div>
-            <span class="hero-stat-num">0</span>
-            <span class="hero-stat-label">Top 10 génériques</span>
-          </div>
-          <div>
-            <span class="hero-stat-num">100%</span>
-            <span class="hero-stat-label">Testé, pas hypé</span>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- ===== INTRO / MANIFESTE ===== -->
     <section class="section section--sm" aria-labelledby="intro-home-title">
