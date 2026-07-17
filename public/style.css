@@ -1450,3 +1450,62 @@ textarea.form-input { resize: vertical; min-height: 120px; }
   color: currentColor;
 }
 .icon-lg { width: 1.5em; height: 1.5em; }
+
+/* ---- 36. BONS PLANS : ÉPINGLES + EMPLACEMENTS PUB ---- */
+.pin-card {
+  position: relative;
+  background: var(--dark-card);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius-lg);
+  padding: 20px 16px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .2s, transform .2s;
+}
+.pin-card:hover { border-color: rgba(255,92,57,.4); transform: translateY(-2px); }
+.pin-card-badge {
+  position: absolute;
+  top: -10px; left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex; align-items: center; gap: 4px;
+  background: var(--accent);
+  color: var(--ink);
+  font-size: .6875rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.pin-card-badge .icon { width: .8em; height: .8em; }
+.pin-card-logo {
+  width: 44px; height: 44px;
+  margin: 10px auto 10px;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink);
+}
+.pin-card h3 { color: var(--white); font-size: 1.05rem; margin-bottom: 2px; }
+.pin-card p { color: rgba(255,255,255,.5); font-size: .8125rem; margin: 0; }
+
+.ad-slot {
+  border: 1.5px dashed var(--ink-15);
+  border-radius: var(--radius);
+  background: #f4f2ee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: var(--ink-45);
+  font-size: .8125rem;
+  text-align: center;
+}
+.ad-slot--300x250 { aspect-ratio: 300 / 250; }
+.ad-slot--300x600 { aspect-ratio: 300 / 600; }
+.ad-slot-size { font-family: var(--font-mono, monospace); font-size: .75rem; color: var(--ink-45); }
+
+@media (max-width: 1024px) {
+  #pins-title ~ .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
