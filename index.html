@@ -29,7 +29,7 @@
       "inLanguage": "fr-FR",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://jauge.media/guides?q={search_term_string}",
+        "target": "https://jauge.media/articles?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     },
@@ -137,7 +137,7 @@
 
           <div class="hero-main">
             <p class="hero-dateline anim-fade-up">
-             MÉDIA INDÉPENDANT · Écrit par des entrepreneurs, pour des entrepreneurs.
+              Cette semaine · un CRM à l'épreuve, la charge mentale, le vrai coût d'un compte pro
             </p>
 
             <h1 class="hero-title anim-fade-up anim-delay-1">
@@ -149,7 +149,7 @@
             </p>
 
             <div class="hero-actions anim-fade-up anim-delay-3">
-              <a href="/guides" class="btn btn-primary btn-lg">Découvrir nos guides →</a>
+              <a href="/articles" class="btn btn-primary btn-lg">Lire les articles →</a>
               <a href="/newsletter" class="btn btn-outline btn-lg">Rejoindre la newsletter</a>
             </div>
 
@@ -170,7 +170,7 @@
           </div>
 
           <div class="hero-gauge anim-fade-up anim-delay-2" role="img" aria-label="Jauge du mois : charge mentale à 71 sur 100">
-            <svg viewBox="0 0 240 150" class="hero-gauge-svg">
+            <svg viewBox="0 0 240 150" width="240" height="150" class="hero-gauge-svg" preserveAspectRatio="xMidYMid meet">
               <path d="M 20 130 A 100 100 0 0 1 220 130" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="18" stroke-linecap="round" />
               <path id="gaugeArc" d="M 20 130 A 100 100 0 0 1 220 130" fill="none" stroke="var(--accent)" stroke-width="18" stroke-linecap="round"
                     stroke-dasharray="314" stroke-dashoffset="91" />
@@ -190,7 +190,7 @@
       <div class="carousel" id="jaugeCarousel">
         <div class="carousel-track">
 
-          <a href="/guides" class="carousel-slide" data-tag="ia" aria-label="Lire : Make vs Zapier vs n8n">
+          <a href="/articles" class="carousel-slide" data-tag="ia" aria-label="Lire : Make vs Zapier vs n8n">
             <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Équipe testant des outils d'automatisation sur ordinateur" loading="eager" />
             <div class="carousel-overlay">
               <span class="tag tag-ia">Outils &amp; IA</span>
@@ -200,7 +200,7 @@
             </div>
           </a>
 
-          <a href="/guides" class="carousel-slide" data-tag="ia" aria-label="Lire : Claude vs ChatGPT vs Gemini">
+          <a href="/articles" class="carousel-slide" data-tag="ia" aria-label="Lire : Claude vs ChatGPT vs Gemini">
             <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Interface IA marketing sur un écran" loading="lazy" />
             <div class="carousel-overlay">
               <span class="tag tag-ia">Outils &amp; IA</span>
@@ -310,31 +310,31 @@
 
         <div class="grid-4">
           <a href="/ia-automatisation" class="category-card">
-            <div class="category-card-icon" style="background:#3a1810;" aria-hidden="true">🤖</div>
+            <div class="category-card-icon" style="background:#3a1810;color:#FF7452;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-cpu"/></svg></div>
             <h3>Outils &amp; IA</h3>
             <p>Outils IA, workflows no-code et productivité, testés en vrai sur des tâches réelles. On dit aussi quand c'est nul.</p>
-            <span class="category-card-arrow" style="color:#FF7452;">Découvrir les guides <span aria-hidden="true">→</span></span>
+            <span class="category-card-arrow" style="color:#FF7452;">Découvrir les articles <span aria-hidden="true">→</span></span>
           </a>
 
           <a href="/acquisition-growth" class="category-card">
-            <div class="category-card-icon" style="background:#2e3a1a;" aria-hidden="true">🎯</div>
+            <div class="category-card-icon" style="background:#2e3a1a;color:#D6FF3F;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-target"/></svg></div>
             <h3>Acquisition &amp; Growth</h3>
             <p>SEO, paid ads, affiliation, tunnels de vente : les mécaniques réelles pour attirer et convertir, pas la théorie.</p>
-            <span class="category-card-arrow" style="color:#D6FF3F;">Découvrir les guides <span aria-hidden="true">→</span></span>
+            <span class="category-card-arrow" style="color:#D6FF3F;">Découvrir les articles <span aria-hidden="true">→</span></span>
           </a>
 
           <a href="/finance-assurances" class="category-card">
-            <div class="category-card-icon" style="background:#2a2a28;" aria-hidden="true">💰</div>
+            <div class="category-card-icon" style="background:#2a2a28;color:#ffffff;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-wallet"/></svg></div>
             <h3>Argent &amp; Trésorerie</h3>
             <p>Comptes pro, comptabilité, fiscalité, assurances : ce qu'il faut vraiment suivre pour ne pas se faire surprendre.</p>
-            <span class="category-card-arrow" style="color:#ffffff;">Découvrir les guides <span aria-hidden="true">→</span></span>
+            <span class="category-card-arrow" style="color:#ffffff;">Découvrir les articles <span aria-hidden="true">→</span></span>
           </a>
 
           <a href="/la-jauge" class="category-card category-card--jauge">
-            <div class="category-card-icon" style="background:#FFE0D6;" aria-hidden="true">🧠</div>
+            <div class="category-card-icon" style="background:#FFE0D6;color:#D9431F;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-brain"/></svg></div>
             <h3>La Jauge</h3>
             <p>Charge mentale, solitude de la décision, peur de regarder son compte. Ce que personne ne dit jamais.</p>
-            <span class="category-card-arrow" style="color:#D9431F;">Découvrir les guides <span aria-hidden="true">→</span></span>
+            <span class="category-card-arrow" style="color:#D9431F;">Découvrir les articles <span aria-hidden="true">→</span></span>
           </a>
         </div>
       </div>
@@ -400,7 +400,7 @@
       </div>
     </section>
 
-    <!-- ===== 3 DERNIERS guides ===== -->
+    <!-- ===== 3 DERNIERS ARTICLES ===== -->
     <section class="section" aria-labelledby="recent-title">
       <div class="container">
         <div class="section-header">
@@ -408,11 +408,11 @@
             <p class="section-label">Récemment publié</p>
             <h2 id="recent-title">Les derniers</h2>
           </div>
-          <a href="/guides" class="btn btn-outline">Voir tout →</a>
+          <a href="/articles" class="btn btn-outline">Voir tout →</a>
         </div>
 
         <div class="grid-3">
-          <a href="/guides" class="article-card anim-fade-up">
+          <a href="/articles" class="article-card anim-fade-up">
             <div class="article-card-img">
               <img
                 src="https://images.pexels.com/photos/5077039/pexels-photo-5077039.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -433,7 +433,7 @@
             </div>
           </a>
 
-          <a href="/guides" class="article-card anim-fade-up anim-delay-1">
+          <a href="/articles" class="article-card anim-fade-up anim-delay-1">
             <div class="article-card-img">
               <img
                 src="https://images.pexels.com/photos/1181672/pexels-photo-1181672.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -454,7 +454,7 @@
             </div>
           </a>
 
-          <a href="/guides" class="article-card anim-fade-up anim-delay-2">
+          <a href="/articles" class="article-card anim-fade-up anim-delay-2">
             <div class="article-card-img">
               <img
                 src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=600"
