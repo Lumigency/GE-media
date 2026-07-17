@@ -10,7 +10,6 @@ export default defineConfig({
       input: {
         main:       resolve(__dirname, 'index.html'),
         categories: resolve(__dirname, 'categories.html'),
-        articles:   resolve(__dirname, 'articles.html'),
         guides:    resolve(__dirname, 'guides.html'),
         'bons-plans': resolve(__dirname, 'bons-plans.html'),
         newsletter: resolve(__dirname, 'newsletter.html'),
@@ -18,7 +17,6 @@ export default defineConfig({
         'acquisition-growth': resolve(__dirname, 'acquisition-growth.html'),
         'finance-assurances': resolve(__dirname, 'finance-assurances.html'),
         'ia-automatisation': resolve(__dirname, 'ia-automatisation.html'),
-        'outils-logiciels': resolve(__dirname, 'outils-logiciels.html'),
         'la-jauge': resolve(__dirname, 'la-jauge.html'),
         'contact': resolve(__dirname, 'contact.html'),
         'mentions-legales': resolve(__dirname, 'mentions-legales.html'),
