@@ -135,18 +135,18 @@
               <li><a href="/acquisition-growth">Acquisition &amp; Growth</a></li>
               <li><a href="/finance-assurances">Argent &amp; Trésorerie</a></li>
               <li><a href="/la-jauge">La Jauge</a></li>
-              <li><a href="/guides">Tous les guides</a></li>
+              <li><a href="/guides">Tous les guidess</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
             <p class="footer-col-title">Articles incontournables</p>
             <ul>
-              <li><a href="/ia-automatisation/claude-vs-chatgpt-2026">Claude vs ChatGPT : lequel choisir pour son business en 2026</a></li>
-              <li><a href="/acquisition-growth/meilleur-crm-freelance">Meilleur CRM pour freelance et petite structure en 2026</a></li>
-              <li><a href="/finance-assurances/meilleur-compte-pro-freelance-2026">Meilleur compte pro freelance 2026 : le classement honnête</a></li>
-              <li><a href="/la-jauge/charge-mentale-entrepreneur">Charge mentale entrepreneur : comment la reconnaître et la travailler</a></li>
-              <li><a href="/la-jauge/syndrome-imposteur-entrepreneuriat">Syndrome de l'imposteur en entrepreneuriat : pourquoi ça touche autant les solos</a></li>
+              <li><a href="/ia-automatisation/claude-vs-chatgpt-2026">Claude vs ChatGPT</a></li>
+              <li><a href="/acquisition-growth/meilleur-crm-freelance">Meilleur CRM freelance</a></li>
+              <li><a href="/finance-assurances/meilleur-compte-pro-freelance-2026">Meilleur compte pro</a></li>
+              <li><a href="/la-jauge/charge-mentale-entrepreneur">Charge mentale entrepreneur</a></li>
+              <li><a href="/la-jauge/syndrome-imposteur-entrepreneuriat">Syndrome de l'imposteur</a></li>
             </ul>
           </div>
 
