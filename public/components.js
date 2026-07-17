@@ -20,7 +20,7 @@
 
             <div class="nav-dropdown-menu" id="dropdown-categories" role="menu" aria-label="Les jauges">
               <a href="/ia-automatisation" class="nav-dropdown-item" role="menuitem">
-                <span class="nav-dropdown-icon" style="background:#FFE0D6;" aria-hidden="true">🤖</span>
+                <span class="nav-dropdown-icon" style="background:#FFE0D6;" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-cpu"/></svg></span>
                 <span class="nav-dropdown-text">
                   <span class="nav-dropdown-title">Outils &amp; IA</span>
                   <span class="nav-dropdown-desc">IA, no-code, automatisation</span>
@@ -28,7 +28,7 @@
               </a>
 
               <a href="/acquisition-growth" class="nav-dropdown-item" role="menuitem">
-                <span class="nav-dropdown-icon" style="background:#EEFAC7;" aria-hidden="true">🎯</span>
+                <span class="nav-dropdown-icon" style="background:#EEFAC7;" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-target"/></svg></span>
                 <span class="nav-dropdown-text">
                   <span class="nav-dropdown-title">Acquisition &amp; Growth</span>
                   <span class="nav-dropdown-desc">SEO, paid, CRM, prospection</span>
@@ -36,7 +36,7 @@
               </a>
 
               <a href="/finance-assurances" class="nav-dropdown-item" role="menuitem">
-                <span class="nav-dropdown-icon" style="background:#e7e5de;" aria-hidden="true">💰</span>
+                <span class="nav-dropdown-icon" style="background:#e7e5de;" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-wallet"/></svg></span>
                 <span class="nav-dropdown-text">
                   <span class="nav-dropdown-title">Argent &amp; Trésorerie</span>
                   <span class="nav-dropdown-desc">Compte pro, compta, fiscalité</span>
@@ -44,7 +44,7 @@
               </a>
 
               <a href="/la-jauge" class="nav-dropdown-item" role="menuitem">
-                <span class="nav-dropdown-icon" style="background:#FDF3D9;" aria-hidden="true">🧠</span>
+                <span class="nav-dropdown-icon" style="background:#FDF3D9;" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-brain"/></svg></span>
                 <span class="nav-dropdown-text">
                   <span class="nav-dropdown-title">La Jauge</span>
                   <span class="nav-dropdown-desc">Charge mentale, solitude, burnout</span>
@@ -58,13 +58,13 @@
           </div>
 
           <div class="nav-links" role="list">
-            <a href="/ia-automatisation" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true">🤖</span>Outils &amp; IA</a>
+            <a href="/ia-automatisation" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-cpu"/></svg></span>Outils &amp; IA</a>
             <span class="nav-dot" aria-hidden="true">·</span>
-            <a href="/acquisition-growth" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true">🎯</span>Growth</a>
+            <a href="/acquisition-growth" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-target"/></svg></span>Growth</a>
             <span class="nav-dot" aria-hidden="true">·</span>
-            <a href="/finance-assurances" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true">💰</span>Argent</a>
+            <a href="/finance-assurances" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-wallet"/></svg></span>Argent</a>
             <span class="nav-dot" aria-hidden="true">·</span>
-            <a href="/la-jauge" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true">🧠</span>La Jauge</a>
+            <a href="/la-jauge" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-brain"/></svg></span>La Jauge</a>
           </div>
 
           <div class="nav-links nav-links--secondary" role="list">
@@ -96,10 +96,10 @@
             </button>
 
             <div class="nav-mobile-submenu" id="mobile-categories">
-              <a href="/ia-automatisation" class="nav-mobile-sublink" role="menuitem">🤖 Outils &amp; IA</a>
-              <a href="/acquisition-growth" class="nav-mobile-sublink" role="menuitem">🎯 Acquisition &amp; Growth</a>
-              <a href="/finance-assurances" class="nav-mobile-sublink" role="menuitem">💰 Argent &amp; Trésorerie</a>
-              <a href="/la-jauge" class="nav-mobile-sublink" role="menuitem">🧠 La Jauge</a>
+              <a href="/ia-automatisation" class="nav-mobile-sublink" role="menuitem"><svg class="icon" aria-hidden="true"><use href="#icon-cpu"/></svg> Outils &amp; IA</a>
+              <a href="/acquisition-growth" class="nav-mobile-sublink" role="menuitem"><svg class="icon" aria-hidden="true"><use href="#icon-target"/></svg> Acquisition &amp; Growth</a>
+              <a href="/finance-assurances" class="nav-mobile-sublink" role="menuitem"><svg class="icon" aria-hidden="true"><use href="#icon-wallet"/></svg> Argent &amp; Trésorerie</a>
+              <a href="/la-jauge" class="nav-mobile-sublink" role="menuitem"><svg class="icon" aria-hidden="true"><use href="#icon-brain"/></svg> La Jauge</a>
               <a href="/categories" class="nav-mobile-sublink nav-mobile-sublink--all" role="menuitem">Toutes les jauges →</a>
             </div>
           </div>
@@ -135,16 +135,16 @@
               <li><a href="/acquisition-growth">Acquisition &amp; Growth</a></li>
               <li><a href="/finance-assurances">Argent &amp; Trésorerie</a></li>
               <li><a href="/la-jauge">La Jauge</a></li>
-              <li><a href="/guides">Tous les guidess</a></li>
+              <li><a href="/guides">Tous les guides</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
             <p class="footer-col-title">Articles incontournables</p>
             <ul>
-              <li><a href="/ia-automatisation/claude-vs-chatgpt-2026">Claude vs ChatGPT</a></li>
-              <li><a href="/acquisition-growth/meilleur-crm-freelance">Meilleur CRM freelance</a></li>
-              <li><a href="/finance-assurances/meilleur-compte-pro-freelance-2026">Meilleur compte pro</a></li>
+              <li><a href="/ia-automatisation/claude-vs-chatgpt-2026">Claude vs ChatGPT 2026</a></li>
+              <li><a href="/acquisition-growth/meilleur-crm-freelance">Meilleur CRM freelance 2026</a></li>
+              <li><a href="/finance-assurances/meilleur-compte-pro-freelance-2026">Meilleur compte pro 2026</a></li>
               <li><a href="/la-jauge/charge-mentale-entrepreneur">Charge mentale entrepreneur</a></li>
               <li><a href="/la-jauge/syndrome-imposteur-entrepreneuriat">Syndrome de l'imposteur</a></li>
             </ul>
@@ -173,7 +173,48 @@
     </footer>
   `;
 
+  /* ---- ICON SPRITE (ligne, style éditorial — remplace les emojis) ---- */
+  const ICONS_SPRITE = `
+    <svg width="0" height="0" style="position:absolute;overflow:hidden;" aria-hidden="true">
+      <defs>
+        <symbol id="icon-cpu" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="10" y="10" width="4" height="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 2v3M12 2v3M15 2v3M9 19v3M12 19v3M15 19v3M2 9h3M2 12h3M2 15h3M19 9h3M19 12h3M19 15h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+
+        <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></symbol>
+
+        <symbol id="icon-wallet" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><rect x="3" y="7" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16.5" cy="13" r="1.4" fill="currentColor"/></symbol>
+
+        <symbol id="icon-brain" viewBox="0 0 24 24"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5h1a3 3 0 0 0 2-1V6a3 3 0 0 0-0-2Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5h-1a3 3 0 0 1-2-1V6a3 3 0 0 1 0-2Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 6v13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+
+        <symbol id="icon-zap" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+
+        <symbol id="icon-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 8V4M9 4h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9" cy="14" r="1.3" fill="currentColor"/><circle cx="15" cy="14" r="1.3" fill="currentColor"/><path d="M9 17.5h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+
+        <symbol id="icon-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 3v18" stroke="currentColor" stroke-width="1.6"/></symbol>
+
+        <symbol id="icon-file-text" viewBox="0 0 24 24"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 2v5h5M8 13h8M8 17h8M8 9h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+
+        <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m3.5 6.5 8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+        <symbol id="icon-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 20a6 6 0 0 1 12 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M16 9a2.6 2.6 0 1 0 0-5.2M18 20a5 5 0 0 0-3.2-4.7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+
+        <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 11 4.6-2.4 8-6 8-11V5l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+
+        <symbol id="icon-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 11V7a4 4 0 0 1 8 0v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      </defs>
+    </svg>
+  `;
+
+  function injectIconSprite() {
+    if (document.getElementById('jauge-icon-sprite')) return;
+    const wrap = document.createElement('div');
+    wrap.id = 'jauge-icon-sprite';
+    wrap.innerHTML = ICONS_SPRITE;
+    document.body.insertBefore(wrap, document.body.firstChild);
+  }
+
   function injectComponents() {
+    injectIconSprite();
+
     const navPlaceholder = document.getElementById('nav-placeholder');
     if (navPlaceholder) {
       navPlaceholder.outerHTML = NAV_HTML;
