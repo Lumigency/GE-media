@@ -15,10 +15,13 @@
   --ink-70:       rgba(26, 26, 24, 0.70);
   --ink-45:       rgba(26, 26, 24, 0.45);
   --ink-15:       rgba(26, 26, 24, 0.10);
-  --accent:       #FF5C39;
-  --accent-dark:  #D9431F;
-  --accent-light: #FFE0D6;
-  --accent-xlight:#FFF4F0;
+  --accent:       #F0684C;
+  --accent-dark:  #C94A2F;
+  --accent-light: #FFDED2;
+  --accent-xlight:#FFF3EE;
+  --accent-2:       #D6FF3F;
+  --accent-2-dark:  #4A5B0A;
+  --accent-2-light: #EEFAC7;
   --dark-bg:      #0f0f0e;
   --dark-card:    #1a1a18;
 
@@ -200,7 +203,7 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
 .tag-n8n         { background: var(--violet-light); color: var(--violet); }
 .tag-outils      { background: var(--amber-light);  color: var(--amber);  }
 .tag-business    { background: var(--blue-light);   color: var(--blue);   }
-.tag-acquisition { background: var(--green-light); color: var(--green); }
+.tag-acquisition { background: var(--accent-2-light); color: var(--accent-2-dark); }
 .tag-finance     { background: var(--blue-light); color: var(--blue); }
 .tag-jauge       { background: var(--violet-light); color: var(--violet); }
 
@@ -1427,7 +1430,7 @@ textarea.form-input { resize: vertical; min-height: 120px; }
   transition: background .2s, transform .2s;
 }
 .carousel-dots button.active {
-  background: var(--accent);
+  background: var(--accent-2);
   transform: scale(1.3);
 }
 
