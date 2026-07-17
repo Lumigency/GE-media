@@ -653,8 +653,9 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
   margin-bottom: 4px;
 }
 
-/* ---- Hero gauge (jauge du mois, cadran SVG) ---- */
+/* ---- Hero gauge (jauge du mois, cadran SVG interactif) ---- */
 .hero-gauge {
+  display: block;
   background: var(--dark-card);
   border: 1px solid rgba(255,92,57,.18);
   border-radius: var(--radius-lg);
@@ -664,8 +665,23 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color .2s, transform .2s, background .2s;
+}
+.hero-gauge:hover {
+  border-color: rgba(255,92,57,.5);
+  background: #201f1c;
+  transform: translateY(-2px);
 }
 .hero-gauge-svg { display: block; width: 100%; max-width: 260px; height: auto; margin: 0 auto; }
+#gaugeArc {
+  animation: gaugeFill 1.6s cubic-bezier(.16,1,.3,1) .4s both;
+}
+@keyframes gaugeFill {
+  from { stroke-dashoffset: 314; }
+  to   { stroke-dashoffset: 91; }
+}
 .hero-gauge-value {
   font-family: var(--font-display);
   font-weight: 700;
@@ -680,6 +696,17 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
   line-height: 1.5;
   margin-top: 6px;
 }
+.hero-gauge-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: .8125rem;
+  font-weight: 700;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity .2s, transform .2s;
+}
+.hero-gauge:hover .hero-gauge-link { opacity: 1; transform: translateY(0); }
 
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; }
