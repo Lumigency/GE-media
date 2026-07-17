@@ -584,7 +584,24 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
 .footer-legal a:hover { color: rgba(255,255,255,.7); }
 
 /* ---- 10. HERO ---- */
-.hero { padding: 96px 0 80px; overflow: hidden; }
+.hero { padding: 64px 0 0; overflow: hidden; }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  gap: 48px;
+  align-items: center;
+  padding-bottom: 48px;
+}
+.hero-dateline {
+  font-family: var(--font-mono, var(--font-body));
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  color: var(--accent);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--page-ink-15);
+}
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -609,16 +626,16 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
 .hero-title em { font-style: normal; color: var(--accent); }
 .hero-desc {
   font-size: 1.125rem;
-  max-width: 600px;
-  margin-bottom: 36px;
+  max-width: 520px;
+  margin-bottom: 32px;
   color: var(--page-ink-70);
 }
-.hero-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 56px; }
+.hero-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
 .hero-stats {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
-  padding-top: 40px;
+  padding-top: 28px;
   border-top: 1px solid var(--page-ink-15);
 }
 .hero-stat-num {
@@ -629,6 +646,35 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
   color: var(--page-ink);
   line-height: 1;
   margin-bottom: 4px;
+}
+
+/* ---- Hero gauge (jauge du mois, cadran SVG) ---- */
+.hero-gauge {
+  background: var(--dark-card);
+  border: 1px solid rgba(255,92,57,.18);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px 24px;
+  text-align: center;
+}
+.hero-gauge-svg { width: 100%; max-width: 260px; }
+.hero-gauge-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.6rem;
+  color: var(--white);
+  margin-top: -8px;
+}
+.hero-gauge-value span { font-size: 1.1rem; color: rgba(255,255,255,.4); font-weight: 500; }
+.hero-gauge-label {
+  font-size: .8125rem;
+  color: rgba(255,255,255,.5);
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-gauge { max-width: 280px; margin: 0 auto; }
 }
 .hero-stat-label { font-size: .875rem; color: var(--page-ink-45); }
 
