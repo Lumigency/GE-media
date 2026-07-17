@@ -135,7 +135,7 @@
               <li><a href="/acquisition-growth">Acquisition &amp; Growth</a></li>
               <li><a href="/finance-assurances">Argent &amp; Trésorerie</a></li>
               <li><a href="/la-jauge">La Jauge</a></li>
-              <li><a href="/guides">Tous les guides</a></li>
+              <li><a href="/guides">Tous les articles</a></li>
             </ul>
           </div>
 
@@ -200,6 +200,10 @@
         <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 11 4.6-2.4 8-6 8-11V5l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
 
         <symbol id="icon-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 11V7a4 4 0 0 1 8 0v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+
+        <symbol id="icon-star" viewBox="0 0 24 24"><path d="M12 3.5 14.7 9l6 .9-4.3 4.2 1 6-5.4-2.8-5.4 2.8 1-6L3.3 9.9l6-.9L12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+
+        <symbol id="icon-tag" viewBox="0 0 24 24"><path d="M11 3h6a2 2 0 0 1 2 2v6a2 2 0 0 1-.6 1.4l-8 8a2 2 0 0 1-2.8 0l-6-6a2 2 0 0 1 0-2.8l8-8A2 2 0 0 1 11 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="15.5" cy="8.5" r="1.4" fill="currentColor"/></symbol>
       </defs>
     </svg>
   `;
