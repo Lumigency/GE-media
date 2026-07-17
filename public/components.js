@@ -135,7 +135,9 @@
               <li><a href="/acquisition-growth">Acquisition &amp; Growth</a></li>
               <li><a href="/finance-assurances">Argent &amp; Trésorerie</a></li>
               <li><a href="/la-jauge">La Jauge</a></li>
-              <li><a href="/guides">Tous les articles</a></li>
+              <li><a href="/bons-plans">Bons Plans</a></li>
+              <li><a href="/guides">Tous les guides</a></li>
+                
             </ul>
           </div>
 
