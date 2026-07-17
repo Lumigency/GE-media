@@ -68,7 +68,7 @@
           </div>
 
           <div class="nav-links nav-links--secondary" role="list">
-            <a href="/outils" class="nav-link" role="listitem">Outils testés</a>
+            <a href="/bons-plans" class="nav-link" role="listitem">Bons plans</a>
             <a href="/newsletter" class="nav-link" role="listitem">Newsletter</a>
             <a href="/a-propos" class="nav-link" role="listitem">À propos</a>
           </div>
@@ -104,7 +104,7 @@
             </div>
           </div>
 
-          <a href="/outils" class="nav-link" role="menuitem">Outils testés</a>
+          <a href="/bons-plans" class="nav-link" role="menuitem">Bons plans</a>
           <a href="/newsletter" class="nav-link" role="menuitem">Newsletter</a>
           <a href="/a-propos" class="nav-link" role="menuitem">À propos</a>
           <a href="/newsletter" class="btn btn-primary">Rejoindre la newsletter</a>
