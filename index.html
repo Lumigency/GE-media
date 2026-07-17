@@ -146,6 +146,7 @@
 
         <p class="hero-desc anim-fade-up anim-delay-2">
           Jauge parle de ta trésorerie, de tes outils IA, de ton acquisition client et de ta santé mentale face à l'entrepreneuriat.
+        </p>
 
         <div class="hero-actions anim-fade-up anim-delay-3">
           <a href="/articles" class="btn btn-primary btn-lg">Lire les articles →</a>
@@ -229,84 +230,108 @@
       </div>
     </section>
 
-    <!-- ===== ARTICLES À LA UNE ===== -->
-    <section class="section section--grey" aria-labelledby="featured-title">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <p class="section-label">À la une</p>
-            <h2 id="featured-title">Ça, tu dois le lire</h2>
-          </div>
-          <a href="/articles" class="btn btn-outline">Tous les articles →</a>
-        </div>
+    <!-- ===== CARROUSEL À LA UNE ===== -->
+    <section class="hero-carousel" aria-labelledby="featured-title" aria-roledescription="carrousel">
+      <div class="container" style="margin-bottom:16px;">
+        <p class="section-label" id="featured-title">À la une</p>
+      </div>
 
-        <div style="display:grid;grid-template-columns:2fr 1fr;gap:24px;" class="featured-layout">
-          <a href="/articles" class="article-card article-card--featured" aria-label="Lire : Make vs Zapier vs n8n">
-            <div class="article-card-img">
-              <img
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Équipe testant des outils d'automatisation sur ordinateur"
-                width="600" height="400"
-                loading="eager"
-              />
-            </div>
+      <div class="carousel" id="jaugeCarousel">
+        <div class="carousel-track">
 
-            <div class="article-card-body">
-              <div class="article-card-meta">
-                <span class="tag tag-ia">Outils &amp; IA</span>
-                <span class="sep" aria-hidden="true">·</span>
-                <time datetime="2026-04-15">15 avril 2026</time>
-                <span class="sep" aria-hidden="true">·</span>
-                <span>12 min de lecture</span>
-              </div>
-              <h3>Make, Zapier, n8n : lequel arrête vraiment de te faire perdre du temps</h3>
-              <p class="article-card-excerpt">
-                On a mis les trois à l'épreuve sur les mêmes workflows réels. Un seul tient la route pour un solopreneur qui n'a pas de temps à perdre en configuration.
-              </p>
-              <div class="article-card-footer">
-                <span>Lire l'article complet →</span>
-                <span class="tag tag-ia">Article populaire</span>
-              </div>
+          <a href="/articles" class="carousel-slide" data-tag="ia" aria-label="Lire : Make vs Zapier vs n8n">
+            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Équipe testant des outils d'automatisation sur ordinateur" loading="eager" />
+            <div class="carousel-overlay">
+              <span class="tag tag-ia">Outils &amp; IA</span>
+              <h2>Make, Zapier, n8n : lequel arrête vraiment de te faire perdre du temps</h2>
+              <p>On a mis les trois à l'épreuve sur les mêmes workflows réels. Un seul tient la route pour un solopreneur.</p>
+              <span class="carousel-cta">Lire l'article →</span>
             </div>
           </a>
 
-          <div style="display:flex;flex-direction:column;gap:16px;">
-            <a href="/articles" class="article-card" aria-label="Lire : Claude vs ChatGPT vs Gemini">
-              <div class="article-card-img">
-                <img
-                  src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=400"
-                  alt="Interface IA marketing sur un écran"
-                  width="400" height="225"
-                  loading="lazy"
-                />
-              </div>
-              <div class="article-card-body">
-                <div class="article-card-meta">
-                  <span class="tag tag-ia">Outils &amp; IA</span>
-                  <span class="sep" aria-hidden="true">·</span>
-                  <time datetime="2026-04-12">12 avr. 2026</time>
-                </div>
-                <h3>Claude vs ChatGPT vs Gemini : lequel mérite ton abonnement</h3>
-                <div class="article-card-footer"><span>Lire →</span><span>8 min</span></div>
-              </div>
-            </a>
+          <a href="/articles" class="carousel-slide" data-tag="ia" aria-label="Lire : Claude vs ChatGPT vs Gemini">
+            <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Interface IA marketing sur un écran" loading="lazy" />
+            <div class="carousel-overlay">
+              <span class="tag tag-ia">Outils &amp; IA</span>
+              <h2>Claude vs ChatGPT vs Gemini : lequel mérite ton abonnement</h2>
+              <p>12 cas d'usage testés en conditions réelles, pas en démo marketing.</p>
+              <span class="carousel-cta">Lire l'article →</span>
+            </div>
+          </a>
 
-            <a href="/articles" class="article-card" aria-label="Lire : Perdre son plus gros client">
-              <div class="article-card-body" style="padding:20px;">
-                <div class="article-card-meta">
-                  <span class="tag tag-jauge">La Jauge</span>
-                  <span class="sep" aria-hidden="true">·</span>
-                  <time datetime="2026-04-10">10 avr. 2026</time>
-                </div>
-                <h3>Perdre son plus gros client : ce que ça fait vraiment</h3>
-                <p class="article-card-excerpt">Pas un article de conseils. Juste ce qui se passe dans ta tête les trois semaines qui suivent.</p>
-                <div class="article-card-footer"><span>Lire →</span><span>7 min</span></div>
-              </div>
-            </a>
-          </div>
+          <a href="/la-jauge/perdre-son-plus-gros-client" class="carousel-slide" data-tag="jauge" aria-label="Lire : Perdre son plus gros client">
+            <img src="https://images.pexels.com/photos/6620832/pexels-photo-6620832.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Entrepreneur seul après avoir perdu un client important" loading="lazy" />
+            <div class="carousel-overlay">
+              <span class="tag tag-jauge">La Jauge</span>
+              <h2>Perdre son plus gros client : ce que ça fait vraiment</h2>
+              <p>Pas un article de conseils. Juste ce qui se passe dans ta tête les trois semaines qui suivent.</p>
+              <span class="carousel-cta">Lire l'article →</span>
+            </div>
+          </a>
+
+          <a href="/finance-assurances/vrai-cout-compte-pro" class="carousel-slide" data-tag="finance" aria-label="Lire : Le vrai coût d'un compte pro">
+            <img src="https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Entrepreneur comparant plusieurs comptes professionnels" loading="lazy" />
+            <div class="carousel-overlay">
+              <span class="tag tag-finance">Argent</span>
+              <h2>Le vrai coût d'un compte pro, au-delà de la pub</h2>
+              <p>Frais réels sur 12 mois selon le volume de transactions. Ce que les pubs ne montrent jamais.</p>
+              <span class="carousel-cta">Lire l'article →</span>
+            </div>
+          </a>
+
         </div>
+
+        <button class="carousel-arrow carousel-arrow--prev" id="carouselPrev" aria-label="Article précédent">‹</button>
+        <button class="carousel-arrow carousel-arrow--next" id="carouselNext" aria-label="Article suivant">›</button>
+
+        <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Choisir un article"></div>
       </div>
     </section>
+
+    <script>
+      (function () {
+        const track = document.querySelector('#jaugeCarousel .carousel-track');
+        const slides = Array.from(track.children);
+        const dotsWrap = document.getElementById('carouselDots');
+        const prevBtn = document.getElementById('carouselPrev');
+        const nextBtn = document.getElementById('carouselNext');
+        let index = 0;
+        let timer;
+
+        slides.forEach((_, i) => {
+          const dot = document.createElement('button');
+          dot.setAttribute('role', 'tab');
+          dot.setAttribute('aria-label', 'Aller à la diapositive ' + (i + 1));
+          dot.addEventListener('click', () => goTo(i));
+          dotsWrap.appendChild(dot);
+        });
+        const dots = Array.from(dotsWrap.children);
+
+        function render() {
+          track.style.transform = `translateX(-${index * 100}%)`;
+          dots.forEach((d, i) => d.classList.toggle('active', i === index));
+        }
+        function goTo(i) {
+          index = (i + slides.length) % slides.length;
+          render();
+          restart();
+        }
+        function next() { goTo(index + 1); }
+        function prev() { goTo(index - 1); }
+        function restart() {
+          clearInterval(timer);
+          timer = setInterval(next, 6000);
+        }
+
+        nextBtn.addEventListener('click', next);
+        prevBtn.addEventListener('click', prev);
+        track.parentElement.addEventListener('mouseenter', () => clearInterval(timer));
+        track.parentElement.addEventListener('mouseleave', restart);
+
+        render();
+        restart();
+      })();
+    </script>
 
     <!-- ===== OUTILS RECOMMANDÉS ===== -->
     <section class="section section--dark" aria-labelledby="tools-title">
