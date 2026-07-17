@@ -130,6 +130,105 @@
 <body>
   <main>
 
+    <!-- ===== CARROUSEL À LA UNE ===== -->
+    <section class="hero-carousel" aria-label="À la une" aria-roledescription="carrousel">
+      <div class="carousel" id="jaugeCarousel">
+        <div class="carousel-track">
+
+          <a href="/articles" class="carousel-slide" data-tag="ia" aria-label="Lire : Make vs Zapier vs n8n">
+            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Équipe testant des outils d'automatisation sur ordinateur" loading="eager" />
+            <div class="carousel-overlay">
+              <span class="tag tag-ia">Outils &amp; IA</span>
+              <h2>Make, Zapier, n8n : lequel arrête vraiment de te faire perdre du temps</h2>
+              <p>On a mis les trois à l'épreuve sur les mêmes workflows réels. Un seul tient la route pour un solopreneur.</p>
+              <span class="carousel-cta">Lire l'article →</span>
+            </div>
+          </a>
+
+          <a href="/articles" class="carousel-slide" data-tag="ia" aria-label="Lire : Claude vs ChatGPT vs Gemini">
+            <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Interface IA marketing sur un écran" loading="lazy" />
+            <div class="carousel-overlay">
+              <span class="tag tag-ia">Outils &amp; IA</span>
+              <h2>Claude vs ChatGPT vs Gemini : lequel mérite ton abonnement</h2>
+              <p>12 cas d'usage testés en conditions réelles, pas en démo marketing.</p>
+              <span class="carousel-cta">Lire l'article →</span>
+            </div>
+          </a>
+
+          <a href="/la-jauge/perdre-son-plus-gros-client" class="carousel-slide" data-tag="jauge" aria-label="Lire : Perdre son plus gros client">
+            <img src="https://images.pexels.com/photos/6620832/pexels-photo-6620832.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Entrepreneur seul après avoir perdu un client important" loading="lazy" />
+            <div class="carousel-overlay">
+              <span class="tag tag-jauge">La Jauge</span>
+              <h2>Perdre son plus gros client : ce que ça fait vraiment</h2>
+              <p>Pas un article de conseils. Juste ce qui se passe dans ta tête les trois semaines qui suivent.</p>
+              <span class="carousel-cta">Lire l'article →</span>
+            </div>
+          </a>
+
+          <a href="/finance-assurances/vrai-cout-compte-pro" class="carousel-slide" data-tag="finance" aria-label="Lire : Le vrai coût d'un compte pro">
+            <img src="https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Entrepreneur comparant plusieurs comptes professionnels" loading="lazy" />
+            <div class="carousel-overlay">
+              <span class="tag tag-finance">Argent</span>
+              <h2>Le vrai coût d'un compte pro, au-delà de la pub</h2>
+              <p>Frais réels sur 12 mois selon le volume de transactions. Ce que les pubs ne montrent jamais.</p>
+              <span class="carousel-cta">Lire l'article →</span>
+            </div>
+          </a>
+
+        </div>
+
+        <button class="carousel-arrow carousel-arrow--prev" id="carouselPrev" aria-label="Article précédent">‹</button>
+        <button class="carousel-arrow carousel-arrow--next" id="carouselNext" aria-label="Article suivant">›</button>
+
+        <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Choisir un article"></div>
+      </div>
+    </section>
+
+    <script>
+      (function () {
+        const track = document.querySelector('#jaugeCarousel .carousel-track');
+        const slides = Array.from(track.children);
+        const dotsWrap = document.getElementById('carouselDots');
+        const prevBtn = document.getElementById('carouselPrev');
+        const nextBtn = document.getElementById('carouselNext');
+        let index = 0;
+        let timer;
+
+        slides.forEach((_, i) => {
+          const dot = document.createElement('button');
+          dot.setAttribute('role', 'tab');
+          dot.setAttribute('aria-label', 'Aller à la diapositive ' + (i + 1));
+          dot.addEventListener('click', () => goTo(i));
+          dotsWrap.appendChild(dot);
+        });
+        const dots = Array.from(dotsWrap.children);
+
+        function render() {
+          track.style.transform = `translateX(-${index * 100}%)`;
+          dots.forEach((d, i) => d.classList.toggle('active', i === index));
+        }
+        function goTo(i) {
+          index = (i + slides.length) % slides.length;
+          render();
+          restart();
+        }
+        function next() { goTo(index + 1); }
+        function prev() { goTo(index - 1); }
+        function restart() {
+          clearInterval(timer);
+          timer = setInterval(next, 6000);
+        }
+
+        nextBtn.addEventListener('click', next);
+        prevBtn.addEventListener('click', prev);
+        track.parentElement.addEventListener('mouseenter', () => clearInterval(timer));
+        track.parentElement.addEventListener('mouseleave', restart);
+
+        render();
+        restart();
+      })();
+    </script>
+
     <!-- ===== HERO ===== -->
     <section class="hero">
       <div class="container">
@@ -230,108 +329,6 @@
       </div>
     </section>
 
-    <!-- ===== CARROUSEL À LA UNE ===== -->
-    <section class="hero-carousel" aria-labelledby="featured-title" aria-roledescription="carrousel">
-      <div class="container" style="margin-bottom:16px;">
-        <p class="section-label" id="featured-title">À la une</p>
-      </div>
-
-      <div class="carousel" id="jaugeCarousel">
-        <div class="carousel-track">
-
-          <a href="/articles" class="carousel-slide" data-tag="ia" aria-label="Lire : Make vs Zapier vs n8n">
-            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Équipe testant des outils d'automatisation sur ordinateur" loading="eager" />
-            <div class="carousel-overlay">
-              <span class="tag tag-ia">Outils &amp; IA</span>
-              <h2>Make, Zapier, n8n : lequel arrête vraiment de te faire perdre du temps</h2>
-              <p>On a mis les trois à l'épreuve sur les mêmes workflows réels. Un seul tient la route pour un solopreneur.</p>
-              <span class="carousel-cta">Lire l'article →</span>
-            </div>
-          </a>
-
-          <a href="/articles" class="carousel-slide" data-tag="ia" aria-label="Lire : Claude vs ChatGPT vs Gemini">
-            <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Interface IA marketing sur un écran" loading="lazy" />
-            <div class="carousel-overlay">
-              <span class="tag tag-ia">Outils &amp; IA</span>
-              <h2>Claude vs ChatGPT vs Gemini : lequel mérite ton abonnement</h2>
-              <p>12 cas d'usage testés en conditions réelles, pas en démo marketing.</p>
-              <span class="carousel-cta">Lire l'article →</span>
-            </div>
-          </a>
-
-          <a href="/la-jauge/perdre-son-plus-gros-client" class="carousel-slide" data-tag="jauge" aria-label="Lire : Perdre son plus gros client">
-            <img src="https://images.pexels.com/photos/6620832/pexels-photo-6620832.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Entrepreneur seul après avoir perdu un client important" loading="lazy" />
-            <div class="carousel-overlay">
-              <span class="tag tag-jauge">La Jauge</span>
-              <h2>Perdre son plus gros client : ce que ça fait vraiment</h2>
-              <p>Pas un article de conseils. Juste ce qui se passe dans ta tête les trois semaines qui suivent.</p>
-              <span class="carousel-cta">Lire l'article →</span>
-            </div>
-          </a>
-
-          <a href="/finance-assurances/vrai-cout-compte-pro" class="carousel-slide" data-tag="finance" aria-label="Lire : Le vrai coût d'un compte pro">
-            <img src="https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Entrepreneur comparant plusieurs comptes professionnels" loading="lazy" />
-            <div class="carousel-overlay">
-              <span class="tag tag-finance">Argent</span>
-              <h2>Le vrai coût d'un compte pro, au-delà de la pub</h2>
-              <p>Frais réels sur 12 mois selon le volume de transactions. Ce que les pubs ne montrent jamais.</p>
-              <span class="carousel-cta">Lire l'article →</span>
-            </div>
-          </a>
-
-        </div>
-
-        <button class="carousel-arrow carousel-arrow--prev" id="carouselPrev" aria-label="Article précédent">‹</button>
-        <button class="carousel-arrow carousel-arrow--next" id="carouselNext" aria-label="Article suivant">›</button>
-
-        <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Choisir un article"></div>
-      </div>
-    </section>
-
-    <script>
-      (function () {
-        const track = document.querySelector('#jaugeCarousel .carousel-track');
-        const slides = Array.from(track.children);
-        const dotsWrap = document.getElementById('carouselDots');
-        const prevBtn = document.getElementById('carouselPrev');
-        const nextBtn = document.getElementById('carouselNext');
-        let index = 0;
-        let timer;
-
-        slides.forEach((_, i) => {
-          const dot = document.createElement('button');
-          dot.setAttribute('role', 'tab');
-          dot.setAttribute('aria-label', 'Aller à la diapositive ' + (i + 1));
-          dot.addEventListener('click', () => goTo(i));
-          dotsWrap.appendChild(dot);
-        });
-        const dots = Array.from(dotsWrap.children);
-
-        function render() {
-          track.style.transform = `translateX(-${index * 100}%)`;
-          dots.forEach((d, i) => d.classList.toggle('active', i === index));
-        }
-        function goTo(i) {
-          index = (i + slides.length) % slides.length;
-          render();
-          restart();
-        }
-        function next() { goTo(index + 1); }
-        function prev() { goTo(index - 1); }
-        function restart() {
-          clearInterval(timer);
-          timer = setInterval(next, 6000);
-        }
-
-        nextBtn.addEventListener('click', next);
-        prevBtn.addEventListener('click', prev);
-        track.parentElement.addEventListener('mouseenter', () => clearInterval(timer));
-        track.parentElement.addEventListener('mouseleave', restart);
-
-        render();
-        restart();
-      })();
-    </script>
 
     <!-- ===== OUTILS RECOMMANDÉS ===== -->
     <section class="section section--dark" aria-labelledby="tools-title">
