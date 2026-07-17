@@ -1277,13 +1277,14 @@ textarea.form-input { resize: vertical; min-height: 120px; }
 [style*="background:#fff7ed"] p, [style*="background:#f0fdfa"] p, [style*="background:#eef2ff"] p, [style*="background:#f5f3ff"] p, [style*="background:#f7f5f3"] p, [style*="background:white"] p, [style*="background:#ffffff"] p, [style*="background:#fff"] p, [style*="background:#FDF3D9"] p { color: var(--ink); }
 
 /* ---- 34. HERO CAROUSEL ---- */
-.hero-carousel { padding: 24px 0 0; }
+.hero-carousel { padding: 0 0 8px; }
 .carousel {
   position: relative;
   overflow: hidden;
-  border-radius: var(--radius-lg);
-  margin: 0 24px;
-  aspect-ratio: 21 / 9;
+  border-radius: 0;
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 16 / 7;
   background: var(--dark-card);
 }
 .carousel-track {
@@ -1378,7 +1379,7 @@ textarea.form-input { resize: vertical; min-height: 120px; }
 }
 
 @media (max-width: 768px) {
-  .carousel { margin: 0 16px; aspect-ratio: 4 / 5; }
+  .carousel { margin: 0; aspect-ratio: 4 / 5; }
   .carousel-overlay { padding: 20px; max-width: 100%; }
   .carousel-arrow { width: 36px; height: 36px; font-size: 1.25rem; }
 }
