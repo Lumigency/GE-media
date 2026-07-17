@@ -12,7 +12,7 @@ export default defineConfig({
         categories: resolve(__dirname, 'categories.html'),
         articles:   resolve(__dirname, 'articles.html'),
         guides:    resolve(__dirname, 'guides.html'),
-        outils:     resolve(__dirname, 'outils.html'),
+        'bons-plans': resolve(__dirname, 'bons-plans.html'),
         newsletter: resolve(__dirname, 'newsletter.html'),
         'a-propos': resolve(__dirname, 'a-propos.html'),
         'acquisition-growth': resolve(__dirname, 'acquisition-growth.html'),
