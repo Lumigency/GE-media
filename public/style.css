@@ -592,6 +592,7 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
   align-items: center;
   padding-bottom: 48px;
 }
+.hero-main { min-width: 0; }
 .hero-dateline {
   font-family: var(--font-mono, var(--font-body));
   font-size: .8rem;
@@ -655,8 +656,12 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
   border-radius: var(--radius-lg);
   padding: 28px 24px 24px;
   text-align: center;
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
-.hero-gauge-svg { width: 100%; max-width: 260px; }
+.hero-gauge-svg { display: block; width: 100%; max-width: 260px; height: auto; margin: 0 auto; }
 .hero-gauge-value {
   font-family: var(--font-display);
   font-weight: 700;
@@ -1429,3 +1434,14 @@ textarea.form-input { resize: vertical; min-height: 120px; }
   .carousel-overlay { padding: 20px; max-width: 100%; }
   .carousel-arrow { width: 36px; height: 36px; font-size: 1.25rem; }
 }
+
+/* ---- 35. ICON SYSTEM (remplace les emojis) ---- */
+.icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: -0.15em;
+  flex-shrink: 0;
+  color: currentColor;
+}
+.icon-lg { width: 1.5em; height: 1.5em; }
