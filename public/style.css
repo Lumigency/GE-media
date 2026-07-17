@@ -1275,3 +1275,110 @@ textarea.form-input { resize: vertical; min-height: 120px; }
 [style*="background:#fff7ed"] h3, [style*="background:#f0fdfa"] h3, [style*="background:#eef2ff"] h3, [style*="background:#f5f3ff"] h3, [style*="background:#f7f5f3"] h3, [style*="background:white"] h3, [style*="background:#ffffff"] h3, [style*="background:#fff"] h3, [style*="background:#FDF3D9"] h3 { color: var(--ink); }
 [style*="background:#fff7ed"] h4, [style*="background:#f0fdfa"] h4, [style*="background:#eef2ff"] h4, [style*="background:#f5f3ff"] h4, [style*="background:#f7f5f3"] h4, [style*="background:white"] h4, [style*="background:#ffffff"] h4, [style*="background:#fff"] h4, [style*="background:#FDF3D9"] h4 { color: var(--ink); }
 [style*="background:#fff7ed"] p, [style*="background:#f0fdfa"] p, [style*="background:#eef2ff"] p, [style*="background:#f5f3ff"] p, [style*="background:#f7f5f3"] p, [style*="background:white"] p, [style*="background:#ffffff"] p, [style*="background:#fff"] p, [style*="background:#FDF3D9"] p { color: var(--ink); }
+
+/* ---- 34. HERO CAROUSEL ---- */
+.hero-carousel { padding: 24px 0 0; }
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  margin: 0 24px;
+  aspect-ratio: 21 / 9;
+  background: var(--dark-card);
+}
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform .5s cubic-bezier(.16,1,.3,1);
+}
+.carousel-slide {
+  position: relative;
+  flex: 0 0 100%;
+  height: 100%;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel-overlay {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 28px 32px 32px;
+  background: linear-gradient(0deg, rgba(0,0,0,.88) 0%, rgba(0,0,0,.4) 55%, rgba(0,0,0,0) 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 640px;
+}
+.carousel-overlay h2 {
+  color: var(--white);
+  font-size: clamp(1.25rem, 2.6vw, 2rem);
+  line-height: 1.2;
+  margin: 0;
+}
+.carousel-overlay p {
+  color: rgba(255,255,255,.75);
+  font-size: .95rem;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.carousel-cta {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: .875rem;
+  margin-top: 4px;
+}
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: rgba(0,0,0,.45);
+  backdrop-filter: blur(6px);
+  color: var(--white);
+  font-size: 1.5rem;
+  line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(255,255,255,.15);
+  cursor: pointer;
+  transition: background .2s;
+  z-index: 5;
+}
+.carousel-arrow:hover { background: rgba(0,0,0,.7); }
+.carousel-arrow--prev { left: 16px; }
+.carousel-arrow--next { right: 16px; }
+.carousel-dots {
+  position: absolute;
+  bottom: 16px;
+  right: 24px;
+  display: flex;
+  gap: 6px;
+  z-index: 5;
+}
+.carousel-dots button {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.35);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background .2s, transform .2s;
+}
+.carousel-dots button.active {
+  background: var(--accent);
+  transform: scale(1.3);
+}
+
+@media (max-width: 768px) {
+  .carousel { margin: 0 16px; aspect-ratio: 4 / 5; }
+  .carousel-overlay { padding: 20px; max-width: 100%; }
+  .carousel-arrow { width: 36px; height: 36px; font-size: 1.25rem; }
+}
