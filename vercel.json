@@ -35,6 +35,26 @@
   ],
   "redirects": [
     {
+      "source": "/articles",
+      "destination": "/categories",
+      "permanent": true
+    },
+    {
+      "source": "/articles.html",
+      "destination": "/categories",
+      "permanent": true
+    },
+    {
+      "source": "/outils-logiciels",
+      "destination": "/bons-plans",
+      "permanent": true
+    },
+    {
+      "source": "/outils-logiciels.html",
+      "destination": "/bons-plans",
+      "permanent": true
+    },
+    {
       "source": "/outils",
       "destination": "/bons-plans",
       "permanent": true
