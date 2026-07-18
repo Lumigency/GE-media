@@ -206,6 +206,32 @@
         <symbol id="icon-star" viewBox="0 0 24 24"><path d="M12 3.5 14.7 9l6 .9-4.3 4.2 1 6-5.4-2.8-5.4 2.8 1-6L3.3 9.9l6-.9L12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
 
         <symbol id="icon-tag" viewBox="0 0 24 24"><path d="M11 3h6a2 2 0 0 1 2 2v6a2 2 0 0 1-.6 1.4l-8 8a2 2 0 0 1-2.8 0l-6-6a2 2 0 0 1 0-2.8l8-8A2 2 0 0 1 11 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="15.5" cy="8.5" r="1.4" fill="currentColor"/></symbol>
+
+        <symbol id="icon-settings" viewBox="0 0 24 24"><path d="M3 6h9M16 6h5M3 12h3M10 12h11M3 18h13M20 18h1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12.5" cy="6" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="6.5" cy="12" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16.5" cy="18" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+
+        <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m20 20-4.6-4.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+
+        <symbol id="icon-rocket" viewBox="0 0 24 24"><path d="M12 2c3.5 1.5 6 6 5.5 11-1.8.3-3.6.1-5.5-1-1.9 1.1-3.7 1.3-5.5 1C6 8 8.5 3.5 12 2Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="8.5" r="1.6" fill="currentColor"/><path d="M8.5 15c-1 .5-1.8 1.8-2 4 2.2-.2 3.5-1 4-2M15.5 15c1 .5 1.8 1.8 2 4-2.2-.2-3.5-1-4-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+        <symbol id="icon-sparkles" viewBox="0 0 24 24"><path d="M11 2c.3 3 1.2 5 4.5 5.5C12.2 8 11.3 10 11 13c-.3-3-1.2-5-4.5-5.5C9.8 7 10.7 5 11 2Z" fill="currentColor"/><path d="M18.5 13c.2 1.6.7 2.6 2.5 3-1.8.4-2.3 1.4-2.5 3-.2-1.6-.7-2.6-2.5-3 1.8-.4 2.3-1.4 2.5-3Z" fill="currentColor"/></symbol>
+
+        <symbol id="icon-trending-up" viewBox="0 0 24 24"><path d="M3 16 9.5 9.5 14 14 21 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 6H21v5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+        <symbol id="icon-briefcase" viewBox="0 0 24 24"><rect x="2.5" y="7.5" width="19" height="12.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 7.5V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 13h19" stroke="currentColor" stroke-width="1.6"/></symbol>
+
+        <symbol id="icon-funnel" viewBox="0 0 24 24"><path d="M3 4h18l-7 9v6l-4 2v-8L3 4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+
+        <symbol id="icon-bank" viewBox="0 0 24 24"><path d="M12 2 22 8H2L12 2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 8v10M9 8v10M15 8v10M20 8v10M2 21h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+
+        <symbol id="icon-bar-chart" viewBox="0 0 24 24"><path d="M4 20V11M12 20V4M20 20v-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+
+        <symbol id="icon-credit-card" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 10h19" stroke="currentColor" stroke-width="1.6"/><path d="M6 15h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+
+        <symbol id="icon-waves" viewBox="0 0 24 24"><path d="M2 8c2-2 4-2 6 0s4 2 6 0 4-2 6 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M2 14c2-2 4-2 6 0s4 2 6 0 4-2 6 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M2 20c2-2 4-2 6 0s4 2 6 0 4-2 6 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+
+        <symbol id="icon-mask" viewBox="0 0 24 24"><path d="M3 5c3 3 3 5 0 8 3 3 8 3 9 0M21 5c-3 3-3 5 0 8-3 3-8 3-9 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="8" cy="9" r="1.1" fill="currentColor"/><circle cx="16" cy="9" r="1.1" fill="currentColor"/></symbol>
+
+        <symbol id="icon-battery" viewBox="0 0 24 24"><rect x="2" y="7" width="17" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M21 10v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M6 10v4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
       </defs>
     </svg>
   `;
