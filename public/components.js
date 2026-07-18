@@ -232,6 +232,8 @@
         <symbol id="icon-mask" viewBox="0 0 24 24"><path d="M3 5c3 3 3 5 0 8 3 3 8 3 9 0M21 5c-3 3-3 5 0 8-3 3-8 3-9 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="8" cy="9" r="1.1" fill="currentColor"/><circle cx="16" cy="9" r="1.1" fill="currentColor"/></symbol>
 
         <symbol id="icon-battery" viewBox="0 0 24 24"><rect x="2" y="7" width="17" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M21 10v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M6 10v4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+
+        <symbol id="icon-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6 6 12 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
       </defs>
     </svg>
   `;
