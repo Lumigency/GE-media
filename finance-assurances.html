@@ -107,11 +107,11 @@
 
         <div class="filter-bar" role="group" aria-label="Filtrer les articles">
           <button class="filter-btn active" data-filter="all" data-filter-group="finance" aria-pressed="true">Tous les articles</button>
-          <button class="filter-btn" data-filter="compte-pro" data-filter-group="finance" aria-pressed="false">🏦 Compte pro</button>
-          <button class="filter-btn" data-filter="assurances" data-filter-group="finance" aria-pressed="false">🛡️ Assurances</button>
-          <button class="filter-btn" data-filter="fiscalite" data-filter-group="finance" aria-pressed="false">🧾 Fiscalité</button>
-          <button class="filter-btn" data-filter="comptabilite" data-filter-group="finance" aria-pressed="false">📊 Comptabilité</button>
-          <button class="filter-btn" data-filter="tresorerie" data-filter-group="finance" aria-pressed="false">💳 Trésorerie</button>
+          <button class="filter-btn" data-filter="compte-pro" data-filter-group="finance" aria-pressed="false"><svg class="icon"><use href="#icon-bank"/></svg> Compte pro</button>
+          <button class="filter-btn" data-filter="assurances" data-filter-group="finance" aria-pressed="false"><svg class="icon"><use href="#icon-shield"/></svg> Assurances</button>
+          <button class="filter-btn" data-filter="fiscalite" data-filter-group="finance" aria-pressed="false"><svg class="icon"><use href="#icon-file-text"/></svg> Fiscalité</button>
+          <button class="filter-btn" data-filter="comptabilite" data-filter-group="finance" aria-pressed="false"><svg class="icon"><use href="#icon-bar-chart"/></svg> Comptabilité</button>
+          <button class="filter-btn" data-filter="tresorerie" data-filter-group="finance" aria-pressed="false"><svg class="icon"><use href="#icon-credit-card"/></svg> Trésorerie</button>
         </div>
 
         <div class="grid-3">
@@ -278,17 +278,17 @@
         <h2 id="autres-jauges-title" style="text-align:center;margin-bottom:28px;">Les autres jauges</h2>
         <div class="grid-3">
           <a href="/ia-automatisation" class="category-card">
-            <div class="category-card-icon" style="background:#3a1810;" aria-hidden="true">🤖</div>
+            <div class="category-card-icon" style="background:#3a1810;" aria-hidden="true"><svg class="icon"><use href="#icon-cpu"/></svg></div>
             <h3>Outils &amp; IA</h3>
             <p>Testé, pas hypé.</p>
           </a>
           <a href="/acquisition-growth" class="category-card">
-            <div class="category-card-icon" style="background:#2e3a1a;" aria-hidden="true">🎯</div>
+            <div class="category-card-icon" style="background:#2e3a1a;" aria-hidden="true"><svg class="icon"><use href="#icon-target"/></svg></div>
             <h3>Acquisition &amp; Growth</h3>
             <p>Les vrais chiffres.</p>
           </a>
           <a href="/la-jauge" class="category-card category-card--jauge">
-            <div class="category-card-icon" style="background:#FFE0D6;" aria-hidden="true">🧠</div>
+            <div class="category-card-icon" style="background:#FFE0D6;" aria-hidden="true"><svg class="icon"><use href="#icon-brain"/></svg></div>
             <h3>La Jauge</h3>
             <p>La tête, pour de vrai.</p>
           </a>
@@ -305,19 +305,19 @@
         </div>
         <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;" class="faq-grid">
           <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
-            <h3 style="font-size:1.05rem;margin-bottom:10px;">🏦 Comment choisir son compte pro ?</h3>
+            <h3 style="font-size:1.05rem;margin-bottom:10px;display:flex;align-items:center;gap:8px;"><svg class="icon" style="color:var(--accent);flex-shrink:0;"><use href="#icon-bank"/></svg> Comment choisir son compte pro ?</h3>
             <p style="margin:0;color:var(--ink-70);line-height:1.7;">Sur l'usage réel : volume de transactions, besoin de cartes, intégration facturation. Pas sur la pub qu'on voit le plus.</p>
           </article>
           <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
-            <h3 style="font-size:1.05rem;margin-bottom:10px;">🛡️ Quelle assurance est vraiment indispensable ?</h3>
+            <h3 style="font-size:1.05rem;margin-bottom:10px;display:flex;align-items:center;gap:8px;"><svg class="icon" style="color:var(--accent);flex-shrink:0;"><use href="#icon-shield"/></svg> Quelle assurance est vraiment indispensable ?</h3>
             <p style="margin:0;color:var(--ink-70);line-height:1.7;">La RC Pro, dans la quasi-totalité des activités de service. Le reste dépend de ta situation personnelle et de ton statut.</p>
           </article>
           <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
-            <h3 style="font-size:1.05rem;margin-bottom:10px;">📊 Faut-il un comptable ou un logiciel suffit-il ?</h3>
+            <h3 style="font-size:1.05rem;margin-bottom:10px;display:flex;align-items:center;gap:8px;"><svg class="icon" style="color:var(--accent);flex-shrink:0;"><use href="#icon-bar-chart"/></svg> Faut-il un comptable ou un logiciel suffit-il ?</h3>
             <p style="margin:0;color:var(--ink-70);line-height:1.7;">Un logiciel suffit en micro-entreprise. Dès que la structure se complexifie, un comptable devient rentable, pas un luxe.</p>
           </article>
           <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
-            <h3 style="font-size:1.05rem;margin-bottom:10px;">💳 Comment gérer un mois creux de trésorerie ?</h3>
+            <h3 style="font-size:1.05rem;margin-bottom:10px;display:flex;align-items:center;gap:8px;"><svg class="icon" style="color:var(--accent);flex-shrink:0;"><use href="#icon-credit-card"/></svg> Comment gérer un mois creux de trésorerie ?</h3>
             <p style="margin:0;color:var(--ink-70);line-height:1.7;">En distinguant vite si c'est un creux ponctuel ou un vrai signal, grâce à un prévisionnel simple mis à jour chaque semaine.</p>
           </article>
         </div>
