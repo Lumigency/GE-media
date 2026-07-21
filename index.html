@@ -103,7 +103,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
   <link rel="icon" type="image/png" href="/jauge.png" />
   <link rel="apple-touch-icon" href="/jauge.png" />
@@ -134,10 +134,16 @@
 
     <!-- ===== HERO ===== -->
     <section class="hero">
+      <div class="hero-scanline" aria-hidden="true"></div>
       <div class="container">
 
+        <div class="hero-tag anim-fade-up">
+          <span class="hero-tag-dot" aria-hidden="true"></span>
+          SYSTEM.JAUGE // BOOT<span class="hero-cursor" aria-hidden="true">_</span>
+        </div>
+
         <div class="hero-bigfall-wrap">
-          <h2 class="hero-bigfall" aria-hidden="true">Le premier média<br>des solopreneurs</h2>
+          <span class="hero-bigfall" id="heroScramble" data-target="LE PREMIER MÉDIA DES SOLOPRENEURS">LE PREMIER MÉDIA DES SOLOPRENEURS</span>
         </div>
 
         <div class="hero-grid">
@@ -158,14 +164,15 @@
           </div>
 
           <a href="/la-jauge" class="hero-gauge anim-fade-up anim-delay-2" role="img" aria-label="Jauge du mois : charge mentale à 71 sur 100">
+            <div class="hero-gauge-sys">JAUGE.MOIS // CHARGE_MENTALE</div>
             <svg viewBox="0 0 240 150" width="240" height="150" class="hero-gauge-svg" preserveAspectRatio="xMidYMid meet">
-              <path d="M 20 130 A 100 100 0 0 1 220 130" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="18" stroke-linecap="round" />
-              <path id="gaugeArc" d="M 20 130 A 100 100 0 0 1 220 130" fill="none" stroke="var(--accent)" stroke-width="18" stroke-linecap="round"
+              <path d="M 20 130 A 100 100 0 0 1 220 130" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="16" stroke-linecap="round" />
+              <path id="gaugeArc" d="M 20 130 A 100 100 0 0 1 220 130" fill="none" stroke="var(--accent)" stroke-width="16" stroke-linecap="round"
                     stroke-dasharray="314" stroke-dashoffset="314" />
-              <line x1="120" y1="130" x2="168" y2="66" stroke="var(--white)" stroke-width="4" stroke-linecap="round" />
-              <circle cx="120" cy="130" r="8" fill="var(--white)" />
+              <line x1="120" y1="130" x2="168" y2="66" stroke="var(--white)" stroke-width="3" stroke-linecap="round" />
+              <circle cx="120" cy="130" r="7" fill="var(--white)" />
             </svg>
-            <div class="hero-gauge-value">71<span>/100</span>
+            <div class="hero-gauge-value"><span id="heroCount">0</span><span>/100</span>
               <svg class="hero-gauge-face" viewBox="0 0 40 40" aria-hidden="true">
                 <circle cx="20" cy="20" r="18" fill="#FDF3D9" stroke="#0B0B0C" stroke-width="2"/>
                 <circle cx="13.5" cy="17" r="2.1" fill="#0B0B0C"/>
@@ -179,6 +186,48 @@
         </div>
       </div>
     </section>
+
+    <script>
+      (function () {
+        const el = document.getElementById('heroScramble');
+        const target = el.dataset.target;
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&";
+        let frame = 0;
+        const totalFrames = 26;
+        function scrambleStep() {
+          let out = "";
+          for (let i = 0; i < target.length; i++) {
+            if (target[i] === " ") { out += " "; continue; }
+            const reveal = frame - i * 1.1;
+            if (reveal > totalFrames * 0.6) out += target[i];
+            else if (reveal > 0) out += chars[Math.floor(Math.random() * chars.length)];
+            else out += " ";
+          }
+          el.textContent = out;
+          frame++;
+          if (frame < totalFrames + target.length) {
+            setTimeout(scrambleStep, 28);
+          } else {
+            el.textContent = target;
+          }
+        }
+        scrambleStep();
+
+        const countEl = document.getElementById('heroCount');
+        let startTime = null;
+        const duration = 1600, delay = 500, endVal = 71;
+        function countUp(ts) {
+          if (!startTime) startTime = ts + delay;
+          const elapsed = ts - startTime;
+          if (elapsed < 0) { requestAnimationFrame(countUp); return; }
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          countEl.textContent = Math.round(eased * endVal);
+          if (progress < 1) requestAnimationFrame(countUp);
+        }
+        requestAnimationFrame(countUp);
+      })();
+    </script>
 
     <!-- ===== CARROUSEL À LA UNE ===== -->
     <section class="hero-carousel" aria-label="À la une" aria-roledescription="carrousel">
