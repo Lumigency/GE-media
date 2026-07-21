@@ -11,7 +11,7 @@
     <nav id="navbar" role="navigation" aria-label="Navigation principale">
       <div class="container">
         <div class="nav-inner">
-          <a href="/" class="nav-logo" aria-label="Jauge — Accueil">Jauge</a>
+          <a href="/" class="nav-logo" aria-label="Jauge — Accueil"><img src="/jauge.png" alt="" width="28" height="28" style="border-radius:6px;" />Jauge</a>
 
           <div class="nav-dropdown" role="listitem">
             <button class="nav-menu-trigger nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-categories">
@@ -120,7 +120,7 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <a href="/" class="footer-logo" aria-label="Accueil Jauge">
-              <span class="footer-logo-icon" aria-hidden="true">J</span>
+              <img src="/jauge.png" alt="" width="28" height="28" style="border-radius:6px;" />
               Jauge
             </a>
             <p class="footer-desc">
