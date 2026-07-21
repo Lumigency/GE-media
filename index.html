@@ -175,9 +175,11 @@
             <div class="hero-gauge-value"><span id="heroCount">0</span><span>/100</span>
               <svg class="hero-gauge-face" viewBox="0 0 40 40" aria-hidden="true">
                 <circle cx="20" cy="20" r="18" fill="#FDF3D9" stroke="#0B0B0C" stroke-width="2"/>
+                <path id="faceBrowL" d="M10.5 13.5h0" fill="none" stroke="#0B0B0C" stroke-width="1.6" stroke-linecap="round"/>
+                <path id="faceBrowR" d="M23 13.5h0" fill="none" stroke="#0B0B0C" stroke-width="1.6" stroke-linecap="round"/>
                 <circle cx="13.5" cy="17" r="2.1" fill="#0B0B0C"/>
                 <circle cx="26.5" cy="17" r="2.1" fill="#0B0B0C"/>
-                <path d="M12 27c3-3 13-3 16 0" fill="none" stroke="#0B0B0C" stroke-width="2.2" stroke-linecap="round"/>
+                <path id="faceMouth" d="M12 26c3 2 13 2 16 0" fill="none" stroke="#0B0B0C" stroke-width="2.2" stroke-linecap="round"/>
               </svg>
             </div>
             <p class="hero-gauge-label">Jauge du mois<br />Charge mentale entrepreneurs solo</p>
@@ -214,6 +216,26 @@
         scrambleStep();
 
         const countEl = document.getElementById('heroCount');
+        const mouthEl = document.getElementById('faceMouth');
+        const browL = document.getElementById('faceBrowL');
+        const browR = document.getElementById('faceBrowR');
+        const faceStates = [
+          { max: 0.4,  mouth: "M12 26c3 2 13 2 16 0", browL: "M9 13.5h5",   browR: "M22 13.5h5" },
+          { max: 0.75, mouth: "M12 27h16",            browL: "M9 13h5",     browR: "M22 13h5" },
+          { max: 2,    mouth: "M12 29c3-3 13-3 16 0", browL: "M9.5 15l5-3", browR: "M22.5 12l5 3" }
+        ];
+        let faceIndex = -1;
+        function updateFace(progress) {
+          const i = faceStates.findIndex(s => progress <= s.max);
+          const target = i === -1 ? faceStates.length - 1 : i;
+          if (target === faceIndex) return;
+          faceIndex = target;
+          const s = faceStates[target];
+          mouthEl.setAttribute('d', s.mouth);
+          browL.setAttribute('d', s.browL);
+          browR.setAttribute('d', s.browR);
+        }
+
         let startTime = null;
         const duration = 1600, delay = 500, endVal = 71;
         function countUp(ts) {
@@ -223,6 +245,7 @@
           const progress = Math.min(elapsed / duration, 1);
           const eased = 1 - Math.pow(1 - progress, 3);
           countEl.textContent = Math.round(eased * endVal);
+          updateFace(eased * (endVal / 100));
           if (progress < 1) requestAnimationFrame(countUp);
         }
         requestAnimationFrame(countUp);
