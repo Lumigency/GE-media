@@ -1580,40 +1580,67 @@ textarea.form-input { resize: vertical; min-height: 120px; }
 /* ---- 36. BONS PLANS : ÉPINGLES + EMPLACEMENTS PUB ---- */
 .pin-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: var(--dark-card);
-  border: 1px solid rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.1);
   border-radius: var(--radius-lg);
-  padding: 20px 16px 16px;
+  padding: 34px 18px 20px;
   text-align: center;
   text-decoration: none;
   color: inherit;
   transition: border-color .2s, transform .2s;
+  overflow: hidden;
 }
-.pin-card:hover { border-color: rgba(255,92,57,.4); transform: translateY(-2px); }
+.pin-card:hover { border-color: rgba(255,92,57,.5); transform: translateY(-3px); }
 .pin-card-badge {
   position: absolute;
-  top: -10px; left: 50%;
-  transform: translateX(-50%);
-  display: inline-flex; align-items: center; gap: 4px;
-  background: var(--accent);
-  color: var(--ink);
-  font-size: .6875rem;
+  top: 14px; left: -34px;
+  transform: rotate(-45deg);
+  width: 150px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 4px;
+  background: var(--ink);
+  color: var(--accent);
+  font-size: .625rem;
   font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 999px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 4px 0;
   white-space: nowrap;
 }
 .pin-card-badge .icon { width: .8em; height: .8em; }
 .pin-card-logo {
-  width: 44px; height: 44px;
-  margin: 10px auto 10px;
+  width: 56px; height: 56px;
+  margin: 6px auto 14px;
   background: var(--white);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius);
   display: flex; align-items: center; justify-content: center;
   color: var(--ink);
+  font-size: 1.4rem;
+  flex-shrink: 0;
 }
-.pin-card h3 { color: var(--white); font-size: 1.05rem; margin-bottom: 2px; }
-.pin-card p { color: rgba(255,255,255,.5); font-size: .8125rem; margin: 0; }
+.pin-card-title { color: var(--white); font-size: 1.15rem; margin-bottom: 8px; }
+.pin-card-desc {
+  color: rgba(255,255,255,.55);
+  font-size: .8125rem;
+  line-height: 1.55;
+  margin: 0 0 18px;
+  flex: 1;
+}
+.pin-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: .8125rem;
+  padding: 9px 20px;
+  border-radius: 8px;
+  transition: background .2s;
+}
+.pin-card:hover .pin-card-cta { background: var(--accent-dark); color: var(--white); }
 
 .ad-slot {
   display: block;
