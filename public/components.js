@@ -135,17 +135,14 @@
               <li><a href="/acquisition-growth">Acquisition &amp; Growth</a></li>
               <li><a href="/finance-assurances">Argent &amp; Trésorerie</a></li>
               <li><a href="/la-jauge">La Jauge</a></li>
-              <li><a href="/bons-plans">Bons Plans</a></li>
-              <li><a href="/guides">Tous les guides</a></li>
-                
             </ul>
           </div>
 
           <div class="footer-col">
             <p class="footer-col-title">Articles incontournables</p>
-            <ul>
+            <ul class="footer-col-nowrap">
               <li><a href="/ia-automatisation/claude-vs-chatgpt-2026">Claude vs ChatGPT 2026</a></li>
-              <li><a href="/acquisition-growth/meilleur-crm-freelance">Meilleur CRM freelance 2026</a></li>
+              <li><a href="/acquisition-growth/meilleur-crm-freelance">Meilleur CRM 2026</a></li>
               <li><a href="/finance-assurances/meilleur-compte-pro-freelance-2026">Meilleur compte pro 2026</a></li>
               <li><a href="/la-jauge/charge-mentale-entrepreneur">Charge mentale entrepreneur</a></li>
               <li><a href="/la-jauge/syndrome-imposteur-entrepreneuriat">Syndrome de l'imposteur</a></li>
@@ -155,6 +152,8 @@
           <div class="footer-col">
             <p class="footer-col-title">Le site</p>
             <ul>
+              <li><a href="/bons-plans">Bons plans</a></li>
+              <li><a href="/guides">Tous les guides</a></li>
               <li><a href="/newsletter">Newsletter</a></li>
               <li><a href="/a-propos">À propos</a></li>
               <li><a href="/contact">Contact</a></li>
