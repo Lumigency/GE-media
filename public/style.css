@@ -1316,9 +1316,9 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
 textarea.form-input { resize: vertical; min-height: 120px; }
 
 /* ---- 26. LEGAL / AFFILIATE BOXES ---- */
-.legal-section h2 { font-size: 1.5rem; margin: 40px 0 16px; }
+.legal-section h2 { font-size: 1.5rem; margin: 40px 0 16px; color: var(--page-ink); }
 .legal-section h2:first-child { margin-top: 0; }
-.legal-section p, .legal-section li { font-size: .9375rem; color: var(--ink-70); line-height: 1.75; }
+.legal-section p, .legal-section li { font-size: .9375rem; color: var(--page-ink-70); line-height: 1.75; }
 .legal-section ul { list-style: disc; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; margin: 8px 0 20px; }
 .affiliate-box {
   background: var(--accent-xlight);
