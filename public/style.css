@@ -1586,33 +1586,27 @@ textarea.form-input { resize: vertical; min-height: 120px; }
   background: var(--dark-card);
   border: 1px solid rgba(255,255,255,.1);
   border-radius: var(--radius-lg);
-  padding: 34px 18px 20px;
+  padding: 22px 18px 20px;
   text-align: center;
   text-decoration: none;
   color: inherit;
   transition: border-color .2s, transform .2s;
-  overflow: hidden;
 }
 .pin-card:hover { border-color: rgba(255,92,57,.5); transform: translateY(-3px); }
 .pin-card-badge {
-  position: absolute;
-  top: 14px; left: -34px;
-  transform: rotate(-45deg);
-  width: 150px;
   display: inline-flex; align-items: center; justify-content: center; gap: 4px;
-  background: var(--ink);
   color: var(--accent);
-  font-size: .625rem;
+  font-size: .6875rem;
   font-weight: 700;
   letter-spacing: .04em;
   text-transform: uppercase;
-  padding: 4px 0;
+  margin-bottom: 10px;
   white-space: nowrap;
 }
 .pin-card-badge .icon { width: .8em; height: .8em; }
 .pin-card-logo {
   width: 56px; height: 56px;
-  margin: 6px auto 14px;
+  margin: 0 auto 14px;
   background: var(--white);
   border-radius: var(--radius);
   display: flex; align-items: center; justify-content: center;
