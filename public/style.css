@@ -1629,14 +1629,17 @@ textarea.form-input { resize: vertical; min-height: 120px; }
   flex: 1;
 }
 .pin-card-cta {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
+  width: 100%;
+  box-sizing: border-box;
   background: var(--accent);
   color: var(--ink);
   font-weight: 700;
   font-size: .8125rem;
-  padding: 9px 20px;
+  padding: 11px 16px;
   border-radius: 8px;
   transition: background .2s;
 }
