@@ -69,6 +69,7 @@
 
           <div class="nav-links nav-links--secondary" role="list">
             <a href="/bons-plans" class="nav-link nav-link--highlight" role="listitem">Bons plans</a>
+            <a href="/guides" class="nav-link" role="listitem">Guides</a>
             <a href="/a-propos" class="nav-link" role="listitem">À propos</a>
           </div>
 
@@ -104,6 +105,7 @@
           </div>
 
           <a href="/bons-plans" class="nav-link nav-link--highlight" role="menuitem">Bons plans</a>
+          <a href="/guides" class="nav-link" role="menuitem">Guides</a>
           <a href="/a-propos" class="nav-link" role="menuitem">À propos</a>
           <a href="/newsletter" class="btn btn-primary">Rejoindre la newsletter</a>
         </div>
