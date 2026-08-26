@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>À propos - Qui sommes-nous ? | Jauge</title>
+  <title>À propos — Qui sommes-nous ? | Jauge</title>
   <meta name="description" content="Jauge est fondé par Tiphaine, solopreneuse curieuse, et Marie, journaliste. Notre mission et nos valeurs." />
   <link rel="canonical" href="https://jauge.media/a-propos" />
 
@@ -13,9 +13,53 @@
   <meta property="og:url"         content="https://jauge.media/a-propos" />
   <meta property="og:type"        content="website" />
   <meta name="twitter:card"       content="summary_large_image" />
-  <meta name="twitter:title"      content="À propos-Jauge" />
+  <meta name="twitter:title"      content="À propos — Jauge" />
   <meta name="twitter:description" content="Mission, valeurs et politique d'affiliation de Jauge." />
   <meta name="twitter:image"      content="https://jauge.media/og-image.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://jauge.media/a-propos/#aboutpage",
+        "url": "https://jauge.media/a-propos",
+        "name": "À propos — Qui sommes-nous ? | Jauge",
+        "isPartOf": { "@id": "https://jauge.media/#website" },
+        "about": { "@id": "https://jauge.media/#organization" },
+        "mainEntity": [
+          { "@id": "https://jauge.media/a-propos/#tiphaine" },
+          { "@id": "https://jauge.media/a-propos/#marie" }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://jauge.media/a-propos/#tiphaine",
+        "name": "Tiphaine",
+        "jobTitle": "Cofondatrice de Jauge",
+        "description": "Entrepreneuse depuis le plus jeune âge : cosmétique, influence, marketing, vente. Un passage par le salariat entre deux aventures, puis retour à l'entrepreneuriat. Aujourd'hui dirigeante d'une agence de marketing par partenariats en ligne.",
+        "worksFor": { "@id": "https://jauge.media/#organization" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://jauge.media/a-propos/#marie",
+        "name": "Marie",
+        "jobTitle": "Cofondatrice de Jauge",
+        "description": "Journaliste depuis 8 ans, spécialisée dans l'interview et le reportage terrain. A notamment écrit pour La Dépêche et L'Indépendant.",
+        "worksFor": { "@id": "https://jauge.media/#organization" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://jauge.media/a-propos/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://jauge.media/" },
+          { "@type": "ListItem", "position": 2, "name": "À propos", "item": "https://jauge.media/a-propos" }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -91,7 +135,7 @@
                 Fondé par une solopreneuse et une journaliste
               </h3>
               <p style="color:rgba(255,255,255,.55);font-size:.9375rem;margin:0;">
-                On ne publie rien qu'on n'a pas vraiment testé ou vécu c'est la règle depuis le premier jour.
+                On ne publie rien qu'on n'a pas vraiment testé ou vécu — c'est la règle depuis le premier jour.
               </p>
             </div>
 
@@ -117,19 +161,19 @@
         <!-- Équipe -->
         <section id="equipe" aria-labelledby="equipe-title">
           <h2 id="equipe-title" style="margin-bottom:8px;">Les fondatrices</h2>
-          <p style="font-size:1.0625rem;color:var(--page-ink-70);margin-bottom:24px;max-width:640px;">Jauge est né de la rencontre entre une solopreneuse curieuse et une journaliste un mélange qui donne à la fois le vécu terrain et l'exigence éditoriale.</p>
+          <p style="font-size:1.0625rem;color:var(--page-ink-70);margin-bottom:24px;max-width:640px;">Jauge est né de la rencontre entre une solopreneuse curieuse et une journaliste — un mélange qui donne à la fois le vécu terrain et l'exigence éditoriale.</p>
           <div class="grid-2" style="margin-bottom:48px;">
 
             <div class="value-card">
               <img src="https://placehold.co/200x200/f4f2ee/8a877d?text=Photo%0ATiphaine&font=roboto" alt="Photo de Tiphaine — à venir" width="88" height="88" loading="lazy" style="width:88px;height:88px;border-radius:50%;object-fit:cover;margin-bottom:16px;" />
               <h3>Tiphaine, Solopreneuse curieuse</h3>
-              <p>Cofondatrice de Jauge. Elle dirige sa propre activité au quotidien : les décisions, la trésorerie, les clients, la charge mentale qui va avec. Curieuse de nature, elle teste les outils IA et les méthodes d'acquisition avant d'en parler.</p>
+              <p>Entrepreneuse depuis le plus jeune âge cosmétique, influence, marketing, vente, avec un passage par le salariat entre deux aventures. Aujourd'hui, elle dirige une agence de marketing par partenariats en ligne, et continue à tester les outils IA et les méthodes d'acquisition avant d'en parler.</p>
             </div>
 
             <div class="value-card">
               <img src="https://placehold.co/200x200/f4f2ee/8a877d?text=Photo%0AMarie&font=roboto" alt="Photo de Marie — à venir" width="88" height="88" loading="lazy" style="width:88px;height:88px;border-radius:50%;object-fit:cover;margin-bottom:16px;" />
               <h3>Marie, Journaliste</h3>
-              <p>Cofondatrice de Jauge. Elle apporte le regard extérieur et l'exigence éditoriale : vérifier, recouper, interviewer d'autres entrepreneurs plutôt que de se contenter d'un point de vue unique.</p>
+              <p>Journaliste depuis 8 ans, spécialisée dans l'interview et le reportage terrain. Elle a notamment écrit pour La Dépêche et L'Indépendant. Elle apporte à Jauge le regard extérieur et l'exigence éditoriale : vérifier, recouper, interviewer d'autres entrepreneurs plutôt que de se contenter d'un point de vue unique.</p>
             </div>
 
           </div>
