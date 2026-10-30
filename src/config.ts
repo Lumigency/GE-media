@@ -1,4 +1,7 @@
 // Réglages globaux du site Jauge
+// Projet Sanity (identifiant public, visible côté navigateur : ce n'est pas un secret)
+export const SANITY = { projectId: 'z43vvgf6', dataset: 'production' };
+
 export const SITE = {
   name: 'Jauge',
   url: 'https://jauge.media',

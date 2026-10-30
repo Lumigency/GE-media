@@ -6,12 +6,13 @@ import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash';
 import { article } from './sanity/schemas/article';
 import { author } from './sanity/schemas/author';
 import { blockContent } from './sanity/schemas/blockContent';
+import { SANITY } from './src/config';
 
 export default defineConfig({
   name: 'jauge',
   title: 'Jauge',
-  projectId: import.meta.env.PUBLIC_SANITY_PROJECT_ID,
-  dataset: import.meta.env.PUBLIC_SANITY_DATASET || 'production',
+  projectId: SANITY.projectId,
+  dataset: SANITY.dataset,
   plugins: [
     structureTool({
       structure: (S) =>

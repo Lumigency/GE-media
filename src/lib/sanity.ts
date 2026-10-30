@@ -1,8 +1,9 @@
 import { createClient, type SanityClient } from '@sanity/client';
 import { createImageUrlBuilder } from '@sanity/image-url';
+import { SANITY } from '../config';
 
-const projectId = import.meta.env.PUBLIC_SANITY_PROJECT_ID;
-const dataset = import.meta.env.PUBLIC_SANITY_DATASET || 'production';
+const projectId = import.meta.env.PUBLIC_SANITY_PROJECT_ID || SANITY.projectId;
+const dataset = import.meta.env.PUBLIC_SANITY_DATASET || SANITY.dataset;
 
 // Mode test local : JAUGE_FIXTURE=chemin/vers/données.json exécute les requêtes sur un jeu de données local.
 const fixture = import.meta.env.JAUGE_FIXTURE || process.env.JAUGE_FIXTURE;
