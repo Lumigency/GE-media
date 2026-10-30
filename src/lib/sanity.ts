@@ -81,7 +81,9 @@ export const getLatestArticles = (limit = 6) =>
 export const getFullArticles = () =>
   fetchSafe<any[]>(
     `*[${LISTABLE}] | order(publishedAt desc){
-      ${CARD_FIELDS}, seoTitle, seoDescription, keyTakeaways, body, faq, noindex,
+      ${CARD_FIELDS}, seoTitle, seoDescription, keyTakeaways, faq, noindex,
+      "heroCredit": mainImage.asset->creditLine,
+      body[]{..., _type == "image" => {..., "credit": asset->creditLine}},
       "author": author->{name, "slug": slug.current, role, bio, photo, linkedin, website},
       "related": related[]->{${CARD_FIELDS}}
     }`,

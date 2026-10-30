@@ -128,8 +128,10 @@ const components = {
     <section class="section section--sm">
       <div class="container">
         {hero && (
-          <img class="article-hero-img" src={hero} alt={a.mainImage?.alt || ''} width="1440" height="810" loading="eager" fetchpriority="high" style="width:100%;height:auto;margin-bottom:40px;" />
+          <img class="article-hero-img" src={hero} alt={a.mainImage?.alt || ''} width="1440" height="810" loading="eager" fetchpriority="high" style="width:100%;height:auto;margin-bottom:8px;" />
         )}
+        {hero && a.heroCredit && <p style="font-size:.75rem;opacity:.6;margin:0 0 32px;text-align:right;">{a.heroCredit}</p>}
+        {hero && !a.heroCredit && <div style="height:32px;"></div>}
         <article class="page-with-sidebar">
           {toc.length > 1 ? (
             <aside class="toc" aria-label="Sommaire">

@@ -2,6 +2,7 @@ import { defineConfig } from 'sanity';
 import { structureTool } from 'sanity/structure';
 import { visionTool } from '@sanity/vision';
 import { frFRLocale } from '@sanity/locale-fr-fr';
+import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash';
 import { article } from './sanity/schemas/article';
 import { author } from './sanity/schemas/author';
 import { blockContent } from './sanity/schemas/blockContent';
@@ -22,6 +23,8 @@ export default defineConfig({
           ]),
     }),
     visionTool(),
+    // Recherche de photos Unsplash (libres de droits) directement dans les champs image
+    unsplashImageAsset(),
     frFRLocale(),
   ],
   schema: { types: [article, author, blockContent] },
