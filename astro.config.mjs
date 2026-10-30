@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import { loadEnv } from 'vite';
 import vercel from '@astrojs/vercel';
 import react from '@astrojs/react';
-import sitemap from '@astrojs/sitemap';
 import sanity from '@sanity/astro';
 
 const env = loadEnv(process.env.NODE_ENV || 'production', process.cwd(), '');
@@ -22,8 +21,5 @@ export default defineConfig({
   adapter: vercel({ webAnalytics: { enabled: true } }),
   integrations: [
     ...sanityIntegrations,
-    sitemap({
-      filter: (page) => !/\/(studio|api|404)/.test(page),
-    }),
   ],
 });

@@ -13,7 +13,7 @@ Média pour entrepreneurs solo. Site construit avec **Astro** (pages HTML géné
 
 ## Ce qui est généré automatiquement
 
-`/sitemap-index.xml`, `/robots.txt` (ouvert aux robots IA), `/llms.txt` (résumé du site pour les IA), `/rss.xml`, les données structurées (Article, Auteur, FAQ, fil d'Ariane) et les listes d'articles par jauge.
+`/sitemap.xml` (une jauge n’y apparaît qu’à partir de son 1er article), `/robots.txt` (ouvert aux robots IA), `/llms.txt` (résumé du site pour les IA), `/rss.xml`, les données structurées (Article, Auteur, FAQ, fil d'Ariane) et les listes d'articles par jauge.
 
 ## Variables d'environnement
 

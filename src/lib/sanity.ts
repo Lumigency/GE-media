@@ -52,11 +52,12 @@ export interface ArticleCard {
   readingTime?: number;
   mainImage?: any;
   featured?: boolean;
+  noindex?: boolean;
 }
 
 const CARD_FIELDS = `
   _id, title, "slug": slug.current, excerpt, category,
-  subcategory, publishedAt, updatedAt, mainImage, featured,
+  subcategory, publishedAt, updatedAt, mainImage, featured, noindex,
   "readingTime": round(length(pt::text(body)) / 1200) + 1
 `;
 

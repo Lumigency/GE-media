@@ -20,7 +20,7 @@ export const GET: APIRoute = () => {
     'Disallow: /go/',
     '',
     ...AI_BOTS.flatMap((bot) => [`User-agent: ${bot}`, 'Allow: /', 'Disallow: /studio', 'Disallow: /go/', '']),
-    `Sitemap: ${SITE.url}/sitemap-index.xml`,
+    `Sitemap: ${SITE.url}/sitemap.xml`,
     '',
   ];
   return new Response(lines.join('\n'), { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
