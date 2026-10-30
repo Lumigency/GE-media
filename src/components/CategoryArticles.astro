@@ -6,30 +6,30 @@ import type { ArticleCard as Card } from '../lib/sanity';
 
 interface Props { category: string; articles: Card[] }
 const { category, articles } = Astro.props;
-// On n'affiche que les rubriques qui contiennent au moins un article
-const used = new Set(articles.map((a) => a.subcategory));
-const rubriques = (SUBCATEGORIES[category] ?? []).filter((r) => used.has(r.value));
+// Toutes les rubriques de la jauge sont toujours affichées, même vides
+const rubriques = SUBCATEGORIES[category] ?? [];
 ---
 <section class="section section--sm">
   <div class="container">
-    {articles.length === 0 ? (
-      <EmptyState />
-    ) : (
-      <>
-        {rubriques.length > 1 && (
-          <div class="filter-bar" role="group" aria-label="Filtrer les articles">
-            <button class="filter-btn active" data-filter="all" data-filter-group={category} aria-pressed="true">Tous les articles</button>
-            {rubriques.map((r) => (
-              <button class="filter-btn" data-filter={r.value} data-filter-group={category} aria-pressed="false">
-                <svg class="icon"><use href={`#icon-${r.icon}`} /></svg> {r.label}
-              </button>
-            ))}
-          </div>
-        )}
-        <div class="grid-3">
-          {articles.map((a) => <ArticleCard article={a} filterable />)}
-        </div>
-      </>
+    {rubriques.length > 0 && (
+      <div class="filter-bar" role="group" aria-label="Filtrer les articles">
+        <button class="filter-btn active" data-filter="all" data-filter-group={category} aria-pressed="true">Tous les articles</button>
+        {rubriques.map((r) => (
+          <button class="filter-btn" data-filter={r.value} data-filter-group={category} aria-pressed="false">
+            <svg class="icon"><use href={`#icon-${r.icon}`} /></svg> {r.label}
+          </button>
+        ))}
+      </div>
     )}
+
+    {articles.length > 0 && (
+      <div class="grid-3">
+        {articles.map((a) => <ArticleCard article={a} filterable />)}
+      </div>
+    )}
+
+    <div class="filter-empty" data-filter-empty hidden={articles.length > 0}>
+      <EmptyState text={articles.length > 0 ? "Pas encore d'article dans cette rubrique. Il arrive bientôt : inscris-toi à la newsletter pour être prévenu·e." : undefined} />
+    </div>
   </div>
 </section>

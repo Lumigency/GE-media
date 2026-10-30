@@ -147,11 +147,17 @@ function initFilters() {
       const filter = btn.dataset.filter;
       const items = document.querySelectorAll('[data-category]');
 
+      let visible = 0;
       items.forEach(item => {
         const categories = (item.dataset.category || '').split(/\s+/).filter(Boolean);
         const show = filter === 'all' || categories.includes(filter);
         item.style.display = show ? '' : 'none';
+        if (show) visible++;
       });
+
+      // Rubrique sans article : on affiche un message plutôt qu'une zone vide
+      const empty = document.querySelector('[data-filter-empty]');
+      if (empty && items.length) empty.hidden = visible > 0;
     });
   });
 }
