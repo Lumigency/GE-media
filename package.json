@@ -21,7 +21,6 @@
     "@sanity/image-url": "^2.1.1",
     "@sanity/locale-fr-fr": "^1.2.37",
     "@sanity/vision": "^6.21.0",
-    "@vercel/analytics": "^2.0.1",
     "astro": "^7.4.4",
     "astro-portabletext": "^1.0.1",
     "react": "^19.3.1",
