@@ -1,0 +1,484 @@
+---
+import Base from '../layouts/Base.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import EmptyState from '../components/EmptyState.astro';
+import { getFeaturedArticles, getLatestArticles, imageUrl } from '../lib/sanity';
+import { categoryBySlug } from '../config';
+
+const featured = await getFeaturedArticles(4);
+const latest = await getLatestArticles(6);
+
+const jsonLd = [
+  {
+    "@type": "FAQPage",
+    "@id": "https://jauge.media/#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qu'est-ce que Jauge ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Jauge est un média pour freelances, solopreneurs et petites structures qui parle d'argent, d'outils IA, d'acquisition client et de charge mentale entrepreneuriale, avec des avis tranchés plutôt que des tops génériques."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Make, Zapier ou n8n : lequel choisir quand on est solo ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ça dépend du budget et de la tolérance au bricolage technique. n8n en self-hosting coûte 0€ mais demande un peu de mise en main, Zapier est le plus simple mais explose vite en prix, et Make est souvent le bon compromis pour un solopreneur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien coûte vraiment un compte pro par mois ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Entre les frais de tenue de compte, les cartes additionnelles et les commissions sur les paiements internationaux, le coût réel dépasse souvent l'abonnement affiché. Il se calcule sur le volume réel de transactions, pas sur la publicité la plus vue."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment trouver ses premiers clients sans réseau ni budget pub ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La prospection LinkedIn ciblée et le SEO sont les deux canaux gratuits qui fonctionnent le mieux au départ, à condition d'en choisir un et de le travailler régulièrement plutôt que d'en essayer dix à la fois."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quels outils IA sont vraiment utiles pour un freelance ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trois suffisent en général : un assistant IA généraliste, un outil d'automatisation no-code comme n8n ou Make, et un outil de gestion simple. Le reste est souvent du bruit marketing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pourquoi je me sens seul en tant qu'entrepreneur solo ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Parce que tu portes seul toutes les décisions, sans collègue pour partager la charge ni valider tes choix. C'est une réalité du quotidien entrepreneurial, pas un problème personnel à cacher."
+        }
+      }
+    ]
+  }
+];
+---
+<Base
+  title="Jauge | Argent, outils & tête d'entrepreneur"
+  description="Jauge est le média qui dit vraiment où t'en es : trésorerie, outils IA, acquisition client et charge mentale d'entrepreneur. Avis tranchés, pas de top 10 générique."
+  path="/"
+  jsonLd={jsonLd}
+>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-scanline" aria-hidden="true"></div>
+      <div class="container">
+
+        <div class="hero-tag anim-fade-up">
+          <span class="hero-tag-dot" aria-hidden="true"></span>
+          SYSTEM.JAUGE // BOOT<span class="hero-cursor" aria-hidden="true">_</span>
+        </div>
+
+        <div class="hero-bigfall-wrap">
+          <span class="hero-bigfall" id="heroScramble" data-target="LE PREMIER MÉDIA DES SOLOPRENEURS">LE PREMIER MÉDIA DES SOLOPRENEURS</span>
+        </div>
+
+        <div class="hero-grid">
+
+          <div class="hero-main">
+            <h1 class="hero-title anim-fade-up anim-delay-1">
+              T'en es où, <em>vraiment</em> ?
+            </h1>
+
+            <p class="hero-desc anim-fade-up anim-delay-2">
+              Jauge parle de ta trésorerie, de tes outils IA, de ton acquisition client et de ta santé mentale face à l'entrepreneuriat.
+            </p>
+
+            <div class="hero-actions anim-fade-up anim-delay-3">
+              <a href="/guides" class="btn btn-primary btn-lg">Découvrir les guides→</a>
+              <a href="/bons-plans" class="btn btn-outline btn-lg">Bons plans</a>
+            </div>
+          </div>
+
+          <a href="/la-jauge" class="hero-gauge anim-fade-up anim-delay-2" role="img" aria-label="Jauge du mois : charge mentale à 71 sur 100">
+            <div class="hero-gauge-sys">JAUGE.MOIS // CHARGE_MENTALE</div>
+            <svg viewBox="0 0 240 150" width="240" height="150" class="hero-gauge-svg" preserveAspectRatio="xMidYMid meet">
+              <path d="M 20 130 A 100 100 0 0 1 220 130" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="16" stroke-linecap="round" />
+              <path id="gaugeArc" d="M 20 130 A 100 100 0 0 1 220 130" fill="none" stroke="var(--accent)" stroke-width="16" stroke-linecap="round"
+                    stroke-dasharray="314" stroke-dashoffset="314" />
+              <line x1="120" y1="130" x2="168" y2="66" stroke="var(--white)" stroke-width="3" stroke-linecap="round" />
+              <circle cx="120" cy="130" r="7" fill="var(--white)" />
+            </svg>
+            <div class="hero-gauge-value"><span id="heroCount">0</span><span>/100</span>
+              <svg class="hero-gauge-face" viewBox="0 0 40 40" aria-hidden="true">
+                <circle cx="20" cy="20" r="18" fill="#FDF3D9" stroke="#0B0B0C" stroke-width="2"/>
+                <path id="faceBrowL" d="M10.5 13.5h0" fill="none" stroke="#0B0B0C" stroke-width="1.6" stroke-linecap="round"/>
+                <path id="faceBrowR" d="M23 13.5h0" fill="none" stroke="#0B0B0C" stroke-width="1.6" stroke-linecap="round"/>
+                <circle cx="13.5" cy="17" r="2.1" fill="#0B0B0C"/>
+                <circle cx="26.5" cy="17" r="2.1" fill="#0B0B0C"/>
+                <path id="faceMouth" d="M12 26c3 2 13 2 16 0" fill="none" stroke="#0B0B0C" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p class="hero-gauge-label">Jauge du mois<br />Charge mentale entrepreneurs solo</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <script is:inline>
+      (function () {
+        const el = document.getElementById('heroScramble');
+        const target = el.dataset.target;
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&";
+        let frame = 0;
+        const totalFrames = 26;
+        function scrambleStep() {
+          let out = "";
+          for (let i = 0; i < target.length; i++) {
+            if (target[i] === " ") { out += " "; continue; }
+            const reveal = frame - i * 1.1;
+            if (reveal > totalFrames * 0.6) out += target[i];
+            else if (reveal > 0) out += chars[Math.floor(Math.random() * chars.length)];
+            else out += " ";
+          }
+          el.textContent = out;
+          frame++;
+          if (frame < totalFrames + target.length) {
+            setTimeout(scrambleStep, 28);
+          } else {
+            el.textContent = target;
+          }
+        }
+        scrambleStep();
+
+        const countEl = document.getElementById('heroCount');
+        const mouthEl = document.getElementById('faceMouth');
+        const browL = document.getElementById('faceBrowL');
+        const browR = document.getElementById('faceBrowR');
+        const faceStates = [
+          { max: 0.4,  mouth: "M12 26c3 2 13 2 16 0", browL: "M9 13.5h5",   browR: "M22 13.5h5" },
+          { max: 0.75, mouth: "M12 27h16",            browL: "M9 13h5",     browR: "M22 13h5" },
+          { max: 2,    mouth: "M12 29c3-3 13-3 16 0", browL: "M9.5 15l5-3", browR: "M22.5 12l5 3" }
+        ];
+        let faceIndex = -1;
+        function updateFace(progress) {
+          const i = faceStates.findIndex(s => progress <= s.max);
+          const target = i === -1 ? faceStates.length - 1 : i;
+          if (target === faceIndex) return;
+          faceIndex = target;
+          const s = faceStates[target];
+          mouthEl.setAttribute('d', s.mouth);
+          browL.setAttribute('d', s.browL);
+          browR.setAttribute('d', s.browR);
+        }
+
+        let startTime = null;
+        const duration = 1600, delay = 500, endVal = 71;
+        function countUp(ts) {
+          if (!startTime) startTime = ts + delay;
+          const elapsed = ts - startTime;
+          if (elapsed < 0) { requestAnimationFrame(countUp); return; }
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          countEl.textContent = Math.round(eased * endVal);
+          updateFace(eased * (endVal / 100));
+          if (progress < 1) requestAnimationFrame(countUp);
+        }
+        requestAnimationFrame(countUp);
+      })();
+    </script>
+
+    <!-- ===== CARROUSEL À LA UNE ===== -->
+    {featured.length > 0 && (
+    <section class="hero-carousel" aria-label="À la une" aria-roledescription="carrousel">
+      <div class="carousel" id="jaugeCarousel">
+        <div class="carousel-track">
+          {featured.map((f, i) => {
+            const c = categoryBySlug(f.category);
+            return (
+              <a href={`/${f.category}/${f.slug}`} class="carousel-slide" aria-label={`Lire : ${f.title}`}>
+                {f.mainImage && <img src={imageUrl(f.mainImage, 1200, 675)} alt={f.mainImage?.alt || ''} loading={i === 0 ? 'eager' : 'lazy'} />}
+                <div class="carousel-overlay">
+                  <span class={`tag ${c?.tag ?? ''}`}>{c?.short}</span>
+                  <h2>{f.title}</h2>
+                  {f.excerpt && <p>{f.excerpt}</p>}
+                  <span class="carousel-cta">Lire l'article →</span>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+
+        <button class="carousel-arrow carousel-arrow--prev" id="carouselPrev" aria-label="Article précédent">‹</button>
+        <button class="carousel-arrow carousel-arrow--next" id="carouselNext" aria-label="Article suivant">›</button>
+
+        <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Choisir un article"></div>
+      </div>
+    </section>
+    )}
+
+    <script is:inline>
+      (function () {
+        const track = document.querySelector('#jaugeCarousel .carousel-track');
+        if (!track || !track.children.length) return;
+        const slides = Array.from(track.children);
+        const dotsWrap = document.getElementById('carouselDots');
+        const prevBtn = document.getElementById('carouselPrev');
+        const nextBtn = document.getElementById('carouselNext');
+        let index = 0;
+        let timer;
+
+        slides.forEach((_, i) => {
+          const dot = document.createElement('button');
+          dot.setAttribute('role', 'tab');
+          dot.setAttribute('aria-label', 'Aller à la diapositive ' + (i + 1));
+          dot.addEventListener('click', () => goTo(i));
+          dotsWrap.appendChild(dot);
+        });
+        const dots = Array.from(dotsWrap.children);
+
+        function render() {
+          track.style.transform = `translateX(-${index * 100}%)`;
+          dots.forEach((d, i) => d.classList.toggle('active', i === index));
+        }
+        function goTo(i) {
+          index = (i + slides.length) % slides.length;
+          render();
+          restart();
+        }
+        function next() { goTo(index + 1); }
+        function prev() { goTo(index - 1); }
+        function restart() {
+          clearInterval(timer);
+          timer = setInterval(next, 6000);
+        }
+
+        nextBtn.addEventListener('click', next);
+        prevBtn.addEventListener('click', prev);
+        track.parentElement.addEventListener('mouseenter', () => clearInterval(timer));
+        track.parentElement.addEventListener('mouseleave', restart);
+
+        render();
+        restart();
+      })();
+    </script>
+
+    <!-- ===== INTRO / MANIFESTE ===== -->
+    <section class="section section--sm" aria-labelledby="intro-home-title">
+      <div class="container">
+        <div style="max-width:860px;margin:0 auto;text-align:center;">
+          <p class="section-label" style="justify-content:center;">Le manifeste, en deux phrases</p>
+          <h2 id="intro-home-title">On en a marre des tops 10 écrits par une IA</h2>
+          <p style="font-size:1.0625rem;line-height:1.75;color:var(--page-ink-70);">
+            Jauge, c'est le contraire des comparatifs qui sonnent comme une pub et des médias business qui ne parlent jamais de la vraie charge de tout porter seul : des avis tranchés sur les outils, des vrais chiffres sur l'acquisition et l'argent, et un espace pour dire que la tête, ça compte aussi.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CATÉGORIES ===== -->
+    <section class="section section--sm" aria-labelledby="cat-title">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <p class="section-label">Explorer par thème</p>
+            <h2 id="cat-title">Les 4 jauges</h2>
+          </div>
+          <a href="/categories" class="btn btn-outline">Voir tout →</a>
+        </div>
+
+        <div class="grid-4">
+          <a href="/ia-automatisation" class="category-card">
+            <div class="category-card-icon" style="background:#3a1810;color:#FF7452;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-cpu"/></svg></div>
+            <h3>Outils &amp; IA</h3>
+            <p>Outils IA, workflows no-code et productivité, testés en vrai sur des tâches réelles. On dit aussi quand c'est nul.</p>
+            <span class="category-card-arrow" style="color:#FF7452;">Découvrir les articles <span aria-hidden="true">→</span></span>
+          </a>
+
+          <a href="/acquisition-growth" class="category-card">
+            <div class="category-card-icon" style="background:#2e3a1a;color:#D6FF3F;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-target"/></svg></div>
+            <h3>Acquisition &amp; Growth</h3>
+            <p>SEO, paid ads, affiliation, tunnels de vente : les mécaniques réelles pour attirer et convertir, pas la théorie.</p>
+            <span class="category-card-arrow" style="color:#D6FF3F;">Découvrir les articles <span aria-hidden="true">→</span></span>
+          </a>
+
+          <a href="/finance-assurances" class="category-card">
+            <div class="category-card-icon" style="background:#2a2a28;color:#ffffff;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-wallet"/></svg></div>
+            <h3>Argent &amp; Trésorerie</h3>
+            <p>Comptes pro, comptabilité, fiscalité, assurances : ce qu'il faut vraiment suivre pour ne pas se faire surprendre.</p>
+            <span class="category-card-arrow" style="color:#ffffff;">Découvrir les articles <span aria-hidden="true">→</span></span>
+          </a>
+
+          <a href="/la-jauge" class="category-card category-card--jauge">
+            <div class="category-card-icon" style="background:#FFE0D6;color:#D9431F;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-brain"/></svg></div>
+            <h3>La Jauge</h3>
+            <p>Charge mentale, solitude de la décision, peur de regarder son compte. Ce que personne ne dit jamais.</p>
+            <span class="category-card-arrow" style="color:#D9431F;">Découvrir les articles <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===== BONS PLANS ===== -->
+    <section class="section section--dark" aria-labelledby="tools-title">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <p class="section-label" style="color:rgba(255,255,255,.5);">Bons plans</p>
+            <h2 id="tools-title" style="color:var(--white);">3 offres qui valent le coup en ce moment</h2>
+          </div>
+          <a href="/bons-plans" class="btn btn-outline-white">Voir tous les bons plans →</a>
+        </div>
+
+        <div class="grid-3">
+          <a href="/bons-plans" class="tool-card tool-card--highlight" style="text-decoration:none;">
+            <div class="tool-card-header">
+              <div class="tool-card-logo" style="background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:8px;" aria-hidden="true"><img src="/N8n-io_idanTsRSNX_1.png" alt="" style="width:100%;height:100%;object-fit:contain;"/></div>
+              <div class="tool-card-tags">
+                <span class="tag tag-ia">Notre pick</span>
+              </div>
+            </div>
+            <h3>n8n</h3>
+            <p>Automatisation flexible, 0 € en self-hosting sans abonnement qui explose avec le volume.</p>
+            <div class="tool-card-footer">
+              <span class="tool-price">Dès <strong>0 €/mois</strong></span>
+              <span class="btn btn-outline-white btn-sm">Voir l'offre →</span>
+            </div>
+          </a>
+
+          <a href="/bons-plans" class="tool-card" style="text-decoration:none;">
+            <div class="tool-card-header">
+              <div class="tool-card-logo" style="background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:8px;" aria-hidden="true"><img src="/Claude_Logo_1.png" alt="" style="width:100%;height:100%;object-fit:contain;"/></div>
+            </div>
+            <h3>Claude</h3>
+            <p>Solide pour rédiger, structurer et analyser. Gratuit pour démarrer.</p>
+            <div class="tool-card-footer">
+              <span class="tool-price">Dès <strong>0 €/mois</strong></span>
+              <span class="btn btn-outline-white btn-sm">Voir l'offre →</span>
+            </div>
+          </a>
+
+          <a href="/bons-plans" class="tool-card" style="text-decoration:none;">
+            <div class="tool-card-header">
+              <div class="tool-card-logo" style="background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:8px;" aria-hidden="true"><img src="/Qonto_id47pmDgSE_1.png" alt="" style="width:100%;height:100%;object-fit:contain;"/></div>
+            </div>
+            <h3>Qonto</h3>
+            <p>Compte pro, offre de lancement en cours on l'a vérifiée avant de la relayer.</p>
+            <div class="tool-card-footer">
+              <span class="tool-price">Offre en cours</span>
+              <span class="btn btn-outline-white btn-sm">Voir l'offre →</span>
+            </div>
+          </a>
+        </div>
+
+        <p style="text-align:center;margin-top:24px;font-size:.8125rem;color:rgba(255,255,255,.3);">
+          ⚠ Certains liens peuvent être affiliés on touche parfois une commission sans surcoût pour toi.
+          <a href="/mentions-legales" style="color:rgba(255,255,255,.45);text-decoration:underline;">En savoir plus</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== 3 DERNIERS ARTICLES ===== -->
+    <section class="section" aria-labelledby="recent-title">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <p class="section-label">Récemment publié</p>
+            <h2 id="recent-title">Les derniers</h2>
+          </div>
+          <a href="/categories" class="btn btn-outline">Voir tout →</a>
+        </div>
+
+        {latest.length > 0 ? (
+          <div class="grid-3">
+            {latest.map((art) => <ArticleCard article={art} />)}
+          </div>
+        ) : (
+          <EmptyState />
+        )}
+      </div>
+    </section>
+
+    <!-- ===== FAQ SEO ===== -->
+    <section class="section section--sm" aria-labelledby="faq-title">
+  <div class="container" style="max-width:980px;">
+    <div style="background:linear-gradient(180deg,#f7f5f3 0%,#ffffff 100%);border:1px solid var(--ink-15);border-radius:28px;padding:40px 36px;">
+      <div style="text-align:center;max-width:720px;margin:0 auto 32px;">
+        <p class="section-label" style="justify-content:center;">Questions fréquentes</p>
+        <h2 id="faq-title" style="margin-bottom:14px;">Ce qu'on te demande souvent</h2>
+        <p style="font-size:1.0625rem;line-height:1.7;color:var(--ink-70);margin:0;">
+          Les réponses directes, sans détour, aux questions qu'on nous pose le plus.
+        </p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;" class="faq-grid">
+
+        <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
+          <h3 style="font-size:1.05rem;margin-bottom:10px;display:flex;align-items:center;gap:8px;"><svg class="icon" style="color:var(--accent);"><use href="#icon-file-text"/></svg> Qu'est-ce que Jauge ?</h3>
+          <p style="margin:0;color:var(--ink-70);line-height:1.7;">Un média pour freelances et solopreneurs qui parle d'argent, d'outils IA, d'acquisition et de charge mentale avec des avis tranchés plutôt que des tops génériques.</p>
+        </article>
+
+        <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
+          <h3 style="font-size:1.05rem;margin-bottom:10px;display:flex;align-items:center;gap:8px;"><svg class="icon" style="color:var(--accent);"><use href="#icon-cpu"/></svg> Make, Zapier ou n8n : lequel choisir quand on est solo ?</h3>
+          <p style="margin:0;color:var(--ink-70);line-height:1.7;">Ça dépend du budget et de la tolérance au bricolage technique. n8n en self-hosting coûte 0€ mais demande un peu de mise en main, Zapier est le plus simple mais explose vite en prix, et Make est souvent le bon compromis.</p>
+        </article>
+
+        <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
+          <h3 style="font-size:1.05rem;margin-bottom:10px;display:flex;align-items:center;gap:8px;"><svg class="icon" style="color:var(--accent);"><use href="#icon-wallet"/></svg> Combien coûte vraiment un compte pro par mois ?</h3>
+          <p style="margin:0;color:var(--ink-70);line-height:1.7;">Entre les frais de tenue de compte, les cartes additionnelles et les commissions sur les paiements internationaux, le coût réel dépasse souvent l'abonnement affiché. Ça se calcule sur ton volume réel de transactions.</p>
+        </article>
+
+        <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
+          <h3 style="font-size:1.05rem;margin-bottom:10px;display:flex;align-items:center;gap:8px;"><svg class="icon" style="color:var(--accent);"><use href="#icon-users"/></svg> Comment trouver ses premiers clients sans réseau ni budget pub ?</h3>
+          <p style="margin:0;color:var(--ink-70);line-height:1.7;">La prospection LinkedIn ciblée et le SEO sont les deux canaux gratuits qui marchent le mieux au départ, à condition d'en choisir un et de le travailler régulièrement plutôt que d'en essayer dix à la fois.</p>
+        </article>
+
+        <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
+          <h3 style="font-size:1.05rem;margin-bottom:10px;display:flex;align-items:center;gap:8px;"><svg class="icon" style="color:var(--accent);"><use href="#icon-cpu"/></svg> Quels outils IA sont vraiment utiles pour un freelance ?</h3>
+          <p style="margin:0;color:var(--ink-70);line-height:1.7;">Trois suffisent en général : un assistant généraliste (Claude, ChatGPT), un outil d'automatisation no-code, et un outil de gestion simple. Le reste est souvent du bruit marketing.</p>
+        </article>
+
+        <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
+          <h3 style="font-size:1.05rem;margin-bottom:10px;display:flex;align-items:center;gap:8px;"><svg class="icon" style="color:var(--accent);"><use href="#icon-brain"/></svg> Pourquoi je me sens seul en tant qu'entrepreneur solo ?</h3>
+          <p style="margin:0;color:var(--ink-70);line-height:1.7;">Parce que tu portes seul toutes les décisions, sans collègue pour partager la charge ni valider tes choix. C'est une réalité du quotidien entrepreneurial, pas un problème personnel à cacher.</p>
+        </article>
+
+      </div>
+    </div>
+  </div>
+    </section>
+
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="section section--dark" aria-labelledby="nl-title">
+      <div class="container" style="max-width:700px;">
+        <div style="text-align:center;">
+          <p class="section-label" style="color:rgba(255,255,255,.45);justify-content:center;">
+            Newsletter gratuite
+          </p>
+          <h2 id="nl-title" style="color:var(--white);margin-bottom:16px;">
+            Une jauge dans ta boîte mail, chaque semaine
+          </h2>
+          <p style="color:rgba(255,255,255,.6);font-size:1.0625rem;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto;">
+            Un outil testé, un chiffre qui compte, et un truc sur la tête. Pas de spam, pas de storytelling creux.
+          </p>
+
+          <form data-newsletter class="newsletter-form newsletter-form--dark" style="justify-content:center;" action="/api/newsletter" method="post" aria-label="Inscription newsletter">
+            <input type="email" name="email" placeholder="ton@email.com" required autocomplete="email" aria-label="Votre adresse email" />
+            <button type="submit" class="btn btn-primary">S'inscrire gratuitement →</button>
+          </form>
+
+          <p style="margin-top:12px;font-size:.8125rem;color:rgba(255,255,255,.3);">
+            Désinscription en 1 clic · Aucun spam
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Base>

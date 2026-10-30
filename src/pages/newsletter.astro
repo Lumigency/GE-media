@@ -1,0 +1,171 @@
+---
+import Base from '../layouts/Base.astro';
+
+const jsonLd = [];
+---
+<Base
+  title="Newsletter | Jauge"
+  description="Chaque semaine : un outil testé, une stratégie d'acquisition, un repère financier et un truc sur la tête. Gratuit, sans spam, désinscription en 1 clic."
+  path="/newsletter"
+  jsonLd={jsonLd}
+>
+
+
+  <main>
+    <!-- HERO -->
+    <section class="section section--dark" style="padding:96px 0 80px;" aria-labelledby="nl-hero-title">
+      <div class="container" style="max-width:720px;">
+        <div style="text-align:center;">
+          <p class="section-label anim-fade-up" style="justify-content:center;color:rgba(255,255,255,.5);">La newsletter Jauge</p>
+          <h1 id="nl-hero-title" class="anim-fade-up anim-delay-1" style="color:var(--white);margin-bottom:20px;">
+            Une jauge dans ta boîte mail,<br><em style="color:var(--accent);">chaque semaine</em>
+          </h1>
+          <p class="anim-fade-up anim-delay-2" style="color:rgba(255,255,255,.7);font-size:1.125rem;margin-bottom:40px;">
+            Un outil testé, une stratégie qui marche, un repère financier et un truc sur la tête. Gratuit, sans spam, désinscription en 1 clic.
+          </p>
+          <form data-newsletter class="newsletter-form newsletter-form--dark anim-fade-up anim-delay-3" style="justify-content:center;max-width:480px;margin:0 auto;" action="/api/newsletter" method="post" aria-label="Formulaire d'inscription newsletter principal">
+            <input type="email" name="email" placeholder="ton@email.com" required autocomplete="email" aria-label="Ton adresse email" style="font-size:1rem;padding:14px 18px;" />
+            <button type="submit" class="btn btn-primary btn-lg" style="font-size:1rem;">S'inscrire gratuitement →</button>
+          </form>
+          <p class="anim-fade-up anim-delay-4" style="margin-top:16px;font-size:.8125rem;color:rgba(255,255,255,.3);">
+            Aucune carte bancaire · Désinscription en 1 clic · Conforme RGPD
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CE QUE TU REÇOIS -->
+    <section class="section" aria-labelledby="content-title">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:48px;">
+          <p class="section-label" style="justify-content:center;">Au programme</p>
+          <h2 id="content-title">Ce que tu reçois chaque semaine</h2>
+          <p style="max-width:520px;margin:12px auto 0;font-size:1.0625rem;color:var(--page-ink-70);">Une édition qui se lit en 5 minutes. Dense, actionnable, sans blabla écrite par nous, pas par un algorithme.</p>
+        </div>
+        <div class="grid-2" style="gap:16px;">
+          <div class="what-you-get-card anim-fade-up">
+            <div class="what-you-get-icon" style="background:#FFE0D6;color:#B8420F;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-cpu"/></svg></div>
+            <div>
+              <h4>Un outil testé</h4>
+              <p>Un outil IA ou un logiciel qu'on a vraiment utilisé, avec un avis tranché plutôt qu'une fiche produit reformulée.</p>
+            </div>
+          </div>
+          <div class="what-you-get-card anim-fade-up anim-delay-1">
+            <div class="what-you-get-icon" style="background:#EEFAC7;color:#4A5B0A;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-target"/></svg></div>
+            <div>
+              <h4>Une stratégie qui marche</h4>
+              <p>Un levier d'acquisition ou une méthode business concrète, sans jargon inutile ni promesse de croissance magique.</p>
+            </div>
+          </div>
+          <div class="what-you-get-card anim-fade-up anim-delay-2">
+            <div class="what-you-get-icon" style="background:#e7e5de;color:#44453f;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-wallet"/></svg></div>
+            <div>
+              <h4>Un repère financier</h4>
+              <p>Un chiffre, un réflexe ou une astuce trésorerie et compte pro à retenir.</p>
+            </div>
+          </div>
+          <div class="what-you-get-card anim-fade-up anim-delay-3">
+            <div class="what-you-get-icon" style="background:#FDF3D9;color:#92640B;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-brain"/></svg></div>
+            <div>
+              <h4>Un truc sur la tête</h4>
+              <p>Une réflexion sur la charge mentale ou la solitude d'entrepreneur solo ce que personne ne dit ailleurs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APERÇU EMAIL -->
+    <section class="section section--grey" aria-labelledby="preview-title">
+      <div class="container" style="max-width:680px;">
+        <div style="text-align:center;margin-bottom:40px;">
+          <p class="section-label" style="justify-content:center;">Aperçu</p>
+          <h2 id="preview-title">À quoi ressemble une édition</h2>
+        </div>
+        <div class="email-preview">
+          <div class="email-preview-header">
+            <div class="email-preview-dots" aria-hidden="true">
+              <div class="email-preview-dot"></div>
+              <div class="email-preview-dot"></div>
+              <div class="email-preview-dot"></div>
+            </div>
+            <span style="font-size:.8125rem;color:rgba(255,255,255,.4);margin-left:12px;">Boîte de réception</span>
+          </div>
+          <div class="email-preview-body">
+            <div class="email-preview-from">
+              <strong style="color:var(--ink);">Jauge</strong>
+              <span style="margin:0 6px;color:var(--ink-15);">·</span>
+              contact@jauge.media
+              <span style="margin:0 6px;color:var(--ink-15);">·</span>
+              Aujourd'hui, 08h00
+            </div>
+            <div class="email-preview-subject" style="display:flex;align-items:center;gap:8px;"><svg class="icon" style="color:var(--accent-dark);"><use href="#icon-brain"/></svg> T'en es où cette semaine ?</div>
+            <div class="email-preview-content">
+              <p><strong>Salut {"{{prénom}}"},</strong></p>
+              <p>Cette semaine, on démonte un CRM qu'on a testé pendant un mois, et on parle du vrai coût d'un compte pro celui que les pubs ne montrent jamais.</p>
+              <p>
+                <strong>Au programme :</strong><br/>
+                <svg class="icon" style="color:var(--accent-dark);"><use href="#icon-cpu"/></svg> Outil testé : le CRM qui tient (vraiment) ses promesses<br/>
+                <svg class="icon" style="color:var(--accent-dark);"><use href="#icon-target"/></svg> Stratégie : structurer sa prospection sans y passer ses soirées<br/>
+                <svg class="icon" style="color:var(--accent-dark);"><use href="#icon-wallet"/></svg> Repère financier : le vrai coût d'un compte pro, au-delà de la pub<br/>
+                <svg class="icon" style="color:var(--accent-dark);"><use href="#icon-brain"/></svg> La tête : pourquoi tu évites de regarder ton compte en banque
+              </p>
+              <p>Bonne lecture.</p>
+              <p>— <strong>Tiphaine &amp; Marie</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CE QU'ON NE FERA JAMAIS -->
+    <section class="section" aria-labelledby="jamais-title">
+      <div class="container" style="max-width:720px;">
+        <div style="text-align:center;margin-bottom:32px;">
+          <p class="section-label" style="justify-content:center;">Notre engagement</p>
+          <h2 id="jamais-title">Ce qu'on ne fera jamais</h2>
+        </div>
+        <div class="grid-2" style="gap:16px;">
+          <div class="value-card">
+            <div class="value-card-icon" style="background:var(--green-light);color:var(--green);" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-ban"/></svg></div>
+            <h3 style="font-size:1.05rem;">De faux chiffres</h3>
+            <p>Pas de faux compteur d'abonnés, pas de témoignages inventés. Si on n'a pas encore l'audience, on ne prétend pas l'avoir.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-card-icon" style="background:var(--amber-light);color:var(--amber);" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-mail"/></svg></div>
+            <h3 style="font-size:1.05rem;">Du remplissage</h3>
+            <p>Si une semaine n'a rien à dire de vraiment utile, on n'envoie pas une édition juste pour occuper l'espace.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-card-icon" style="background:#FFE0D6;color:#B8420F;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-shield"/></svg></div>
+            <h3 style="font-size:1.05rem;">De la promo déguisée</h3>
+            <p>Un outil recommandé, c'est un outil testé pas un partenariat payant présenté comme un avis neutre.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-card-icon" style="background:var(--violet-light);color:var(--violet);" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-lock"/></svg></div>
+            <h3 style="font-size:1.05rem;">Revendre tes données</h3>
+            <p>Ton email sert à t'envoyer la newsletter. Un point, c'est tout jamais revendu, jamais partagé.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAS DE PAGE -->
+    <section class="section section--dark" aria-labelledby="cta2-title">
+      <div class="container" style="max-width:640px;">
+        <div style="text-align:center;">
+          <p class="section-label" style="color:rgba(255,255,255,.4);justify-content:center;">Gratuit, toujours</p>
+          <h2 id="cta2-title" style="color:var(--white);margin-bottom:16px;">Rejoins les premiers abonnés</h2>
+          <p style="color:rgba(255,255,255,.65);font-size:1.0625rem;margin-bottom:32px;">On démarre tout juste c'est le bon moment pour être dans les premiers à recevoir la newsletter.</p>
+          <form data-newsletter class="newsletter-form newsletter-form--dark" style="justify-content:center;max-width:460px;margin:0 auto;" action="/api/newsletter" method="post" aria-label="Formulaire d'inscription newsletter bas de page">
+            <input type="email" name="email" placeholder="ton@email.com" required autocomplete="email" aria-label="Ton adresse email" />
+            <button type="submit" class="btn btn-primary btn-lg">S'inscrire gratuitement →</button>
+          </form>
+          <p style="margin-top:14px;font-size:.8125rem;color:rgba(255,255,255,.25);">
+            Aucune carte bancaire · Désinscription en 1 clic
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Base>

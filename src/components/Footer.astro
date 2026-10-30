@@ -1,0 +1,60 @@
+---
+import { CATEGORIES } from '../config';
+import { getFeaturedArticles } from '../lib/sanity';
+
+const featured = await getFeaturedArticles(5);
+const year = new Date().getFullYear();
+---
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo" aria-label="Accueil Jauge">
+          <img src="/jauge.png" alt="" width="28" height="28" style="border-radius:6px;" />
+          Jauge
+        </a>
+        <p class="footer-desc">
+          Jauge parle de trésorerie, d'outils IA, d'acquisition client et de charge mentale d'entrepreneur. Des avis tranchés, pas des tops génériques.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-col-title">Les jauges</p>
+        <ul>
+          {CATEGORIES.map((c) => <li><a href={`/${c.slug}`}>{c.title}</a></li>)}
+        </ul>
+      </div>
+
+      {featured.length > 0 && (
+        <div class="footer-col">
+          <p class="footer-col-title">Articles incontournables</p>
+          <ul class="footer-col-nowrap">
+            {featured.map((a) => <li><a href={`/${a.category}/${a.slug}`}>{a.title}</a></li>)}
+          </ul>
+        </div>
+      )}
+
+      <div class="footer-col">
+        <p class="footer-col-title">Le site</p>
+        <ul>
+          <li><a href="/bons-plans">Bons plans</a></li>
+          <li><a href="/guides">Tous les guides</a></li>
+          <li><a href="/newsletter">Newsletter</a></li>
+          <li><a href="/a-propos">À propos</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/mentions-legales">Mentions légales</a></li>
+          <li><a href="/mentions-legales#rgpd">RGPD</a></li>
+          <li><a href="/rss.xml">Flux RSS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© {year} Jauge. Tous droits réservés.</p>
+      <nav class="footer-legal" aria-label="Liens légaux">
+        <a href="/mentions-legales">Mentions légales</a>
+        <a href="/mentions-legales#rgpd">RGPD</a>
+      </nav>
+    </div>
+  </div>
+</footer>

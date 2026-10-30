@@ -1,0 +1,9 @@
+---
+// Affiché tant qu'aucun article n'est publié dans une rubrique
+interface Props { text?: string }
+const { text = "Les premiers articles arrivent très vite. Inscris-toi à la newsletter pour être prévenu·e de leur sortie." } = Astro.props;
+---
+<div class="affiliate-box" style="text-align:center;padding:32px 24px;">
+  <p style="margin:0 0 16px;">{text}</p>
+  <a href="/newsletter" class="btn btn-primary">Rejoindre la newsletter</a>
+</div>

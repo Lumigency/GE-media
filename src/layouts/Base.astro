@@ -1,0 +1,108 @@
+---
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/space-grotesk/500.css';
+import '@fontsource/space-grotesk/700.css';
+import '@fontsource/jetbrains-mono/500.css';
+import Analytics from '@vercel/analytics/astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import Icons from '../components/Icons.astro';
+import { SITE } from '../config';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Chemin de la page, ex. "/guides". Par défaut : l'URL courante. */
+  path?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  /** Blocs JSON-LD propres à la page (ajoutés au graphe commun). */
+  jsonLd?: Record<string, unknown>[];
+  publishedTime?: string;
+  modifiedTime?: string;
+  readingProgress?: boolean;
+}
+
+const {
+  title,
+  description,
+  path = Astro.url.pathname,
+  image = SITE.ogImage,
+  type = 'website',
+  noindex = false,
+  jsonLd = [],
+  publishedTime,
+  modifiedTime,
+  readingProgress = false,
+} = Astro.props;
+
+const cleanPath = path === '/' ? '' : path.replace(/\/$/, '');
+const canonical = `${SITE.url}${cleanPath}`;
+const ogImage = image.startsWith('http') ? image : `${SITE.url}${image}`;
+
+const graph = [
+  {
+    '@type': 'WebSite',
+    '@id': `${SITE.url}/#website`,
+    url: `${SITE.url}/`,
+    name: SITE.name,
+    description: SITE.description,
+    inLanguage: SITE.lang,
+    publisher: { '@id': `${SITE.url}/#organization` },
+  },
+  {
+    '@type': 'Organization',
+    '@id': `${SITE.url}/#organization`,
+    name: SITE.name,
+    url: `${SITE.url}/`,
+    logo: { '@type': 'ImageObject', url: `${SITE.url}${SITE.logo}` },
+  },
+  ...jsonLd,
+];
+---
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content={type} />
+    <meta property="og:locale" content={SITE.locale} />
+    <meta property="og:site_name" content={SITE.name} />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <link rel="icon" type="image/png" href="/jauge.png" />
+    <link rel="alternate" type="application/rss+xml" title="Jauge — derniers articles" href="/rss.xml" />
+    <link rel="stylesheet" href="/style.css" />
+    <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />
+    <slot name="head" />
+  </head>
+  <body>
+    <Icons />
+    {readingProgress && <div class="reading-progress" aria-hidden="true"></div>}
+    <Nav />
+    <slot />
+    <Footer />
+    <script>
+      import '../scripts/site.js';
+    </script>
+    <Analytics />
+  </body>
+</html>

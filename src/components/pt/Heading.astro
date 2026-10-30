@@ -1,0 +1,9 @@
+---
+// Titres H2/H3 avec ancre (pour le sommaire et les liens directs vers une section)
+import { slugify } from '../../lib/text';
+const { node } = Astro.props;
+const text = (node.children ?? []).map((c: any) => c.text ?? '').join('');
+const id = slugify(text);
+const Tag = node.style === 'h3' ? 'h3' : 'h2';
+---
+<Tag id={id}><slot /></Tag>

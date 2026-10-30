@@ -1,0 +1,8 @@
+---
+const { node } = Astro.props;
+const labels: Record<string, string> = { tip: 'Astuce', warning: 'Attention', verdict: 'Notre avis' };
+---
+<aside class="affiliate-box" data-tone={node.tone} style="margin:28px 0;">
+  <p style="margin:0 0 6px;"><strong>{node.title || labels[node.tone] || 'À noter'}</strong></p>
+  <p style="margin:0;">{node.text}</p>
+</aside>

@@ -1,0 +1,17 @@
+---
+const { node } = Astro.props;
+---
+<figure style="margin:32px 0;">
+  {node.caption && <figcaption style="font-weight:600;margin-bottom:10px;">{node.caption}</figcaption>}
+  <div class="comparison-table-wrap">
+    <table class="comparison-table">
+      <thead><tr>{(node.columns || []).map((c: string) => <th scope="col">{c}</th>)}</tr></thead>
+      <tbody>
+        {(node.rows || []).map((r: any) => (
+          <tr>{(r.cells || []).map((cell: string, i: number) => (i === 0 ? <th scope="row">{cell}</th> : <td>{cell}</td>))}</tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  {node.source && <p style="font-size:.8rem;opacity:.7;margin-top:8px;">{node.source}</p>}
+</figure>

@@ -1,0 +1,35 @@
+---
+import ArticleCard from './ArticleCard.astro';
+import EmptyState from './EmptyState.astro';
+import { SUBCATEGORIES } from '../config';
+import type { ArticleCard as Card } from '../lib/sanity';
+
+interface Props { category: string; articles: Card[] }
+const { category, articles } = Astro.props;
+// On n'affiche que les rubriques qui contiennent au moins un article
+const used = new Set(articles.map((a) => a.subcategory));
+const rubriques = (SUBCATEGORIES[category] ?? []).filter((r) => used.has(r.value));
+---
+<section class="section section--sm">
+  <div class="container">
+    {articles.length === 0 ? (
+      <EmptyState />
+    ) : (
+      <>
+        {rubriques.length > 1 && (
+          <div class="filter-bar" role="group" aria-label="Filtrer les articles">
+            <button class="filter-btn active" data-filter="all" data-filter-group={category} aria-pressed="true">Tous les articles</button>
+            {rubriques.map((r) => (
+              <button class="filter-btn" data-filter={r.value} data-filter-group={category} aria-pressed="false">
+                <svg class="icon"><use href={`#icon-${r.icon}`} /></svg> {r.label}
+              </button>
+            ))}
+          </div>
+        )}
+        <div class="grid-3">
+          {articles.map((a) => <ArticleCard article={a} filterable />)}
+        </div>
+      </>
+    )}
+  </div>
+</section>
