@@ -11,7 +11,7 @@ export interface OutboundLink {
 export const LIENS: Record<string, OutboundLink> = {
   qonto: { name: 'Qonto', url: 'https://qonto.com/fr', affiliate: false },
   brevo: { name: 'Brevo', url: 'https://www.brevo.com/fr/', affiliate: false },
-  n8n: { name: 'n8n (auto-hébergé)', url: 'https://docs.n8n.io/hosting/', affiliate: false },
+  n8n: { name: 'n8n (auto-hébergé)', url: 'https://n8n.io/', affiliate: false },
   'n8n-cloud': { name: 'n8n Cloud', url: 'https://n8n.io/pricing/', affiliate: false },
   claude: { name: 'Claude', url: 'https://claude.ai', affiliate: false },
   notion: { name: 'Notion', url: 'https://www.notion.com/fr', affiliate: false },
