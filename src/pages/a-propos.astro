@@ -166,7 +166,7 @@ const jsonLd = [
             </div>
 
             <div class="value-card" id="marie">
-              <img src="https://placehold.co/200x200/f4f2ee/8a877d?text=Photo%0AMarie&font=roboto" alt="Photo de Marie — à venir" width="160" height="160" loading="lazy" style="width:160px;height:160px;border-radius:50%;object-fit:cover;margin-bottom:16px;" />
+              <div role="img" aria-label="Marie, cofondatrice de Jauge" style="width:160px;height:160px;border-radius:50%;margin-bottom:16px;display:flex;align-items:center;justify-content:center;background:var(--accent);color:var(--white);font-family:var(--font-display);font-size:3rem;font-weight:700;letter-spacing:-.02em;">M</div>
               <h3>Marie, Journaliste</h3>
               <p>Journaliste depuis 8 ans, spécialisée dans l'interview et le reportage terrain. Elle a notamment écrit pour La Dépêche et L'Indépendant. Elle apporte à Jauge le regard extérieur et l'exigence éditoriale : vérifier, recouper, interviewer d'autres entrepreneurs plutôt que de se contenter d'un point de vue unique.</p>
             </div>
@@ -201,6 +201,19 @@ const jsonLd = [
           </div>
         </section>
 
+        <section id="qui-finance" aria-labelledby="qui-finance-title">
+          <h2 id="qui-finance-title" style="margin-bottom:18px;">Qui finance Jauge ?</h2>
+          <p style="font-size:1.0625rem;line-height:1.75;color:var(--page-ink-70);margin-bottom:16px;">
+            Jauge est éditée par <strong>Lumigency</strong>, l'agence d'affiliation fondée par Tiphaine. Pas d'investisseur, pas de groupe de presse derrière : le média se finance par les liens affiliés présents dans certains articles et sur la page <a href="/bons-plans">Bons plans</a>. Quand tu passes par l'un de ces liens, on peut toucher une commission, sans surcoût pour toi.
+          </p>
+          <p style="font-size:1.0625rem;line-height:1.75;color:var(--page-ink-70);margin-bottom:16px;">
+            Lumigency accompagne des marques sur leurs programmes d'affiliation, et certaines d'entre elles peuvent être citées sur Jauge. La règle est simple : elles passent les mêmes tests et sont jugées avec les mêmes critères que les autres. Aucune marque ne peut acheter un avis, un classement ou une place dans un comparatif, client de l'agence ou non.
+          </p>
+          <p style="font-size:1.0625rem;line-height:1.75;color:var(--page-ink-70);margin-bottom:48px;">
+            Les liens affiliés sont signalés dans chaque article concerné. Le détail est dans notre <a href="/mentions-legales#affiliation">politique d'affiliation</a>.
+          </p>
+        </section>
+
           </div>
 
           <!-- SIDEBAR -->
@@ -212,6 +225,7 @@ const jsonLd = [
                   <li><a href="#mission" style="font-size:.9375rem;color:var(--ink-70);transition:color .2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--ink-70)'">→ Notre histoire</a></li>
                   <li><a href="#equipe" style="font-size:.9375rem;color:var(--ink-70);transition:color .2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--ink-70)'">→ L'équipe</a></li>
                   <li><a href="#valeurs" style="font-size:.9375rem;color:var(--ink-70);transition:color .2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--ink-70)'">→ Nos valeurs</a></li>
+                  <li><a href="#qui-finance" style="font-size:.9375rem;color:var(--ink-70);transition:color .2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--ink-70)'">→ Qui finance Jauge ?</a></li>
                   <li><a href="/mentions-legales" style="font-size:.9375rem;color:var(--ink-70);transition:color .2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--ink-70)'">→ Mentions légales &amp; RGPD</a></li>
                 </ul>
               </nav>

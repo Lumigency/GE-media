@@ -5,7 +5,7 @@ import { getAllArticles } from '../lib/sanity';
 // Sitemap généré à partir du contenu réel :
 // - une jauge n'y figure qu'à partir de son 1er article publié (avant, elle est en noindex)
 // - les articles marqués « Masquer aux moteurs » dans Sanity sont exclus
-const STATIC_PAGES = ['/', '/categories', '/guides', '/bons-plans', '/newsletter', '/a-propos', '/contact', '/mentions-legales'];
+const STATIC_PAGES = ['/', '/categories', '/bons-plans', '/newsletter', '/a-propos', '/contact', '/mentions-legales'];
 
 export const GET: APIRoute = async () => {
   const articles = (await getAllArticles()).filter((a) => !a.noindex);

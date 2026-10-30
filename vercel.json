@@ -46,6 +46,16 @@
   ],
   "redirects": [
     {
+      "source": "/guides",
+      "destination": "/categories",
+      "permanent": false
+    },
+    {
+      "source": "/guides.html",
+      "destination": "/categories",
+      "permanent": false
+    },
+    {
       "source": "/articles",
       "destination": "/categories",
       "permanent": true
@@ -87,7 +97,7 @@
     },
     {
       "source": "/article",
-      "destination": "/guides",
+      "destination": "/categories",
       "permanent": true
     },
     {
@@ -108,11 +118,6 @@
     {
       "source": "/finance-assurances.html",
       "destination": "/finance-assurances",
-      "permanent": true
-    },
-    {
-      "source": "/guides.html",
-      "destination": "/guides",
       "permanent": true
     },
     {

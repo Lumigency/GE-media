@@ -29,7 +29,6 @@ export const GET: APIRoute = async () => {
     '',
     `- [À propos et auteurs](${SITE.url}/a-propos)`,
     `- [Bons plans testés](${SITE.url}/bons-plans)`,
-    `- [Guides](${SITE.url}/guides)`,
     `- [Newsletter](${SITE.url}/newsletter)`,
     `- [Mentions légales et politique d'affiliation](${SITE.url}/mentions-legales)`,
     '',
