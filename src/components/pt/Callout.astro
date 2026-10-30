@@ -1,8 +1,9 @@
 ---
 const { node } = Astro.props;
 const labels: Record<string, string> = { tip: 'Astuce', warning: 'Attention', verdict: 'Notre avis' };
+const tone = labels[node.tone] ? node.tone : 'tip';
 ---
-<aside class="affiliate-box" data-tone={node.tone} style="margin:28px 0;">
-  <p style="margin:0 0 6px;"><strong>{node.title || labels[node.tone] || 'À noter'}</strong></p>
-  <p style="margin:0;">{node.text}</p>
+<aside class={`note-box note-box--${tone}`}>
+  <p class="note-box-title">{node.title || labels[tone]}</p>
+  <p>{node.text}</p>
 </aside>

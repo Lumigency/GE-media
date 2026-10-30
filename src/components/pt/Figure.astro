@@ -4,12 +4,10 @@ const { node } = Astro.props;
 const src = imageUrl(node, 1440);
 ---
 {src && (
-  <figure style="margin:32px 0;">
-    <img src={src} alt={node.alt || ''} loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;" />
+  <figure class="article-figure">
+    <img src={src} alt={node.alt || ''} loading="lazy" decoding="async" />
     {(node.caption || node.credit) && (
-      <figcaption style="font-size:.85rem;color:var(--ink-45, #777);margin-top:8px;">
-        {node.caption}{node.caption && node.credit && ' · '}{node.credit && <span>{node.credit}</span>}
-      </figcaption>
+      <figcaption>{node.caption}{node.caption && node.credit && ' · '}{node.credit}</figcaption>
     )}
   </figure>
 )}

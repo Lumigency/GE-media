@@ -1,8 +1,8 @@
 ---
 const { node } = Astro.props;
 ---
-<figure style="margin:32px 0;">
-  {node.caption && <figcaption style="font-weight:600;margin-bottom:10px;">{node.caption}</figcaption>}
+<figure class="article-table">
+  {node.caption && <figcaption class="article-table-caption">{node.caption}</figcaption>}
   <div class="comparison-table-wrap">
     <table class="comparison-table">
       <thead><tr>{(node.columns || []).map((c: string) => <th scope="col">{c}</th>)}</tr></thead>
@@ -13,5 +13,5 @@ const { node } = Astro.props;
       </tbody>
     </table>
   </div>
-  {node.source && <p style="font-size:.8rem;opacity:.7;margin-top:8px;">{node.source}</p>}
+  {node.source && <p class="article-table-source">{node.source}</p>}
 </figure>

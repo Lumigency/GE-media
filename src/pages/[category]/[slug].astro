@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import '../../styles/article.css';
 import ArticleCard from '../../components/ArticleCard.astro';
 import { PortableText, toPlainText } from 'astro-portabletext';
 import Heading from '../../components/pt/Heading.astro';
@@ -29,11 +30,12 @@ const toc = body
 const hasAffiliate =
   body.some((b: any) => b._type === 'affiliateBox') ||
   body.some((b: any) => (b.markDefs ?? []).some((m: any) => m._type === 'link' && m.affiliate));
-const hero = imageUrl(a.mainImage, 1440, 810);
+const hero = imageUrl(a.mainImage, 1440, 630);
 const ogImage = imageUrl(a.mainImage, 1200, 630) ?? SITE.ogImage;
 const modified = a.updatedAt || a.publishedAt;
 const author = a.author;
 const authorPhoto = imageUrl(author?.photo, 160, 160);
+const hasToc = toc.length > 1;
 const rubrique = subcategoryLabel(a.category, a.subcategory);
 
 const authorLd = author
@@ -127,29 +129,24 @@ const components = {
 
     <section class="section section--sm">
       <div class="container">
-        {hero && (
-          <img class="article-hero-img" src={hero} alt={a.mainImage?.alt || ''} width="1440" height="810" loading="eager" fetchpriority="high" style="width:100%;height:auto;margin-bottom:8px;" />
-        )}
-        {hero && a.heroCredit && <p style="font-size:.75rem;opacity:.6;margin:0 0 32px;text-align:right;">{a.heroCredit}</p>}
-        {hero && !a.heroCredit && <div style="height:32px;"></div>}
-        <article class="page-with-sidebar">
-          {toc.length > 1 ? (
-            <aside class="toc" aria-label="Sommaire">
-              <p class="toc-title">Sommaire</p>
-              <ol>{toc.map((t: any) => <li><a href={`#${t.id}`}>{t.text}</a></li>)}</ol>
-            </aside>
-          ) : <div></div>}
+        {hero ? (
+          <>
+            <img class="article-hero-img" src={hero} alt={a.mainImage?.alt || ''} width="1440" height="630" loading="eager" fetchpriority="high" />
+            {a.heroCredit ? <p class="article-hero-credit">{a.heroCredit}</p> : <div class="article-hero-spacer"></div>}
+          </>
+        ) : null}
 
-          <div class="article-content">
+        <div class={hasToc ? 'article-layout' : 'article-layout article-layout--no-toc'}>
+          <article class="article-body">
             {hasAffiliate && (
-              <p class="affiliate-box" style="font-size:.85rem;">
+              <p class="disclosure">
                 Transparence : cet article contient des liens affiliés. Si tu passes par eux, Jauge peut toucher une commission, sans surcoût pour toi et sans influence sur notre avis. <a href="/mentions-legales#affiliation">Notre politique</a>.
               </p>
             )}
 
             {a.keyTakeaways?.length > 0 && (
-              <section class="affiliate-box" aria-labelledby="essentiel" style="margin-bottom:32px;">
-                <h2 id="essentiel" style="margin-top:0;font-size:1.25rem;">L'essentiel</h2>
+              <section class="key-takeaways" aria-labelledby="essentiel">
+                <h2 id="essentiel">L'essentiel</h2>
                 <ul>{a.keyTakeaways.map((k: string) => <li>{k}</li>)}</ul>
               </section>
             )}
@@ -157,37 +154,50 @@ const components = {
             <PortableText value={body} components={components} onMissingComponent={false} />
 
             {a.faq?.length > 0 && (
-              <section aria-labelledby="faq">
+              <section class="article-faq" aria-labelledby="faq">
                 <h2 id="faq">Questions fréquentes</h2>
                 {a.faq.map((f: any) => (
-                  <>
-                    <h3>{f.question}</h3>
+                  <details>
+                    <summary>{f.question}</summary>
                     <p>{f.answer}</p>
-                  </>
+                  </details>
                 ))}
               </section>
             )}
 
             {author && (
-              <aside class="affiliate-box" style="display:flex;gap:16px;align-items:flex-start;margin-top:48px;" aria-label="À propos de l'auteur">
-                {authorPhoto && <img src={authorPhoto} alt={author.name} width="64" height="64" loading="lazy" style="border-radius:50%;flex-shrink:0;" />}
+              <aside class="author-box" aria-label="À propos de l'auteur·rice">
+                {authorPhoto
+                  ? <img class="author-box-photo" src={authorPhoto} alt={author.name} width="64" height="64" loading="lazy" />
+                  : <span class="author-box-initial" aria-hidden="true">{author.name?.[0]}</span>}
                 <div>
-                  <p style="margin:0 0 4px;"><strong>{author.name}</strong>{author.role && <> · {author.role}</>}</p>
-                  {author.bio && <p style="margin:0;">{author.bio}</p>}
-                  {author.linkedin && <p style="margin:6px 0 0;"><a href={author.linkedin} rel="noopener me" target="_blank">LinkedIn</a></p>}
+                  <p class="author-box-label">Écrit par</p>
+                  <p class="author-box-name"><a href={`/a-propos#${author.slug}`} style="color:inherit;text-decoration:none;">{author.name}</a>{author.role && <span style="font-weight:400;color:var(--page-ink-45);"> · {author.role}</span>}</p>
+                  {author.bio && <p class="author-box-bio">{author.bio}</p>}
+                  {author.linkedin && <p class="author-box-bio" style="margin-top:8px;"><a href={author.linkedin} rel="noopener me" target="_blank">LinkedIn</a></p>}
                 </div>
               </aside>
             )}
-          </div>
-        </article>
+
+            <p class="article-back"><a href={`/${cat.slug}`}>← Tous les articles {cat.title}</a></p>
+          </article>
+
+          {hasToc && (
+            <aside aria-label="Sommaire">
+              <nav class="article-toc">
+                <p class="article-toc-title">Sommaire</p>
+                <ol>{toc.map((t: any) => <li><a href={`#${t.id}`}>{t.text}</a></li>)}</ol>
+              </nav>
+            </aside>
+          )}
+        </div>
 
         {a.related?.length > 0 && (
-          <section class="related-articles" aria-labelledby="related-title" style="margin-top:64px;">
+          <section class="article-related" aria-labelledby="related-title">
             <h2 id="related-title">À lire aussi</h2>
             <div class="grid-3">{a.related.filter(Boolean).map((r: any) => <ArticleCard article={r} />)}</div>
           </section>
         )}
-        <p style="margin-top:32px;"><a href={`/${cat.slug}`}>← Tous les articles {cat.title}</a></p>
       </div>
     </section>
   </main>
