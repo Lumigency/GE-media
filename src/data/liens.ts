@@ -17,4 +17,6 @@ export const LIENS: Record<string, OutboundLink> = {
   notion: { name: 'Notion', url: 'https://www.notion.com/fr', affiliate: false },
   airtable: { name: 'Airtable', url: 'https://www.airtable.com/', affiliate: false },
   jasper: { name: 'Jasper', url: 'https://www.jasper.ai/', affiliate: false },
+  legalplace: { name: 'LegalPlace', url: 'https://www.legalplace.fr/', affiliate: false },
+  legalstart: { name: 'Legalstart', url: 'https://www.legalstart.fr/', affiliate: false },
 };

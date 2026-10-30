@@ -107,6 +107,11 @@ export const SUBCATEGORIES: Record<string, { value: string; label: string; icon:
       "value": "tresorerie",
       "icon": "credit-card",
       "label": "Trésorerie"
+    },
+    {
+      "value": "statut-demarches",
+      "icon": "briefcase",
+      "label": "Statut & démarches"
     }
   ],
   "la-jauge": [
