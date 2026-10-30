@@ -1,0 +1,13 @@
+---
+import { imageUrl } from '../../lib/sanity';
+const { node } = Astro.props;
+const src = imageUrl(node, 1440);
+---
+{src && (
+  <figure class="article-figure">
+    <img src={src} alt={node.alt || ''} loading="lazy" decoding="async" />
+    {(node.caption || node.credit) && (
+      <figcaption>{node.caption}{node.caption && node.credit && ' · '}{node.credit}</figcaption>
+    )}
+  </figure>
+)}

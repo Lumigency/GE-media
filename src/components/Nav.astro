@@ -1,0 +1,106 @@
+---
+// Menu principal, rendu en HTML (lisible par Google et les robots IA)
+---
+
+<nav id="navbar" role="navigation" aria-label="Navigation principale">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Jauge — Accueil"><img src="/jauge.png" alt="" width="28" height="28" style="border-radius:6px;" />Jauge</a>
+
+      <div class="nav-dropdown" role="listitem">
+        <button class="nav-menu-trigger nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-categories">
+          menu
+        </button>
+
+        <div class="nav-dropdown-menu" id="dropdown-categories" role="menu" aria-label="Les jauges">
+          <a href="/ia-automatisation" class="nav-dropdown-item" role="menuitem">
+            <span class="nav-dropdown-icon" style="background:#FFE0D6;" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-cpu"/></svg></span>
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-title">Outils &amp; IA</span>
+              <span class="nav-dropdown-desc">IA, no-code, automatisation</span>
+            </span>
+          </a>
+
+          <a href="/acquisition-growth" class="nav-dropdown-item" role="menuitem">
+            <span class="nav-dropdown-icon" style="background:#EEFAC7;" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-target"/></svg></span>
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-title">Acquisition &amp; Growth</span>
+              <span class="nav-dropdown-desc">SEO, paid, CRM, prospection</span>
+            </span>
+          </a>
+
+          <a href="/finance-assurances" class="nav-dropdown-item" role="menuitem">
+            <span class="nav-dropdown-icon" style="background:#e7e5de;" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-wallet"/></svg></span>
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-title">Argent &amp; Trésorerie</span>
+              <span class="nav-dropdown-desc">Compte pro, compta, fiscalité</span>
+            </span>
+          </a>
+
+          <a href="/la-jauge" class="nav-dropdown-item" role="menuitem">
+            <span class="nav-dropdown-icon" style="background:#FDF3D9;" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-brain"/></svg></span>
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-title">La Jauge</span>
+              <span class="nav-dropdown-desc">Charge mentale, solitude, burnout</span>
+            </span>
+          </a>
+
+          <div class="nav-dropdown-footer">
+            <a href="/categories" class="nav-dropdown-all">Voir toutes les jauges →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-links" role="list">
+        <a href="/ia-automatisation" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-cpu"/></svg></span>Outils &amp; IA</a>
+        <span class="nav-dot" aria-hidden="true">·</span>
+        <a href="/acquisition-growth" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-target"/></svg></span>Growth</a>
+        <span class="nav-dot" aria-hidden="true">·</span>
+        <a href="/finance-assurances" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-wallet"/></svg></span>Argent</a>
+        <span class="nav-dot" aria-hidden="true">·</span>
+        <a href="/la-jauge" class="nav-link nav-link--cat" role="listitem"><span class="nav-link-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-brain"/></svg></span>La Jauge</a>
+      </div>
+
+      <div class="nav-links nav-links--secondary" role="list">
+        <a href="/bons-plans" class="nav-link nav-link--highlight" role="listitem">Bons plans</a>
+        <a href="/a-propos" class="nav-link" role="listitem">À propos</a>
+      </div>
+
+      <a href="/newsletter" class="btn btn-primary btn-sm nav-cta">
+        Rejoindre la newsletter
+      </a>
+
+      <button class="nav-burger" id="navBurger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="nav-mobile" id="navMobile" role="menu" aria-label="Menu mobile">
+      <a href="/" class="nav-link" role="menuitem">Accueil</a>
+
+      <div class="nav-mobile-accordion">
+        <button class="nav-link nav-mobile-accordion-trigger" aria-expanded="false" aria-controls="mobile-categories">
+          Les jauges
+          <svg class="nav-dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+            <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="nav-mobile-submenu" id="mobile-categories">
+          <a href="/ia-automatisation" class="nav-mobile-sublink" role="menuitem"><svg class="icon" aria-hidden="true"><use href="#icon-cpu"/></svg> Outils &amp; IA</a>
+          <a href="/acquisition-growth" class="nav-mobile-sublink" role="menuitem"><svg class="icon" aria-hidden="true"><use href="#icon-target"/></svg> Acquisition &amp; Growth</a>
+          <a href="/finance-assurances" class="nav-mobile-sublink" role="menuitem"><svg class="icon" aria-hidden="true"><use href="#icon-wallet"/></svg> Argent &amp; Trésorerie</a>
+          <a href="/la-jauge" class="nav-mobile-sublink" role="menuitem"><svg class="icon" aria-hidden="true"><use href="#icon-brain"/></svg> La Jauge</a>
+          <a href="/categories" class="nav-mobile-sublink nav-mobile-sublink--all" role="menuitem">Toutes les jauges →</a>
+        </div>
+      </div>
+
+      <a href="/bons-plans" class="nav-link nav-link--highlight" role="menuitem">Bons plans</a>
+      <a href="/a-propos" class="nav-link" role="menuitem">À propos</a>
+      <a href="/newsletter" class="btn btn-primary">Rejoindre la newsletter</a>
+    </div>
+  </div>
+</nav>
+  

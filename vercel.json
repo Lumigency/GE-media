@@ -1,4 +1,6 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "astro",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
@@ -31,16 +33,30 @@
           "value": "camera=(), microphone=(), geolocation=()"
         }
       ]
+    },
+    {
+      "source": "/studio(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ],
   "redirects": [
     {
-      "source": "/articles",
+      "source": "/guides",
       "destination": "/categories",
-      "permanent": true
+      "permanent": false
     },
     {
-      "source": "/articles.html",
+      "source": "/guides.html",
+      "destination": "/categories",
+      "permanent": false
+    },
+    {
+      "source": "/articles",
       "destination": "/categories",
       "permanent": true
     },
@@ -50,17 +66,7 @@
       "permanent": true
     },
     {
-      "source": "/outils-logiciels.html",
-      "destination": "/bons-plans",
-      "permanent": true
-    },
-    {
       "source": "/outils",
-      "destination": "/bons-plans",
-      "permanent": true
-    },
-    {
-      "source": "/outils.html",
       "destination": "/bons-plans",
       "permanent": true
     },
@@ -70,17 +76,7 @@
       "permanent": true
     },
     {
-      "source": "/categorie-ia-automatisation.html",
-      "destination": "/ia-automatisation",
-      "permanent": true
-    },
-    {
       "source": "/categorie-acquisition-growth",
-      "destination": "/acquisition-growth",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition-growth.html",
       "destination": "/acquisition-growth",
       "permanent": true
     },
@@ -90,228 +86,18 @@
       "permanent": true
     },
     {
-      "source": "/categorie-acquisition.html",
-      "destination": "/acquisition-growth",
-      "permanent": true
-    },
-    {
       "source": "/categorie-assurances-finances",
       "destination": "/finance-assurances",
       "permanent": true
     },
     {
-      "source": "/categorie-assurances-finances.html",
-      "destination": "/finance-assurances",
-      "permanent": true
-    },
-    {
       "source": "/categorie-outils-logiciels",
-      "destination": "/outils",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-outils-logiciels.html",
-      "destination": "/outils",
+      "destination": "/bons-plans",
       "permanent": true
     },
     {
       "source": "/article",
-      "destination": "/guides",
-      "permanent": true
-    },
-    {
-      "source": "/article.html",
-      "destination": "/guides",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-ia-automatisation/automatisation-administrative-business",
-      "destination": "/ia-automatisation/automatisation-administrative-business",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-ia-automatisation/automatisation-administrative-business.html",
-      "destination": "/ia-automatisation/automatisation-administrative-business",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-ia-automatisation/guide-entrepreneur-et-productivite",
-      "destination": "/ia-automatisation/guide-entrepreneur-et-productivite",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-ia-automatisation/guide-entrepreneur-et-productivite.html",
-      "destination": "/ia-automatisation/guide-entrepreneur-et-productivite",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-ia-automatisation/ia-generative-creation-contenu",
-      "destination": "/ia-automatisation/ia-generative-creation-contenu",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-ia-automatisation/ia-generative-creation-contenu.html",
-      "destination": "/ia-automatisation/ia-generative-creation-contenu",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-ia-automatisation/outils-ia-entrepreneurs",
-      "destination": "/ia-automatisation/outils-ia-entrepreneurs",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-ia-automatisation/outils-ia-entrepreneurs.html",
-      "destination": "/ia-automatisation/outils-ia-entrepreneurs",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-ia-automatisation/workflows-et-automatisation-no-code",
-      "destination": "/ia-automatisation/workflows-et-automatisation-no-code",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-ia-automatisation/workflows-et-automatisation-no-code.html",
-      "destination": "/ia-automatisation/workflows-et-automatisation-no-code",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition/crm-et-automatisation",
-      "destination": "/acquisition-growth/crm-et-automatisation",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition/crm-et-automatisation.html",
-      "destination": "/acquisition-growth/crm-et-automatisation",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition/payante-et-performance",
-      "destination": "/acquisition-growth/payante-et-performance",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition/payante-et-performance.html",
-      "destination": "/acquisition-growth/payante-et-performance",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition/prospection-linkedin-b2b",
-      "destination": "/acquisition-growth/prospection-linkedin-b2b",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition/prospection-linkedin-b2b.html",
-      "destination": "/acquisition-growth/prospection-linkedin-b2b",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition/seo-et-strategie-contenus",
-      "destination": "/acquisition-growth/seo-et-strategie-contenus",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition/seo-et-strategie-contenus.html",
-      "destination": "/acquisition-growth/seo-et-strategie-contenus",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition/tunnel-de-vente-conversion",
-      "destination": "/acquisition-growth/tunnel-de-vente-conversion",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition/tunnel-de-vente-conversion.html",
-      "destination": "/acquisition-growth/tunnel-de-vente-conversion",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition-growth/crm-et-automatisation",
-      "destination": "/acquisition-growth/crm-et-automatisation",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition-growth/crm-et-automatisation.html",
-      "destination": "/acquisition-growth/crm-et-automatisation",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition-growth/payante-et-performance",
-      "destination": "/acquisition-growth/payante-et-performance",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition-growth/payante-et-performance.html",
-      "destination": "/acquisition-growth/payante-et-performance",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition-growth/prospection-linkedin-b2b",
-      "destination": "/acquisition-growth/prospection-linkedin-b2b",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition-growth/prospection-linkedin-b2b.html",
-      "destination": "/acquisition-growth/prospection-linkedin-b2b",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition-growth/seo-et-strategie-contenus",
-      "destination": "/acquisition-growth/seo-et-strategie-contenus",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition-growth/seo-et-strategie-contenus.html",
-      "destination": "/acquisition-growth/seo-et-strategie-contenus",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition-growth/tunnel-de-vente-conversion",
-      "destination": "/acquisition-growth/tunnel-de-vente-conversion",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-acquisition-growth/tunnel-de-vente-conversion.html",
-      "destination": "/acquisition-growth/tunnel-de-vente-conversion",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-assurances-finances/assurances-pro",
-      "destination": "/finance-assurances/assurances-pro",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-assurances-finances/assurances-pro.html",
-      "destination": "/finance-assurances/assurances-pro",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-assurances-finances/banques-compte-pro",
-      "destination": "/finance-assurances/banques-compte-pro",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-assurances-finances/banques-compte-pro.html",
-      "destination": "/finance-assurances/banques-compte-pro",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-assurances-finances/financement-tresorerie",
-      "destination": "/finance-assurances/financement-tresorerie",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-assurances-finances/financement-tresorerie.html",
-      "destination": "/finance-assurances/financement-tresorerie",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-assurances-finances/fiscalite-entrepreneur",
-      "destination": "/finance-assurances/fiscalite-entrepreneur",
-      "permanent": true
-    },
-    {
-      "source": "/categorie-assurances-finances/fiscalite-entrepreneur.html",
-      "destination": "/finance-assurances/fiscalite-entrepreneur",
+      "destination": "/categories",
       "permanent": true
     },
     {
@@ -335,108 +121,48 @@
       "permanent": true
     },
     {
-      "source": "/ia-automatisation/outils-ia-entrepreneurs.html",
-      "destination": "/ia-automatisation/outils-ia-entrepreneurs",
+      "source": "/index.html",
+      "destination": "/",
       "permanent": true
     },
     {
-      "source": "/ia-automatisation/workflows-et-automatisation-no-code.html",
-      "destination": "/ia-automatisation/workflows-et-automatisation-no-code",
+      "source": "/categories.html",
+      "destination": "/categories",
       "permanent": true
     },
     {
-      "source": "/ia-automatisation/automatisation-administrative-business.html",
-      "destination": "/ia-automatisation/automatisation-administrative-business",
+      "source": "/bons-plans.html",
+      "destination": "/bons-plans",
       "permanent": true
     },
     {
-      "source": "/ia-automatisation/guide-entrepreneur-et-productivite.html",
-      "destination": "/ia-automatisation/guide-entrepreneur-et-productivite",
+      "source": "/newsletter.html",
+      "destination": "/newsletter",
       "permanent": true
     },
     {
-      "source": "/ia-automatisation/ia-generative-creation-contenu.html",
-      "destination": "/ia-automatisation/ia-generative-creation-contenu",
+      "source": "/a-propos.html",
+      "destination": "/a-propos",
       "permanent": true
     },
     {
-      "source": "/guides.html",
-      "destination": "/guides",
+      "source": "/ia-automatisation.html",
+      "destination": "/ia-automatisation",
       "permanent": true
     },
     {
-      "source": "/finance-assurances/banques-compte-pro.html",
-      "destination": "/finance-assurances/banques-compte-pro",
+      "source": "/la-jauge.html",
+      "destination": "/la-jauge",
       "permanent": true
     },
     {
-      "source": "/finance-assurances/financement-tresorerie.html",
-      "destination": "/finance-assurances/financement-tresorerie",
+      "source": "/contact.html",
+      "destination": "/contact",
       "permanent": true
     },
     {
-      "source": "/finance-assurances/fiscalite-entrepreneur.html",
-      "destination": "/finance-assurances/fiscalite-entrepreneur",
-      "permanent": true
-    },
-    {
-      "source": "/finance-assurances/assurances-pro.html",
-      "destination": "/finance-assurances/assurances-pro",
-      "permanent": true
-    },
-    {
-      "source": "/acquisition-growth/seo-et-strategie-contenus.html",
-      "destination": "/acquisition-growth/seo-et-strategie-contenus",
-      "permanent": true
-    },
-    {
-      "source": "/acquisition-growth/crm-et-automatisation.html",
-      "destination": "/acquisition-growth/crm-et-automatisation",
-      "permanent": true
-    },
-    {
-      "source": "/acquisition-growth/payante-et-performance.html",
-      "destination": "/acquisition-growth/payante-et-performance",
-      "permanent": true
-    },
-    {
-      "source": "/acquisition-growth/tunnel-de-vente-conversion.html",
-      "destination": "/acquisition-growth/tunnel-de-vente-conversion",
-      "permanent": true
-    },
-    {
-      "source": "/acquisition-growth/prospection-linkedin-b2b.html",
-      "destination": "/acquisition-growth/prospection-linkedin-b2b",
-      "permanent": true
-    },
-    {
-      "source": "/ia-automatisation/meilleurs-outils-ia.html",
-      "destination": "/ia-automatisation/meilleurs-outils-ia",
-      "permanent": true
-    },
-    {
-      "source": "/ia-automatisation/automatiser-son-entreprise.html",
-      "destination": "/ia-automatisation/automatiser-son-entreprise",
-      "permanent": true
-    },
-    {
-      "source": "/acquisition-growth/crm/meilleur-crm-pme.html",
-      "destination": "/acquisition-growth/crm/meilleur-crm-pme",
-      "permanent": true
-    },
-    {
-      "source": "/acquisition-growth/email-marketing/meilleur-logiciel-emailing.html",
-      "destination": "/acquisition-growth/email-marketing/meilleur-logiciel-emailing",
-      "permanent": true
-    },
-    {
-      "source": "/finance-assurances/banques-professionnelles/meilleure-banque-professionnelle.html",
-      "destination": "/finance-assurances/banques-professionnelles/meilleure-banque-professionnelle",
-      "permanent": true
-    },
-    {
-      "source": "/finance-assurances/assurance-professionnelle/meilleure-assurance-professionnelle.html",
-      "destination": "/finance-assurances/assurance-professionnelle/meilleure-assurance-professionnelle",
+      "source": "/mentions-legales.html",
+      "destination": "/mentions-legales",
       "permanent": true
     }
   ]

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://ge-media.vercel.app/sitemap.xml

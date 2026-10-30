@@ -1,0 +1,14 @@
+---
+import { imageUrl } from '../../lib/sanity';
+const { node } = Astro.props;
+const logo = imageUrl(node.logo, 160);
+---
+<aside class="tool-box">
+  {logo ? <img class="tool-box-logo" src={logo} alt={node.tool} width="56" height="56" loading="lazy" /> : <span></span>}
+  <div>
+    <p class="tool-box-name">{node.tool}{node.offer && <span class="tool-box-offer">{node.offer}</span>}</p>
+    <p class="tool-box-pitch">{node.pitch}</p>
+  </div>
+  <a class="btn btn-primary" href={node.url} rel="sponsored nofollow noopener" target="_blank">{node.cta || 'Essayer'} →</a>
+  <p class="tool-box-note">Lien affilié : Jauge peut toucher une commission, sans surcoût pour toi. <a href="/mentions-legales#affiliation">En savoir plus</a></p>
+</aside>

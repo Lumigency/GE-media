@@ -1,0 +1,130 @@
+---
+import Base from '../layouts/Base.astro';
+
+const jsonLd = [
+  {
+    "@type": "CollectionPage",
+    "@id": "https://jauge.media/categories",
+    "name": "Toutes les jauges — Jauge",
+    "description": "Hub des 4 catégories de Jauge : Outils & IA, Acquisition & Growth, Argent & Trésorerie, La Jauge.",
+    "url": "https://jauge.media/categories",
+    "isPartOf": {
+      "@id": "https://jauge.media/#website"
+    }
+  },
+  {
+    "@type": "ItemList",
+    "@id": "https://jauge.media/categories#list",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://jauge.media/ia-automatisation",
+        "name": "Outils & IA"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://jauge.media/acquisition-growth",
+        "name": "Acquisition & Growth"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://jauge.media/finance-assurances",
+        "name": "Argent & Trésorerie"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "url": "https://jauge.media/la-jauge",
+        "name": "La Jauge"
+      }
+    ]
+  }
+];
+---
+<Base
+  title="Toutes les jauges | Jauge"
+  description="Outils & IA, Acquisition & Growth, Argent & Trésorerie, La Jauge : les 4 thèmes autour desquels Jauge est construit, pour entrepreneurs solo."
+  path="/categories"
+  jsonLd={jsonLd}
+>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane" style="justify-content:center;">
+          <a href="/">Accueil</a>
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
+          <span aria-current="page">Catégories</span>
+        </nav>
+
+        <p class="section-label" style="justify-content:center;">Explorer le contenu</p>
+        <h1>Toutes les jauges</h1>
+        <p>Outils & IA, Acquisition & Growth, Argent & Trésorerie, La Jauge quatre thèmes, zéro top 10 générique. Choisis celui qui te parle le plus aujourd'hui.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-2" style="gap:20px;">
+
+          <a href="/ia-automatisation" class="category-card" style="padding:36px;">
+            <div class="category-card-icon" style="background:#3a1810;width:56px;height:56px;font-size:1.6rem;color:#FF7452;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-cpu"/></svg></div>
+            <h3 style="font-size:1.5rem;">Outils &amp; IA</h3>
+            <p style="font-size:1rem;">Outils IA, workflows no-code, automatisation administrative testé sur des tâches réelles </p>
+            <div style="margin:8px 0 4px;"><span class="tag tag-ia">7 articles</span></div>
+            <span class="category-card-arrow" style="color:#FF7452;">Explorer Outils &amp; IA <span aria-hidden="true">→</span></span>
+          </a>
+
+          <a href="/acquisition-growth" class="category-card" style="padding:36px;">
+            <div class="category-card-icon" style="background:#2e3a1a;width:56px;height:56px;font-size:1.6rem;color:#D6FF3F;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-target"/></svg></div>
+            <h3 style="font-size:1.5rem;">Acquisition &amp; Growth</h3>
+            <p style="font-size:1rem;">SEO, acquisition payante, prospection LinkedIn, tunnel de vente, CRM  les vrais chiffres : en tout cas ceux qu'on a pu nous même analyser</p>
+            <div style="margin:8px 0 4px;"><span class="tag tag-acquisition">9 articles</span></div>
+            <span class="category-card-arrow" style="color:#D6FF3F;">Explorer Acquisition &amp; Growth <span aria-hidden="true">→</span></span>
+          </a>
+
+          <a href="/finance-assurances" class="category-card" style="padding:36px;">
+            <div class="category-card-icon" style="background:#2a2a28;width:56px;height:56px;font-size:1.6rem;color:#ffffff;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-wallet"/></svg></div>
+            <h3 style="font-size:1.5rem;">Argent &amp; Trésorerie</h3>
+            <p style="font-size:1rem;">Compte pro, comptabilité, fiscalité, assurances, trésorerie ce qu'il faut vraiment suivre, sans langue de bois.</p>
+            <div style="margin:8px 0 4px;"><span class="tag tag-finance">9 articles</span></div>
+            <span class="category-card-arrow" style="color:#ffffff;">Explorer Argent &amp; Trésorerie <span aria-hidden="true">→</span></span>
+          </a>
+
+          <a href="/la-jauge" class="category-card category-card--jauge" style="padding:36px;">
+            <div class="category-card-icon" style="background:#FFE0D6;width:56px;height:56px;font-size:1.6rem;color:#D9431F;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-brain"/></svg></div>
+            <h3 style="font-size:1.5rem;">La Jauge</h3>
+            <p style="font-size:1rem;">Charge mentale, solitude de la décision, peur de l'échec, syndrome de l'imposteur ,la tête, pour de vrai.</p>
+            <div style="margin:8px 0 4px;"><span class="tag tag-jauge">6 articles</span></div>
+            <span class="category-card-arrow" style="color:#D9431F;">Explorer La Jauge <span aria-hidden="true">→</span></span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+       <section class="section section--sm" aria-labelledby="intro-categories-title">
+      <div class="container" style="max-width:760px;">
+        <h2 id="intro-categories-title" style="text-align:center;margin-bottom:16px;">Pourquoi 4 jauges, et pas 40 catégories</h2>
+        <p style="text-align:center;color:var(--page-ink-70);font-size:1.0625rem;line-height:1.75;margin-bottom:14px;">
+          La plupart des médias business découpent leur contenu en dizaines de rubriques qui finissent à moitié vides. On a fait l'inverse : quatre thèmes qui couvrent tout ce qui pèse vraiment quand on gère seul son activité les outils qu'on utilise, la façon dont on trouve des clients, l'argent qu'on gère, et la tête qu'on porte avec tout ça.
+        </p>
+        <p style="text-align:center;color:var(--page-ink-70);font-size:1.0625rem;line-height:1.75;">
+          Chaque jauge est filtrable par sous-thème, sans sous-pages qui se vident jamais : tous les articles d'une catégorie vivent au même endroit, classés par tag.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--sm" style="padding-top:0;">
+      <div class="container" style="text-align:center;">
+        <p style="color:var(--page-ink-70);font-size:1.0625rem;margin-bottom:20px;">Pas envie de choisir ? La newsletter fait le tri pour toi, une fois par semaine.</p>
+        <a href="/newsletter" class="btn btn-primary btn-lg">Rejoindre la newsletter →</a>
+      </div>
+    </section>
+
+  </main>
+</Base>

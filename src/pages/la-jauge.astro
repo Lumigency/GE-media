@@ -1,0 +1,176 @@
+---
+import Base from '../layouts/Base.astro';
+import CategoryArticles from '../components/CategoryArticles.astro';
+import { getArticlesByCategory } from '../lib/sanity';
+
+const articles = await getArticlesByCategory('la-jauge');
+const lastUpdate = articles[0]?.updatedAt || articles[0]?.publishedAt;
+const updateLabel = lastUpdate
+  ? `Mis à jour le ${new Date(lastUpdate).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })} · ${articles.length} article${articles.length > 1 ? 's' : ''}`
+  : 'Premiers articles en préparation';
+
+const jsonLd = [
+  {
+    "@type": "CollectionPage",
+    "@id": "https://jauge.media/la-jauge",
+    "name": "La Jauge — Jauge",
+    "description": "Charge mentale, solitude de la décision, peur de l'échec, syndrome de l'imposteur et rapport à l'argent pour les entrepreneurs solo.",
+    "url": "https://jauge.media/la-jauge",
+    "isPartOf": {
+      "@id": "https://jauge.media/#website"
+    },
+    "breadcrumb": {
+      "@id": "https://jauge.media/la-jauge#breadcrumb"
+    }
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": "https://jauge.media/la-jauge#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://jauge.media/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Catégories",
+        "item": "https://jauge.media/categories"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "La Jauge"
+      }
+    ]
+  },
+  {
+    "@type": "FAQPage",
+    "@id": "https://jauge.media/la-jauge#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "C'est quoi la charge mentale d'un entrepreneur ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La charge mentale d'un entrepreneur, c'est le poids cumulé des décisions, de la trésorerie, des clients et de l'incertitude qu'une seule personne porte en continu, sans équipe pour partager la responsabilité."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pourquoi le syndrome de l'imposteur touche autant les entrepreneurs solo ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sans collègues ni hiérarchie pour valider son travail, un entrepreneur solo manque de repères extérieurs. Le doute sur sa légitimité s'installe facilement, surtout face à des clients qui paient cher."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment reconnaître les signes avant-coureurs du burnout entrepreneurial ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les signaux précèdent presque toujours la fatigue physique : irritabilité inhabituelle, perte de plaisir dans des tâches qu'on aimait, difficulté à décider même sur des sujets mineurs, et isolement social progressif."
+        }
+      }
+    ]
+  }
+];
+if (articles.length) {
+  jsonLd.push({
+    '@type': 'ItemList',
+    '@id': 'https://jauge.media/la-jauge#articles',
+    itemListElement: articles.map((a, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `https://jauge.media/la-jauge/${a.slug}`,
+      name: a.title,
+    })),
+  } as any);
+}
+---
+<Base
+  title="La Jauge : charge mentale, solitude & burnout entrepreneur | Jauge"
+  description="Charge mentale, solitude de la décision, peur de l'échec, syndrome de l'imposteur, rapport à l'argent : ce que personne ne dit à un entrepreneur qui porte tout seul."
+  path="/la-jauge"
+  jsonLd={jsonLd}
+  noindex={articles.length === 0}
+>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane" style="justify-content:center;">
+          <a href="/">Accueil</a>
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
+          <a href="/categories">Catégories</a>
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
+          <span aria-current="page">La Jauge</span>
+        </nav>
+
+        <p class="section-label" style="justify-content:center;">La tête, pour de vrai</p>
+        <h1>La Jauge</h1>
+        <p>Charge mentale, solitude de la décision, peur de l'échec, syndrome de l'imposteur, rapport à l'argent ce que ça fait vraiment de tout porter seul, sans discours de développement personnel plaqué dessus.</p>
+        <p style="font-size:.8125rem;color:var(--page-ink-45);margin-top:16px;">{updateLabel}</p>
+      </div>
+    </section>
+
+    <CategoryArticles category="la-jauge" articles={articles} />
+
+    <!-- MAILLAGE INTERNE : LES AUTRES JAUGES -->
+    <section class="section section--sm" style="background:var(--dark-bg);" aria-labelledby="autres-jauges-title">
+      <div class="container">
+        <p class="section-label" style="justify-content:center;">Explorer aussi</p>
+        <h2 id="autres-jauges-title" style="text-align:center;margin-bottom:28px;">Les autres jauges</h2>
+        <div class="grid-3">
+          <a href="/ia-automatisation" class="category-card">
+            <div class="category-card-icon" style="background:#3a1810;" aria-hidden="true"><svg class="icon"><use href="#icon-cpu"/></svg></div>
+            <h3>Outils &amp; IA</h3>
+            <p>Testé, pas hypé.</p>
+          </a>
+          <a href="/acquisition-growth" class="category-card">
+            <div class="category-card-icon" style="background:#2e3a1a;" aria-hidden="true"><svg class="icon"><use href="#icon-target"/></svg></div>
+            <h3>Acquisition &amp; Growth</h3>
+            <p>Les vrais chiffres.</p>
+          </a>
+          <a href="/finance-assurances" class="category-card">
+            <div class="category-card-icon" style="background:#2a2a28;" aria-hidden="true"><svg class="icon"><use href="#icon-wallet"/></svg></div>
+            <h3>Argent &amp; Trésorerie</h3>
+            <p>Sans langue de bois.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SEO -->
+    <section class="section section--sm" aria-labelledby="faq-jauge-title">
+      <div class="container" style="max-width:820px;">
+        <div style="text-align:center;margin-bottom:28px;">
+          <p class="section-label" style="justify-content:center;">Questions fréquentes</p>
+          <h2 id="faq-jauge-title">Charge mentale d'entrepreneur : les questions qu'on nous pose</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;" class="faq-grid">
+          <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
+            <h3 style="font-size:1.05rem;margin-bottom:10px;display:flex;align-items:center;gap:8px;"><svg class="icon" style="color:var(--accent);flex-shrink:0;"><use href="#icon-brain"/></svg> C'est quoi la charge mentale d'un entrepreneur ?</h3>
+            <p style="margin:0;color:var(--ink-70);line-height:1.7;">Le poids cumulé des décisions, de la trésorerie, des clients et de l'incertitude qu'une seule personne porte en continu, sans équipe pour partager la responsabilité.</p>
+          </article>
+          <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
+            <h3 style="font-size:1.05rem;margin-bottom:10px;display:flex;align-items:center;gap:8px;"><svg class="icon" style="color:var(--accent);flex-shrink:0;"><use href="#icon-mask"/></svg> Pourquoi le syndrome de l'imposteur touche autant les solos ?</h3>
+            <p style="margin:0;color:var(--ink-70);line-height:1.7;">Sans collègues ni hiérarchie pour valider son travail, les repères extérieurs manquent. Le doute sur sa légitimité s'installe facilement, surtout face à un client qui paie cher.</p>
+          </article>
+          <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
+            <h3 style="font-size:1.05rem;margin-bottom:10px;display:flex;align-items:center;gap:8px;"><svg class="icon" style="color:var(--accent);flex-shrink:0;"><use href="#icon-battery"/></svg> Comment reconnaître les signes avant-coureurs du burnout ?</h3>
+            <p style="margin:0;color:var(--ink-70);line-height:1.7;">Les signaux précèdent presque toujours la fatigue physique : irritabilité inhabituelle, perte de plaisir, difficulté à décider, isolement progressif.</p>
+          </article>
+          <article class="faq-item" style="background:#fff;border:1px solid var(--ink-15);border-radius:20px;padding:22px;">
+            <h3 style="font-size:1.05rem;margin-bottom:10px;display:flex;align-items:center;gap:8px;"><svg class="icon" style="color:var(--accent);flex-shrink:0;"><use href="#icon-wallet"/></svg> Pourquoi j'évite de regarder mon compte en banque ?</h3>
+            <p style="margin:0;color:var(--ink-70);line-height:1.7;">Le compte devient le thermomètre direct de ta valeur perçue. L'éviter est une réaction de protection, pas de la négligence.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Base>
