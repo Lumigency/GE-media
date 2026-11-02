@@ -240,3 +240,17 @@
   .article-body h2 { font-size: 1.45rem; }
   .article-hero-img { aspect-ratio: 16 / 9; }
 }
+
+/* ---- Encadré signé (photo de l'auteure) ---- */
+.note-box-head { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+.note-box-avatar {
+  width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex-shrink: 0;
+  border: 2px solid var(--note);
+}
+.note-box-avatar--initial {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--note); color: #0B0B0C; font-weight: 700; font-size: 1.25rem;
+}
+.article-body .note-box--signed .note-box-title { margin: 0 0 2px; }
+.article-body .note-box-by { margin: 0; font-size: .875rem; color: var(--page-ink); font-weight: 600; }
+.article-body .note-box-by span { font-weight: 400; color: var(--page-ink-45); }
