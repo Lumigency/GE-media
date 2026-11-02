@@ -1,7 +1,7 @@
 ---
 const { node } = Astro.props;
 const href: string = node.markDef?.href || '#';
-const external = /^https?:\/\//.test(href) && !href.includes('jauge.media');
+const external = /^https?:\/\//.test(href) && !href.includes('jauge-media.com');
 const affiliate = Boolean(node.markDef?.affiliate);
 const rel = affiliate ? 'sponsored nofollow noopener' : external ? 'noopener' : undefined;
 ---

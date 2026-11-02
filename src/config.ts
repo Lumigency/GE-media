@@ -4,14 +4,14 @@ export const SANITY = { projectId: 'z43vvgf6', dataset: 'production' };
 
 export const SITE = {
   name: 'Jauge',
-  url: 'https://jauge.media',
+  url: 'https://www.jauge-media.com',
   description:
     "Jauge est le média des entrepreneurs solo : trésorerie, outils IA, acquisition client et charge mentale. Avis tranchés, tests réels, pas de top 10 générique.",
   locale: 'fr_FR',
   lang: 'fr-FR',
   ogImage: '/og-image.jpg',
   logo: '/jauge.png',
-  contactEmail: 'contact@jauge.media',
+  contactEmail: 'contact@jauge-media.com',
 };
 
 // Les 4 jauges. Le slug correspond à l'URL de la catégorie et au champ "slug" de la catégorie dans Sanity.
