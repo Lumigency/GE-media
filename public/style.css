@@ -1716,3 +1716,20 @@ textarea.form-input { resize: vertical; min-height: 120px; }
 
   body.nav-open { overflow: hidden; }
 }
+
+/* ---- Formulaire de contact : libellés lisibles sur fond sombre ---- */
+.contact-form .form-group label { color: var(--page-ink-70); }
+
+/* ---- AJUSTEMENTS MOBILE ---- */
+@media (max-width: 768px) {
+  /* FAQ : une seule colonne (la grille est en style inline) */
+  .faq-grid { grid-template-columns: 1fr !important; }
+  .faq-item h3 { align-items: flex-start !important; }
+  .faq-item h3 .icon { margin-top: 3px; flex-shrink: 0; }
+  /* en-têtes de section : titre puis bouton, l'un sous l'autre */
+  .section-header { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 28px; }
+  .section-header > div { width: 100%; }
+}
+@media (max-width: 560px) {
+  .grid-4 { grid-template-columns: 1fr; }
+}
