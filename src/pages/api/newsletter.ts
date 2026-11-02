@@ -1,7 +1,8 @@
 import type { APIRoute } from 'astro';
 
 // Inscription newsletter → contact ajouté à une liste Brevo.
-// Variables Vercel requises : BREVO_API_KEY et BREVO_LIST_ID.
+// Variables Vercel requises : BREVO_API_KEY et BREVO_LIST_ID (liste « JAUGE »).
+// Aucun attribut n'est envoyé : le compte Brevo est partagé et ses attributs (ex. SOURCE) sont des listes de choix fermées.
 export const prerender = false;
 
 const isEmail = (v: unknown): v is string => typeof v === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
@@ -34,7 +35,6 @@ export const POST: APIRoute = async ({ request, redirect }) => {
       email: body.email.trim().toLowerCase(),
       listIds: [listId],
       updateEnabled: true,
-      attributes: { SOURCE: typeof body.source === 'string' ? body.source.slice(0, 100) : 'site' },
     }),
   });
 
