@@ -1,5 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
+import { getAllArticles } from '../lib/sanity';
+
+const all = await getAllArticles();
+const count = (cat: string) => all.filter((a) => a.category === cat).length;
+const label = (cat: string) => { const n = count(cat); return n === 0 ? 'Bientôt' : `${n} article${n > 1 ? 's' : ''}`; };
 
 const jsonLd = [
   {
@@ -75,7 +80,7 @@ const jsonLd = [
             <div class="category-card-icon" style="background:#3a1810;width:56px;height:56px;font-size:1.6rem;color:#FF7452;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-cpu"/></svg></div>
             <h3 style="font-size:1.5rem;">Outils &amp; IA</h3>
             <p style="font-size:1rem;">Outils IA, workflows no-code, automatisation administrative testé sur des tâches réelles </p>
-            <div style="margin:8px 0 4px;"><span class="tag tag-ia">7 articles</span></div>
+            <div style="margin:8px 0 4px;"><span class="tag tag-ia">{label('ia-automatisation')}</span></div>
             <span class="category-card-arrow" style="color:#FF7452;">Explorer Outils &amp; IA <span aria-hidden="true">→</span></span>
           </a>
 
@@ -83,7 +88,7 @@ const jsonLd = [
             <div class="category-card-icon" style="background:#2e3a1a;width:56px;height:56px;font-size:1.6rem;color:#D6FF3F;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-target"/></svg></div>
             <h3 style="font-size:1.5rem;">Acquisition &amp; Growth</h3>
             <p style="font-size:1rem;">SEO, acquisition payante, prospection LinkedIn, tunnel de vente, CRM  les vrais chiffres : en tout cas ceux qu'on a pu nous même analyser</p>
-            <div style="margin:8px 0 4px;"><span class="tag tag-acquisition">9 articles</span></div>
+            <div style="margin:8px 0 4px;"><span class="tag tag-acquisition">{label('acquisition-growth')}</span></div>
             <span class="category-card-arrow" style="color:#D6FF3F;">Explorer Acquisition &amp; Growth <span aria-hidden="true">→</span></span>
           </a>
 
@@ -91,7 +96,7 @@ const jsonLd = [
             <div class="category-card-icon" style="background:#2a2a28;width:56px;height:56px;font-size:1.6rem;color:#ffffff;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-wallet"/></svg></div>
             <h3 style="font-size:1.5rem;">Argent &amp; Trésorerie</h3>
             <p style="font-size:1rem;">Compte pro, comptabilité, fiscalité, assurances, trésorerie ce qu'il faut vraiment suivre, sans langue de bois.</p>
-            <div style="margin:8px 0 4px;"><span class="tag tag-finance">9 articles</span></div>
+            <div style="margin:8px 0 4px;"><span class="tag tag-finance">{label('finance-assurances')}</span></div>
             <span class="category-card-arrow" style="color:#ffffff;">Explorer Argent &amp; Trésorerie <span aria-hidden="true">→</span></span>
           </a>
 
@@ -99,7 +104,7 @@ const jsonLd = [
             <div class="category-card-icon" style="background:#FFE0D6;width:56px;height:56px;font-size:1.6rem;color:#D9431F;" aria-hidden="true"><svg class="icon icon-lg"><use href="#icon-brain"/></svg></div>
             <h3 style="font-size:1.5rem;">La Jauge</h3>
             <p style="font-size:1rem;">Charge mentale, solitude de la décision, peur de l'échec, syndrome de l'imposteur ,la tête, pour de vrai.</p>
-            <div style="margin:8px 0 4px;"><span class="tag tag-jauge">6 articles</span></div>
+            <div style="margin:8px 0 4px;"><span class="tag tag-jauge">{label('la-jauge')}</span></div>
             <span class="category-card-arrow" style="color:#D9431F;">Explorer La Jauge <span aria-hidden="true">→</span></span>
           </a>
 
