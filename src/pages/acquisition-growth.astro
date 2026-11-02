@@ -12,32 +12,32 @@ const updateLabel = lastUpdate
 const jsonLd = [
   {
     "@type": "CollectionPage",
-    "@id": "https://jauge.media/acquisition-growth",
+    "@id": "https://www.jauge-media.com/acquisition-growth",
     "name": "Acquisition & Growth — Jauge",
     "description": "SEO, acquisition payante, prospection LinkedIn, tunnel de vente et CRM pour entrepreneurs solo.",
-    "url": "https://jauge.media/acquisition-growth",
+    "url": "https://www.jauge-media.com/acquisition-growth",
     "isPartOf": {
-      "@id": "https://jauge.media/#website"
+      "@id": "https://www.jauge-media.com/#website"
     },
     "breadcrumb": {
-      "@id": "https://jauge.media/acquisition-growth#breadcrumb"
+      "@id": "https://www.jauge-media.com/acquisition-growth#breadcrumb"
     }
   },
   {
     "@type": "BreadcrumbList",
-    "@id": "https://jauge.media/acquisition-growth#breadcrumb",
+    "@id": "https://www.jauge-media.com/acquisition-growth#breadcrumb",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
         "name": "Accueil",
-        "item": "https://jauge.media/"
+        "item": "https://www.jauge-media.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Catégories",
-        "item": "https://jauge.media/categories"
+        "item": "https://www.jauge-media.com/categories"
       },
       {
         "@type": "ListItem",
@@ -48,7 +48,7 @@ const jsonLd = [
   },
   {
     "@type": "FAQPage",
-    "@id": "https://jauge.media/acquisition-growth#faq",
+    "@id": "https://www.jauge-media.com/acquisition-growth#faq",
     "mainEntity": [
       {
         "@type": "Question",
@@ -88,11 +88,11 @@ const jsonLd = [
 if (articles.length) {
   jsonLd.push({
     '@type': 'ItemList',
-    '@id': 'https://jauge.media/acquisition-growth#articles',
+    '@id': 'https://www.jauge-media.com/acquisition-growth#articles',
     itemListElement: articles.map((a, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      url: `https://jauge.media/acquisition-growth/${a.slug}`,
+      url: `https://www.jauge-media.com/acquisition-growth/${a.slug}`,
       name: a.title,
     })),
   } as any);

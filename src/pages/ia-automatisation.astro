@@ -12,32 +12,32 @@ const updateLabel = lastUpdate
 const jsonLd = [
   {
     "@type": "CollectionPage",
-    "@id": "https://jauge.media/ia-automatisation",
+    "@id": "https://www.jauge-media.com/ia-automatisation",
     "name": "Outils & IA — Jauge",
     "description": "Outils IA, workflows no-code et automatisation administrative pour entrepreneurs solo.",
-    "url": "https://jauge.media/ia-automatisation",
+    "url": "https://www.jauge-media.com/ia-automatisation",
     "isPartOf": {
-      "@id": "https://jauge.media/#website"
+      "@id": "https://www.jauge-media.com/#website"
     },
     "breadcrumb": {
-      "@id": "https://jauge.media/ia-automatisation#breadcrumb"
+      "@id": "https://www.jauge-media.com/ia-automatisation#breadcrumb"
     }
   },
   {
     "@type": "BreadcrumbList",
-    "@id": "https://jauge.media/ia-automatisation#breadcrumb",
+    "@id": "https://www.jauge-media.com/ia-automatisation#breadcrumb",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
         "name": "Accueil",
-        "item": "https://jauge.media/"
+        "item": "https://www.jauge-media.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Catégories",
-        "item": "https://jauge.media/categories"
+        "item": "https://www.jauge-media.com/categories"
       },
       {
         "@type": "ListItem",
@@ -48,7 +48,7 @@ const jsonLd = [
   },
   {
     "@type": "FAQPage",
-    "@id": "https://jauge.media/ia-automatisation#faq",
+    "@id": "https://www.jauge-media.com/ia-automatisation#faq",
     "mainEntity": [
       {
         "@type": "Question",
@@ -80,11 +80,11 @@ const jsonLd = [
 if (articles.length) {
   jsonLd.push({
     '@type': 'ItemList',
-    '@id': 'https://jauge.media/ia-automatisation#articles',
+    '@id': 'https://www.jauge-media.com/ia-automatisation#articles',
     itemListElement: articles.map((a, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      url: `https://jauge.media/ia-automatisation/${a.slug}`,
+      url: `https://www.jauge-media.com/ia-automatisation/${a.slug}`,
       name: a.title,
     })),
   } as any);

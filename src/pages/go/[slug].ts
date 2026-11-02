@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import { LIENS } from '../../data/liens';
 
-// Redirection jauge.media/go/<outil> → site de l'outil (ou lien affilié une fois configuré).
+// Redirection jauge-media.com/go/<outil> → site de l'outil (ou lien affilié une fois configuré).
 // Redirection temporaire (302) : on peut changer la destination à tout moment.
 export const prerender = false;
 

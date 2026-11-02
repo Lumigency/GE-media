@@ -1,10 +1,10 @@
-# Jauge — jauge.media
+# Jauge — jauge-media.com
 
 Média pour entrepreneurs solo. Site construit avec **Astro** (pages HTML générées à l'avance, rapides et lisibles par Google et les IA), contenus gérés dans **Sanity**, hébergé sur **Vercel**.
 
 ## Comment ça marche
 
-- **Écrire un article** : `jauge.media/studio` → Articles → « + ». Remplir titre, chapeau, « L'essentiel », jauge, rubrique, auteur·rice, puis **Publier**.
+- **Écrire un article** : `jauge-media.com/studio` → Articles → « + ». Remplir titre, chapeau, « L'essentiel », jauge, rubrique, auteur·rice, puis **Publier**.
 - **Mise en ligne** : chaque publication déclenche une reconstruction du site (≈ 1 min) grâce au webhook Sanity → Vercel.
 - **Pages fixes** (accueil, à propos, bons plans…) : fichiers `src/pages/*.astro`.
 - **Menu / pied de page** : `src/components/Nav.astro`, `src/components/Footer.astro`.

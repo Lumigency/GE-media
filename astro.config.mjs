@@ -15,7 +15,7 @@ const sanityIntegrations = projectId
   : [];
 
 export default defineConfig({
-  site: 'https://jauge.media',
+  site: 'https://www.jauge-media.com',
   trailingSlash: 'never',
   build: { format: 'file' },
   output: 'static',

@@ -12,32 +12,32 @@ const updateLabel = lastUpdate
 const jsonLd = [
   {
     "@type": "CollectionPage",
-    "@id": "https://jauge.media/finance-assurances",
+    "@id": "https://www.jauge-media.com/finance-assurances",
     "name": "Argent & Trésorerie — Jauge",
     "description": "Compte pro, comptabilité, fiscalité, assurances et trésorerie pour entrepreneurs solo.",
-    "url": "https://jauge.media/finance-assurances",
+    "url": "https://www.jauge-media.com/finance-assurances",
     "isPartOf": {
-      "@id": "https://jauge.media/#website"
+      "@id": "https://www.jauge-media.com/#website"
     },
     "breadcrumb": {
-      "@id": "https://jauge.media/finance-assurances#breadcrumb"
+      "@id": "https://www.jauge-media.com/finance-assurances#breadcrumb"
     }
   },
   {
     "@type": "BreadcrumbList",
-    "@id": "https://jauge.media/finance-assurances#breadcrumb",
+    "@id": "https://www.jauge-media.com/finance-assurances#breadcrumb",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
         "name": "Accueil",
-        "item": "https://jauge.media/"
+        "item": "https://www.jauge-media.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Catégories",
-        "item": "https://jauge.media/categories"
+        "item": "https://www.jauge-media.com/categories"
       },
       {
         "@type": "ListItem",
@@ -48,7 +48,7 @@ const jsonLd = [
   },
   {
     "@type": "FAQPage",
-    "@id": "https://jauge.media/finance-assurances#faq",
+    "@id": "https://www.jauge-media.com/finance-assurances#faq",
     "mainEntity": [
       {
         "@type": "Question",
@@ -88,11 +88,11 @@ const jsonLd = [
 if (articles.length) {
   jsonLd.push({
     '@type': 'ItemList',
-    '@id': 'https://jauge.media/finance-assurances#articles',
+    '@id': 'https://www.jauge-media.com/finance-assurances#articles',
     itemListElement: articles.map((a, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      url: `https://jauge.media/finance-assurances/${a.slug}`,
+      url: `https://www.jauge-media.com/finance-assurances/${a.slug}`,
       name: a.title,
     })),
   } as any);
