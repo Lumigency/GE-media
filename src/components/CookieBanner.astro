@@ -34,6 +34,13 @@ import { GA_ID } from '../config';
           if (window.__gaLoaded) return; window.__gaLoaded = true;
           window.dataLayer = window.dataLayer || [];
           window.gtag = function () { dataLayer.push(arguments); };
+          // Consent Mode v2 : mesure d'audience acceptée, aucune finalité publicitaire
+          gtag('consent', 'default', {
+            analytics_storage: 'granted',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+          });
           gtag('js', new Date());
           gtag('config', GA_ID);
           var s = document.createElement('script');
