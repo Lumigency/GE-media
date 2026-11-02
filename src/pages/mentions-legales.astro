@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 
 const jsonLd = [];
+import { GA_ID } from '../config';
 ---
 <Base
   title="Mentions légales & RGPD | Jauge"
@@ -89,12 +90,26 @@ const jsonLd = [];
               Pour la newsletter, tu peux te désinscrire à tout moment via le lien présent dans chaque email.
             </p>
 
-            <h2>Cookies</h2>
-            <p>
-              Ce site ne dépose aucun cookie publicitaire, de suivi ou de réseau social sur ton appareil, c'est pourquoi il n'affiche pas de bandeau de consentement.
-              La mesure d'audience (Vercel Web Analytics) fonctionne sans cookie et sans identifiant personnel : elle compte des visites, pas des personnes.
-              Les polices de caractères sont hébergées sur nos propres serveurs, sans appel à un service tiers.
-            </p>
+            <h2 id="cookies">Cookies</h2>
+            {GA_ID ? (
+              <>
+                <p>
+                  Avec ton accord uniquement, on utilise Google Analytics pour mesurer l'audience : pages vues, durée de lecture, provenance des visites, clics vers les outils recommandés.
+                  Ces cookies (_ga) sont conservés 13 mois au plus. Tant que tu n'as pas cliqué sur « Accepter », aucun cookie Google n'est déposé et le script n'est même pas chargé.
+                  Ton choix est gardé 13 mois si tu acceptes, 6 mois si tu refuses. Tu peux le modifier à tout moment via le lien « Gérer les cookies » en bas de chaque page.
+                </p>
+                <p>
+                  Google Analytics est fourni par Google Ireland Ltd. Certaines données peuvent être transférées aux États-Unis, dans le cadre du Data Privacy Framework UE–États-Unis.
+                  Vercel Web Analytics complète cette mesure sans cookie et sans identifiant personnel. Les polices de caractères sont hébergées sur nos propres serveurs.
+                </p>
+              </>
+            ) : (
+              <p>
+                Ce site ne dépose aucun cookie publicitaire, de suivi ou de réseau social sur ton appareil, c'est pourquoi il n'affiche pas de bandeau de consentement.
+                La mesure d'audience (Vercel Web Analytics) fonctionne sans cookie et sans identifiant personnel : elle compte des visites, pas des personnes.
+                Les polices de caractères sont hébergées sur nos propres serveurs, sans appel à un service tiers.
+              </p>
+            )}
             <p>
               Certains liens vers des outils (signalés comme liens affiliés) mènent vers des sites partenaires. Une fois sur ces sites, ce sont leurs propres règles de cookies qui s'appliquent, et c'est à eux de recueillir ton consentement.
             </p>
