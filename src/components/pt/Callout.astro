@@ -1,4 +1,5 @@
 ---
+import { imageUrl } from '../../lib/sanity';
 const { node } = Astro.props;
 const labels: Record<string, string> = { tip: 'Astuce', warning: 'Attention', verdict: 'Notre avis' };
 const tone = labels[node.tone] ? node.tone : 'tip';
@@ -7,8 +8,22 @@ const paragraphs = String(node.text ?? '')
   .split(/\n\s*\n/)
   .map((p) => p.trim())
   .filter(Boolean);
+const expert = node.expert;
+const photo = expert?.photo ? imageUrl(expert.photo, 112, 112) : undefined;
 ---
-<aside class={`note-box note-box--${tone}`}>
-  <p class="note-box-title">{node.title || labels[tone]}</p>
+<aside class={`note-box note-box--${tone}${expert ? ' note-box--signed' : ''}`}>
+  {expert ? (
+    <div class="note-box-head">
+      {photo
+        ? <img class="note-box-avatar" src={photo} alt={expert.name} width="56" height="56" loading="lazy" />
+        : <span class="note-box-avatar note-box-avatar--initial" aria-hidden="true">{expert.name?.[0]}</span>}
+      <div>
+        <p class="note-box-title">{node.title || labels[tone]}</p>
+        <p class="note-box-by">{expert.name}{expert.role && <span> · {expert.role}</span>}</p>
+      </div>
+    </div>
+  ) : (
+    <p class="note-box-title">{node.title || labels[tone]}</p>
+  )}
   {paragraphs.map((p) => <p>{p}</p>)}
 </aside>
