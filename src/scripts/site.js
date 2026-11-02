@@ -45,6 +45,7 @@ function initBurger() {
 
   burger.addEventListener('click', () => {
     const isOpen = mobile.classList.toggle('open');
+    document.body.classList.toggle('nav-open', isOpen);
     burger.setAttribute('aria-expanded', isOpen);
     burger.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
   });
@@ -52,6 +53,7 @@ function initBurger() {
   document.addEventListener('click', (e) => {
     if (!burger.contains(e.target) && !mobile.contains(e.target)) {
       mobile.classList.remove('open');
+      document.body.classList.remove('nav-open');
       burger.setAttribute('aria-expanded', 'false');
       burger.setAttribute('aria-label', 'Ouvrir le menu');
     }
