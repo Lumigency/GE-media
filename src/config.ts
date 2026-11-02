@@ -2,6 +2,10 @@
 // Projet Sanity (identifiant public, visible côté navigateur : ce n'est pas un secret)
 export const SANITY = { projectId: 'z43vvgf6', dataset: 'production' };
 
+// Google Analytics 4 : identifiant de mesure (G-XXXXXXXXXX), public par nature.
+// Vide = pas de Google Analytics et pas de bandeau cookies.
+export const GA_ID = '';
+
 export const SITE = {
   name: 'Jauge',
   url: 'https://www.jauge-media.com',
