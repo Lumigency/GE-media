@@ -165,11 +165,13 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
   background: var(--page-ink);
   color: var(--ink);
 }
-.section--grey .btn-outline {
+.section--grey .btn-outline,
+.sidebar-widget .btn-outline {
   color: var(--ink);
   border-color: var(--ink-15);
 }
-.section--grey .btn-outline:hover {
+.section--grey .btn-outline:hover,
+.sidebar-widget .btn-outline:hover {
   border-color: var(--ink);
   background: var(--ink);
   color: var(--white);
