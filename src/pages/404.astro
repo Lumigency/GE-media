@@ -8,7 +8,7 @@ import { CATEGORIES } from '../config';
       <div class="container">
         <p class="section-label" style="justify-content:center;">Erreur 404</p>
         <h1>Jauge à zéro : cette page n'existe pas</h1>
-        <p>L'article a peut-être changé d'adresse. Repars d'une des 4 jauges :</p>
+        <p>L'article a peut-être changé d'adresse. Repartez d'une des 4 jauges :</p>
         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px;">
           {CATEGORIES.map((c) => <a class="btn btn-outline" href={`/${c.slug}`}>{c.title}</a>)}
         </div>

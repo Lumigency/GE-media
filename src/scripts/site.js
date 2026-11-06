@@ -182,7 +182,7 @@ function initTocScroll() {
 async function postJSON(url, data) {
   const res = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
   const json = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(json.message || "Une erreur est survenue. Réessaie dans un instant.");
+  if (!res.ok) throw new Error(json.message || "Une erreur est survenue. Réessayez dans un instant.");
   return json;
 }
 
@@ -222,7 +222,7 @@ function initContactForm() {
     try {
       await postJSON("/api/contact", data);
       form.reset();
-      if (btn) btn.textContent = "✓ Message envoyé, on te répond vite";
+      if (btn) btn.textContent = "✓ Message envoyé, on vous répond vite";
     } catch (err) {
       if (btn) btn.textContent = original;
       alert(err.message);

@@ -26,7 +26,7 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 
   const apiKey = import.meta.env.BREVO_API_KEY;
   const listId = Number(import.meta.env.BREVO_LIST_ID);
-  if (!apiKey || !listId) return reply(503, "L'inscription n'est pas encore ouverte. Reviens très vite !");
+  if (!apiKey || !listId) return reply(503, "L'inscription n'est pas encore ouverte. Revenez très vite !");
 
   const res = await fetch('https://api.brevo.com/v3/contacts', {
     method: 'POST',
@@ -41,5 +41,5 @@ export const POST: APIRoute = async ({ request, redirect }) => {
   // 201 = créé, 204 = déjà inscrit et mis à jour
   if (res.ok) return reply(200, 'Inscription confirmée.');
   console.error('Brevo newsletter', res.status, await res.text().catch(() => ''));
-  return reply(502, "Oups, l'inscription n'a pas fonctionné. Réessaie dans un instant.");
+  return reply(502, "Oups, l'inscription n'a pas fonctionné. Réessayez dans un instant.");
 };

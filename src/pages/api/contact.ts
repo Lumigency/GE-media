@@ -24,7 +24,7 @@ export const POST: APIRoute = async ({ request, redirect }) => {
   const sujet = clean(data.sujet, 100) || 'Contact';
   const message = clean(data.message);
   if (!prenom || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) || message.length < 5) {
-    return reply(400, 'Merci de remplir ton prénom, un email valide et ton message.');
+    return reply(400, 'Merci de remplir votre prénom, un email valide et votre message.');
   }
   if (!data.rgpd) return reply(400, 'Merci de cocher la case de consentement.');
 
