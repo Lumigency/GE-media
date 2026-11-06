@@ -1,6 +1,6 @@
 // Liens sortants vers les outils recommandés, utilisés via jauge-media.com/go/<outil>.
 //
-// Pour passer un outil en lien affilié : remplacer `url` par ton lien de tracking
+// Pour passer un outil en lien affilié : remplacer `url` par le lien de tracking
 // et mettre `affiliate: true`. Toutes les pages du site suivent automatiquement.
 export interface OutboundLink {
   name: string;
