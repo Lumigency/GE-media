@@ -72,6 +72,25 @@ export const article = defineType({
     }),
 
     defineField({
+      name: 'sources',
+      title: 'Sources',
+      type: 'array',
+      group: 'contenu',
+      description: 'Textes officiels, études, chiffres… Affichées en bas de l’article. Les liens externes (non affiliés) du corps de l’article y sont déjà ajoutés automatiquement : n’ajoute ici que les sources qui ne sont pas en lien dans le texte.',
+      of: [
+        defineArrayMember({
+          type: 'object',
+          name: 'source',
+          fields: [
+            defineField({ name: 'title', title: 'Nom de la source', type: 'string', description: 'Ex. « Urssaf : taux de cotisations des micro-entrepreneurs »', validation: (r) => r.required() }),
+            defineField({ name: 'url', title: 'Lien', type: 'url', validation: (r) => r.required().uri({ scheme: ['http', 'https'] }) }),
+          ],
+          preview: { select: { title: 'title', subtitle: 'url' } },
+        }),
+      ],
+    }),
+
+    defineField({
       name: 'category',
       title: 'Jauge',
       type: 'string',
