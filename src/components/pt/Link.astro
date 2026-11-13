@@ -1,7 +1,10 @@
 ---
+import { internalPath } from '../../lib/links';
 const { node } = Astro.props;
-const href: string = node.markDef?.href || '#';
-const external = /^https?:\/\//.test(href) && !href.includes('jauge-media.com');
+const raw: string = node.markDef?.href || '#';
+const internal = internalPath(raw);
+const href = internal ?? raw;
+const external = !internal && /^https?:\/\//.test(raw);
 const affiliate = Boolean(node.markDef?.affiliate);
 const rel = affiliate ? 'sponsored nofollow noopener' : external ? 'noopener' : undefined;
 ---
