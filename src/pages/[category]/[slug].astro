@@ -12,6 +12,7 @@ import ComparisonTable from '../../components/pt/ComparisonTable.astro';
 import { getFullArticles, imageUrl, formatDate } from '../../lib/sanity';
 import { categoryBySlug, subcategoryLabel, SITE } from '../../config';
 import { slugify } from '../../lib/text';
+import { internalPath } from '../../lib/links';
 
 export async function getStaticPaths() {
   const articles = await getFullArticles();
@@ -47,7 +48,7 @@ for (const b of body) {
   for (const m of b.markDefs ?? []) {
     const href: string = m?.href ?? '';
     if (m?._type !== 'link' || m.affiliate || !/^https?:\/\//.test(href)) continue;
-    if (/jauge-media\.com/.test(href) || /\/go\//.test(href)) continue;
+    if (internalPath(href) || /\/go\//.test(href)) continue;
     const key = normUrl(href);
     if (sourceMap.has(key)) continue;
     const text = (b.children ?? []).filter((c: any) => (c.marks ?? []).includes(m._key)).map((c: any) => c.text).join('').trim();
