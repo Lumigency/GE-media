@@ -38,6 +38,29 @@ const authorPhoto = imageUrl(author?.photo, 160, 160);
 const hasToc = toc.length > 1;
 const rubrique = subcategoryLabel(a.category, a.subcategory);
 
+// Sources : liens externes non affiliés du corps + sources saisies à la main, sans doublon.
+const normUrl = (u: string) => u.trim().replace(/#.*$/, '').replace(/\/$/, '');
+const hostOf = (u: string) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return ''; } };
+const sourceMap = new Map<string, { title: string; url: string; host: string }>();
+for (const b of body) {
+  if (b?._type !== 'block') continue;
+  for (const m of b.markDefs ?? []) {
+    const href: string = m?.href ?? '';
+    if (m?._type !== 'link' || m.affiliate || !/^https?:\/\//.test(href)) continue;
+    if (/jauge-media\.com/.test(href) || /\/go\//.test(href)) continue;
+    const key = normUrl(href);
+    if (sourceMap.has(key)) continue;
+    const text = (b.children ?? []).filter((c: any) => (c.marks ?? []).includes(m._key)).map((c: any) => c.text).join('').trim();
+    sourceMap.set(key, { title: text || hostOf(href), url: href, host: hostOf(href) });
+  }
+}
+for (const src of a.sources ?? []) {
+  if (!src?.url || !src?.title) continue;
+  const key = normUrl(src.url);
+  sourceMap.set(key, { title: src.title, url: src.url, host: hostOf(src.url) });
+}
+const sources = [...sourceMap.values()];
+
 const authorLd = author
   ? {
       '@type': 'Person',
@@ -65,6 +88,7 @@ const jsonLd: Record<string, unknown>[] = [
     publisher: { '@id': `${SITE.url}/#organization` },
     articleSection: cat.title,
     ...(a.keyTakeaways?.length ? { abstract: a.keyTakeaways.join(' ') } : {}),
+    ...(sources.length ? { citation: sources.map((x) => ({ '@type': 'CreativeWork', name: x.title, url: x.url })) } : {}),
   },
   {
     '@type': 'BreadcrumbList',
@@ -162,6 +186,17 @@ const components = {
                     <p>{f.answer}</p>
                   </details>
                 ))}
+              </section>
+            )}
+
+            {sources.length > 0 && (
+              <section class="article-sources" aria-labelledby="sources">
+                <h2 id="sources">Sources</h2>
+                <ol>
+                  {sources.map((x) => (
+                    <li><a href={x.url} rel="noopener" target="_blank">{x.title}</a>{x.host && x.title !== x.host && <span class="article-sources-host"> · {x.host}</span>}</li>
+                  ))}
+                </ol>
               </section>
             )}
 
