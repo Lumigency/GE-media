@@ -10,7 +10,7 @@ export const SITE = {
   name: 'Jauge',
   url: 'https://www.jauge-media.com',
   description:
-    "Jauge est le média des entrepreneurs solo : trésorerie, outils IA, acquisition client et charge mentale. Avis tranchés, tests réels, pas de top 10 générique.",
+    "Jauge est le média des entrepreneurs solo : trésorerie, outils IA, acquisition client et charge mentale. Des avis tranchés, écrits par une solopreneuse et une journaliste.",
   locale: 'fr_FR',
   lang: 'fr-FR',
   ogImage: '/og-image.jpg',
