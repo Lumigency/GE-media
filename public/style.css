@@ -598,11 +598,13 @@ p  { line-height: 1.7; color: var(--page-ink-70); }
 .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
 .footer-col a { font-size: .9375rem; color: rgba(255,255,255,.55); transition: color .2s; }
 .footer-col a:hover { color: var(--white); }
+.footer-grid > * { min-width: 0; }
 .footer-col-nowrap a {
-  display: block;
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.45;
 }
 .footer-bottom {
   display: flex;
@@ -1479,6 +1481,8 @@ textarea.form-input { resize: vertical; min-height: 120px; }
 .carousel-slide {
   position: relative;
   flex: 0 0 100%;
+  min-width: 0;
+  overflow: hidden;
   height: 100%;
   display: block;
   text-decoration: none;
@@ -1499,7 +1503,9 @@ textarea.form-input { resize: vertical; min-height: 120px; }
   gap: 8px;
   max-width: 640px;
 }
+.carousel-overlay .tag { align-self: flex-start; }
 .carousel-overlay h2 {
+  overflow-wrap: break-word;
   color: var(--white);
   font-size: clamp(1.25rem, 2.6vw, 2rem);
   line-height: 1.2;
