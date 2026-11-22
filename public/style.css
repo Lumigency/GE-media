@@ -1661,7 +1661,10 @@ textarea.form-input { resize: vertical; min-height: 120px; }
 .ad-slot--300x250 img, .ad-slot--300x600 img { width: 100%; height: 100%; object-fit: cover; }
 
 @media (max-width: 1024px) {
-  #pins-title ~ .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  #pins-title ~ .pins-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  #pins-title ~ .pins-grid { grid-template-columns: 1fr; }
 }
 
 /* ---- MENU MOBILE (thème sombre, plein écran) ---- */
